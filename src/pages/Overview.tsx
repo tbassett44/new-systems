@@ -9,7 +9,7 @@ const Overview = () => {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold mb-4">New Systems and Structures</h1>
+        <h1 className="text-4xl font-bold mb-4">System Regeneration</h1>
         <p className="text-xl text-muted-foreground mb-6">
           Supporting Better Feedback, Effective Governance, and Improved Wellbeing
         </p>
