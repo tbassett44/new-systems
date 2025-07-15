@@ -72,7 +72,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
 
   return (
     <>
-      <Sidebar className={state === "collapsed" ? "w-14" : "w-80"} collapsible>
+      <Sidebar className={state === "collapsed" ? "w-14" : "w-80"} collapsible="icon">
         <SidebarHeader className="border-b">
           <div className="flex items-center justify-between">
             <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
