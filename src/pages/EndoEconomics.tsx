@@ -362,12 +362,15 @@ const EndoEconomics = () => {
             Liberating Ethical Alignment and Purpose-Driven Work
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            One of the most transformative impacts of the Endo Economics model is its capacity to de-risk integrity. In the current economy, many individuals—especially those from marginalized or precarious backgrounds—are forced to compromise their values to meet basic needs.
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            One of the most transformative impacts of the Endo Economics model is its capacity to de-risk integrity. In the current economy, many individuals—especially those from marginalized or precarious backgrounds—are forced to compromise their values to meet basic needs. Jobs that perpetuate harm, extractive systems, or cultural dissonance are often the only viable options for survival.
           </p>
-          <p className="leading-relaxed mb-4">
-            By providing a guaranteed baseline of income and resource access, Endo Economics creates the conditions for ethical clarity and vocational freedom. People are no longer compelled to tolerate toxic workplaces, unethical industries, or meaningless labor.
+          <p className="leading-relaxed">
+            By providing a guaranteed baseline of income and resource access, Endo Economics creates the conditions for ethical clarity and vocational freedom. People are no longer compelled to tolerate toxic workplaces, unethical industries, or meaningless labor. Instead, they gain the flexibility to self-organize around projects, communities, and efforts that align with their deeper sense of purpose and positive social or ecological impact.
+          </p>
+          <p className="leading-relaxed">
+            This shift is not just humane—it is structurally intelligent. When work becomes a field of self-organizing desire, rather than coercion, it naturally optimizes for motivation, creativity, cooperation, and resilience. The result is a distributed intelligence network of people doing what they are intrinsically called to do, rather than merely what they are economically forced to do.
           </p>
           <div className="bg-indigo-50 p-4 rounded-lg">
             <p className="text-indigo-800 font-medium">
