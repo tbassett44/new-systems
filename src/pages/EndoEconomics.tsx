@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap } from "lucide-react";
+
 const EndoEconomics = () => {
   return <div className="space-y-8">
       <div className="mb-8">
@@ -135,25 +136,56 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="leading-relaxed">
-            The Gross Domestic Product (GDP) of the United States is projected to be $30.34 trillion annually in 2025. To understand and redirect this flow, we isolate the two core components that represent value flowing into human lives and collective infrastructure:
+            The Gross Domestic Product (GDP) of the United States is projected to be $30.34 trillion annually in 2025 (O'Neill 2025). To understand and redirect this flow, we isolate the two core components that represent value flowing into human lives and collective infrastructure:
           </p>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-2">Wage Flow (Human Labor Economy)</h4>
-              <p className="text-2xl font-bold text-blue-600">~$9.94 trillion</p>
-              <p className="text-sm text-blue-700">Total annual wages paid to ~92% of the U.S. workforce across 23 primary occupational sectors</p>
+          <div className="space-y-6">
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-blue-800 mb-3 text-lg">Wage Flow (Human Labor Economy)</h4>
+              <div className="space-y-3">
+                <div>
+                  <p className="text-2xl font-bold text-blue-600 mb-1">~$9.94 trillion</p>
+                  <p className="text-sm text-blue-700">Total annual wages paid to the U.S. workforce</p>
+                </div>
+                <p className="text-sm text-blue-700">
+                  This covers compensation for ~92% of the U.S. employed population, across 23 primary occupational sectors. [Data 1]
+                </p>
+                <div className="mt-4 p-3 bg-blue-100 rounded">
+                  <p className="text-sm text-blue-800">
+                    <strong>Additional Coverage:</strong> Including the remaining 8% of the workforce not accounted for in the annual wage above, as well as the total of people currently unemployed (7.2M), assuming a "high" average of $70,000/year UBI, this would total $1.3608 trillion
+                  </p>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">Government Operations Flow</h4>
-              <p className="text-2xl font-bold text-green-600">~$7.36 trillion</p>
-              <p className="text-sm text-green-700">Federal spending including Social Security, Medicare, Medicaid, and all agency budgets</p>
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-green-800 mb-3 text-lg">Government Operations Flow (Public Service Economy)</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-2xl font-bold text-green-600 mb-1">~$7.36 trillion</p>
+                  <p className="text-sm text-green-700 mb-2">Total annual federal spending [Data 2]</p>
+                  <p className="text-sm text-green-700">
+                    Includes Social Security, Medicare, Medicaid, SNAP, Unemployment Insurance, ACA subsidies, federal agency budgets, and interest on national debt.
+                  </p>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-green-100 p-3 rounded">
+                    <p className="text-lg font-semibold text-green-800">$2.515 trillion</p>
+                    <p className="text-sm text-green-700">Budgets from all 50 US States [Data 3]</p>
+                  </div>
+                  
+                  <div className="bg-green-100 p-3 rounded">
+                    <p className="text-lg font-semibold text-green-800">$1.1 trillion</p>
+                    <p className="text-sm text-green-700">Financial flow from Federal Government to States</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-purple-50 p-4 rounded-lg">
-            <p className="text-purple-800 font-medium">
+          <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+            <p className="text-purple-800 font-medium text-lg">
               Together, these components account for ~$22.3 trillion, or 74% of total U.S. GDP. This represents the most human-centric portion of the economy: what people are paid, and what is spent to serve and support them.
             </p>
           </div>
@@ -315,4 +347,5 @@ const EndoEconomics = () => {
       </Card>
     </div>;
 };
+
 export default EndoEconomics;
