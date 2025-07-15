@@ -1,10 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Recycle, CheckCircle, AlertTriangle, TrendingUp, Leaf, Heart, Shield } from "lucide-react";
-
 const WasteManagement = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold">Toward a New Waste Management Model</h1>
         <p className="text-xl text-muted-foreground mt-2">
@@ -12,14 +10,7 @@ const WasteManagement = () => {
         </p>
       </div>
 
-      <div className="bg-muted/30 p-6 rounded-lg border-l-4 border-primary">
-        <p className="text-sm text-muted-foreground mb-2">By</p>
-        <p className="font-semibold">Juicy Life</p>
-        <p className="text-sm text-primary">juicy@actualize.earth</p>
-        <p className="text-sm text-muted-foreground mt-2">
-          and Aether, an AI collaborator powered by GPT-4 by OpenAI
-        </p>
-      </div>
+      
 
       <Card>
         <CardHeader>
@@ -298,8 +289,6 @@ const WasteManagement = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default WasteManagement;
