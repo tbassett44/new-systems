@@ -65,10 +65,10 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            The inspiration behind "Endo Economics" arises from the evolutionary principle of endosymbiosis—a foundational process in biology through which distinct organisms merge to form a more complex, cooperative whole. This process gave rise to mitochondria and chloroplasts, essential cellular components that once existed as independent organisms.
+            The inspiration behind "Endo Economics" arises from the evolutionary principle of endosymbiosis—a foundational process in biology through which distinct organisms merge to form a more complex, cooperative whole. This process gave rise to mitochondria and chloroplasts, essential cellular components that once existed as independent organisms. Evolution favored this integration not through domination, but through mutual benefit, shared function, and interdependence.
           </p>
           <p className="leading-relaxed">
-            In this spirit, Endo Economics proposes that our economic systems can evolve in the same way—by uniting previously siloed and competitive domains into cooperative ecosystems of shared value. By embedding cooperation at the cellular level of economic architecture, we unlock the evolutionary advantage of systems designed not for domination, but for long-term flourishing.
+            In this spirit, Endo Economics proposes that our economic systems can evolve in the same way—by uniting previously siloed and competitive domains into cooperative ecosystems of shared value. When different parts of society (labor sectors, public systems, innovation hubs, ecological services) function in harmony toward the health of the whole, the result is greater stability, adaptability, and specialization. By embedding cooperation at the cellular level of economic architecture, we unlock the evolutionary advantage of systems designed not for domination, but for long-term flourishing. Endo Economics sees the economy not as a marketplace of isolated agents, but as a living system—dynamic, intelligent, and capable of co-evolving with humanity's deeper needs.
           </p>
         </CardContent>
       </Card>
