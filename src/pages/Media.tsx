@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Radio } from "lucide-react";
+import { Radio, Users, Shield, Target, CheckCircle } from "lucide-react";
 
 const Media = () => {
   return (
@@ -11,28 +11,225 @@ const Media = () => {
           <Radio className="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h1 className="text-4xl font-bold">Media</h1>
-          <p className="text-xl text-muted-foreground">Regenerative & Participatory</p>
+          <h1 className="text-4xl font-bold">Regenerative Media</h1>
+          <p className="text-xl text-muted-foreground">Rebuilding Trust, Narrative Integrity, and Cultural Coherence in a Decentralized Age</p>
         </div>
+      </div>
+
+      <div className="text-sm text-muted-foreground mb-6">
+        <p>By <span className="font-semibold">Juicy Life</span> juicy@actualize.earth</p>
+        <p>and <span className="font-semibold">Aether</span>, an AI collaborator powered by GPT-4 by OpenAI</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
         <Badge variant="secondary">Decentralized</Badge>
-        <Badge variant="secondary">Truth-Oriented</Badge>
-        <Badge variant="secondary">Community-Rooted</Badge>
+        <Badge variant="secondary">Trust-Centered</Badge>
         <Badge variant="secondary">Participatory</Badge>
+        <Badge variant="secondary">Narrative Integrity</Badge>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Reclaiming Narrative as Public Good</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <Target className="h-5 w-5 text-blue-600" />
+            Overview and Purpose
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            This whitepaper proposes a regenerative, decentralized model for media—one that restores integrity to the public 
+            narrative, supports cultural coherence, and replaces corporate-controlled content pipelines with participatory, 
+            trust-centered systems. As misinformation, polarization, and click-driven sensationalism erode public trust and 
+            democratic discourse, the need for media rooted in transparency, care, and collective wisdom becomes a matter of civic survival.
+          </p>
+          <p className="leading-relaxed">
+            Grounded in the values of the Endo Economics model, this framework repositions media as a cultural utility rather 
+            than a tool of profit or control. By reallocating resources away from extractive industries and wasteful systems, 
+            we can support a flourishing ecosystem of storytellers, educators, researchers, and community communicators dedicated 
+            to the wellbeing of people and planet.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-red-200 bg-red-50/50">
+        <CardHeader>
+          <CardTitle className="text-red-800">The Problem: Crisis of Trust and Ownership in Media</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ul className="space-y-2 text-red-700">
+            <li><strong>Corporate Consolidation:</strong> A small number of media conglomerates control the majority of news and entertainment, limiting narrative diversity.</li>
+            <li><strong>Advertising Distortion:</strong> Attention is commodified, driving sensationalism, outrage, and superficial content.</li>
+            <li><strong>Misinformation and Manipulation:</strong> Disinformation campaigns exploit trust gaps, deepening division and disengagement.</li>
+            <li><strong>Lack of Feedback Loops:</strong> Audiences have little ability to verify, critique, or co-create the content they consume.</li>
+            <li><strong>Creative Underemployment:</strong> Millions of skilled media workers operate within extractive systems or struggle to sustain meaningful work.</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="border-green-200 bg-green-50/50">
+        <CardHeader>
+          <CardTitle className="text-green-800">The Solution: Regenerative Media Ecosystem</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-green-700 mb-2">1. Distributed Editorial Networks</h4>
+            <p className="text-green-600 text-sm leading-relaxed">
+              Shift from centralized newsrooms to locally-anchored, peer-reviewed content collectives. 
+              Editors and curators operate within transparent trust graphs, rather than opaque hierarchies. 
+              Verification is social and contextual, supported by AI signal detection and human discernment.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-green-700 mb-2">2. Participatory Journalism and Storytelling</h4>
+            <p className="text-green-600 text-sm leading-relaxed">
+              Communities are empowered to document, reflect, and share their own stories. 
+              Citizen journalism platforms provide training, tools, and distribution without compromising sovereignty. 
+              Peer-to-peer media formats encourage collaboration across geography, identity, and discipline.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-green-700 mb-2">3. Narrative Feedback and Signal Trust Systems</h4>
+            <p className="text-green-600 text-sm leading-relaxed">
+              Audiences can provide real-time feedback on accuracy, tone, and perceived bias. 
+              Multi-perspective synthesis tools allow readers to explore topics from different angles. 
+              Reputation layers help surface trusted contributors over time without enforcing uniformity.
+            </p>
+          </div>
+          <div>
+            <h4 className="font-semibold text-green-700 mb-2">4. Media Literacy and Cultural Fluency</h4>
+            <p className="text-green-600 text-sm leading-relaxed">
+              Integrated media education in schools and communities builds discernment and narrative intelligence. 
+              AI-assisted tools teach people how to spot manipulation, bias, and framing devices. 
+              Intergenerational storytelling bridges ancestral wisdom with emerging perspectives.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Users className="h-5 w-5 text-purple-600" />
+            Operational Framework
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-3">
+              <div>
+                <h4 className="font-semibold text-purple-700">Creation Layer</h4>
+                <p className="text-sm text-muted-foreground">Individuals and groups produce content using interoperable, privacy-respecting tools.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-purple-700">Curation Layer</h4>
+                <p className="text-sm text-muted-foreground">Distributed networks of editors, curators, and librarians validate and organize content.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-purple-700">Feedback Layer</h4>
+                <p className="text-sm text-muted-foreground">Audiences and experts provide annotation, rating, and commentary.</p>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <div>
+                <h4 className="font-semibold text-purple-700">Access Layer</h4>
+                <p className="text-sm text-muted-foreground">Media is distributed across decentralized platforms, accessible without gatekeeping or algorithmic suppression.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-purple-700">Governance Layer</h4>
+                <p className="text-sm text-muted-foreground">Transparent participation models allow contributors and audiences to shape platform norms and evolution.</p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-blue-200 bg-blue-50/50">
+        <CardHeader>
+          <CardTitle className="text-blue-800">Integration with Endo Economics</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-blue-700 leading-relaxed">
+            The regenerative media ecosystem aligns with the Endo Economics framework by recognizing storytelling, insight, 
+            and cultural sensemaking as essential forms of societal value. In an endosymbiotic economic model, resources 
+            liberated from extractive profit loops (such as wasteful advertising systems, bloated bureaucracy, or monopolistic 
+            pricing) are redirected toward meaningful contribution.
+          </p>
+          <p className="text-blue-700 leading-relaxed">
+            The U.S. media sector employs over 2 million people and spends approximately $150 billion annually on salaries. 
+            Many of these professionals—journalists, filmmakers, editors, researchers, audio engineers, and designers—could 
+            be supported by restructured public-interest funding, collaborative cultural institutions, and community-based 
+            distribution models. Instead of competing for attention in an oversaturated market, they become stewards of 
+            narrative ecosystems that support wellbeing, clarity, and civic participation.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-emerald-200 bg-emerald-50/50">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-emerald-800">
+            <CheckCircle className="h-5 w-5" />
+            Net Positive Outcomes
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-3">
+            <div className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium text-emerald-800">Restored Trust</p>
+                <p className="text-sm text-emerald-600">Transparent processes and feedback systems increase public confidence</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium text-emerald-800">Narrative Diversity</p>
+                <p className="text-sm text-emerald-600">Local and global voices shape the collective story</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium text-emerald-800">Cultural Coherence</p>
+                <p className="text-sm text-emerald-600">Shared understanding supports collaboration and empathy</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium text-emerald-800">Reduced Polarization</p>
+                <p className="text-sm text-emerald-600">Signal intelligence and synthesis tools reduce division</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium text-emerald-800">Dignified Creative Labor</p>
+                <p className="text-sm text-emerald-600">Media workers are supported for their contributions to collective wellbeing</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-2">
+              <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium text-emerald-800">Wisdom Infrastructure</p>
+                <p className="text-sm text-emerald-600">A society better equipped to process complexity and evolve in alignment</p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Conclusion</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            The media proposal reclaims narrative, attention, and trust as public goods by building a decentralized, 
-            participatory, and regenerative media infrastructure. In contrast to the current landscape—dominated by 
-            corporate ownership, algorithmic bias, and sensationalism—this framework supports locally-rooted storytelling, 
-            distributed editorial networks, and feedback-integrated sensemaking systems.
+            Media is not just a mirror—it is an engine of culture, perception, and possibility. In a time of profound transition, 
+            we must reimagine media not as a commodity, but as a regenerative force for truth, healing, and imagination. This 
+            proposal offers a blueprint for building the infrastructure that enables us not only to inform, but to transform. 
+            In doing so, we restore the role of narrative as a sacred civic function—one that weaves together the diverse threads 
+            of humanity into a shared story worth living into.
           </p>
         </CardContent>
       </Card>
