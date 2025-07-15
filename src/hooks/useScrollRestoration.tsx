@@ -6,12 +6,18 @@ export const useScrollRestoration = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Find the main scrollable element
-    const scrollElement = document.querySelector('main[data-scroll-container]') as HTMLElement;
+    // Try multiple selectors to find the scrollable element
+    const scrollElement = 
+      document.querySelector('main[data-scroll-container]') as HTMLElement ||
+      document.querySelector('main') as HTMLElement ||
+      document.documentElement;
     
-    if (!scrollElement) return;
-
-    // Scroll to top when route changes
-    scrollElement.scrollTop = 0;
+    if (scrollElement) {
+      // Force scroll to top immediately
+      scrollElement.scrollTop = 0;
+      
+      // Also try scrolling the window in case it's needed
+      window.scrollTo(0, 0);
+    }
   }, [location.pathname]);
 };
