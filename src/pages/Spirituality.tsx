@@ -10,11 +10,11 @@ const Spirituality = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Sacred Infrastructure</Badge>
-        <Badge variant="secondary">Pluralistic</Badge>
-        <Badge variant="secondary">Inner Development</Badge>
-        <Badge variant="secondary">Communal Ritual</Badge>
-        <Badge variant="secondary">Planetary Coherence</Badge>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Sacred Infrastructure</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Pluralistic</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Inner Development</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Communal Ritual</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Planetary Coherence</Badge>
       </div>
 
       <Card>
