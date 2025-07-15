@@ -1,19 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Radio, Users, Shield, Target, CheckCircle } from "lucide-react";
-
 const Media = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-foreground">Regenerative Media</h1>
         <p className="text-xl text-muted-foreground">Rebuilding Trust, Narrative Integrity, and Cultural Coherence in a Decentralized Age</p>
       </div>
 
-      <div className="text-sm text-muted-foreground mb-6">
-        <p>By <span className="font-semibold">Juicy Life</span> juicy@actualize.earth</p>
-        <p>and <span className="font-semibold">Aether</span>, an AI collaborator powered by GPT-4 by OpenAI</p>
-      </div>
+      
 
       <div className="flex flex-wrap gap-2 mb-6">
         <Badge variant="secondary">Decentralized</Badge>
@@ -227,8 +222,6 @@ const Media = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Media;
