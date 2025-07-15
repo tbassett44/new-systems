@@ -1,195 +1,210 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Sparkles } from "lucide-react";
 
 const Spirituality = () => {
   return (
     <div className="space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">Spirituality</h1>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Sacred practices and wisdom traditions that support individual and collective transformation
-        </p>
+      <div className="flex items-center gap-4 mb-6">
+        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+          <Sparkles className="h-6 w-6 text-primary" />
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold">Regenerative Spirituality</h1>
+          <p className="text-xl text-muted-foreground">Cultivating Sacred Infrastructure for Inner Development, Communal Ritual, and Planetary Coherence</p>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-6">
+        <Badge variant="secondary">Sacred Infrastructure</Badge>
+        <Badge variant="secondary">Pluralistic</Badge>
+        <Badge variant="secondary">Inner Development</Badge>
+        <Badge variant="secondary">Communal Ritual</Badge>
+        <Badge variant="secondary">Planetary Coherence</Badge>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Abstract</CardTitle>
+          <CardTitle className="text-2xl">By Juicy Life & Aether</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Spiritual practices and wisdom traditions offer essential resources for navigating 
-            complexity, finding meaning, and cultivating the inner transformation necessary for 
-            external change. This paper explores how diverse spiritual frameworks can support 
-            both individual development and collective evolution toward more compassionate and 
-            sustainable ways of living.
+        <CardContent>
+          <p className="text-sm text-muted-foreground mb-4">
+            juicy@actualize.earth | An AI collaborator powered by GPT-4 by OpenAI
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>Introduction</CardTitle>
+          <CardTitle>Overview and Purpose</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                In a world grappling with unprecedented challenges, the integration of spirituality into our daily lives and collective endeavors is not just desirable but essential. Spirituality, in its broadest sense, encompasses the search for meaning, purpose, and connection to something larger than oneself. It is a journey of self-discovery, ethical development, and the cultivation of inner peace. This paper explores the role of spirituality in fostering individual and collective transformation, offering insights into how sacred practices and wisdom traditions can guide us toward a more compassionate, sustainable, and interconnected world.
-            </p>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            This whitepaper proposes a regenerative approach to spirituality as a vital societal function—one that nourishes inner development, honors the sacredness of life, and restores shared meaning across cultures and communities. Spirituality, often relegated to private belief or institutional religion, is reframed here as a collective capacity for coherence, reverence, and conscious evolution. In a time of ecological crisis, disconnection, and cultural fragmentation, spiritual infrastructure becomes essential: not as dogma, but as a wellspring of courage, healing, and imagination.
+          </p>
+          <p className="leading-relaxed">
+            Rather than promoting a single belief system, this framework supports pluralistic pathways to the sacred—integrating contemplative practice, seasonal ritual, interfaith dialogue, and spiritual literacy into public life. When rooted in inclusivity, humility, and lived experience, regenerative spirituality becomes a stabilizing and activating force in the transformation of self and society.
+          </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>The Essence of Spirituality</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+            The Problem: Disconnection from Meaning and Sacred Rhythm
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                Spirituality is often misunderstood as solely belonging to organized religion. However, its essence transcends religious boundaries, encompassing a wide range of practices and beliefs that nurture the human spirit. Key components of spirituality include:
-            </p>
-            <ol>
-                <li>
-                    <strong>Meaning and Purpose:</strong> The quest to understand one's place in the universe and to find meaning in life's experiences.
-                </li>
-                <li>
-                    <strong>Connection:</strong> Building relationships with oneself, others, nature, and the divine or ultimate reality.
-                </li>
-                <li>
-                    <strong>Ethics and Values:</strong> Developing a moral compass that guides actions and decisions toward the greater good.
-                </li>
-                <li>
-                    <strong>Inner Peace:</strong> Cultivating a sense of calm, contentment, and resilience in the face of life's challenges.
-                </li>
-                <li>
-                    <strong>Transformation:</strong> Engaging in practices that foster personal growth, healing, and the realization of one's full potential.
-                </li>
-            </ol>
+        <CardContent>
+          <ul className="space-y-3">
+            <li><strong>Spiritual Isolation:</strong> Many lack a sense of connection to source, purpose, or sacred community.</li>
+            <li><strong>Institutional Distrust:</strong> Organized religions often fail to meet modern spiritual needs, while retaining moral and cultural authority.</li>
+            <li><strong>Ritual Deficiency:</strong> Societies lack shared ceremonies to process grief, mark transitions, or celebrate life meaningfully.</li>
+            <li><strong>Cultural Appropriation:</strong> Spiritual wisdom is often extracted and commodified without respect for its roots.</li>
+            <li><strong>Neglect of Inner Life:</strong> Fast-paced culture rarely supports stillness, reflection, or non-material growth.</li>
+          </ul>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>Sacred Practices and Wisdom Traditions</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            The Solution: Regenerative Spiritual Infrastructure
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                Sacred practices and wisdom traditions offer time-tested methods for cultivating spirituality. These practices can be adapted to suit individual needs and preferences, providing a framework for personal and collective transformation. Some examples include:
-            </p>
-            <ol>
-                <li>
-                    <strong>Meditation:</strong> A practice of focused attention that quiets the mind, reduces stress, and enhances self-awareness.
-                </li>
-                <li>
-                    <strong>Mindfulness:</strong> Paying attention to the present moment without judgment, fostering a deeper connection to one's thoughts, feelings, and surroundings.
-                </li>
-                <li>
-                    <strong>Prayer:</strong> Communicating with the divine or ultimate reality, expressing gratitude, seeking guidance, and offering compassion.
-                </li>
-                <li>
-                    <strong>Yoga:</strong> A physical, mental, and spiritual practice that integrates movement, breath, and meditation to promote holistic wellbeing.
-                </li>
-                <li>
-                    <strong>Nature Connection:</strong> Spending time in nature, observing its beauty, and recognizing our interconnectedness with all living beings.
-                </li>
-                <li>
-                    <strong>Rituals and Ceremonies:</strong> Engaging in symbolic actions that mark significant life events, honor traditions, and create a sense of community.
-                </li>
-                <li>
-                    <strong>Study of Wisdom Texts:</strong> Reading and reflecting on sacred texts, philosophical works, and spiritual teachings from various traditions.
-                </li>
-                <li>
-                    <strong>Service and Compassion:</strong> Engaging in acts of kindness, generosity, and service to others, recognizing our shared humanity.
-                </li>
-            </ol>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-lg mb-2">1. Public Ritual and Sacred Spaces</h4>
+            <ul className="space-y-2 ml-4">
+              <li>• Community-accessible spaces for seasonal celebrations, rites of passage, and ceremonial gatherings.</li>
+              <li>• Designated sacred spaces in urban, rural, and natural environments for reflection, meditation, and remembrance.</li>
+              <li>• Ritual design education supports local stewards in creating inclusive, resonant practices.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg mb-2">2. Interfaith and Interspiritual Councils</h4>
+            <ul className="space-y-2 ml-4">
+              <li>• Pluralistic networks of elders, spiritual leaders, and mystics from diverse paths.</li>
+              <li>• Forums for dialogue, mutual learning, and collaborative blessing of major civic moments.</li>
+              <li>• Guidance on ethical spiritual practice, lineage respect, and cultural transmission.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg mb-2">3. Inner Development Frameworks</h4>
+            <ul className="space-y-2 ml-4">
+              <li>• Programs to cultivate presence, compassion, awareness, resilience, and forgiveness.</li>
+              <li>• Accessible contemplative tools: meditation, breathwork, prayer, silence, embodiment.</li>
+              <li>• Integration into schools, healthcare, workplaces, and justice systems.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-semibold text-lg mb-2">4. Spiritual Literacy and Commons</h4>
+            <ul className="space-y-2 ml-4">
+              <li>• Open-access libraries of global spiritual practices, cosmologies, and wisdom teachings.</li>
+              <li>• Storytelling projects that preserve and share ancestral spiritual knowledge.</li>
+              <li>• AI-assisted tools to help individuals find aligned practices and paths.</li>
+            </ul>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>Spirituality and Individual Transformation</CardTitle>
+          <CardTitle>Operational Framework</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                Spirituality plays a crucial role in individual transformation, offering tools and insights for personal growth, healing, and self-realization. By engaging in spiritual practices, individuals can:
-            </p>
-            <ol>
-                <li>
-                    <strong>Develop Self-Awareness:</strong> Gain a deeper understanding of one's thoughts, emotions, and behaviors, fostering self-acceptance and authenticity.
-                </li>
-                <li>
-                    <strong>Cultivate Emotional Resilience:</strong> Learn to navigate difficult emotions, manage stress, and bounce back from adversity with greater ease.
-                </li>
-                <li>
-                    <strong>Enhance Empathy and Compassion:</strong> Develop a greater capacity for understanding and caring for others, fostering harmonious relationships.
-                </li>
-                <li>
-                    <strong>Find Meaning and Purpose:</strong> Discover one's unique gifts and talents, aligning them with a sense of purpose that contributes to the greater good.
-                </li>
-                <li>
-                    <strong>Live with Integrity:</strong> Align one's actions with one's values, fostering a sense of wholeness and authenticity.
-                </li>
-            </ol>
+        <CardContent className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <h4 className="font-semibold mb-2">Practice Layer</h4>
+              <p className="text-sm text-muted-foreground">Individuals engage with daily and seasonal spiritual practices in diverse forms.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Community Layer</h4>
+              <p className="text-sm text-muted-foreground">Shared rituals and gatherings foster local coherence and sacred kinship.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Leadership Layer</h4>
+              <p className="text-sm text-muted-foreground">Spiritual elders, facilitators, and lineage holders are supported as public guides.</p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-2">Commons Layer</h4>
+              <p className="text-sm text-muted-foreground">Digital and physical infrastructure supports open, ethical access to wisdom traditions.</p>
+            </div>
+            <div className="md:col-span-2">
+              <h4 className="font-semibold mb-2">Integration Layer</h4>
+              <p className="text-sm text-muted-foreground">Spiritual development is recognized and woven into health, justice, governance, and education.</p>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>Spirituality and Collective Transformation</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+            Integration with Endo Economics
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                Spirituality is not just a personal journey but also a catalyst for collective transformation. By integrating spiritual principles into our communities and institutions, we can create a more just, sustainable, and interconnected world. Key aspects of spirituality in collective transformation include:
-            </p>
-            <ol>
-                <li>
-                    <strong>Ethical Leadership:</strong> Leaders who embody spiritual values such as compassion, integrity, and service can inspire positive change and create a culture of trust and collaboration.
-                </li>
-                <li>
-                    <strong>Community Building:</strong> Spiritual practices such as meditation, mindfulness, and shared rituals can foster a sense of belonging, connection, and mutual support within communities.
-                </li>
-                <li>
-                    <strong>Social Justice:</strong> Spirituality can inspire action to address systemic injustices, promote equality, and advocate for the rights of marginalized communities.
-                </li>
-                <li>
-                    <strong>Environmental Stewardship:</strong> Recognizing our interconnectedness with nature can motivate us to protect the environment, conserve resources, and promote sustainable practices.
-                </li>
-                <li>
-                    <strong>Global Interconnectedness:</strong> Spirituality can foster a sense of global citizenship, recognizing our shared humanity and the need for collaboration to address global challenges.
-                </li>
-            </ol>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            In the Endo Economics model, inner transformation and spiritual coherence are seen as foundational to collective wellbeing. Spiritual labor—holding space, blessing transitions, transmitting wisdom—is honored as vital contribution, not invisible or unpaid emotional work. Rather than being monetized through commercial spiritual industries, regenerative spiritual infrastructure is supported through rebalanced resource flows, redirected from extractive systems.
+          </p>
+          <p className="leading-relaxed">
+            Elders, ritualists, contemplative teachers, and sacred space stewards are resourced within the community economy, allowing them to serve without distortion or burnout. Ceremonial work, grief tending, and initiatory pathways are recognized as necessary infrastructure for resilient societies—equally as vital as healthcare, education, or governance.
+          </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>Challenges and Considerations</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+            Net Positive Outcomes
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                While spirituality offers immense potential for individual and collective transformation, it is essential to address potential challenges and considerations:
-            </p>
-            <ol>
-                <li>
-                    <strong>Avoiding Dogmatism:</strong> Spirituality should be approached with an open mind, avoiding rigid beliefs and dogmatic interpretations that can lead to exclusion and conflict.
-                </li>
-                <li>
-                    <strong>Respecting Diversity:</strong> Recognizing and honoring the diversity of spiritual paths and traditions, fostering interfaith dialogue and collaboration.
-                </li>
-                <li>
-                    <strong>Addressing Spiritual Bypassing:</strong> Avoiding the use of spiritual concepts to bypass or avoid dealing with difficult emotions, personal issues, or social injustices.
-                </li>
-                <li>
-                    <strong>Integrating Spirituality with Action:</strong> Combining spiritual practices with concrete actions to address real-world problems, ensuring that spirituality is not just an abstract concept but a force for positive change.
-                </li>
-            </ol>
+        <CardContent>
+          <div className="grid gap-3">
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✅</span>
+              <span><strong>Spiritual Inclusion:</strong> Diverse traditions and seekers are honored without hierarchy or coercion</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✅</span>
+              <span><strong>Meaning-Making:</strong> People reconnect to purpose, mystery, and sacred rhythm</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✅</span>
+              <span><strong>Community Cohesion:</strong> Ritual and shared spiritual practice strengthen social bonds</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✅</span>
+              <span><strong>Healing Pathways:</strong> Trauma, grief, and transition are held in sacred space</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✅</span>
+              <span><strong>Inner Resilience:</strong> Individuals cultivate practices to navigate complexity and deepen presence</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-green-600">✅</span>
+              <span><strong>Ethical Rooting:</strong> Wisdom traditions offer moral guidance in turbulent times</span>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-            <CardTitle>Conclusion</CardTitle>
+          <CardTitle>Conclusion</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-            <p>
-                Spirituality is a vital resource for navigating the complexities of the modern world and fostering individual and collective transformation. By integrating sacred practices and wisdom traditions into our daily lives, communities, and institutions, we can cultivate a more compassionate, sustainable, and interconnected world. As we embark on this journey, let us embrace the diversity of spiritual paths, honor the wisdom of ancient traditions, and work together to create a future where spirituality guides us toward a more just and harmonious world for all.
-            </p>
+        <CardContent>
+          <p className="leading-relaxed">
+            Regenerative spirituality is not a return to religion—it is a reawakening of humanity's sacred intelligence. In a time of profound transformation, we must cultivate not only new systems and structures, but new myths, rituals, and inner capacities. This proposal invites a reclamation of the sacred—not as belief, but as belonging; not as doctrine, but as devotion to life. By weaving spiritual practice into the public and planetary sphere, we can meet the future not only with strategy, but with soul.
+          </p>
         </CardContent>
       </Card>
     </div>

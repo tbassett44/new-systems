@@ -1,116 +1,83 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Skull, AlertTriangle, CheckCircle } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Death = () => {
   return (
     <div className="space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">Death and Dignity</h1>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Honoring the natural cycles of life and death with dignity, meaning, and community support
-        </p>
+      <div className="flex items-center gap-4 mb-6">
+        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+          <Skull className="h-6 w-6 text-primary" />
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold text-primary">Death and Dignity</h1>
+          <p className="text-xl text-muted-foreground">Reclaiming a Conscious Relationship with Life's Final Passage</p>
+        </div>
+      </div>
+
+      <div className="text-center space-y-2 mb-8">
+        <p className="text-sm text-muted-foreground">By</p>
+        <p className="font-semibold">Juicy Life</p>
+        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
+        <p className="text-sm text-muted-foreground">and</p>
+        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-6">
+        <Badge variant="secondary">Conscious Dying</Badge>
+        <Badge variant="secondary">Dignity</Badge>
+        <Badge variant="secondary">Self-Sovereignty</Badge>
+        <Badge variant="secondary">Sacred Transition</Badge>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Abstract</CardTitle>
+          <CardTitle className="text-primary">Overview and Purpose</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Modern societies often deny or medicalize death, missing opportunities for meaning-making, 
-            growth, and community connection. This paper explores frameworks for honoring death 
-            and dying as natural parts of life, supporting dignified transitions, and creating 
-            practices that help communities process grief and find meaning in loss.
+        <CardContent className="prose max-w-none">
+          <p className="leading-relaxed">
+            This whitepaper proposes a holistic reframing of how society approaches death. Rather than treating it as a failure or medical emergency to be avoided at all costs, this framework acknowledges death as a sacred and natural process that, when consciously approached, can become a deeply meaningful and empowering transition. It seeks to restore dignity, autonomy, and presence to the final phase of life through cultural renewal, legal reform, and the integration of spiritual and community-based practices.
+          </p>
+          <p className="leading-relaxed">
+            This document outlines pathways for supporting conscious dying, including legal rights to assisted transitions, expanded palliative care, the role of death doulas, and the reintegration of death into communal and spiritual life. It invites systems-level redesign around how we die—one that honors individual sovereignty, reduces suffering, and reclaims death as a vital dimension of a regenerative culture.
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Introduction</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-destructive">
+            <AlertTriangle className="h-5 w-5" />
+            The Problem: Disempowered and Isolated Death
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Death is an inevitable part of life, yet modern societies often shy away from discussing it openly.
-            In many cultures, death has become medicalized and institutionalized, removing it from the
-            context of community and family. This paper aims to explore alternative approaches to death and
-            dying that honor the natural cycles of life, provide dignity and meaning to the dying process, and
-            offer support to individuals and communities as they navigate loss and grief.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Historical and Cultural Perspectives on Death</CardTitle>
-        </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Throughout history and across cultures, death has been viewed and approached in diverse ways.
-            Many indigenous cultures see death as a natural transition, a sacred journey, and an opportunity
-            for spiritual growth. Rituals, ceremonies, and community involvement play a central role in
-            honoring the deceased and supporting the grieving process.
-          </p>
-          <p>
-            In contrast, Western societies have often adopted a more clinical and detached approach to death,
-            focusing on medical interventions and prolonging life at all costs. This can lead to a sense of
-            alienation and disconnection from the natural rhythms of life and death.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>The Medicalization of Death</CardTitle>
-        </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            The medicalization of death has transformed the dying process into a medical event, often taking
-            place in hospitals or nursing homes under the care of medical professionals. While medical
-            interventions can be valuable in managing pain and symptoms, they can also overshadow the
-            emotional, spiritual, and social aspects of dying.
-          </p>
-          <p>
-            Critics argue that the medicalization of death can lead to over-treatment, unnecessary suffering,
-            and a loss of autonomy for the dying individual. It can also create a sense of distance and
-            disconnection between the dying person and their loved ones.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Alternative Approaches to Death and Dying</CardTitle>
-        </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            In response to the limitations of the medicalized approach to death, alternative models have
-            emerged that prioritize holistic care, personal autonomy, and community involvement. These
-            approaches include:
-          </p>
-          <ul className="list-disc pl-6">
-            <li>
-              <b>Hospice Care:</b> Hospice provides compassionate care for individuals with terminal illnesses,
-              focusing on pain management, emotional support, and spiritual guidance. Hospice care can take
-              place in hospitals, nursing homes, or the individual's own home.
+        <CardContent>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Medicalization of Death:</strong> In modern systems, death is often overly medicalized, hidden behind hospital curtains, stripped of ritual and meaning.
+              </div>
             </li>
-            <li>
-              <b>Palliative Care:</b> Palliative care aims to improve the quality of life for individuals with
-              serious illnesses by addressing their physical, emotional, and spiritual needs. Palliative care
-              can be provided at any stage of illness, not just at the end of life.
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Lack of Autonomy:</strong> Many people face death without legal agency over their end-of-life decisions, including the right to consciously transition.
+              </div>
             </li>
-            <li>
-              <b>Home Funerals:</b> Home funerals allow families to care for their deceased loved ones at home,
-              preparing the body, conducting memorial services, and handling burial or cremation arrangements
-              themselves.
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Fear and Avoidance:</strong> Cultural taboos around death foster denial, spiritual disconnection, and unprocessed grief.
+              </div>
             </li>
-            <li>
-              <b>Death Doulas:</b> Death doulas provide emotional, spiritual, and practical support to dying
-              individuals and their families, helping them navigate the end-of-life process with dignity and
-              grace.
-            </li>
-            <li>
-              <b>Green Burials:</b> Green burials minimize environmental impact by using biodegradable caskets,
-              avoiding embalming, and burying the body in a natural setting.
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Loneliness in Dying:</strong> Individuals often die in isolation, without communal, emotional, or spiritual support.
+              </div>
             </li>
           </ul>
         </CardContent>
@@ -118,50 +85,127 @@ const Death = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>The Role of Community in Death and Grief</CardTitle>
+          <CardTitle className="text-primary">The Solution: Conscious Death as a Regenerative Practice</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            In many traditional cultures, death is a community event, with family, friends, and neighbors
-            coming together to support the dying person and their loved ones. Community involvement can
-            provide emotional comfort, practical assistance, and a sense of shared purpose during a difficult
-            time.
-          </p>
-          <p>
-            In modern societies, community support for death and grief has often diminished, leaving individuals
-            feeling isolated and alone. Rebuilding community connections and creating spaces for shared mourning
-            can help individuals process grief and find meaning in loss.
-          </p>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
+            <div className="space-y-4">
+              <div className="border-l-4 border-primary/30 pl-4">
+                <h5 className="font-medium text-primary">Legal Recognition of End-of-Life Autonomy</h5>
+                <p className="text-sm text-muted-foreground">
+                  Expand Death with Dignity laws to ensure the right to medically or spiritually supported self-assisted transition. Create protocols to safeguard informed consent, mental clarity, and ethical review.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-300 pl-4">
+                <h5 className="font-medium text-blue-700">Integration of Death Doulas and Spiritual Midwives</h5>
+                <p className="text-sm text-muted-foreground">
+                  Support training and certification programs for non-medical end-of-life companions. Incorporate spiritual, emotional, and ritual practices that honor each person's beliefs and lineage.
+                </p>
+              </div>
+              <div className="border-l-4 border-green-300 pl-4">
+                <h5 className="font-medium text-green-700">Community-Based Death Literacy</h5>
+                <p className="text-sm text-muted-foreground">
+                  Develop public education programs that normalize conversations about mortality. Encourage communal rituals, storytelling, and grief-sharing as part of civic life.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-300 pl-4">
+                <h5 className="font-medium text-purple-700">Expanded Palliative and Hospice Care</h5>
+                <p className="text-sm text-muted-foreground">
+                  Ensure accessible, high-quality end-of-life care that minimizes suffering. Include emotional and spiritual care alongside physical comfort.
+                </p>
+              </div>
+              <div className="border-l-4 border-orange-300 pl-4">
+                <h5 className="font-medium text-orange-700">Digital and Legal Infrastructure for End-of-Life Intentions</h5>
+                <p className="text-sm text-muted-foreground">
+                  Create sovereign digital identity tools to document and share end-of-life wishes. Use decentralized platforms for trusted witnesses and legal validation.
+                </p>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Creating Meaning and Legacy</CardTitle>
+          <CardTitle className="text-primary">Operational Framework</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Death can be an opportunity to reflect on one's life, values, and contributions to the world.
-            Creating a legacy can provide a sense of purpose and meaning, helping individuals feel that their
-            lives have had a lasting impact.
-          </p>
-          <p>
-            Legacy-building activities can include writing a memoir, creating a work of art, establishing a
-            scholarship fund, or simply sharing stories and memories with loved ones.
-          </p>
+        <CardContent>
+          <div className="grid gap-4">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Policy Layer</h4>
+              <p className="text-sm">Legal reforms to broaden assisted dying rights and protections</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Healthcare Layer</h4>
+              <p className="text-sm">Expansion of integrative palliative and hospice programs</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Community Layer</h4>
+              <p className="text-sm">Development of local rituals, education, and support networks</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Spiritual Layer</h4>
+              <p className="text-sm">Honor lineage-informed practices and multi-faith spiritual companionship</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Digital Layer</h4>
+              <p className="text-sm">Tools for securely recording, verifying, and honoring end-of-life directives</p>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Conclusion</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-green-700">
+            <CheckCircle className="h-5 w-5" />
+            Net Positive Outcomes
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Death is an integral part of life, and by embracing it with openness, compassion, and community
-            support, we can create more meaningful and dignified end-of-life experiences. By exploring
-            alternative approaches to death and dying, we can reclaim our autonomy, honor the natural cycles
-            of life, and find solace in the face of loss.
+        <CardContent>
+          <div className="grid gap-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Empowered Individuals:</strong> People face death with clarity, agency, and peace
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Reduced Suffering:</strong> Less traumatic or prolonged dying experiences
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Grief Integration:</strong> Healthier individual and communal grieving processes
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Cultural Maturity:</strong> Reconnection to ancestral wisdom and mortality awareness
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Systemic Alignment:</strong> Medical, legal, and spiritual systems aligned in service of dignity
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Conclusion</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed">
+            A regenerative society does not avoid death—it honors it. Conscious dying is a doorway to deeper meaning, compassion, and presence in life. By embracing mortality as a sacred transition, we free ourselves from the fear that drives so much disconnection and dysfunction. This proposal calls for a cultural and structural evolution that restores sovereignty, beauty, and dignity to our final moments—and to those who remain.
           </p>
         </CardContent>
       </Card>

@@ -1,106 +1,280 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Scale, CheckCircle, AlertTriangle, Users, Heart, Shield } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Justice = () => {
   return (
     <div className="space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">Justice</h1>
-        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Restorative justice systems that heal communities and address root causes of harm
-        </p>
+      <div className="flex items-center gap-4 mb-6">
+        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+          <Scale className="h-6 w-6 text-primary" />
+        </div>
+        <div>
+          <h1 className="text-4xl font-bold text-primary">Regenerative Justice</h1>
+          <p className="text-xl text-muted-foreground">Evolving the Legal System Through Dignity, Healing, and Community Accountability</p>
+        </div>
+      </div>
+
+      <div className="text-center space-y-2 mb-8">
+        <p className="text-sm text-muted-foreground">By</p>
+        <p className="font-semibold">Juicy Life</p>
+        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
+        <p className="text-sm text-muted-foreground">and</p>
+        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-6">
+        <Badge variant="secondary">Restorative</Badge>
+        <Badge variant="secondary">Transformative</Badge>
+        <Badge variant="secondary">Community-Centered</Badge>
+        <Badge variant="secondary">Healing-Based</Badge>
+        <Badge variant="secondary">Dignity-Focused</Badge>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Abstract</CardTitle>
+          <CardTitle className="text-primary">Overview and Purpose</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Punitive justice systems perpetuate cycles of harm while failing to address root 
-            causes or heal communities. This paper explores restorative justice frameworks 
-            that focus on healing, accountability, and systemic transformation to create 
-            truly just and regenerative communities.
+        <CardContent className="prose max-w-none">
+          <p className="leading-relaxed">
+            This whitepaper outlines a transformative framework for reimagining justice systems in alignment with human dignity, rehabilitation, and systemic coherence. Moving beyond punitive, carceral models rooted in isolation and punishment, this proposal invites a regenerative approach—where justice becomes a vehicle for personal transformation, communal healing, and societal learning.
+          </p>
+          <p className="leading-relaxed">
+            Drawing inspiration from restorative and transformative justice traditions, as well as emerging technologies in AI and decentralized governance, this model supports a shift from retribution to restoration. By embedding feedback loops, relational accountability, and resourcing pathways into the justice process, individuals and communities can move from cycles of harm to cycles of growth.
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Introduction</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-destructive">
+            <AlertTriangle className="h-5 w-5" />
+            The Problem: Punitive Systems and Cycles of Harm
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            The current justice system in many societies is primarily punitive, focusing on punishment rather than rehabilitation or addressing the root causes of crime. This approach often leads to high rates of recidivism, disproportionately affects marginalized communities, and fails to provide healing for victims and offenders alike. Restorative justice offers an alternative framework that prioritizes repairing harm, fostering accountability, and promoting reconciliation.
+        <CardContent>
+          <ul className="space-y-3">
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Mass Incarceration:</strong> The U.S. incarcerates over 2 million people, often for nonviolent offenses, with high rates of recidivism.
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Racial and Economic Injustice:</strong> Marginalized communities bear the brunt of systemic bias, over-policing, and under-resourcing.
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Lack of Rehabilitation:</strong> Most prisons are not designed to support healing, education, or reintegration.
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Disconnected Systems:</strong> Legal processes are slow, adversarial, and alienating for victims, offenders, and communities alike.
+              </div>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">The Solution: Regenerative Justice Infrastructure</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
+            <div className="space-y-4">
+              <div className="border-l-4 border-primary/30 pl-4">
+                <h5 className="font-medium text-primary">Community Accountability Circles</h5>
+                <p className="text-sm text-muted-foreground">
+                  Local groups trained in restorative practices facilitate dialogues between affected parties. Focus on acknowledgment of harm, repair, reintegration, and shared understanding.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-300 pl-4">
+                <h5 className="font-medium text-blue-700">Regenerative Rehabilitation Centers</h5>
+                <p className="text-sm text-muted-foreground">
+                  Replace prisons with healing-based campuses offering education, vocational training, therapy, and rites of passage. Residents are supported in trauma healing and skill-building.
+                </p>
+              </div>
+              <div className="border-l-4 border-green-300 pl-4">
+                <h5 className="font-medium text-green-700">Decentralized Legal Support Systems</h5>
+                <p className="text-sm text-muted-foreground">
+                  Open-source platforms offer access to legal aid, peer-to-peer mediation, and reputation-informed conflict resolution with AI-supported equitable case analysis.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-300 pl-4">
+                <h5 className="font-medium text-purple-700">Sentencing Transformation Framework</h5>
+                <p className="text-sm text-muted-foreground">
+                  Shift sentencing models from punitive timeframes to outcome-based regeneration, with accountability tied to personal and social growth.
+                </p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Operational Framework</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Governance Layer</h4>
+              <p className="text-sm">Participatory legal councils and restorative boards guide justice procedures</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Tech Layer</h4>
+              <p className="text-sm">Platforms for decentralized mediation, legal access, and regenerative progress tracking</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Education Layer</h4>
+              <p className="text-sm">Training in restorative justice, trauma healing, conflict transformation, and civic responsibility</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Monitoring Layer</h4>
+              <p className="text-sm">Non-punitive feedback loops for measuring reintegration success, community impact, and healing outcomes</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Integration with Broader Systems</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed mb-4">
+            This justice model is designed to interface with other sectors of regenerative society:
           </p>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>With Education:</strong> Justice-involved individuals are offered personalized learning journeys
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>With Wellbeing Systems:</strong> Psychological, emotional, and relational care are core to every stage of the process
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>With Endo Economics:</strong> Resources flow to systems that reduce harm, regenerate lives, and increase social coherence
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>With Digital Sovereignty:</strong> Individuals retain privacy and dignity through encrypted, self-sovereign records
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Key Principles of Restorative Justice</CardTitle>
+          <CardTitle className="text-primary">Estimated Project Costs (per 100 individuals served annually)</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <ul>
-            <li><strong>Focus on Harm:</strong> Restorative justice begins by identifying the harm caused by an offense and understanding the needs of those affected.</li>
-            <li><strong>Involvement of Stakeholders:</strong> It emphasizes the active participation of victims, offenders, and community members in the justice process.</li>
-            <li><strong>Accountability:</strong> Offenders are encouraged to take responsibility for their actions and make amends for the harm they have caused.</li>
-            <li><strong>Repairing Harm:</strong> The goal is to repair the harm to the extent possible through restitution, community service, or other restorative measures.</li>
-            <li><strong>Reintegration:</strong> Restorative justice seeks to reintegrate offenders back into the community as productive and law-abiding members.</li>
-          </ul>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Community Accountability Circle Programs</h4>
+              <p className="text-sm text-muted-foreground">$150,000–$250,000 including training, facilitation, and coordination</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Regenerative Rehabilitation Centers</h4>
+              <p className="text-sm text-muted-foreground">$2M–$5M initial buildout + $35,000–$60,000 per resident annually</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Legal Access and Mediation Platforms</h4>
+              <p className="text-sm text-muted-foreground">$500,000–$1.5M for initial development + $100,000/year for community deployment and support</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Restorative Training for Police and Legal Professionals</h4>
+              <p className="text-sm text-muted-foreground">$5,000–$15,000 per cohort including curriculum and mentorship</p>
+            </div>
+          </div>
+          <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
+            <p className="text-sm text-green-800">
+              <strong>Note:</strong> These costs are dramatically lower than traditional incarceration (average $45,000–$80,000/year per prisoner) and yield significantly higher social returns in reduced recidivism, increased public trust, and communal resilience.
+            </p>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Restorative Justice Practices</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-green-700">
+            <CheckCircle className="h-5 w-5" />
+            Net Positive Outcomes
+          </CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <ul>
-            <li><strong>Victim-Offender Mediation:</strong> A facilitated dialogue between the victim and offender to discuss the harm caused and explore ways to repair it.</li>
-            <li><strong>Community Conferencing:</strong> A meeting involving victims, offenders, their families, and community members to address the harm and develop a plan for repair.</li>
-            <li><strong>Sentencing Circles:</strong> A collaborative process in which community members participate in determining appropriate sentences for offenders.</li>
-            <li><strong>Restitution:</strong> Offenders provide compensation to victims for their losses or damages.</li>
-            <li><strong>Community Service:</strong> Offenders perform unpaid work to benefit the community and repair the harm they have caused.</li>
-          </ul>
+        <CardContent>
+          <div className="grid gap-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Healing-Centered Systems:</strong> Justice processes that restore dignity and promote personal growth
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Reduced Recidivism:</strong> Empowered reintegration leads to lower rates of reoffense
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Community Resilience:</strong> Local accountability strengthens trust and cohesion
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Economic Savings:</strong> Lower long-term costs and greater ROI than incarceration
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Systemic Equity:</strong> Culturally responsive and bias-aware processes uplift marginalized voices
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Interoperability:</strong> Integration with education, wellbeing, and governance infrastructures
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Benefits of Restorative Justice</CardTitle>
+          <CardTitle className="text-primary">Conclusion</CardTitle>
         </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <ul>
-            <li><strong>Increased Victim Satisfaction:</strong> Victims often report higher levels of satisfaction with restorative justice processes compared to traditional court proceedings.</li>
-            <li><strong>Reduced Recidivism:</strong> Studies have shown that restorative justice can be more effective than traditional punishment in reducing reoffending rates.</li>
-            <li><strong>Cost Savings:</strong> Restorative justice programs can be less expensive than incarceration and other forms of punishment.</li>
-            <li><strong>Community Healing:</strong> Restorative justice promotes healing and reconciliation within communities affected by crime.</li>
-            <li><strong>Empowerment:</strong> It empowers victims and offenders to actively participate in the justice process and shape the outcome.</li>
-          </ul>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Challenges and Considerations</CardTitle>
-        </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <ul>
-            <li><strong>Implementation Challenges:</strong> Implementing restorative justice requires a shift in mindset and resources from traditional punitive approaches.</li>
-            <li><strong>Suitability:</strong> Restorative justice may not be appropriate for all types of offenses or offenders, particularly in cases involving serious violence or unrepentant offenders.</li>
-            <li><strong>Power Imbalances:</strong> It is important to address power imbalances between victims and offenders to ensure that restorative justice processes are fair and equitable.</li>
-            <li><strong>Cultural Sensitivity:</strong> Restorative justice practices should be culturally sensitive and adapted to the specific needs and values of diverse communities.</li>
-          </ul>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Conclusion</CardTitle>
-        </CardHeader>
-        <CardContent className="prose prose-gray max-w-none">
-          <p>
-            Restorative justice offers a promising alternative to traditional punitive approaches, with the potential to reduce recidivism, increase victim satisfaction, and promote community healing. By focusing on repairing harm, fostering accountability, and empowering stakeholders, restorative justice can create more just and regenerative communities.
+        <CardContent>
+          <p className="leading-relaxed">
+            Justice is not merely the enforcement of rules—it is the embodiment of care, accountability, and evolution within a community. This regenerative justice framework offers a clear path forward: one that replaces punishment with healing, alienation with belonging, and rigidity with responsiveness.
+          </p>
+          <Separator className="my-4" />
+          <p className="leading-relaxed font-medium">
+            It reclaims the legal system as a vital organ of societal transformation, capable of not only addressing harm, but of midwifing a culture rooted in compassion, wisdom, and shared responsibility.
           </p>
         </CardContent>
       </Card>
