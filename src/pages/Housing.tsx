@@ -1,6 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, AlertTriangle, Home, Users, Heart, Tree2 } from "lucide-react";
+import { CheckCircle, AlertTriangle, Home, Users, Heart, Trees } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Housing = () => {
