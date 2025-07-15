@@ -2,22 +2,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Scale, CheckCircle, AlertTriangle, Users, Heart, Shield } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-
 const Justice = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-primary">Regenerative Justice</h1>
         <p className="text-xl text-muted-foreground">Evolving the Legal System Through Dignity, Healing, and Community Accountability</p>
       </div>
 
-      <div className="text-center space-y-2 mb-8">
-        <p className="text-sm text-muted-foreground">By</p>
-        <p className="font-semibold">Juicy Life</p>
-        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
-        <p className="text-sm text-muted-foreground">and</p>
-        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
-      </div>
+      
 
       <div className="flex flex-wrap gap-2 mb-6">
         <Badge variant="secondary">Restorative</Badge>
@@ -272,8 +264,6 @@ const Justice = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Justice;
