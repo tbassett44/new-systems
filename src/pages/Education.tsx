@@ -7,14 +7,14 @@ const Education = () => {
   return (
     <div className="space-y-8">
       <div className="mb-6">
-        <h1 className="text-4xl font-bold">Regenerative Education Through Digital Sovereignty</h1>
+        <h1 className="text-4xl font-bold text-foreground">Regenerative Education Through Digital Sovereignty</h1>
         <p className="text-xl text-muted-foreground mt-2">A Framework for Decentralized, Lifelong, and Learner-Led Learning</p>
       </div>
 
       <div className="text-center space-y-2 mb-8">
-        <p className="text-lg font-medium">By</p>
+        <p className="text-lg font-medium text-foreground">By</p>
         <div className="space-y-1">
-          <p className="text-lg">
+          <p className="text-lg text-foreground">
             <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
           </p>
           <p className="text-muted-foreground">
@@ -34,77 +34,77 @@ const Education = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 text-foreground">
             <BookOpen className="h-5 w-5 text-primary" />
             Overview and Purpose
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed mb-4">
+          <p className="leading-relaxed mb-4 text-foreground">
             This whitepaper proposes a new model for education grounded in the principles of digital sovereignty, self-custody, and decentralized identity. The traditional education system, characterized by centralized control, one-size-fits-all curricula, and locked-down credentials, no longer meets the needs of a rapidly evolving world.
           </p>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-foreground">
             In contrast, this new framework envisions a regenerative, learner-centered ecosystem where education is lifelong, locally rooted, globally recognized, and holistically measured. By integrating decentralized infrastructure, self-sovereign identity, and verifiable credentials, we aim to empower individuals to design and own their learning journeys. This system honors informal, community-based, and interdisciplinary learning while ensuring privacy, security, and autonomy for every learner.
           </p>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-destructive/20 bg-destructive/5">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-destructive" />
+          <CardTitle className="flex items-center gap-2 text-destructive">
+            <AlertTriangle className="h-5 w-5" />
             The Problem: Centralized, Rigid, and Siloed Education Systems
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2">Standardized Curricula</h4>
-              <p className="text-muted-foreground">Current systems prioritize uniformity over purpose-driven, diverse paths.</p>
+              <h4 className="font-semibold mb-2 text-destructive">Standardized Curricula</h4>
+              <p className="text-destructive/80">Current systems prioritize uniformity over purpose-driven, diverse paths.</p>
             </div>
             <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2">Credential Lock-In</h4>
-              <p className="text-muted-foreground">Diplomas and transcripts are controlled by institutions, inaccessible or unverifiable across systems.</p>
+              <h4 className="font-semibold mb-2 text-destructive">Credential Lock-In</h4>
+              <p className="text-destructive/80">Diplomas and transcripts are controlled by institutions, inaccessible or unverifiable across systems.</p>
             </div>
             <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2">Data Exploitation</h4>
-              <p className="text-muted-foreground">Edtech platforms increasingly monetize learner data without consent.</p>
+              <h4 className="font-semibold mb-2 text-destructive">Data Exploitation</h4>
+              <p className="text-destructive/80">Edtech platforms increasingly monetize learner data without consent.</p>
             </div>
             <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2">Fragmented Learning</h4>
-              <p className="text-muted-foreground">Informal, spiritual, or experiential learning is excluded or unrecognized.</p>
+              <h4 className="font-semibold mb-2 text-destructive">Fragmented Learning</h4>
+              <p className="text-destructive/80">Informal, spiritual, or experiential learning is excluded or unrecognized.</p>
             </div>
             <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2">Limited Agency</h4>
-              <p className="text-muted-foreground">Students are often passive recipients, rather than active co-creators, of their educational path.</p>
+              <h4 className="font-semibold mb-2 text-destructive">Limited Agency</h4>
+              <p className="text-destructive/80">Students are often passive recipients, rather than active co-creators, of their educational path.</p>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-primary/20 bg-primary/5">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Key className="h-5 w-5 text-primary" />
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <Key className="h-5 w-5" />
             The Solution: Sovereign Learning Infrastructure
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
             <div className="border-l-4 border-primary/30 pl-4">
-              <h4 className="font-semibold mb-3">1. Self-Sovereign Learner Profiles</h4>
+              <h4 className="font-semibold mb-3 text-primary">1. Self-Sovereign Learner Profiles</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  Each learner has a digital identity wallet containing their learning records, values, goals, and reflections
+                  <span className="text-primary/90">Each learner has a digital identity wallet containing their learning records, values, goals, and reflections</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions
+                  <span className="text-primary/90">Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  Credentials can represent knowledge, skills, experiences, contributions, and character traits
+                  <span className="text-primary/90">Credentials can represent knowledge, skills, experiences, contributions, and character traits</span>
                 </li>
               </ul>
             </div>
@@ -114,15 +114,15 @@ const Education = () => {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces
+                  <span className="text-blue-700/90">Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  All nodes can issue credentials if aligned with community standards and interoperability protocols
+                  <span className="text-blue-700/90">All nodes can issue credentials if aligned with community standards and interoperability protocols</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  Encourages learning in context—rooted in place, culture, and purpose
+                  <span className="text-blue-700/90">Encourages learning in context—rooted in place, culture, and purpose</span>
                 </li>
               </ul>
             </div>
@@ -132,15 +132,15 @@ const Education = () => {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  Credentials can be verified anywhere, at any time, without needing centralized databases
+                  <span className="text-green-700/90">Credentials can be verified anywhere, at any time, without needing centralized databases</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  Learners can selectively disclose or prove qualifications using zero-knowledge proofs
+                  <span className="text-green-700/90">Learners can selectively disclose or prove qualifications using zero-knowledge proofs</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  Creates fluid pathways for employment, collaboration, and further learning
+                  <span className="text-green-700/90">Creates fluid pathways for employment, collaboration, and further learning</span>
                 </li>
               </ul>
             </div>
@@ -150,15 +150,15 @@ const Education = () => {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  Learners design personalized pathways with support from AI systems and human mentors
+                  <span className="text-purple-700/90">Learners design personalized pathways with support from AI systems and human mentors</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  Learning recommendations align with purpose, context, and wellbeing—not just market demand
+                  <span className="text-purple-700/90">Learning recommendations align with purpose, context, and wellbeing—not just market demand</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  Reflection and narrative become central to progress tracking
+                  <span className="text-purple-700/90">Reflection and narrative become central to progress tracking</span>
                 </li>
               </ul>
             </div>
@@ -168,15 +168,15 @@ const Education = () => {
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  Peers, elders, and collectives endorse growth through verifiable acknowledgments
+                  <span className="text-orange-700/90">Peers, elders, and collectives endorse growth through verifiable acknowledgments</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  Learning becomes a social, relational process
+                  <span className="text-orange-700/90">Learning becomes a social, relational process</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  Networks of trust replace standardized testing
+                  <span className="text-orange-700/90">Networks of trust replace standardized testing</span>
                 </li>
               </ul>
             </div>
@@ -186,7 +186,7 @@ const Education = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+          <CardTitle className="flex items-center gap-2 text-foreground">
             <Network className="h-5 w-5 text-primary" />
             Operational Framework
           </CardTitle>
@@ -194,30 +194,30 @@ const Education = () => {
         <CardContent>
           <div className="grid gap-4">
             <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Infrastructure</h4>
-              <p className="text-sm">Edge-hosted identity and credential storage (e.g., Raspberry Pi or mobile device)</p>
+              <h4 className="font-semibold mb-2 text-foreground">Infrastructure</h4>
+              <p className="text-sm text-foreground">Edge-hosted identity and credential storage (e.g., Raspberry Pi or mobile device)</p>
             </div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Recovery</h4>
-              <p className="text-sm">Key recovery via trusted network using secret sharing (e.g., Horcrux)</p>
+              <h4 className="font-semibold mb-2 text-foreground">Recovery</h4>
+              <p className="text-sm text-foreground">Key recovery via trusted network using secret sharing (e.g., Horcrux)</p>
             </div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Protocols</h4>
-              <p className="text-sm">Based on W3C DIDs, VCs, and open-source decentralized identity libraries</p>
+              <h4 className="font-semibold mb-2 text-foreground">Protocols</h4>
+              <p className="text-sm text-foreground">Based on W3C DIDs, VCs, and open-source decentralized identity libraries</p>
             </div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Access</h4>
-              <p className="text-sm">Learners own and control access to their records</p>
+              <h4 className="font-semibold mb-2 text-foreground">Access</h4>
+              <p className="text-sm text-foreground">Learners own and control access to their records</p>
             </div>
             <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Governance</h4>
-              <p className="text-sm">Community-curated registries of recognized learning providers and credential standards</p>
+              <h4 className="font-semibold mb-2 text-foreground">Governance</h4>
+              <p className="text-sm text-foreground">Community-curated registries of recognized learning providers and credential standards</p>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      <Card className="bg-gradient-to-r from-green-50 to-primary/5 border-green-200">
+      <Card className="border-green-200/50 bg-green-50/50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-700">
             <CheckCircle className="h-5 w-5" />
@@ -230,19 +230,22 @@ const Education = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong>Lifelong Learning:</strong> Education extends beyond formal schooling into every phase of life
+                  <strong className="text-green-800">Lifelong Learning:</strong>
+                  <span className="text-green-700"> Education extends beyond formal schooling into every phase of life</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong>Empowered Learners:</strong> Individuals actively shape their paths, reflecting their values and callings
+                  <strong className="text-green-800">Empowered Learners:</strong>
+                  <span className="text-green-700"> Individuals actively shape their paths, reflecting their values and callings</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong>Recognition of All Growth:</strong> Learning from lived experience, contribution, healing, and creativity is honored
+                  <strong className="text-green-800">Recognition of All Growth:</strong>
+                  <span className="text-green-700"> Learning from lived experience, contribution, healing, and creativity is honored</span>
                 </div>
               </div>
             </div>
@@ -250,19 +253,22 @@ const Education = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong>Privacy and Consent:</strong> Learners share only what they choose, on their terms
+                  <strong className="text-green-800">Privacy and Consent:</strong>
+                  <span className="text-green-700"> Learners share only what they choose, on their terms</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong>Equity Across Borders:</strong> Portable credentials help migrants, refugees, and informal learners thrive globally
+                  <strong className="text-green-800">Equity Across Borders:</strong>
+                  <span className="text-green-700"> Portable credentials help migrants, refugees, and informal learners thrive globally</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong>Cultural Relevance and Regeneration:</strong> Education reflects and revitalizes local wisdom and community needs
+                  <strong className="text-green-800">Cultural Relevance and Regeneration:</strong>
+                  <span className="text-green-700"> Education reflects and revitalizes local wisdom and community needs</span>
                 </div>
               </div>
             </div>
@@ -270,15 +276,15 @@ const Education = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
+      <Card className="border-primary/20 bg-primary/5">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Globe className="h-5 w-5 text-primary" />
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <Globe className="h-5 w-5" />
             Conclusion
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-foreground">
             Regenerative education is not just a shift in curriculum—it is a transformation of the very architecture through which learning is organized, tracked, and valued. By embedding digital sovereignty into the fabric of learning systems, we empower every individual to steward their growth with autonomy, dignity, and coherence. This framework invites a global transition from extractive schooling to generative learning—cultivating a civilization of creative, connected, and conscious learners prepared to navigate and shape the future.
           </p>
         </CardContent>
