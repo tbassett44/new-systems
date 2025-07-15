@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap, Target } from "lucide-react";
+import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap, Target, MapPin } from "lucide-react";
 
 const EndoEconomics = () => {
   return <div className="space-y-8">
@@ -282,6 +282,43 @@ const EndoEconomics = () => {
               <p className="text-sm text-purple-700">• Precision in resource allocation</p>
               <p className="text-sm text-purple-700">• Recognition of nuanced contributions across specialties</p>
             </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-emerald-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-emerald-700">
+            <MapPin className="h-6 w-6" />
+            Adjusting for Cost of Living (COL)
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            To ensure equity across geographic regions, the economic model incorporates adjustments based on local cost of living. This recognizes that a thriving wage in one area may not meet basic needs in another. Several methods are proposed, which will need additional experimentation and refinement to determine the best strategy:
+          </p>
+          <div className="space-y-4">
+            <div className="bg-emerald-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-emerald-800 mb-2">Regional COL Index Modifier</h4>
+              <p className="text-sm text-emerald-700">Salaries are adjusted using a multiplier based on local living cost indices, similar to federal per diem or COLA models.</p>
+            </div>
+            <div className="bg-emerald-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-emerald-800 mb-2">Living Wage Anchoring</h4>
+              <p className="text-sm text-emerald-700">The minimum wage for any career category is tied to the local living wage, ensuring a dignified baseline for all.</p>
+            </div>
+            <div className="bg-emerald-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-emerald-800 mb-2">Geo-Clustering</h4>
+              <p className="text-sm text-emerald-700">Locations are grouped into cost-of-living bands (e.g., high, medium, low), each with its own standardized budget calibration.</p>
+            </div>
+            <div className="bg-emerald-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-emerald-800 mb-2">Hybrid Factor Weighting</h4>
+              <p className="text-sm text-emerald-700">COL becomes one component (e.g., 15%) in a weighted formula that also includes merit, education, and experience.</p>
+            </div>
+          </div>
+          <div className="bg-emerald-100 p-4 rounded-lg border-l-4 border-emerald-400">
+            <p className="text-emerald-800 font-medium">
+              These adjustments ensure that the same role offers equivalent quality of life across diverse geographies, and that the model maintains both equity and adaptability over time.
+            </p>
           </div>
         </CardContent>
       </Card>
