@@ -1,5 +1,4 @@
-
-import { ReactNode, useEffect } from "react";
+import { ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
   Sidebar, 
@@ -114,12 +113,7 @@ function AppSidebar() {
 }
 
 export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
-  const { scrollElementRef, setScrollElement } = useScrollRestoration();
-
-  useEffect(() => {
-    const mainElement = document.querySelector('main[data-scroll-container]') as HTMLElement;
-    setScrollElement(mainElement);
-  }, [setScrollElement]);
+  useScrollRestoration();
 
   return (
     <SidebarProvider>
@@ -128,9 +122,6 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
         <main 
           className="flex-1 overflow-auto" 
           data-scroll-container
-          ref={(el) => {
-            if (el) setScrollElement(el);
-          }}
         >
           <div className="container mx-auto px-6 py-8 max-w-4xl">
             {children}

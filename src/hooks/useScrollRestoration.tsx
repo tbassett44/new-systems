@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // Store scroll positions for each route
@@ -7,41 +7,41 @@ const scrollPositions = new Map<string, number>();
 
 export const useScrollRestoration = () => {
   const location = useLocation();
-  const scrollElementRef = useRef<HTMLElement | null>(null);
 
-  // Save scroll position when leaving a route
   useEffect(() => {
+    // Find the main scrollable element
+    const scrollElement = document.querySelector('main[data-scroll-container]') as HTMLElement;
+    
+    if (!scrollElement) return;
+
+    // Save current scroll position when leaving this route
     const saveScrollPosition = () => {
-      if (scrollElementRef.current) {
-        scrollPositions.set(location.pathname, scrollElementRef.current.scrollTop);
-      }
+      scrollPositions.set(location.pathname, scrollElement.scrollTop);
     };
 
-    // Save on route change
+    // Restore scroll position for this route
+    const restoreScrollPosition = () => {
+      const savedPosition = scrollPositions.get(location.pathname) || 0;
+      scrollElement.scrollTop = savedPosition;
+    };
+
+    // Save previous route's scroll position
+    saveScrollPosition();
+    
+    // Restore current route's scroll position after a brief delay
+    const timeoutId = setTimeout(restoreScrollPosition, 100);
+
+    // Save scroll position when user scrolls
+    const handleScroll = () => {
+      scrollPositions.set(location.pathname, scrollElement.scrollTop);
+    };
+
+    scrollElement.addEventListener('scroll', handleScroll);
+
     return () => {
+      clearTimeout(timeoutId);
+      scrollElement.removeEventListener('scroll', handleScroll);
       saveScrollPosition();
     };
   }, [location.pathname]);
-
-  // Restore scroll position when entering a route
-  useEffect(() => {
-    const restoreScrollPosition = () => {
-      if (scrollElementRef.current) {
-        const savedPosition = scrollPositions.get(location.pathname) || 0;
-        scrollElementRef.current.scrollTop = savedPosition;
-      }
-    };
-
-    // Small delay to ensure content is rendered
-    const timeoutId = setTimeout(restoreScrollPosition, 50);
-    
-    return () => clearTimeout(timeoutId);
-  }, [location.pathname]);
-
-  return {
-    scrollElementRef,
-    setScrollElement: (element: HTMLElement | null) => {
-      scrollElementRef.current = element;
-    }
-  };
 };
