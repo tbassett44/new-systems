@@ -1,7 +1,8 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Vote } from "lucide-react";
+import { Vote, AlertTriangle, CheckCircle, Users, Heart, Lightbulb } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Election = () => {
   return (
@@ -11,9 +12,17 @@ const Election = () => {
           <Vote className="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h1 className="text-4xl font-bold">Regenerative Election</h1>
-          <p className="text-xl text-muted-foreground">Creating a Stage for Democratic Dialogue</p>
+          <h1 className="text-4xl font-bold text-primary">Regenerative Election</h1>
+          <p className="text-xl text-muted-foreground">Prototyping a New Model of Democratic Participation and Civic Imagination</p>
         </div>
+      </div>
+
+      <div className="text-center space-y-2 mb-8">
+        <p className="text-sm text-muted-foreground">By</p>
+        <p className="font-semibold">Juicy Life</p>
+        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
+        <p className="text-sm text-muted-foreground">and</p>
+        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
@@ -21,18 +30,199 @@ const Election = () => {
         <Badge variant="secondary">Participatory</Badge>
         <Badge variant="secondary">Values-Aligned</Badge>
         <Badge variant="secondary">Co-Creation</Badge>
+        <Badge variant="secondary">Civic Imagination</Badge>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Visionary Approach to Democratic Renewal</CardTitle>
+          <CardTitle className="text-primary">Overview and Purpose</CardTitle>
+        </CardHeader>
+        <CardContent className="prose max-w-none">
+          <p className="leading-relaxed">
+            This whitepaper introduces the concept of a Regenerative Election — a pre-ballot, participatory, values-driven electoral process designed to prototype the future of democracy before it enters the constraints of the legacy electoral system. It serves as a public experiment in democratic evolution, inviting civic imagination, fostering trust, and modeling a dignified, generative alternative to polarizing politics. The Regenerative Election is not about partisanship or power-seeking, but about demonstrating what governance can feel like when it is rooted in feedback, transparency, collective intelligence, and care.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-destructive">
+            <AlertTriangle className="h-5 w-5" />
+            The Problem: Crisis in Electoral Culture
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed">
-            The Regenerative Election offers a visionary yet grounded approach to democratic renewal—by operating outside 
-            the constraints of the existing electoral system, it creates the freedom to prototype what participatory, 
-            trust-rich, and values-aligned politics could look like. Rather than reacting to a broken structure, it builds 
-            a living alternative: one rooted in dialogue, transparency, and wellbeing.
+          <ul className="space-y-3">
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Disillusionment and Disengagement:</strong> The public feels alienated by binary choices, adversarial debates, and negative campaigning.
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Institutional Mistrust:</strong> Corporate influence and opaque party systems erode belief in democratic integrity.
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Absence of Feedback Loops:</strong> Citizens are not meaningfully involved in shaping platforms or policy vision.
+              </div>
+            </li>
+            <li className="flex items-start gap-2">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <strong>Narrative Deficit:</strong> Politics lacks ceremony, soul, and the creative capacity to imagine new futures.
+              </div>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">The Solution: A Regenerative Election Framework</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div>
+            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
+            <div className="space-y-4">
+              <div className="border-l-4 border-primary/30 pl-4">
+                <h5 className="font-medium text-primary">Values-Based Platform Development</h5>
+                <p className="text-sm text-muted-foreground">
+                  Grounded in regenerative principles. Public sensemaking sessions help shape priorities and illuminate collective values.
+                </p>
+              </div>
+              <div className="border-l-4 border-blue-300 pl-4">
+                <h5 className="font-medium text-blue-700">Multi-Candidate Cooperative Field</h5>
+                <p className="text-sm text-muted-foreground">
+                  Features multiple participants who share a commitment to regenerative ethics. Dialogues prioritize listening, nuance, and co-evolution over combative debate.
+                </p>
+              </div>
+              <div className="border-l-4 border-green-300 pl-4">
+                <h5 className="font-medium text-green-700">Participatory Public Engagement</h5>
+                <p className="text-sm text-muted-foreground">
+                  Citizens contribute to question design, assess platform clarity, and engage in reflection events. Interactive tools allow for distributed civic input across geographies.
+                </p>
+              </div>
+              <div className="border-l-4 border-purple-300 pl-4">
+                <h5 className="font-medium text-purple-700">Wellbeing-Informed Feedback Metrics</h5>
+                <p className="text-sm text-muted-foreground">
+                  Participants assess proposals not only on logic, but how they impact physical, emotional, and social wellbeing. Data is collected and synthesized to inform collective direction.
+                </p>
+              </div>
+              <div className="border-l-4 border-orange-300 pl-4">
+                <h5 className="font-medium text-orange-700">Decentralized Civic Media</h5>
+                <p className="text-sm text-muted-foreground">
+                  Media coverage is crowd-curated and trust-layered, moving beyond clickbait or soundbites. Storytelling and public media guide the election narrative from sensationalism to depth.
+                </p>
+              </div>
+              <div className="border-l-4 border-teal-300 pl-4">
+                <h5 className="font-medium text-teal-700">Ethical Transparency & Open Process Infrastructure</h5>
+                <p className="text-sm text-muted-foreground">
+                  All budget flows, communications, and strategic processes are shared openly. Voting, polling, and data systems are verifiable, auditable, and respectful of digital sovereignty.
+                </p>
+              </div>
+              <div className="border-l-4 border-pink-300 pl-4">
+                <h5 className="font-medium text-pink-700">Ritual, Art, and Public Gathering</h5>
+                <p className="text-sm text-muted-foreground">
+                  Civic ceremonies and artistic activations accompany key moments in the process. Debates are framed as shared explorations of vision, not zero-sum contests.
+                </p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Operational Framework</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Pre-Launch Phase</h4>
+              <p className="text-sm">Convene design teams, clarify ethical frameworks, recruit candidates, and develop digital tools</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Platform Co-Design</h4>
+              <p className="text-sm">Regional and virtual forums gather public priorities and reflect them into draft platforms</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Campaigning and Dialogue</h4>
+              <p className="text-sm">Candidates share proposals, host listening sessions, and participate in moderated dialogues</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Cultural and Civic Events</h4>
+              <p className="text-sm">Art, music, ceremony, and story shape the emotional landscape of the election</p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">Closing Assembly</h4>
+              <p className="text-sm">Synthesized learnings, community votes, and a declaration for how to proceed toward ballot access or other forms of public engagement</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-green-700">
+            <CheckCircle className="h-5 w-5" />
+            Net Positive Outcomes
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Reimagined Democratic Process:</strong> A blueprint for elections as generative, participatory, and meaningful
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Civic Trust-Building:</strong> Transparency and integrity rebuild faith in leadership processes
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Shared Ownership:</strong> Citizens feel invited to co-create rather than passively consume
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Wisdom-Driven Platforms:</strong> Proposals emerge from dialogue, not top-down promises
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong>Movement Seeding:</strong> Sparks a distributed network of political and cultural regeneration
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-primary">Conclusion and Call to Action</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed mb-4">
+            The Regenerative Election is not about electing a hero. It is about electing a new possibility: one where democracy becomes a living, learning, and healing process. By prototyping a new election outside the legacy timeline, we create space for trust to grow, imagination to flourish, and communities to align around values that nourish life.
+          </p>
+          <p className="leading-relaxed mb-4">
+            This is not a rejection of civic responsibility. It is its expansion. Let us remember that voting is not the beginning or end of political participation. It is one moment in a much longer, sacred act of choosing who we become—together.
+          </p>
+          <Separator className="my-4" />
+          <p className="leading-relaxed font-medium">
+            Let us not campaign against a broken system. Let us prototype the one we would be proud to inherit.
           </p>
         </CardContent>
       </Card>
