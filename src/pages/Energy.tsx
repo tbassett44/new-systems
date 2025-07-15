@@ -16,15 +16,6 @@ const Energy = () => {
           </p>
         </div>
 
-        <div className="border-l-4 border-primary/30 pl-6 py-2">
-          <p className="text-sm text-muted-foreground mb-2">By</p>
-          <p className="font-medium">Juicy Life</p>
-          <p className="text-sm text-primary">juicy@actualize.earth</p>
-          <p className="text-sm text-muted-foreground mt-1">
-            and Aether, an AI collaborator powered by GPT-4 by OpenAI
-          </p>
-        </div>
-
         <div className="flex flex-wrap gap-2">
           <Badge variant="secondary">Clean Energy</Badge>
           <Badge variant="secondary">Thorium Reactors</Badge>
