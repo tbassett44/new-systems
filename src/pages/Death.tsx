@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skull, AlertTriangle, CheckCircle } from "lucide-react";
@@ -32,7 +33,7 @@ const Death = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-destructive/20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-destructive">
             <AlertTriangle className="h-5 w-5" />
@@ -144,7 +145,7 @@ const Death = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
+          <CardTitle className="flex items-center gap-2 text-primary">
             <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
@@ -154,31 +155,36 @@ const Death = () => {
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Empowered Individuals:</strong> People face death with clarity, agency, and peace
+                <strong>Empowered Individuals:</strong>
+                <span className="text-muted-foreground"> People face death with clarity, agency, and peace</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Reduced Suffering:</strong> Less traumatic or prolonged dying experiences
+                <strong>Reduced Suffering:</strong>
+                <span className="text-muted-foreground"> Less traumatic or prolonged dying experiences</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Grief Integration:</strong> Healthier individual and communal grieving processes
+                <strong>Grief Integration:</strong>
+                <span className="text-muted-foreground"> Healthier individual and communal grieving processes</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Cultural Maturity:</strong> Reconnection to ancestral wisdom and mortality awareness
+                <strong>Cultural Maturity:</strong>
+                <span className="text-muted-foreground"> Reconnection to ancestral wisdom and mortality awareness</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Systemic Alignment:</strong> Medical, legal, and spiritual systems aligned in service of dignity
+                <strong>Systemic Alignment:</strong>
+                <span className="text-muted-foreground"> Medical, legal, and spiritual systems aligned in service of dignity</span>
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Palette, AlertTriangle, CheckCircle, Users, Heart, Sparkles } from "lucide-react";
@@ -33,7 +34,7 @@ const Arts = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-destructive/20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-destructive">
             <AlertTriangle className="h-5 w-5" />
@@ -159,7 +160,7 @@ const Arts = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
+          <CardTitle className="flex items-center gap-2 text-primary">
             <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
@@ -169,37 +170,43 @@ const Arts = () => {
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Cultural Coherence:</strong> Shared meaning-making supports resilience and belonging
+                <strong>Cultural Coherence:</strong>
+                <span className="text-muted-foreground"> Shared meaning-making supports resilience and belonging</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Artist Dignity:</strong> Creatives are valued and resourced as cultural stewards
+                <strong>Artist Dignity:</strong>
+                <span className="text-muted-foreground"> Creatives are valued and resourced as cultural stewards</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Healing Pathways:</strong> Art becomes integrated in trauma work, wellbeing, and emotional literacy
+                <strong>Healing Pathways:</strong>
+                <span className="text-muted-foreground"> Art becomes integrated in trauma work, wellbeing, and emotional literacy</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Intergenerational Memory:</strong> Wisdom, story, and tradition are passed forward and evolved
+                <strong>Intergenerational Memory:</strong>
+                <span className="text-muted-foreground"> Wisdom, story, and tradition are passed forward and evolved</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Civic Engagement:</strong> Art invites participation in shaping society, not just observing it
+                <strong>Civic Engagement:</strong>
+                <span className="text-muted-foreground"> Art invites participation in shaping society, not just observing it</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Beauty as Infrastructure:</strong> Creative design is central to thriving spaces and systems
+                <strong>Beauty as Infrastructure:</strong>
+                <span className="text-muted-foreground"> Creative design is central to thriving spaces and systems</span>
               </div>
             </div>
           </div>

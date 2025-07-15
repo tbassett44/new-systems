@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -42,10 +43,10 @@ const Spirituality = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-destructive/20">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+          <CardTitle className="flex items-center gap-2 text-destructive">
+            <span className="w-2 h-2 bg-destructive rounded-full"></span>
             The Problem: Disconnection from Meaning and Sacred Rhythm
           </CardTitle>
         </CardHeader>
@@ -62,8 +63,8 @@ const Spirituality = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <span className="w-2 h-2 bg-primary rounded-full"></span>
             The Solution: Regenerative Spiritual Infrastructure
           </CardTitle>
         </CardHeader>
@@ -138,8 +139,8 @@ const Spirituality = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <span className="w-2 h-2 bg-primary rounded-full"></span>
             Integration with Endo Economics
           </CardTitle>
         </CardHeader>
@@ -155,8 +156,8 @@ const Spirituality = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <span className="w-2 h-2 bg-primary rounded-full"></span>
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>

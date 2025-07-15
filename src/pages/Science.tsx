@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle } from "lucide-react";
@@ -33,7 +34,7 @@ const Science = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-destructive/20 bg-destructive/5">
+      <Card className="border-destructive/20">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-destructive">
             <AlertTriangle className="h-5 w-5" />
@@ -44,31 +45,31 @@ const Science = () => {
           <ul className="space-y-3">
             <li className="flex items-start gap-2">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
+              <div>
                 <strong>Centralized Gatekeeping:</strong> Access to research, funding, and publication is limited by elite institutions and paywalls.
               </div>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
+              <div>
                 <strong>Corporate Influence:</strong> Scientific agendas are often dictated by funders whose interests may not align with public or planetary health.
               </div>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
+              <div>
                 <strong>Disconnection from Place:</strong> Research is often abstracted from the real-world ecosystems, communities, and cultures it affects.
               </div>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
+              <div>
                 <strong>Lack of Interdisciplinarity:</strong> Siloed disciplines limit holistic insight and systems thinking.
               </div>
             </li>
             <li className="flex items-start gap-2">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
+              <div>
                 <strong>Underutilized Potential:</strong> Countless citizen scientists, independent researchers, and Indigenous knowledge holders remain marginalized.
               </div>
             </li>
@@ -76,7 +77,7 @@ const Science = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-primary/20 bg-primary/5">
+      <Card>
         <CardHeader>
           <CardTitle className="text-primary">The Solution: Regenerative Science Ecosystem</CardTitle>
         </CardHeader>
@@ -86,25 +87,25 @@ const Science = () => {
             <div className="space-y-4">
               <div className="border-l-4 border-primary/30 pl-4">
                 <h5 className="font-medium text-primary">Open Science Commons</h5>
-                <p className="text-sm text-primary/80">
+                <p className="text-sm text-muted-foreground">
                   All publicly funded research is accessible through open platforms. Data, tools, and methodologies are shared under creative commons or copyleft licenses. AI-assisted curation and cross-disciplinary synthesis make vast knowledge navigable.
                 </p>
               </div>
               <div className="border-l-4 border-blue-300 pl-4">
                 <h5 className="font-medium text-blue-700">Citizen Science and Local Research Networks</h5>
-                <p className="text-sm text-blue-700/80">
+                <p className="text-sm text-muted-foreground">
                   Community labs, schools, and bioregional councils support hands-on experimentation and applied research. Citizen observers contribute to biodiversity tracking, climate sensing, air/water quality monitoring, and more.
                 </p>
               </div>
               <div className="border-l-4 border-green-300 pl-4">
                 <h5 className="font-medium text-green-700">Ethical Innovation Frameworks</h5>
-                <p className="text-sm text-green-700/80">
+                <p className="text-sm text-muted-foreground">
                   All research is guided by life-affirming ethics that account for ecological, social, and intergenerational impact. Participatory review boards include non-scientists, elders, youth, and ecological stewards.
                 </p>
               </div>
               <div className="border-l-4 border-purple-300 pl-4">
                 <h5 className="font-medium text-purple-700">Integrative Knowledge Systems</h5>
-                <p className="text-sm text-purple-700/80">
+                <p className="text-sm text-muted-foreground">
                   Scientific inquiry is enriched by Indigenous wisdom, spiritual cosmologies, systems theory, and biointelligence. Labs and universities become hubs for cultural exchange and multidisciplinary dialogue.
                 </p>
               </div>
@@ -143,23 +144,23 @@ const Science = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-blue-200/50 bg-blue-50/50">
+      <Card>
         <CardHeader>
-          <CardTitle className="text-blue-800">Integration with Endo Economics</CardTitle>
+          <CardTitle className="text-primary">Integration with Endo Economics</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed mb-4 text-blue-700">
+          <p className="leading-relaxed mb-4">
             In the Endo Economics model, research and discovery are seen not as cost centers or patent portfolios but as generative forces within the societal body. Funding is directed toward knowledge that increases resilience, reveals patterns of cooperation, and empowers local solutions. Scientists and contributors are recognized and compensated for their service to the commons—not through competitive grants or venture capital, but through transparent systems that reflect collective priorities.
           </p>
-          <p className="leading-relaxed text-blue-700">
+          <p className="leading-relaxed">
             Rather than isolating innovation in IP vaults or pharmaceutical monopolies, discoveries flow openly into regenerative infrastructure—supporting health, ecology, education, and culture. This approach redefines progress as coherence, wisdom, and applicability—not just novelty or speed.
           </p>
         </CardContent>
       </Card>
 
-      <Card className="border-green-200/50 bg-green-50/50">
+      <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
+          <CardTitle className="flex items-center gap-2 text-primary">
             <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
@@ -169,43 +170,43 @@ const Science = () => {
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Liberated Knowledge:</strong>
-                <span className="text-green-700"> Open, accessible science accelerates discovery and reduces duplication</span>
+                <strong>Liberated Knowledge:</strong>
+                <span className="text-muted-foreground"> Open, accessible science accelerates discovery and reduces duplication</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Participatory Insight:</strong>
-                <span className="text-green-700"> Broader inclusion of communities, cultures, and disciplines enriches inquiry</span>
+                <strong>Participatory Insight:</strong>
+                <span className="text-muted-foreground"> Broader inclusion of communities, cultures, and disciplines enriches inquiry</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Ethical Innovation:</strong>
-                <span className="text-green-700"> Research serves life, not markets, and is governed by living systems values</span>
+                <strong>Ethical Innovation:</strong>
+                <span className="text-muted-foreground"> Research serves life, not markets, and is governed by living systems values</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Resilient Infrastructure:</strong>
-                <span className="text-green-700"> Decentralized science networks persist through institutional collapse or disruption</span>
+                <strong>Resilient Infrastructure:</strong>
+                <span className="text-muted-foreground"> Decentralized science networks persist through institutional collapse or disruption</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Civic Engagement:</strong>
-                <span className="text-green-700"> People rediscover a relationship to discovery and the mysteries of life</span>
+                <strong>Civic Engagement:</strong>
+                <span className="text-muted-foreground"> People rediscover a relationship to discovery and the mysteries of life</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Holistic Evolution:</strong>
-                <span className="text-green-700"> Science re-integrated with spirit, story, and systems consciousness</span>
+                <strong>Holistic Evolution:</strong>
+                <span className="text-muted-foreground"> Science re-integrated with spirit, story, and systems consciousness</span>
               </div>
             </div>
           </div>
