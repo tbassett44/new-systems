@@ -1,12 +1,9 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Brain, Users, Target, Shield, Eye, MessageSquare, CheckCircle, AlertTriangle } from "lucide-react";
-
 const Sensemaking = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="flex items-center gap-4 mb-6">
         <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
           <Brain className="h-6 w-6 text-primary" />
@@ -17,17 +14,7 @@ const Sensemaking = () => {
         </div>
       </div>
 
-      <div className="text-center space-y-2 mb-8">
-        <p className="text-lg font-medium">By</p>
-        <div className="space-y-1">
-          <p className="text-lg">
-            <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
-          </p>
-          <p className="text-muted-foreground">
-            and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
-          </p>
-        </div>
-      </div>
+      
 
       <div className="flex flex-wrap gap-2 mb-6">
         <Badge variant="secondary">Civic Intelligence</Badge>
@@ -325,8 +312,6 @@ const Sensemaking = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Sensemaking;
