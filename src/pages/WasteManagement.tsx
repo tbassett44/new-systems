@@ -12,29 +12,7 @@ const WasteManagement = () => {
 
       
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <TrendingUp className="h-5 w-5 text-primary" />
-            Overview and Purpose
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            This whitepaper presents a strategic vision and operational framework for addressing the United States' 
-            waste crisis through scalable, high-efficiency waste processing infrastructure. Utilizing technology such 
-            as Eden Energy's advanced systems, we explore how a $200 billion investment could fully process the 
-            nation's waste while generating profound benefits for public health, ecological regeneration, economic 
-            efficiency, and systemic resilience.
-          </p>
-          <p className="leading-relaxed">
-            The goal of this document is to demonstrate that comprehensive waste infrastructure is not only 
-            technologically feasible but also economically justifiable and socially imperative. By drawing on 
-            existing capabilities and clear data, we aim to catalyze national action and policy alignment around 
-            a regenerative waste strategy.
-          </p>
-        </CardContent>
-      </Card>
+      
 
       <Card>
         <CardHeader>
