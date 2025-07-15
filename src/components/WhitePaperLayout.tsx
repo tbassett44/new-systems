@@ -12,6 +12,7 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
   SidebarHeader,
+  SidebarProvider,
   useSidebar
 } from "@/components/ui/sidebar";
 import { 
@@ -60,7 +61,7 @@ const navigationItems = [
   { title: "Regenerative Election", url: "/papers/election", icon: Vote },
 ];
 
-export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
+function SidebarContent() {
   const { state } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
@@ -71,50 +72,57 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
   };
 
   return (
-    <>
-      <Sidebar className={state === "collapsed" ? "w-14" : "w-80"} collapsible="icon">
-        <SidebarHeader className="border-b">
-          <div className="flex items-center justify-between">
-            <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
-              <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
-              <p className="text-sm text-muted-foreground">White Paper Collection</p>
-            </div>
-            <SidebarTrigger />
+    <Sidebar className="border-r" collapsible="icon">
+      <SidebarHeader className="border-b">
+        <div className="flex items-center justify-between">
+          <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
+            <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
+            <p className="text-sm text-muted-foreground">White Paper Collection</p>
           </div>
-        </SidebarHeader>
-        
-        <SidebarContent>
-          <SidebarGroup>
-            <SidebarGroupLabel>Papers</SidebarGroupLabel>
-            <SidebarGroupContent>
-              <SidebarMenu>
-                {navigationItems.map((item) => (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                      <NavLink 
-                        to={item.url} 
-                        end={item.url === "/papers/"}
-                        className="flex items-center gap-3 w-full"
-                      >
-                        <item.icon className="h-4 w-4 shrink-0" />
-                        {state !== "collapsed" && (
-                          <span className="truncate">{item.title}</span>
-                        )}
-                      </NavLink>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
-              </SidebarMenu>
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </SidebarContent>
-      </Sidebar>
-
-      <main className="flex-1 overflow-auto">
-        <div className="container mx-auto px-6 py-8 max-w-4xl">
-          {children}
+          <SidebarTrigger />
         </div>
-      </main>
-    </>
+      </SidebarHeader>
+      
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel>Papers</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {navigationItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
+                    <NavLink 
+                      to={item.url} 
+                      end={item.url === "/papers/"}
+                      className="flex items-center gap-3 w-full"
+                    >
+                      <item.icon className="h-4 w-4 shrink-0" />
+                      {state !== "collapsed" && (
+                        <span className="truncate">{item.title}</span>
+                      )}
+                    </NavLink>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
+  );
+}
+
+export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
+  return (
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full">
+        <SidebarContent />
+        <main className="flex-1 overflow-auto">
+          <div className="container mx-auto px-6 py-8 max-w-4xl">
+            {children}
+          </div>
+        </main>
+      </div>
+    </SidebarProvider>
   );
 }
