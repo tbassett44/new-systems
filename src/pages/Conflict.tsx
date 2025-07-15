@@ -1,86 +1,69 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Users, CheckCircle, AlertTriangle } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 const Conflict = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Users className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold text-primary">Conflict Transformation & Restorative Processes</h1>
-          <p className="text-xl text-muted-foreground">A Culture of Repair, Not Retribution</p>
-        </div>
-      </div>
-
-      <div className="text-center space-y-2 mb-8">
-        <p className="text-sm text-muted-foreground">By</p>
-        <p className="font-semibold">Juicy Life</p>
-        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
-        <p className="text-sm text-muted-foreground">and</p>
-        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
-      </div>
-
-      <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Restorative</Badge>
-        <Badge variant="secondary">Proactive</Badge>
-        <Badge variant="secondary">Community-Based</Badge>
-        <Badge variant="secondary">Growth-Oriented</Badge>
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight">Conflict Transformation</h1>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Transforming conflict into opportunities for deeper understanding and community resilience
+        </p>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-primary">Overview and Purpose</CardTitle>
+          <CardTitle>Abstract</CardTitle>
         </CardHeader>
-        <CardContent className="prose max-w-none">
-          <p className="leading-relaxed">
-            This whitepaper proposes a shift from reactive, punitive models of conflict resolution to a proactive, regenerative culture of repair. It recognizes conflict as a natural part of human relationships and communities—one that, when skillfully engaged, can lead to deeper understanding, stronger bonds, and collective growth. Rather than waiting for harm to escalate into criminal justice involvement, this framework introduces tools and systems that foster early intervention, relational accountability, and long-term healing.
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Traditional conflict resolution often seeks to suppress or eliminate conflict rather 
+            than transform it into opportunities for growth and deeper understanding. This paper 
+            explores frameworks for conflict transformation that honor diverse perspectives, 
+            address systemic issues, and strengthen community bonds.
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
-            <AlertTriangle className="h-5 w-5" />
-            The Problem: Escalation, Disconnection, and Harm Without Repair
-          </CardTitle>
+          <CardTitle>Introduction</CardTitle>
         </CardHeader>
-        <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Most communities lack accessible, trusted processes to address interpersonal harm or tension before it escalates.
-              </div>
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Conflict is an inevitable part of human interaction, arising from differences in needs, values, and perspectives.
+            However, conflict is often viewed negatively, as something to be avoided or suppressed.
+            This paper proposes a shift in perspective, viewing conflict as an opportunity for growth, learning, and deeper understanding.
+            Conflict transformation is a process that seeks to address the root causes of conflict,
+            transforming destructive patterns into constructive dialogue and collaboration.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Key Principles of Conflict Transformation</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-gray max-w-none">
+          <ul>
+            <li>
+              <strong>Embracing Complexity:</strong> Recognizing that conflict is often multifaceted and interconnected with various
+              social, economic, and political factors.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Punitive systems prioritize blame and punishment over understanding, restitution, or healing.
-              </div>
+            <li>
+              <strong>Honoring Diverse Perspectives:</strong> Valuing and integrating different viewpoints, experiences, and cultural
+              backgrounds to gain a more comprehensive understanding of the conflict.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Schools, workplaces, and neighborhoods often suppress conflict or outsource it to external authorities.
-              </div>
+            <li>
+              <strong>Addressing Systemic Issues:</strong> Identifying and addressing the underlying systemic factors that contribute to
+              conflict, such as inequality, discrimination, and lack of access to resources.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Many people lack the skills or models to engage in honest dialogue or reconciliation.
-              </div>
+            <li>
+              <strong>Building Relationships:</strong> Fostering trust, empathy, and mutual respect among conflicting parties to create a
+              foundation for constructive dialogue and collaboration.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Early experiences of unresolved conflict (e.g., on playgrounds or in families) shape lifelong beliefs about safety, trust, and justice.
-              </div>
+            <li>
+              <strong>Promoting Empowerment:</strong> Empowering individuals and communities to take ownership of the conflict resolution
+              process and develop their own solutions.
             </li>
           </ul>
         </CardContent>
@@ -88,139 +71,89 @@ const Conflict = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-primary">The Solution: Regenerative Conflict Transformation Infrastructure</CardTitle>
+          <CardTitle>Strategies for Conflict Transformation</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Community-Based Restorative Hubs</h5>
-                <p className="text-sm text-muted-foreground">
-                  Localized spaces—integrated into schools, neighborhoods, and workplaces—where trained facilitators guide individuals and groups through nonviolent communication, conflict mapping, and restorative dialogue. Accessible to all ages, with youth-specific and elder-guided pathways.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Early Intervention in Youth Spaces</h5>
-                <p className="text-sm text-muted-foreground">
-                  Embed conflict transformation into education systems: playground peer mediation, classroom talking circles, and restorative response teams. Teach children to name feelings, take responsibility, and co-create repair.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Culturally Adaptable Mediation and Circle Processes</h5>
-                <p className="text-sm text-muted-foreground">
-                  Offer a menu of conflict engagement tools (restorative justice circles, mediation, deep listening councils) tailored to cultural context. Include elders, spiritual leaders, and conflict-trained peers in facilitation.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Integrating Conflict Education into Life Skills Training</h5>
-                <p className="text-sm text-muted-foreground">
-                  Teach relational intelligence, accountability, and rupture-repair as core competencies alongside reading and math. Utilize gamified or narrative-based platforms to practice real-world scenarios.
-                </p>
-              </div>
-              <div className="border-l-4 border-orange-300 pl-4">
-                <h5 className="font-medium text-orange-700">Digital Conflict Resolution Tools</h5>
-                <p className="text-sm text-muted-foreground">
-                  Create privacy-respecting platforms for structured dialogue, facilitated check-ins, and reflective journaling. Integrate with sovereign identity and wellbeing systems.
-                </p>
-              </div>
-              <div className="border-l-4 border-teal-300 pl-4">
-                <h5 className="font-medium text-teal-700">Bridging to Justice System Alternatives</h5>
-                <p className="text-sm text-muted-foreground">
-                  Use community-based agreements, restitution processes, and healing circles to divert cases from formal systems when appropriate. Train law enforcement and legal actors in trauma-informed, restorative approaches.
-                </p>
-              </div>
-            </div>
-          </div>
+        <CardContent className="prose prose-gray max-w-none">
+          <ul>
+            <li>
+              <strong>Dialogue and Mediation:</strong> Facilitating structured conversations between conflicting parties to promote
+              understanding, identify common ground, and develop mutually acceptable solutions.
+            </li>
+            <li>
+              <strong>Restorative Justice:</strong> Bringing together victims, offenders, and community members to address the harm caused
+              by conflict, promote healing, and restore relationships.
+            </li>
+            <li>
+              <strong>Peacebuilding Education:</strong> Providing individuals and communities with the knowledge, skills, and attitudes
+              necessary to prevent and resolve conflicts peacefully.
+            </li>
+            <li>
+              <strong>Advocacy and Social Change:</strong> Working to address systemic issues that contribute to conflict through policy
+              reform, community organizing, and social activism.
+            </li>
+            <li>
+              <strong>Creative Arts:</strong> Utilizing artistic expression, such as storytelling, music, and visual arts, to promote
+              dialogue, empathy, and understanding across cultural divides.
+            </li>
+          </ul>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-primary">Operational Framework</CardTitle>
+          <CardTitle>Examples of Conflict Transformation in Action</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid gap-4">
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Prevention Layer</h4>
-              <p className="text-sm">Conflict literacy education in early childhood and adolescence</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Engagement Layer</h4>
-              <p className="text-sm">Hubs and facilitators available for in-person or digital support</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Accountability Layer</h4>
-              <p className="text-sm">Community-crafted agreements and reparative outcomes</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Integration Layer</h4>
-              <p className="text-sm">Sync with wellbeing tracking, school systems, housing, and justice alternatives</p>
-            </div>
-          </div>
+        <CardContent className="prose prose-gray max-w-none">
+          <ul>
+            <li>
+              <strong>Community Mediation Centers:</strong> Providing accessible and affordable mediation services to resolve disputes
+              between neighbors, landlords and tenants, and small business owners.
+            </li>
+            <li>
+              <strong>Restorative Justice Programs in Schools:</strong> Addressing student misconduct through restorative practices that
+              focus on repairing harm, building relationships, and promoting accountability.
+            </li>
+            <li>
+              <strong>Peacebuilding Initiatives in Conflict Zones:</strong> Supporting local peacebuilders in war-torn regions to
+              facilitate dialogue, promote reconciliation, and build sustainable peace.
+            </li>
+            <li>
+              <strong>Truth and Reconciliation Commissions:</strong> Investigating and documenting past human rights abuses to promote
+              healing, justice, and reconciliation in post-conflict societies.
+            </li>
+          </ul>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
-            <CheckCircle className="h-5 w-5" />
-            Net Positive Outcomes
-          </CardTitle>
+          <CardTitle>Challenges and Opportunities</CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid gap-3">
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Reduction in School Suspensions and Youth Arrests:</strong> Early intervention reduces escalation to punitive systems
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Increased Capacity for Emotional Regulation:</strong> Communities develop skills for healthy expression and conflict navigation
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Stronger Trust and Cohesion:</strong> Restorative processes rebuild relationships and social fabric
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Empowered Individual Responsibility:</strong> People gain skills to take accountability and repair harm
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Decreased Reliance on Punitive Systems:</strong> Communities handle conflicts locally and restoratively
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Culturally Inclusive Pathways:</strong> Healing and dialogue processes honor diverse traditions and approaches
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-primary">Conclusion</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed">
-            A society's resilience is measured not by its ability to avoid conflict, but by its capacity to transform it. By investing in restorative infrastructure—emotional, educational, and institutional—we reweave the social fabric and lay the foundation for a justice system that truly honors dignity, repair, and relationship.
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Conflict transformation is not without its challenges. It requires a willingness to engage in difficult conversations,
+            address uncomfortable truths, and challenge deeply ingrained patterns of behavior.
+            However, the potential benefits of conflict transformation are immense.
+            By transforming conflict into opportunities for growth, learning, and deeper understanding,
+            we can build more resilient, equitable, and peaceful communities.
           </p>
-          <Separator className="my-4" />
-          <p className="leading-relaxed font-medium">
-            This proposal complements and reinforces broader transformations in the justice, education, and wellbeing sectors, ensuring that the seeds of conflict become compost for collective evolution.
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Conclusion</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Conflict transformation offers a powerful framework for addressing the root causes of conflict and building more
+            harmonious and resilient communities.
+            By embracing complexity, honoring diverse perspectives, and promoting empowerment,
+            we can transform destructive patterns into constructive dialogue and collaboration.
+            As we move forward, it is essential to invest in peacebuilding education, support local peacebuilders,
+            and advocate for policies that promote justice, equality, and social inclusion.
+            Together, we can create a world where conflict is seen not as a threat, but as an opportunity for growth,
+            learning, and deeper connection.
           </p>
         </CardContent>
       </Card>

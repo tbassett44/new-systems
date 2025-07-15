@@ -1,90 +1,85 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Palette, AlertTriangle, CheckCircle, Users, Heart, Sparkles } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 
 const Arts = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Palette className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold text-primary">Regenerative Arts & Culture</h1>
-          <p className="text-xl text-muted-foreground">Revitalizing Meaning, Memory, and Belonging through Creative Expression</p>
-        </div>
-      </div>
-
-      <div className="text-center space-y-2 mb-8">
-        <p className="text-sm text-muted-foreground">By</p>
-        <p className="font-semibold">Juicy Life</p>
-        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
-        <p className="text-sm text-muted-foreground">and</p>
-        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
-      </div>
-
-      <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Cultural Stewardship</Badge>
-        <Badge variant="secondary">Community-Rooted</Badge>
-        <Badge variant="secondary">Healing Arts</Badge>
-        <Badge variant="secondary">Regenerative</Badge>
-        <Badge variant="secondary">Sacred Expression</Badge>
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-bold tracking-tight">Arts and Culture</h1>
+        <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          Creative expression as a catalyst for cultural transformation and community healing
+        </p>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-primary">Overview and Purpose</CardTitle>
+          <CardTitle>Abstract</CardTitle>
         </CardHeader>
-        <CardContent className="prose max-w-none">
-          <p className="leading-relaxed">
-            This whitepaper proposes a regenerative infrastructure for arts and culture—one that positions creative expression not as luxury or entertainment, but as essential societal infrastructure. In a time of ecological crisis, social fragmentation, and cultural commodification, we must restore the sacred role of art: to reveal truth, transmit wisdom, and reweave connection across time, space, and identity.
-          </p>
-          <p className="leading-relaxed">
-            The regenerative arts and culture framework supports artists, tradition-bearers, and culture-makers as central stewards of imagination and coherence. Through public support, decentralized creation, and integration with healing and education systems, this model enables the flourishing of beauty, meaning, and community memory. When aligned with Endo Economics, cultural labor becomes not extractive or precarious, but reciprocal and honored—nourishing the soul of society.
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Arts and culture shape collective imagination and identity, influencing how communities 
+            understand themselves and their possibilities. This paper explores how creative 
+            expression can serve as a catalyst for cultural transformation, community healing, 
+            and the emergence of regenerative ways of being that honor both tradition and innovation.
           </p>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
-            <AlertTriangle className="h-5 w-5" />
-            The Problem: Cultural Erosion and Extractive Entertainment
-          </CardTitle>
+          <CardTitle>Introduction</CardTitle>
         </CardHeader>
-        <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Commodified Creativity:</strong> Art is often devalued, commercialized, or algorithmically shaped for profit.
-              </div>
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Art is not merely a reflection of society but a powerful force that shapes it. Throughout history, artistic movements have sparked social change, challenged norms, and inspired new ways of thinking and being. In the context of systems regeneration, arts and culture play a vital role in envisioning and embodying alternative futures, fostering empathy and connection, and mobilizing collective action.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>The Role of Arts in Systems Regeneration</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-gray max-w-none">
+          <ol>
+            <li>
+              <b>Envisioning Alternative Futures:</b> Art can help us imagine and explore alternative futures that are more just, equitable, and sustainable. Through storytelling, visual arts, and performance, artists can create compelling visions of what is possible, inspiring hope and motivating action.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Precarious Labor:</strong> Artists face unstable income, lack of healthcare, and limited public support.
-              </div>
+            <li>
+              <b>Fostering Empathy and Connection:</b> Art can bridge divides and foster empathy by allowing us to see the world through different perspectives. By engaging with diverse voices and experiences, we can develop a deeper understanding of ourselves and others, strengthening community bonds and promoting social cohesion.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Cultural Amnesia:</strong> Intergenerational wisdom, ritual, and traditional arts are being lost or appropriated.
-              </div>
+            <li>
+              <b>Challenging Dominant Narratives:</b> Art can challenge dominant narratives and power structures by exposing injustice, questioning assumptions, and amplifying marginalized voices. Through satire, protest art, and other forms of creative expression, artists can disrupt the status quo and create space for alternative perspectives.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Isolation of Artists:</strong> Creatives are siloed from other systems—health, education, governance—despite their connective role.
-              </div>
+            <li>
+              <b>Mobilizing Collective Action:</b> Art can inspire and mobilize collective action by creating a sense of shared purpose and identity. Through participatory art projects, community murals, and other forms of collaborative expression, artists can bring people together to address pressing social and environmental issues.
             </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Lack of Public Ritual:</strong> Societies lack shared spaces to process emotion, celebrate, mourn, or envision together.
-              </div>
+            <li>
+              <b>Embodying Regenerative Values:</b> Art can embody regenerative values by celebrating beauty, diversity, and interconnectedness. By using sustainable materials, engaging with local communities, and promoting ecological awareness, artists can create works that are both aesthetically pleasing and ethically sound.
+            </li>
+          </ol>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Strategies for Integrating Arts and Culture into Systems Regeneration</CardTitle>
+        </CardHeader>
+        <CardContent className="prose prose-gray max-w-none">
+          <ul>
+            <li>
+              <b>Support artists and cultural organizations:</b> Provide funding, resources, and platforms for artists and cultural organizations that are working to promote systems regeneration.
+            </li>
+            <li>
+              <b>Integrate arts into education:</b> Incorporate arts-based learning into schools and universities to cultivate creativity, critical thinking, and social-emotional intelligence.
+            </li>
+            <li>
+              <b>Create public art spaces:</b> Develop public art spaces that showcase regenerative art and provide opportunities for community engagement.
+            </li>
+            <li>
+              <b>Promote cultural exchange:</b> Facilitate cultural exchange programs that connect artists and communities from different backgrounds to share knowledge and build relationships.
+            </li>
+            <li>
+              <b>Use art for advocacy:</b> Employ art as a tool for advocacy and social change, raising awareness about pressing issues and mobilizing collective action.
             </li>
           </ul>
         </CardContent>
@@ -92,141 +87,11 @@ const Arts = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-primary">The Solution: Regenerative Cultural Ecosystem</CardTitle>
+          <CardTitle>Conclusion</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Cultural Stewardship Networks</h5>
-                <p className="text-sm text-muted-foreground">
-                  Local and bioregional artist cooperatives, councils, and mentorship guilds. Elders, tradition keepers, and storytellers are compensated for intergenerational sharing.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Public Creative Infrastructure</h5>
-                <p className="text-sm text-muted-foreground">
-                  Cultural centers, open-air theaters, and studios accessible to all. Public murals, participatory art installations, and ritual performance spaces. Mobile art labs and traveling exhibitions reach underserved regions.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Decentralized Patronage and Distribution</h5>
-                <p className="text-sm text-muted-foreground">
-                  Platforms for direct supporter-artist connection (non-commercial). Shared ownership of cultural works through creative commons and co-licensing. Local currencies and gift economies for cultural exchange.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Art as Healing and Civic Practice</h5>
-                <p className="text-sm text-muted-foreground">
-                  Integration of expressive arts into wellbeing and trauma recovery programs. Ritual design for life transitions, community healing, and environmental grief. Artist residencies in schools, hospitals, councils, and ecological projects.
-                </p>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-primary">Operational Framework</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-4">
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Creation Layer</h4>
-              <p className="text-sm">Individuals and collectives produce visual, musical, narrative, movement-based, and ritual-based works</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Support Layer</h4>
-              <p className="text-sm">Communities, organizations, and aligned governance structures provide funding, space, and recognition</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Transmission Layer</h4>
-              <p className="text-sm">Digital archives, oral histories, traveling exhibitions, and ceremony share culture across generations</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Feedback Layer</h4>
-              <p className="text-sm">Audiences reflect, participate, and shape evolving narratives</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Integration Layer</h4>
-              <p className="text-sm">Cultural practice is embedded in education, health, justice, governance, and ecology</p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-primary">Integration with Endo Economics</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            In the Endo Economics model, value is redefined as what nourishes life. Artistic expression—especially when relational, place-based, and healing—becomes a core form of reciprocal contribution. Instead of relying on profit from ticket sales or attention economies, artists are resourced as community members whose work supports belonging, transformation, and resilience.
-          </p>
-          <p className="leading-relaxed">
-            Cultural creation is not siloed from society but integrated: a dancer helping restore land memory, a musician tending intergroup harmony, a ritual designer helping a community grieve. With millions of creatives currently under-supported or under-employed, redirecting even a fraction of existing economic waste or inequitable surpluses could seed a renaissance of meaningful, regenerative culture.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
-            <CheckCircle className="h-5 w-5" />
-            Net Positive Outcomes
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid gap-3">
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Cultural Coherence:</strong> Shared meaning-making supports resilience and belonging
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Artist Dignity:</strong> Creatives are valued and resourced as cultural stewards
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Healing Pathways:</strong> Art becomes integrated in trauma work, wellbeing, and emotional literacy
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Intergenerational Memory:</strong> Wisdom, story, and tradition are passed forward and evolved
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Civic Engagement:</strong> Art invites participation in shaping society, not just observing it
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Beauty as Infrastructure:</strong> Creative design is central to thriving spaces and systems
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-primary">Conclusion</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed">
-            Arts and culture are not peripheral—they are the pulse, breath, and memory of a living society. This proposal invites us to restore creativity to its rightful role as the connective tissue of regeneration. When artists are trusted as visionaries and healers, and when culture is treated not as commodity but as communion, we activate one of the most powerful forces for planetary transformation: the imagination of a people remembering who they are.
+        <CardContent className="prose prose-gray max-w-none">
+          <p>
+            Arts and culture are essential components of systems regeneration, providing the creative vision, emotional connection, and collective action needed to build a more just, equitable, and sustainable world. By supporting artists, integrating arts into education, and creating public art spaces, we can harness the transformative power of art to create a future where all life can thrive.
           </p>
         </CardContent>
       </Card>
