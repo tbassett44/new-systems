@@ -246,22 +246,22 @@ const Wellbeing = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Early Intervention:</strong>
-                  <span className="text-green-700"> Identify mental health issues before they become crises</span>
+                  <strong className="text-white">Early Intervention:</strong>
+                  <span className="text-white"> Identify mental health issues before they become crises</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Data Sovereignty:</strong>
-                  <span className="text-green-700"> Individuals maintain complete control over their personal data</span>
+                  <strong className="text-white">Data Sovereignty:</strong>
+                  <span className="text-white"> Individuals maintain complete control over their personal data</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Community Resilience:</strong>
-                  <span className="text-green-700"> Build stronger support networks and collective wellbeing</span>
+                  <strong className="text-white">Community Resilience:</strong>
+                  <span className="text-white"> Build stronger support networks and collective wellbeing</span>
                 </div>
               </div>
             </div>
@@ -269,22 +269,22 @@ const Wellbeing = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Personalized Care:</strong>
-                  <span className="text-green-700"> Tailored interventions based on individual patterns and needs</span>
+                  <strong className="text-white">Personalized Care:</strong>
+                  <span className="text-white"> Tailored interventions based on individual patterns and needs</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Resource Optimization:</strong>
-                  <span className="text-green-700"> Direct mental health resources where they're needed most</span>
+                  <strong className="text-white">Resource Optimization:</strong>
+                  <span className="text-white"> Direct mental health resources where they're needed most</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Stigma Reduction:</strong>
-                  <span className="text-green-700"> Normalize mental health discussions through community participation</span>
+                  <strong className="text-white">Stigma Reduction:</strong>
+                  <span className="text-white"> Normalize mental health discussions through community participation</span>
                 </div>
               </div>
             </div>

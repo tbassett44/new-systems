@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -189,22 +190,22 @@ const Sensemaking = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Stronger Governance:</strong>
-                  <span className="text-green-700"> Real-time public insight guides decisions</span>
+                  <strong className="text-white">Stronger Governance:</strong>
+                  <span className="text-white"> Real-time public insight guides decisions</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Inclusive Participation:</strong>
-                  <span className="text-green-700"> Voices previously unheard become central to dialogue</span>
+                  <strong className="text-white">Inclusive Participation:</strong>
+                  <span className="text-white"> Voices previously unheard become central to dialogue</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Improved Trust:</strong>
-                  <span className="text-green-700"> Transparent, responsive systems rebuild confidence</span>
+                  <strong className="text-white">Improved Trust:</strong>
+                  <span className="text-white"> Transparent, responsive systems rebuild confidence</span>
                 </div>
               </div>
             </div>
@@ -212,15 +213,15 @@ const Sensemaking = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Crisis Preparedness:</strong>
-                  <span className="text-green-700"> Early detection of stressors or unmet needs</span>
+                  <strong className="text-white">Crisis Preparedness:</strong>
+                  <span className="text-white"> Early detection of stressors or unmet needs</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Empowered Communities:</strong>
-                  <span className="text-green-700"> People see their ideas shaping the world around them</span>
+                  <strong className="text-white">Empowered Communities:</strong>
+                  <span className="text-white"> People see their ideas shaping the world around them</span>
                 </div>
               </div>
             </div>
