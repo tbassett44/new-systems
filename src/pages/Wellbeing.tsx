@@ -1,143 +1,240 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, AlertTriangle } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { Heart, Users, Brain, Shield, Activity, Target, CheckCircle, AlertTriangle, Smartphone, BarChart, Lock } from "lucide-react";
 
 const Wellbeing = () => {
   return (
     <div className="space-y-8">
-      <div className="mb-6">
-        <h1 className="text-4xl font-bold text-primary">AI-Supported Wellbeing Tracking</h1>
-        <p className="text-xl text-muted-foreground">A Participatory Framework for Individual Flourishing and Systemic Alignment</p>
+      <div className="mb-8">
+        <h1 className="text-5xl font-bold text-primary mb-2">Wellbeing Tracking</h1>
+        <h2 className="text-3xl font-semibold text-blue-600 mb-3">Privacy-First Mental Health & Community Resilience</h2>
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Participatory</Badge>
-        <Badge variant="secondary">AI-Enhanced</Badge>
-        <Badge variant="secondary">Holistic Wellbeing</Badge>
-        <Badge variant="secondary">Personalized Support</Badge>
-        <Badge variant="secondary">Systemic Feedback</Badge>
+      <div className="flex flex-wrap gap-2 mb-8">
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Mental Health</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Privacy-First</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Community Resilience</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Self-Sovereign Data</Badge>
       </div>
 
-      <Card>
+      <Card className="border-blue-200">
         <CardHeader>
-          <CardTitle className="text-primary">Overview and Purpose</CardTitle>
-        </CardHeader>
-        <CardContent className="prose max-w-none">
-          <p className="leading-relaxed">
-            This whitepaper proposes a new paradigm for understanding and enhancing human wellbeing by combining participatory self-reflection with AI-driven insight and support. Through structured inquiry across eight core domains of wellbeing—physical, mental, emotional, spiritual, relational, occupational, financial, and environmental—we can generate rich qualitative data that forms a living map of individual and collective experience.
-          </p>
-          <p className="leading-relaxed">
-            This data can not only reveal whether our systems are improving wellbeing, but also help route individuals to personalized resources, services, and practices that meet them where they are. The goal of this document is to demonstrate how a wellbeing-centered feedback system can serve both personal growth and societal evolution, creating a culture where feedback becomes nourishment and AI becomes a guide—not a gatekeeper.
-          </p>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
-            <AlertTriangle className="h-5 w-5" />
-            The Problem: Disconnection from Inner and Outer Support Systems
+          <CardTitle className="flex items-center gap-2 text-blue-700">
+            <Target className="h-5 w-5" />
+            Purpose and Overview
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Invisible Suffering:</strong> Many people struggle silently across multiple dimensions of wellbeing, lacking language, tools, or social permission to express their needs.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Fragmented Systems:</strong> Existing health, education, and support systems operate in silos, failing to address the interconnected nature of wellbeing.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Lack of Feedback:</strong> We lack clear, timely feedback on whether our institutions are enhancing or harming human flourishing.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Resource Mismatch:</strong> People are often unaware of what support is available—or which support would best meet their needs.
-              </div>
-            </li>
-          </ul>
+          <p className="leading-relaxed mb-4">
+            This whitepaper outlines a framework for distributed, privacy-first wellbeing tracking that empowers individuals and communities to monitor, understand, and improve mental health outcomes while maintaining complete data sovereignty. The system combines personal wellbeing metrics with community-level insights to create a comprehensive picture of collective mental health.
+          </p>
+          <p className="leading-relaxed">
+            The goal is to create early warning systems for mental health crises, identify effective interventions, and build resilient communities—all while ensuring that personal data remains under individual control and is never exploited by external parties.
+          </p>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-red-200">
         <CardHeader>
-          <CardTitle className="text-primary">The Solution: Participatory Wellbeing Tracking and AI-Enhanced Support</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Design Elements:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Reflective Prompts</h5>
-                <p className="text-sm text-muted-foreground">
-                  Individuals are invited to answer guided questions about how they are doing in each wellbeing domain, using both qualitative responses and scaled self-assessments.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">AI Analysis</h5>
-                <p className="text-sm text-muted-foreground">
-                  Natural language processing models identify patterns, strengths, and areas of concern—while preserving user privacy.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Personalized Recommendations</h5>
-                <p className="text-sm text-muted-foreground">
-                  Based on reflections, individuals receive suggestions tailored to their current state—such as relevant trainings, therapists, coaches, community offerings, or micro-practices.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Collective Insight</h5>
-                <p className="text-sm text-muted-foreground">
-                  Anonymized data feeds into a shared wellbeing dashboard that helps communities, institutions, and policymakers understand what's working and where support is needed.
-                </p>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-primary">Operational Framework</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-red-700">
+            <AlertTriangle className="h-5 w-5" />
+            The Problem: Mental Health Crisis and Data Exploitation
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-4">
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Data Collection</h4>
-              <p className="text-sm">Periodic check-ins (e.g., monthly or yearly) with a conversational AI or simple journaling interface</p>
+          <div className="space-y-4">
+            <div className="border-l-4 border-red-400 pl-4">
+              <h4 className="font-semibold text-red-800 mb-2">Rising Mental Health Challenges</h4>
+              <p className="text-red-700">Depression, anxiety, and suicide rates continue to climb, especially among young people and marginalized communities.</p>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Domains Tracked</h4>
-              <p className="text-sm">Physical, Mental, Emotional, Spiritual, Relational, Occupational, Financial, Environmental</p>
+            <div className="border-l-4 border-red-400 pl-4">
+              <h4 className="font-semibold text-red-800 mb-2">Lack of Early Detection</h4>
+              <p className="text-red-700">Current systems are reactive rather than preventive, often identifying mental health issues only after crisis points.</p>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Privacy & Consent</h4>
-              <p className="text-sm">Data encrypted, anonymized, and owned by the user; contributions to collective datasets opt-in only</p>
+            <div className="border-l-4 border-red-400 pl-4">
+              <h4 className="font-semibold text-red-800 mb-2">Data Privacy Violations</h4>
+              <p className="text-red-700">Existing mental health apps and platforms often monetize sensitive personal data without meaningful consent.</p>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Support Ecosystem</h4>
-              <p className="text-sm">Curated network of resources that span both conventional and alternative modalities</p>
-            </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Feedback Loops</h4>
-              <p className="text-sm">Real-time reflection not just to users, but also to system designers and policymakers</p>
+            <div className="border-l-4 border-red-400 pl-4">
+              <h4 className="font-semibold text-red-800 mb-2">Fragmented Support Systems</h4>
+              <p className="text-red-700">Mental health resources are siloed, expensive, and often inaccessible to those who need them most.</p>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-green-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-green-700">
+            <Heart className="h-5 w-5" />
+            The Solution: Self-Sovereign Wellbeing Networks
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed mb-4">We propose a new model of wellbeing tracking that combines:</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <div className="border-l-4 border-green-400 pl-4">
+                <h4 className="font-semibold text-green-800 mb-2">Personal Metrics</h4>
+                <p className="text-green-700">Mood tracking, sleep patterns, social connection, stress levels, and other self-reported indicators.</p>
+              </div>
+              <div className="border-l-4 border-green-400 pl-4">
+                <h4 className="font-semibold text-green-800 mb-2">Community Aggregation</h4>
+                <p className="text-green-700">Anonymous, encrypted sharing that reveals population-level trends without compromising individual privacy.</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="border-l-4 border-green-400 pl-4">
+                <h4 className="font-semibold text-green-800 mb-2">Early Warning Systems</h4>
+                <p className="text-green-700">AI-powered pattern recognition that identifies emerging mental health risks at individual and community levels.</p>
+              </div>
+              <div className="border-l-4 border-green-400 pl-4">
+                <h4 className="font-semibold text-green-800 mb-2">Intervention Networks</h4>
+                <p className="text-green-700">Connected support systems that can respond quickly and appropriately to emerging needs.</p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-purple-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-purple-700">
+            <Smartphone className="h-5 w-5" />
+            Technical Architecture
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div>
+              <h4 className="font-semibold mb-3 text-purple-700">Edge-Based Data</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• Personal devices store all raw data</li>
+                <li>• No centralized data collection</li>
+                <li>• User controls all sharing permissions</li>
+                <li>• Encrypted local storage</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3 text-purple-700">Federated Analytics</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• Pattern analysis without data transfer</li>
+                <li>• Differential privacy protocols</li>
+                <li>• Community insights via aggregation</li>
+                <li>• Zero-knowledge proof systems</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3 text-purple-700">Response Networks</h4>
+              <ul className="space-y-2 text-sm">
+                <li>• Peer-to-peer support systems</li>
+                <li>• Professional intervention protocols</li>
+                <li>• Resource recommendation engines</li>
+                <li>• Crisis response automation</li>
+              </ul>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-indigo-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-indigo-700">
+            <BarChart className="h-5 w-5" />
+            Metrics and Indicators
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold mb-3 text-indigo-700">Individual Tracking</h4>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Daily mood and energy levels</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Sleep quality and duration</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Social connection frequency</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Stress and anxiety indicators</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Physical activity and movement</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-3 text-indigo-700">Community Insights</h4>
+              <div className="space-y-2">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Population wellbeing trends</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Seasonal mental health patterns</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Crisis event correlation</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Intervention effectiveness</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <span>Resource allocation optimization</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-amber-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-amber-700">
+            <Users className="h-5 w-5" />
+            Use Cases and Applications
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-4">
+              <div className="bg-amber-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-amber-800 mb-2">🏫 Educational Institutions</h4>
+                <p className="text-sm text-amber-700">Track student wellbeing trends, identify at-risk populations, and deploy targeted mental health resources.</p>
+              </div>
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-blue-800 mb-2">🏢 Workplace Wellness</h4>
+                <p className="text-sm text-blue-700">Monitor employee mental health, prevent burnout, and create healthier work environments.</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="bg-green-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-green-800 mb-2">🏘️ Community Health</h4>
+                <p className="text-sm text-green-700">Enable neighborhoods to understand and address collective mental health needs.</p>
+              </div>
+              <div className="bg-purple-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-purple-800 mb-2">🏥 Healthcare Integration</h4>
+                <p className="text-sm text-purple-700">Provide healthcare providers with longitudinal mental health data for better treatment outcomes.</p>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-green-200 bg-green-50">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-700">
             <CheckCircle className="h-5 w-5" />
@@ -145,58 +242,96 @@ const Wellbeing = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-3">
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Improved Self-Awareness:</strong> People gain clearer understanding of their own needs, challenges, and progress
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-3">
+              <div className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="text-green-800">Early Intervention:</strong>
+                  <span className="text-green-700"> Identify mental health issues before they become crises</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="text-green-800">Data Sovereignty:</strong>
+                  <span className="text-green-700"> Individuals maintain complete control over their personal data</span>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="text-green-800">Community Resilience:</strong>
+                  <span className="text-green-700"> Build stronger support networks and collective wellbeing</span>
+                </div>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Targeted Support:</strong> Individuals receive timely, relevant support, improving wellbeing outcomes
+            <div className="space-y-3">
+              <div className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="text-green-800">Personalized Care:</strong>
+                  <span className="text-green-700"> Tailored interventions based on individual patterns and needs</span>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Community-Level Insight:</strong> Shared patterns reveal where communities are thriving or struggling
+              <div className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="text-green-800">Resource Optimization:</strong>
+                  <span className="text-green-700"> Direct mental health resources where they're needed most</span>
+                </div>
               </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Systemic Feedback:</strong> Institutions gain real-time insight into whether their efforts are improving human flourishing
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Normalization of Reflection:</strong> Creates cultural permission to talk about wellbeing as a central part of life
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <strong>Data-Driven Evolution:</strong> Aligns resource allocation and system design with actual human experience
+              <div className="flex items-start gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <div>
+                  <strong className="text-green-800">Stigma Reduction:</strong>
+                  <span className="text-green-700"> Normalize mental health discussions through community participation</span>
+                </div>
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-yellow-200">
         <CardHeader>
-          <CardTitle className="text-primary">Conclusion</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-yellow-700">
+            <Shield className="h-5 w-5" />
+            Privacy and Ethical Considerations
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed">
-            Wellbeing is not a luxury—it is the foundation for a thriving, adaptive society. This proposal offers a way to make wellbeing measurable, actionable, and participatory at scale. By combining human reflection with machine insight, we can close the gap between need and support, between suffering and care.
-          </p>
-          <Separator className="my-4" />
-          <p className="leading-relaxed font-medium">
-            This is not about surveillance—it is about sovereignty, self-knowledge, and social coherence. It is an invitation to build the inner mirrors and outer structures that a conscious society needs to grow.
+          <div className="space-y-4">
+            <div className="border-l-4 border-yellow-400 pl-4">
+              <h4 className="font-semibold text-yellow-800 mb-2">Consent and Agency</h4>
+              <p className="text-yellow-700">All data sharing must be explicit, informed, and revocable. Users maintain granular control over what data is shared and with whom.</p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-4">
+              <h4 className="font-semibold text-yellow-800 mb-2">Anonymization and Security</h4>
+              <p className="text-yellow-700">Advanced cryptographic techniques ensure that community insights cannot be traced back to individuals.</p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-4">
+              <h4 className="font-semibold text-yellow-800 mb-2">Algorithmic Transparency</h4>
+              <p className="text-yellow-700">All AI models and analysis methods must be open-source and auditable by the community.</p>
+            </div>
+            <div className="border-l-4 border-yellow-400 pl-4">
+              <h4 className="font-semibold text-yellow-800 mb-2">Crisis Response Protocols</h4>
+              <p className="text-yellow-700">Clear guidelines for when and how the system can override privacy settings in genuine emergency situations.</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-primary">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-primary">
+            <Brain className="h-5 w-5" />
+            Conclusion
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="text-lg leading-relaxed">
+            Privacy-first wellbeing tracking represents a fundamental shift from extractive mental health data collection to empowering, community-centered approaches. By giving individuals control over their data while enabling collective insights, we can build more resilient, supportive communities that proactively address mental health challenges. This system has the potential to transform how we understand, prevent, and respond to mental health crises while respecting human dignity and autonomy.
           </p>
         </CardContent>
       </Card>
