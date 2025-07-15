@@ -73,10 +73,10 @@ const Ecology = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-green-200/50 bg-green-50/50">
+      <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-foreground">
-            <Sprout className="h-5 w-5 text-green-600" />
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <Sprout className="h-5 w-5" />
             The Solution: Regenerative Infrastructure for Bioregional Health
           </CardTitle>
         </CardHeader>
@@ -237,37 +237,37 @@ const Ecology = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-green-200/50 bg-green-50/50">
+      <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-foreground">
-            <CheckCircle className="h-5 w-5 text-green-600" />
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-3">
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
+              <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
               <span className="text-foreground"><strong>Healing Landscapes:</strong> Measurable regeneration of soil, water, air, and biodiversity</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
+              <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
               <span className="text-foreground"><strong>Climate Resilience:</strong> Reduced risk of droughts, fires, floods, and other disruptions</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
+              <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
               <span className="text-foreground"><strong>Community Empowerment:</strong> Local stewardship and skill-building at the ground level</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
+              <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
               <span className="text-foreground"><strong>Transparent Accountability:</strong> Public, real-time visibility into ecological progress</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
+              <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
               <span className="text-foreground"><strong>Aligned Funding:</strong> Financial systems that reward stewardship and long-term thinking</span>
             </div>
             <div className="flex items-center gap-3">
-              <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
+              <CheckCircle className="h-4 w-4 text-green-500 shrink-0" />
               <span className="text-foreground"><strong>Knowledge Propagation:</strong> Regenerative know-how shared freely across borders and generations</span>
             </div>
           </div>
