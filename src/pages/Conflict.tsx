@@ -147,9 +147,9 @@ const Conflict = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-green-200/50 bg-green-50/50">
+      <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
+          <CardTitle className="flex items-center gap-2 text-green-600">
             <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
@@ -157,45 +157,45 @@ const Conflict = () => {
         <CardContent>
           <div className="grid gap-3">
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Reduction in School Suspensions and Youth Arrests:</strong>
-                <span className="text-green-700"> Early intervention reduces escalation to punitive systems</span>
+                <strong className="text-foreground">Reduction in School Suspensions and Youth Arrests:</strong>
+                <span className="text-muted-foreground"> Early intervention reduces escalation to punitive systems</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Increased Capacity for Emotional Regulation:</strong>
-                <span className="text-green-700"> Communities develop skills for healthy expression and conflict navigation</span>
+                <strong className="text-foreground">Increased Capacity for Emotional Regulation:</strong>
+                <span className="text-muted-foreground"> Communities develop skills for healthy expression and conflict navigation</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Stronger Trust and Cohesion:</strong>
-                <span className="text-green-700"> Restorative processes rebuild relationships and social fabric</span>
+                <strong className="text-foreground">Stronger Trust and Cohesion:</strong>
+                <span className="text-muted-foreground"> Restorative processes rebuild relationships and social fabric</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Empowered Individual Responsibility:</strong>
-                <span className="text-green-700"> People gain skills to take accountability and repair harm</span>
+                <strong className="text-foreground">Empowered Individual Responsibility:</strong>
+                <span className="text-muted-foreground"> People gain skills to take accountability and repair harm</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Decreased Reliance on Punitive Systems:</strong>
-                <span className="text-green-700"> Communities handle conflicts locally and restoratively</span>
+                <strong className="text-foreground">Decreased Reliance on Punitive Systems:</strong>
+                <span className="text-muted-foreground"> Communities handle conflicts locally and restoratively</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-green-800">Culturally Inclusive Pathways:</strong>
-                <span className="text-green-700"> Healing and dialogue processes honor diverse traditions and approaches</span>
+                <strong className="text-foreground">Culturally Inclusive Pathways:</strong>
+                <span className="text-muted-foreground"> Healing and dialogue processes honor diverse traditions and approaches</span>
               </div>
             </div>
           </div>
