@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Users, Brain, Shield, Activity, Target, CheckCircle, AlertTriangle, Smartphone, BarChart, Lock } from "lucide-react";
@@ -234,7 +233,7 @@ const Wellbeing = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-green-200 bg-green-50">
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-700">
             <CheckCircle className="h-5 w-5" />
