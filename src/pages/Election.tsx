@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Vote, AlertTriangle, CheckCircle, Users, Heart, Lightbulb } from "lucide-react";
@@ -6,68 +7,73 @@ import { Separator } from "@/components/ui/separator";
 const Election = () => {
   return (
     <div className="space-y-8">
-      <div className="mb-6">
-        <h1 className="text-4xl font-bold text-primary">Regenerative Election</h1>
-        <p className="text-xl text-muted-foreground">Prototyping a New Model of Democratic Participation and Civic Imagination</p>
+      <div className="mb-8">
+        <h1 className="text-5xl font-bold text-primary mb-2">Regenerative Election</h1>
+        <h2 className="text-3xl font-semibold text-blue-600 mb-4">Prototyping a New Model of Democratic Participation and Civic Imagination</h2>
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Democratic Renewal</Badge>
-        <Badge variant="secondary">Participatory</Badge>
-        <Badge variant="secondary">Values-Aligned</Badge>
-        <Badge variant="secondary">Co-Creation</Badge>
-        <Badge variant="secondary">Civic Imagination</Badge>
+      <div className="flex flex-wrap gap-2 mb-8">
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Democratic Renewal</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Participatory</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Values-Aligned</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Co-Creation</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Civic Imagination</Badge>
       </div>
 
-      <Card>
+      <Card className="border-blue-200">
         <CardHeader>
           <CardTitle className="text-primary">Overview and Purpose</CardTitle>
         </CardHeader>
         <CardContent className="prose max-w-none">
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-lg">
             This whitepaper introduces the concept of a Regenerative Election — a pre-ballot, participatory, values-driven electoral process designed to prototype the future of democracy before it enters the constraints of the legacy electoral system. It serves as a public experiment in democratic evolution, inviting civic imagination, fostering trust, and modeling a dignified, generative alternative to polarizing politics. The Regenerative Election is not about partisanship or power-seeking, but about demonstrating what governance can feel like when it is rooted in feedback, transparency, collective intelligence, and care.
           </p>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-red-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
-            <AlertTriangle className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-red-700">
+            <AlertTriangle className="h-6 w-6" />
             The Problem: Crisis in Electoral Culture
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Disillusionment and Disengagement:</strong> The public feels alienated by binary choices, adversarial debates, and negative campaigning.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Institutional Mistrust:</strong> Corporate influence and opaque party systems erode belief in democratic integrity.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Absence of Feedback Loops:</strong> Citizens are not meaningfully involved in shaping platforms or policy vision.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                <strong>Narrative Deficit:</strong> Politics lacks ceremony, soul, and the creative capacity to imagine new futures.
-              </div>
-            </li>
-          </ul>
+          <div className="space-y-4">
+            <p className="leading-relaxed">
+              The current electoral system faces deep structural challenges that undermine democratic participation and trust.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong>Disillusionment and Disengagement:</strong> The public feels alienated by binary choices, adversarial debates, and negative campaigning.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong>Institutional Mistrust:</strong> Corporate influence and opaque party systems erode belief in democratic integrity.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong>Absence of Feedback Loops:</strong> Citizens are not meaningfully involved in shaping platforms or policy vision.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong>Narrative Deficit:</strong> Politics lacks ceremony, soul, and the creative capacity to imagine new futures.
+                </div>
+              </li>
+            </ul>
+          </div>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="text-primary">The Solution: A Regenerative Election Framework</CardTitle>
         </CardHeader>
@@ -122,7 +128,7 @@ const Election = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-blue-200">
         <CardHeader>
           <CardTitle className="text-primary">Operational Framework</CardTitle>
         </CardHeader>
@@ -152,10 +158,10 @@ const Election = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-700">
-            <CheckCircle className="h-5 w-5" />
+            <CheckCircle className="h-6 w-6" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
@@ -195,19 +201,19 @@ const Election = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-primary">
         <CardHeader>
           <CardTitle className="text-primary">Conclusion and Call to Action</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed mb-4">
+          <p className="leading-relaxed text-lg mb-4">
             The Regenerative Election is not about electing a hero. It is about electing a new possibility: one where democracy becomes a living, learning, and healing process. By prototyping a new election outside the legacy timeline, we create space for trust to grow, imagination to flourish, and communities to align around values that nourish life.
           </p>
-          <p className="leading-relaxed mb-4">
+          <p className="leading-relaxed text-lg mb-4">
             This is not a rejection of civic responsibility. It is its expansion. Let us remember that voting is not the beginning or end of political participation. It is one moment in a much longer, sacred act of choosing who we become—together.
           </p>
           <Separator className="my-4" />
-          <p className="leading-relaxed font-medium">
+          <p className="leading-relaxed text-lg font-medium text-primary">
             Let us not campaign against a broken system. Let us prototype the one we would be proud to inherit.
           </p>
         </CardContent>

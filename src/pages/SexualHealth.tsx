@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertTriangle, CheckCircle } from "lucide-react";
@@ -5,74 +6,79 @@ import { AlertTriangle, CheckCircle } from "lucide-react";
 const SexualHealth = () => {
   return (
     <div className="space-y-8">
-      <div className="mb-6">
-        <h1 className="text-4xl font-bold text-primary">Sexual Health, Reproductive Choice, and Cultural Dignity</h1>
-        <p className="text-xl text-muted-foreground">A Regenerative Approach to Harm Reduction and Empowered Consent</p>
+      <div className="mb-8">
+        <h1 className="text-5xl font-bold text-primary mb-2">Sexual Health, Reproductive Choice, and Cultural Dignity</h1>
+        <h2 className="text-3xl font-semibold text-blue-600 mb-4">A Regenerative Approach to Harm Reduction and Empowered Consent</h2>
       </div>
 
-      <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Dignity-Centered</Badge>
-        <Badge variant="secondary">Consent-Based</Badge>
-        <Badge variant="secondary">Harm Reduction</Badge>
-        <Badge variant="secondary">Equitable Access</Badge>
-        <Badge variant="secondary">Reproductive Justice</Badge>
+      <div className="flex flex-wrap gap-2 mb-8">
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Dignity-Centered</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Consent-Based</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Harm Reduction</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Equitable Access</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Reproductive Justice</Badge>
       </div>
 
-      <Card>
+      <Card className="border-blue-200">
         <CardHeader>
           <CardTitle className="text-primary">Overview and Purpose</CardTitle>
         </CardHeader>
         <CardContent className="prose max-w-none">
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-lg">
             This whitepaper proposes a regenerative framework for sexual and reproductive health—one that honors bodily autonomy, fosters consent culture, and reduces harm through education, technology, and universal access to care. It moves beyond polarized political debates and instead seeks to create systems that empower individuals to make informed, sovereign decisions about their bodies, relationships, and futures.
           </p>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-red-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
-            <AlertTriangle className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-red-700">
+            <AlertTriangle className="h-6 w-6" />
             The Problem: Fragmented Access, Shame-Based Culture, and Preventable Harm
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Unwanted pregnancies and STIs continue to occur at high rates, often due to lack of access to early detection, affordable contraception, or clear information.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Reproductive responsibility disproportionately falls on women, with limited male contraceptive options and social stigma around sexual health.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Consent education is inconsistent or absent, leading to relational confusion and harm.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Cultural taboos and shame create barriers to honest dialogue, trauma recovery, and seeking care.
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div>
-                Informed choice around abortion is often entangled in political and moral warfare, rather than rooted in early access, accurate data, and compassionate care.
-              </div>
-            </li>
-          </ul>
+          <div className="space-y-4">
+            <p className="leading-relaxed">
+              Current sexual and reproductive health systems are fragmented, stigmatized, and often fail to serve the people who need them most.
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  Unwanted pregnancies and STIs continue to occur at high rates, often due to lack of access to early detection, affordable contraception, or clear information.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  Reproductive responsibility disproportionately falls on women, with limited male contraceptive options and social stigma around sexual health.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  Consent education is inconsistent or absent, leading to relational confusion and harm.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  Cultural taboos and shame create barriers to honest dialogue, trauma recovery, and seeking care.
+                </div>
+              </li>
+              <li className="flex items-start gap-2">
+                <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  Informed choice around abortion is often entangled in political and moral warfare, rather than rooted in early access, accurate data, and compassionate care.
+                </div>
+              </li>
+            </ul>
+          </div>
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="text-primary">The Solution: A Regenerative Sexual Health System</CardTitle>
         </CardHeader>
@@ -133,7 +139,7 @@ const SexualHealth = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-blue-200">
         <CardHeader>
           <CardTitle className="text-primary">Operational Framework</CardTitle>
         </CardHeader>
@@ -163,10 +169,10 @@ const SexualHealth = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-green-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-green-700">
-            <CheckCircle className="h-5 w-5" />
+            <CheckCircle className="h-6 w-6" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
@@ -212,12 +218,12 @@ const SexualHealth = () => {
         </CardContent>
       </Card>
 
-      <Card>
+      <Card className="border-primary">
         <CardHeader>
           <CardTitle className="text-primary">Conclusion</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed text-lg">
             By shifting the foundation of sexual and reproductive systems from shame and control to dignity and informed choice, we can create a future of safer, more respectful human relationships. With accessible tools, regenerative education, and sovereign technologies, we empower individuals to steward their health and sexuality with clarity, care, and integrity.
           </p>
         </CardContent>
