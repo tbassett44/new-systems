@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skull, AlertTriangle, CheckCircle, Heart, Shield, Users, Brain } from "lucide-react";
@@ -141,9 +140,9 @@ const Death = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-purple-200">
+      <Card className="border-green-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-purple-700">
+          <CardTitle className="flex items-center gap-2 text-green-700">
             <CheckCircle className="h-6 w-6" />
             Net Positive Outcomes
           </CardTitle>
