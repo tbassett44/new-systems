@@ -79,7 +79,6 @@ function AppSidebar() {
           <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
             <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE</h1>
             <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
-            <p className="text-sm text-muted-foreground">White Paper Collection</p>
           </div>
           <SidebarTrigger />
         </div>
