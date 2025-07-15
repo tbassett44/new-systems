@@ -1,22 +1,13 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap } from "lucide-react";
-
 const EndoEconomics = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-8">
         <h1 className="text-5xl font-bold text-primary mb-2">Toward a New Economic Model</h1>
         <h2 className="text-3xl font-semibold text-blue-600 mb-3">Redirecting GDP Flow for Collective Wellbeing</h2>
         <h3 className="text-2xl font-medium text-green-600 mb-4">Endo Economics</h3>
-        <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-lg border-l-4 border-blue-500">
-          <p className="text-lg text-muted-foreground mb-2">By</p>
-          <p className="font-semibold text-primary">Juicy Life</p>
-          <p className="text-blue-600">juicy@actualize.earth</p>
-          <p className="text-muted-foreground mt-2">and</p>
-          <p className="font-semibold text-primary">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
-        </div>
+        
       </div>
 
       <div className="flex flex-wrap gap-2 mb-8">
@@ -322,8 +313,6 @@ const EndoEconomics = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default EndoEconomics;
