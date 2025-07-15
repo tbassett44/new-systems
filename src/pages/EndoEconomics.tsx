@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap } from "lucide-react";
+import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap, Target } from "lucide-react";
 
 const EndoEconomics = () => {
   return <div className="space-y-8">
@@ -246,6 +246,42 @@ const EndoEconomics = () => {
             <p className="text-sm text-orange-700 mb-1"><strong>Surgeons:</strong> patient outcomes, peer review, malpractice rates, years of service</p>
             <p className="text-sm text-orange-700 mb-1"><strong>Teachers:</strong> student growth, community feedback, years teaching, continuing education</p>
             <p className="text-sm text-orange-700"><strong>Plumbers:</strong> client satisfaction, project volume, service innovation</p>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="border-purple-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-purple-700">
+            <Target className="h-6 w-6" />
+            Nested Distribution Within Careers
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            This model of distribution can be recursively applied within each career category. For example, within "Healthcare Practitioners," there are sub-careers like surgeons, nurses, midwives, and therapists. Each sub-group can:
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>Allocate their share of the total category budget internally</div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>Use a similar merit-based, normal distribution to support growth and diversity within the field</div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>Create custom metrics that reflect the values and outcomes specific to their role</div>
+            </div>
+          </div>
+          <div className="bg-purple-50 p-4 rounded-lg">
+            <h4 className="font-semibold text-purple-800 mb-2">This nested structure allows for:</h4>
+            <div className="space-y-2">
+              <p className="text-sm text-purple-700">• Autonomy within professional ecosystems</p>
+              <p className="text-sm text-purple-700">• Precision in resource allocation</p>
+              <p className="text-sm text-purple-700">• Recognition of nuanced contributions across specialties</p>
+            </div>
           </div>
         </CardContent>
       </Card>
