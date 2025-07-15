@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Vote, AlertTriangle, CheckCircle, Users, Heart, Lightbulb } from "lucide-react";
@@ -15,14 +14,6 @@ const Election = () => {
           <h1 className="text-4xl font-bold text-primary">Regenerative Election</h1>
           <p className="text-xl text-muted-foreground">Prototyping a New Model of Democratic Participation and Civic Imagination</p>
         </div>
-      </div>
-
-      <div className="text-center space-y-2 mb-8">
-        <p className="text-sm text-muted-foreground">By</p>
-        <p className="font-semibold">Juicy Life</p>
-        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
-        <p className="text-sm text-muted-foreground">and</p>
-        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">

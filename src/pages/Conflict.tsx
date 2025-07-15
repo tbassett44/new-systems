@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, CheckCircle, AlertTriangle } from "lucide-react";
@@ -15,14 +14,6 @@ const Conflict = () => {
           <h1 className="text-4xl font-bold text-primary">Conflict Transformation & Restorative Processes</h1>
           <p className="text-xl text-muted-foreground">A Culture of Repair, Not Retribution</p>
         </div>
-      </div>
-
-      <div className="text-center space-y-2 mb-8">
-        <p className="text-sm text-muted-foreground">By</p>
-        <p className="font-semibold">Juicy Life</p>
-        <p className="text-sm text-blue-600">juicy@actualize.earth</p>
-        <p className="text-sm text-muted-foreground">and</p>
-        <p className="text-sm">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
