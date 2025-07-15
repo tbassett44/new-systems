@@ -14,62 +14,7 @@ const WasteManagement = () => {
 
       
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <AlertTriangle className="h-5 w-5 text-destructive" />
-            The Problem: The Cost of Waste Mismanagement
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="bg-destructive/5 p-4 rounded-lg">
-                <h4 className="font-semibold text-destructive mb-2">Volume</h4>
-                <p className="text-sm">
-                  The average American generates 4.9 pounds of waste per day. With a population of approximately 
-                  350 million, the U.S. produces roughly 1 million tons of waste per day.
-                </p>
-              </div>
-              
-              <div className="bg-destructive/5 p-4 rounded-lg">
-                <h4 className="font-semibold text-destructive mb-2">Health Impacts</h4>
-                <p className="text-sm">
-                  Landfills and incinerators emit pollutants linked to respiratory illness, cancer, neurological 
-                  damage, and endocrine disruption. Communities—especially low-income ones—near waste sites face 
-                  disproportionate health risks.
-                </p>
-              </div>
-            </div>
-            
-            <div className="space-y-4">
-              <div className="bg-destructive/5 p-4 rounded-lg">
-                <h4 className="font-semibold text-destructive mb-2">Ecological Degradation</h4>
-                <p className="text-sm">
-                  Mismanaged waste leads to soil, water, and air pollution; oceanic plastic gyres; and biodiversity 
-                  loss. Methane emissions from landfills are a major contributor to climate change.
-                </p>
-              </div>
-              
-              <div className="bg-destructive/5 p-4 rounded-lg">
-                <h4 className="font-semibold text-destructive mb-2">Economic Costs</h4>
-                <p className="text-sm">
-                  The U.S. spends tens of billions annually on collection, landfill management, and environmental 
-                  remediation. These costs are compounded by lost resource value from recyclable or compostable materials.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-6 p-4 bg-muted/50 rounded-lg">
-            <h4 className="font-semibold mb-2">Feedback Failures</h4>
-            <p className="text-sm text-muted-foreground">
-              Our current waste systems lack feedback loops for accountability, citizen participation, and ecological 
-              metrics—further disconnecting people from the impacts of their consumption.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
+      
 
       <Card>
         <CardHeader>
