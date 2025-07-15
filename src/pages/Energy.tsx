@@ -1,22 +1,16 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Sun, Atom, Recycle, Shield, Globe, DollarSign, CheckCircle } from "lucide-react";
 
 const Energy = () => {
   return (
-    <div className="space-y-8 max-w-4xl">
-      {/* Header Section */}
-      <div className="space-y-6">
-        <div className="mb-6">
-          <h1 className="text-4xl font-bold leading-tight">
-            Regenerative Energy Infrastructure
-          </h1>
-          <p className="text-xl text-muted-foreground">
-            Powering a Thriving Civilization Beyond Carbon
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
+    <div className="space-y-8">
+      <div className="mb-8">
+        <h1 className="text-4xl font-bold text-primary mb-2">Regenerative Energy Infrastructure</h1>
+        <h2 className="text-2xl font-semibold text-muted-foreground mb-4">Powering a Thriving Civilization Beyond Carbon</h2>
+        
+        <div className="flex flex-wrap gap-2 mb-8">
           <Badge variant="secondary">Clean Energy</Badge>
           <Badge variant="secondary">Thorium Reactors</Badge>
           <Badge variant="secondary">Fusion Power</Badge>
@@ -25,16 +19,15 @@ const Energy = () => {
         </div>
       </div>
 
-      {/* Overview */}
-      <Card>
+      <Card className="border-blue-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Globe className="h-5 w-5 text-primary" />
+          <CardTitle className="text-primary flex items-center gap-2">
+            <Globe className="h-6 w-6 text-blue-600" />
             Overview and Purpose
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed text-muted-foreground">
+        <CardContent className="prose max-w-none">
+          <p className="leading-relaxed text-lg">
             This whitepaper outlines a pathway toward a clean, abundant, and regenerative energy future. 
             Grounded in the principles of systemic wellbeing and long-term resilience, it highlights 
             underfunded but promising technologies—such as thorium molten salt reactors and Tokamak 
@@ -45,95 +38,135 @@ const Energy = () => {
         </CardContent>
       </Card>
 
-      {/* The Problem */}
-      <Card>
+      <Card className="border-red-200">
         <CardHeader>
-          <CardTitle className="text-destructive">The Problem: Fossil Dependency and Innovation Suppression</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-red-700">
+            <Shield className="h-6 w-6" />
+            The Problem: Fossil Dependency and Innovation Suppression
+          </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="grid gap-4">
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h3 className="font-semibold text-destructive mb-2">Climate Crisis</h3>
-              <p className="text-sm text-muted-foreground">
-                Continued reliance on fossil fuels drives emissions, climate disruption, and ecological degradation.
-              </p>
+        <CardContent className="space-y-4">
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <strong>Climate Crisis:</strong> Continued reliance on fossil fuels drives emissions, climate disruption, and ecological degradation.
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h3 className="font-semibold text-destructive mb-2">Centralized Control</h3>
-              <p className="text-sm text-muted-foreground">
-                Legacy energy systems concentrate power in the hands of a few corporations or governments.
-              </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <strong>Centralized Control:</strong> Legacy energy systems concentrate power in the hands of a few corporations or governments.
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h3 className="font-semibold text-destructive mb-2">Suppressed Innovation</h3>
-              <p className="text-sm text-muted-foreground">
-                Breakthrough technologies like thorium reactors were shelved due to geopolitical and industrial inertia.
-              </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <strong>Suppressed Innovation:</strong> Breakthrough technologies like thorium reactors were shelved due to geopolitical and industrial inertia.
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h3 className="font-semibold text-destructive mb-2">Underinvestment</h3>
-              <p className="text-sm text-muted-foreground">
-                Fusion research has suffered from decades of underfunding relative to its long-term potential.
-              </p>
+          </div>
+          <div className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+            <div>
+              <strong>Underinvestment:</strong> Fusion research has suffered from decades of underfunding relative to its long-term potential.
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* The Solution */}
-      <Card>
+      <Card className="border-green-200">
         <CardHeader>
-          <CardTitle className="text-primary">The Solution: Decentralized and Safe Next-Gen Energy Systems</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-green-700">
+            <Zap className="h-6 w-6" />
+            The Solution: Decentralized and Safe Next-Gen Energy Systems
+          </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
-          {/* Thorium Reactors */}
-          <div className="bg-primary/5 p-6 rounded-lg">
+          <div className="bg-blue-50 dark:bg-blue-950/50 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
             <div className="flex items-center gap-3 mb-4">
-              <Atom className="h-6 w-6 text-primary" />
-              <h3 className="text-xl font-semibold">1. Thorium Molten Salt Reactors</h3>
+              <Atom className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+              <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100">1. Thorium Molten Salt Reactors</h3>
             </div>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Safer than traditional uranium reactors (inherent safety, low pressure)</li>
-              <li>• Produce less long-lived radioactive waste</li>
-              <li>• Cannot melt down like conventional nuclear plants</li>
-              <li>• Abundant fuel supply (thorium is more common than uranium)</li>
-              <li>• Prototypes proven as early as the 1960s (Oak Ridge National Laboratory)</li>
-            </ul>
+            <div className="space-y-2">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-blue-800 dark:text-blue-200">Safer than traditional uranium reactors (inherent safety, low pressure)</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-blue-800 dark:text-blue-200">Produce less long-lived radioactive waste</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-blue-800 dark:text-blue-200">Cannot melt down like conventional nuclear plants</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-blue-800 dark:text-blue-200">Abundant fuel supply (thorium is more common than uranium)</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-blue-800 dark:text-blue-200">Prototypes proven as early as the 1960s (Oak Ridge National Laboratory)</div>
+              </div>
+            </div>
           </div>
 
-          {/* Fusion Reactors */}
-          <div className="bg-secondary/30 p-6 rounded-lg">
+          <div className="bg-green-50 dark:bg-green-950/50 p-6 rounded-lg border border-green-200 dark:border-green-800">
             <div className="flex items-center gap-3 mb-4">
-              <Sun className="h-6 w-6 text-secondary-foreground" />
-              <h3 className="text-xl font-semibold">2. Tokamak Fusion Reactors</h3>
+              <Sun className="h-6 w-6 text-green-600 dark:text-green-400" />
+              <h3 className="text-xl font-semibold text-green-900 dark:text-green-100">2. Tokamak Fusion Reactors</h3>
             </div>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Mimic the energy generation of the sun via nuclear fusion</li>
-              <li>• Produce massive energy output with zero carbon emissions</li>
-              <li>• Minimal radioactive waste and no risk of meltdown</li>
-              <li>• International collaboration already underway (e.g., ITER project)</li>
-              <li>• Once commercialized, could provide virtually limitless power</li>
-            </ul>
+            <div className="space-y-2">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-green-800 dark:text-green-200">Mimic the energy generation of the sun via nuclear fusion</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-green-800 dark:text-green-200">Produce massive energy output with zero carbon emissions</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-green-800 dark:text-green-200">Minimal radioactive waste and no risk of meltdown</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-green-800 dark:text-green-200">International collaboration already underway (e.g., ITER project)</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-green-800 dark:text-green-200">Once commercialized, could provide virtually limitless power</div>
+              </div>
+            </div>
           </div>
 
-          {/* Grid Architecture */}
-          <div className="bg-accent/30 p-6 rounded-lg">
+          <div className="bg-purple-50 dark:bg-purple-950/50 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
             <div className="flex items-center gap-3 mb-4">
-              <Zap className="h-6 w-6 text-accent-foreground" />
-              <h3 className="text-xl font-semibold">3. Regenerative Grid Architecture</h3>
+              <Zap className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+              <h3 className="text-xl font-semibold text-purple-900 dark:text-purple-100">3. Regenerative Grid Architecture</h3>
             </div>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>• Distributed renewable energy systems (solar, wind, geothermal)</li>
-              <li>• Microgrids and community-scale storage</li>
-              <li>• AI-assisted energy flow optimization</li>
-              <li>• Open-source hardware and peer-managed infrastructure</li>
-            </ul>
+            <div className="space-y-2">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-purple-800 dark:text-purple-200">Distributed renewable energy systems (solar, wind, geothermal)</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-purple-800 dark:text-purple-200">Microgrids and community-scale storage</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-purple-800 dark:text-purple-200">AI-assisted energy flow optimization</div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="text-purple-800 dark:text-purple-200">Open-source hardware and peer-managed infrastructure</div>
+              </div>
+            </div>
           </div>
 
-          {/* Solar Note */}
-          <div className="bg-muted/50 p-6 rounded-lg border-l-4 border-muted-foreground/30">
-            <h3 className="text-lg font-semibold mb-3">4. A Note on Solar Energy</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+          <div className="bg-amber-50 dark:bg-amber-950/50 p-6 rounded-lg border border-amber-200 dark:border-amber-800">
+            <h3 className="text-lg font-semibold mb-3 text-amber-900 dark:text-amber-100">4. A Note on Solar Energy</h3>
+            <p className="text-amber-800 dark:text-amber-200 leading-relaxed">
               While solar power has played a key role in decentralizing energy and reducing operational 
               emissions, its regenerative potential must be assessed holistically. The production of 
               photovoltaic panels involves high material throughput, often using rare or difficult-to-recycle 
@@ -147,51 +180,43 @@ const Energy = () => {
         </CardContent>
       </Card>
 
-      {/* Operational Framework */}
-      <Card>
+      <Card className="border-orange-200">
         <CardHeader>
-          <CardTitle>Operational Framework</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-orange-700">
+            <Recycle className="h-6 w-6" />
+            Operational Framework
+          </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <div className="border-l-4 border-primary pl-4">
-                <h4 className="font-semibold text-primary">Mapping Layer</h4>
-                <p className="text-sm text-muted-foreground">Geographic and population-based energy need assessment</p>
-              </div>
-              <div className="border-l-4 border-primary pl-4">
-                <h4 className="font-semibold text-primary">R&D Layer</h4>
-                <p className="text-sm text-muted-foreground">Strategic funding of underdeveloped tech like thorium/fusion</p>
-              </div>
-              <div className="border-l-4 border-primary pl-4">
-                <h4 className="font-semibold text-primary">Governance Layer</h4>
-                <p className="text-sm text-muted-foreground">Decentralized decision-making with community participation</p>
-              </div>
+          <div className="grid gap-4">
+            <div className="border-l-4 border-primary pl-4">
+              <strong className="text-primary">Mapping Layer:</strong> Geographic and population-based energy need assessment
             </div>
-            <div className="space-y-3">
-              <div className="border-l-4 border-primary pl-4">
-                <h4 className="font-semibold text-primary">Funding Layer</h4>
-                <p className="text-sm text-muted-foreground">Redirect subsidies from fossil fuels to regenerative tech via Endo Economics flows</p>
-              </div>
-              <div className="border-l-4 border-primary pl-4">
-                <h4 className="font-semibold text-primary">Deployment Layer</h4>
-                <p className="text-sm text-muted-foreground">Public-private partnerships, cooperatives, and international collaboration</p>
-              </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <strong className="text-green-700">R&D Layer:</strong> Strategic funding of underdeveloped tech like thorium/fusion
+            </div>
+            <div className="border-l-4 border-blue-500 pl-4">
+              <strong className="text-blue-700">Governance Layer:</strong> Decentralized decision-making with community participation
+            </div>
+            <div className="border-l-4 border-yellow-500 pl-4">
+              <strong className="text-yellow-700">Funding Layer:</strong> Redirect subsidies from fossil fuels to regenerative tech via Endo Economics flows
+            </div>
+            <div className="border-l-4 border-purple-500 pl-4">
+              <strong className="text-purple-700">Deployment Layer:</strong> Public-private partnerships, cooperatives, and international collaboration
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Integration with Endo Economics */}
-      <Card>
+      <Card className="border-teal-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Recycle className="h-5 w-5 text-primary" />
+          <CardTitle className="flex items-center gap-2 text-teal-700">
+            <Recycle className="h-6 w-6" />
             Integration with Endo Economics
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed text-muted-foreground">
+          <p className="leading-relaxed">
             The Endo Economics model unlocks resource flow toward solutions that serve collective wellbeing. 
             Instead of funding extraction, public wealth can be redirected toward energy systems that support 
             long-term health and climate stability. Guaranteed income and transparent resource allocation 
@@ -200,11 +225,10 @@ const Energy = () => {
         </CardContent>
       </Card>
 
-      {/* Project Costs */}
-      <Card>
+      <Card className="border-indigo-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <DollarSign className="h-5 w-5 text-primary" />
+          <CardTitle className="flex items-center gap-2 text-indigo-700">
+            <DollarSign className="h-6 w-6" />
             Estimated Project Costs
           </CardTitle>
         </CardHeader>
@@ -234,73 +258,61 @@ const Energy = () => {
         </CardContent>
       </Card>
 
-      {/* Net Positive Outcomes */}
-      <Card>
+      <Card className="border-green-200">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-600">
-            <CheckCircle className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-green-700">
+            <CheckCircle className="h-6 w-6" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Climate Mitigation</h4>
-                  <p className="text-sm text-muted-foreground">Major reduction in greenhouse gas emissions</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Energy Sovereignty</h4>
-                  <p className="text-sm text-muted-foreground">Local communities control their power</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Innovation Reignited</h4>
-                  <p className="text-sm text-muted-foreground">Funding flows toward long-neglected solutions</p>
-                </div>
+          <div className="grid gap-4">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Climate Mitigation:</strong> Major reduction in greenhouse gas emissions
               </div>
             </div>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Safety and Resilience</h4>
-                  <p className="text-sm text-muted-foreground">Decentralized systems minimize risk</p>
-                </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Energy Sovereignty:</strong> Local communities control their power
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Generational Equity</h4>
-                  <p className="text-sm text-muted-foreground">Future generations inherit a stable, powered planet</p>
-                </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Innovation Reignited:</strong> Funding flows toward long-neglected solutions
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold">Economic Efficiency</h4>
-                  <p className="text-sm text-muted-foreground">Reduced long-term costs of climate impact and energy loss</p>
-                </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Safety and Resilience:</strong> Decentralized systems minimize risk
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Generational Equity:</strong> Future generations inherit a stable, powered planet
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Economic Efficiency:</strong> Reduced long-term costs of climate impact and energy loss
               </div>
             </div>
           </div>
         </CardContent>
       </Card>
 
-      {/* Conclusion */}
-      <Card>
+      <Card className="border-primary">
         <CardHeader>
-          <CardTitle>Conclusion</CardTitle>
+          <CardTitle className="text-primary">Conclusion</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed text-muted-foreground">
+          <p className="leading-relaxed text-lg">
             A regenerative energy infrastructure is not only possible—it is essential. We must reclaim 
             innovation, liberate funding, and prioritize the health of both people and planet. With 
             technologies like thorium and fusion on the horizon, and distributed renewables already 
