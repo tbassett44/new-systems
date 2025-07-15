@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 const Science = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-4 mb-6">
+      <div className="flex items-start gap-4 mb-6">
         <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
           <Microscope className="h-6 w-6 text-primary" />
         </div>
