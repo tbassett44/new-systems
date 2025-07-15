@@ -217,10 +217,10 @@ const Education = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-green-200/50 bg-green-50/50">
+      <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-foreground">
-            <CheckCircle className="h-5 w-5 text-green-600" />
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
@@ -228,21 +228,21 @@ const Education = () => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-foreground">Lifelong Learning:</strong>
                   <span className="text-foreground"> Education extends beyond formal schooling into every phase of life</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-foreground">Empowered Learners:</strong>
                   <span className="text-foreground"> Individuals actively shape their paths, reflecting their values and callings</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-foreground">Recognition of All Growth:</strong>
                   <span className="text-foreground"> Learning from lived experience, contribution, healing, and creativity is honored</span>
@@ -251,21 +251,21 @@ const Education = () => {
             </div>
             <div className="space-y-3">
               <div className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-foreground">Privacy and Consent:</strong>
                   <span className="text-foreground"> Learners share only what they choose, on their terms</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-foreground">Equity Across Borders:</strong>
                   <span className="text-foreground"> Portable credentials help migrants, refugees, and informal learners thrive globally</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
-                <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <strong className="text-foreground">Cultural Relevance and Regeneration:</strong>
                   <span className="text-foreground"> Education reflects and revitalizes local wisdom and community needs</span>
