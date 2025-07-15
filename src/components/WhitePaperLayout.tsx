@@ -116,7 +116,7 @@ function AppSidebar() {
 }
 
 function MobileNavButton() {
-  const { toggleSidebar } = useSidebar();
+  const { toggleSidebar, openMobile } = useSidebar();
   const isMobile = useIsMobile();
   
   if (!isMobile) return null;
@@ -124,7 +124,9 @@ function MobileNavButton() {
   return (
     <button
       onClick={toggleSidebar}
-      className="fixed bottom-4 right-0 z-50 p-2.5 bg-blue-600 text-white rounded-l-lg shadow-lg hover:bg-blue-700 transition-colors md:hidden"
+      className={`fixed bottom-4 z-50 p-2.5 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 md:hidden ${
+        openMobile ? 'left-72' : 'left-4'
+      }`}
       aria-label="Toggle navigation menu"
     >
       <Menu className="h-5 w-5" />
