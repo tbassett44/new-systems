@@ -14,12 +14,12 @@ const DigitalSovereignty = () => {
       
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Self-Sovereignty</Badge>
-        <Badge variant="secondary">Decentralized</Badge>
-        <Badge variant="secondary">Privacy</Badge>
-        <Badge variant="secondary">Verifiable Credentials</Badge>
-        <Badge variant="secondary">Zero-Knowledge</Badge>
-        <Badge variant="secondary">Edge Computing</Badge>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Self-Sovereignty</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Decentralized</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Privacy</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Verifiable Credentials</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Zero-Knowledge</Badge>
+        <Badge variant="secondary" className="bg-teal-100 text-teal-800">Edge Computing</Badge>
       </div>
 
       <Card>

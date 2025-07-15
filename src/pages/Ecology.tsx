@@ -11,12 +11,12 @@ const Ecology = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Bioregional</Badge>
-        <Badge variant="secondary">Regenerative</Badge>
-        <Badge variant="secondary">Ecosystem Restoration</Badge>
-        <Badge variant="secondary">Community Stewardship</Badge>
-        <Badge variant="secondary">Climate Resilience</Badge>
-        <Badge variant="secondary">Verified Impact</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Bioregional</Badge>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Regenerative</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Ecosystem Restoration</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Community Stewardship</Badge>
+        <Badge variant="secondary" className="bg-teal-100 text-teal-800">Climate Resilience</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Verified Impact</Badge>
       </div>
 
       <Card>
@@ -226,7 +226,7 @@ const Ecology = () => {
               <span className="text-foreground">Fire-adapted ecosystem restoration (100 acres)</span>
               <span className="font-semibold text-foreground">$60,000–$100,000</span>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center border-b pb-2">
               <span className="text-foreground">Greenbelt revitalization (per mile)</span>
               <span className="font-semibold text-foreground">$45,000–$90,000</span>
             </div>

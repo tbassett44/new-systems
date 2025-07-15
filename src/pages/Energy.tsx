@@ -1,4 +1,5 @@
 
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Sun, Atom, Recycle, Shield, Globe, DollarSign, CheckCircle } from "lucide-react";
@@ -11,11 +12,11 @@ const Energy = () => {
         <h2 className="text-2xl font-semibold text-muted-foreground mb-4">Powering a Thriving Civilization Beyond Carbon</h2>
         
         <div className="flex flex-wrap gap-2 mb-8">
-          <Badge variant="secondary">Clean Energy</Badge>
-          <Badge variant="secondary">Thorium Reactors</Badge>
-          <Badge variant="secondary">Fusion Power</Badge>
-          <Badge variant="secondary">Decentralized Grid</Badge>
-          <Badge variant="secondary">Post-Carbon</Badge>
+          <Badge variant="secondary" className="bg-green-100 text-green-800">Clean Energy</Badge>
+          <Badge variant="secondary" className="bg-blue-100 text-blue-800">Thorium Reactors</Badge>
+          <Badge variant="secondary" className="bg-purple-100 text-purple-800">Fusion Power</Badge>
+          <Badge variant="secondary" className="bg-orange-100 text-orange-800">Decentralized Grid</Badge>
+          <Badge variant="secondary" className="bg-teal-100 text-teal-800">Post-Carbon</Badge>
         </div>
       </div>
 

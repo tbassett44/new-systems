@@ -12,11 +12,11 @@ const Arts = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Cultural Stewardship</Badge>
-        <Badge variant="secondary">Community-Rooted</Badge>
-        <Badge variant="secondary">Healing Arts</Badge>
-        <Badge variant="secondary">Regenerative</Badge>
-        <Badge variant="secondary">Sacred Expression</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Cultural Stewardship</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Community-Rooted</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Healing Arts</Badge>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Regenerative</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Sacred Expression</Badge>
       </div>
 
       <Card>

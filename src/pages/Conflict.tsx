@@ -12,10 +12,10 @@ const Conflict = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Restorative</Badge>
-        <Badge variant="secondary">Proactive</Badge>
-        <Badge variant="secondary">Community-Based</Badge>
-        <Badge variant="secondary">Growth-Oriented</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Restorative</Badge>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Proactive</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Community-Based</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Growth-Oriented</Badge>
       </div>
 
       <Card>

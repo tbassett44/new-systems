@@ -15,12 +15,12 @@ const Education = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Learner-Led</Badge>
-        <Badge variant="secondary">Digital Sovereignty</Badge>
-        <Badge variant="secondary">Lifelong Learning</Badge>
-        <Badge variant="secondary">Self-Custody</Badge>
-        <Badge variant="secondary">Verifiable Credentials</Badge>
-        <Badge variant="secondary">Decentralized</Badge>
+        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Learner-Led</Badge>
+        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Digital Sovereignty</Badge>
+        <Badge variant="secondary" className="bg-green-100 text-green-800">Lifelong Learning</Badge>
+        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Self-Custody</Badge>
+        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Verifiable Credentials</Badge>
+        <Badge variant="secondary" className="bg-teal-100 text-teal-800">Decentralized</Badge>
       </div>
 
       <Card>
