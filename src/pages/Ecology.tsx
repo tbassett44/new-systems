@@ -75,19 +75,19 @@ const Ecology = () => {
 
       <Card className="border-green-200/50 bg-green-50/50">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
-            <Sprout className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-foreground">
+            <Sprout className="h-5 w-5 text-green-600" />
             The Solution: Regenerative Infrastructure for Bioregional Health
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
             <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-green-700">
-                <Users className="h-4 w-4" />
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
                 1. Bioregional Regeneration Hubs
               </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-green-700/90">
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Local councils or cooperatives map and prioritize regeneration goals (e.g., watershed repair, pollinator corridors, rewilding)</li>
                 <li>Use of digital tools to engage citizen scientists, elders, farmers, and youth in co-designing projects</li>
                 <li>Interoperable platforms connect local action to global knowledge</li>
@@ -95,11 +95,11 @@ const Ecology = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-green-700">
-                <Globe className="h-4 w-4" />
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Globe className="h-4 w-4 text-green-600" />
                 2. Data-Driven Tracking and Verification
               </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-green-700/90">
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Use of satellite imagery, drone surveys, and community reporting to monitor ecological indicators</li>
                 <li>AI supports pattern recognition, trend detection, and predictive modeling</li>
                 <li>Open dashboards offer real-time visibility into ecosystem health and project progress</li>
@@ -107,11 +107,11 @@ const Ecology = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-green-700">
-                <Heart className="h-4 w-4" />
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
                 3. Regenerative Funding Models
               </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-green-700/90">
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Community-led treasury or DAO mechanisms distribute funds to projects based on verified impact</li>
                 <li>Ecological performance metrics tied to funding flows (e.g., increased soil carbon, restored riparian buffers)</li>
                 <li>Integration with local currencies, impact tokens, or public benefit coins</li>
@@ -119,11 +119,11 @@ const Ecology = () => {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-green-700">
-                <Users className="h-4 w-4" />
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
                 4. Knowledge Commons and Skill Exchange
               </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-green-700/90">
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Decentralized libraries of practices, tools, and case studies</li>
                 <li>Credentialed and peer-validated regenerative practitioners</li>
                 <li>Networks for mentorship, land access, and tools-sharing across regions</li>
@@ -239,8 +239,8 @@ const Ecology = () => {
 
       <Card className="border-green-200/50 bg-green-50/50">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
-            <CheckCircle className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-foreground">
+            <CheckCircle className="h-5 w-5 text-green-600" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
@@ -248,27 +248,27 @@ const Ecology = () => {
           <div className="grid gap-3">
             <div className="flex items-center gap-3">
               <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
-              <span className="text-green-700"><strong>Healing Landscapes:</strong> Measurable regeneration of soil, water, air, and biodiversity</span>
+              <span className="text-foreground"><strong>Healing Landscapes:</strong> Measurable regeneration of soil, water, air, and biodiversity</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
-              <span className="text-green-700"><strong>Climate Resilience:</strong> Reduced risk of droughts, fires, floods, and other disruptions</span>
+              <span className="text-foreground"><strong>Climate Resilience:</strong> Reduced risk of droughts, fires, floods, and other disruptions</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
-              <span className="text-green-700"><strong>Community Empowerment:</strong> Local stewardship and skill-building at the ground level</span>
+              <span className="text-foreground"><strong>Community Empowerment:</strong> Local stewardship and skill-building at the ground level</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
-              <span className="text-green-700"><strong>Transparent Accountability:</strong> Public, real-time visibility into ecological progress</span>
+              <span className="text-foreground"><strong>Transparent Accountability:</strong> Public, real-time visibility into ecological progress</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
-              <span className="text-green-700"><strong>Aligned Funding:</strong> Financial systems that reward stewardship and long-term thinking</span>
+              <span className="text-foreground"><strong>Aligned Funding:</strong> Financial systems that reward stewardship and long-term thinking</span>
             </div>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-4 w-4 text-green-600 shrink-0" />
-              <span className="text-green-700"><strong>Knowledge Propagation:</strong> Regenerative know-how shared freely across borders and generations</span>
+              <span className="text-foreground"><strong>Knowledge Propagation:</strong> Regenerative know-how shared freely across borders and generations</span>
             </div>
           </div>
         </CardContent>

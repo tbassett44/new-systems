@@ -92,91 +92,91 @@ const Education = () => {
         <CardContent>
           <div className="space-y-6">
             <div className="border-l-4 border-primary/30 pl-4">
-              <h4 className="font-semibold mb-3 text-primary">1. Self-Sovereign Learner Profiles</h4>
+              <h4 className="font-semibold mb-3 text-foreground">1. Self-Sovereign Learner Profiles</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-primary/90">Each learner has a digital identity wallet containing their learning records, values, goals, and reflections</span>
+                  <span className="text-foreground">Each learner has a digital identity wallet containing their learning records, values, goals, and reflections</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-primary/90">Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions</span>
+                  <span className="text-foreground">Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-primary/90">Credentials can represent knowledge, skills, experiences, contributions, and character traits</span>
+                  <span className="text-foreground">Credentials can represent knowledge, skills, experiences, contributions, and character traits</span>
                 </li>
               </ul>
             </div>
 
             <div className="border-l-4 border-blue-300 pl-4">
-              <h4 className="font-semibold mb-3 text-blue-700">2. Modular Learning Ecosystem</h4>
+              <h4 className="font-semibold mb-3 text-foreground">2. Modular Learning Ecosystem</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-blue-700/90">Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</span>
+                  <span className="text-foreground">Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-blue-700/90">All nodes can issue credentials if aligned with community standards and interoperability protocols</span>
+                  <span className="text-foreground">All nodes can issue credentials if aligned with community standards and interoperability protocols</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-blue-700/90">Encourages learning in context—rooted in place, culture, and purpose</span>
+                  <span className="text-foreground">Encourages learning in context—rooted in place, culture, and purpose</span>
                 </li>
               </ul>
             </div>
 
             <div className="border-l-4 border-green-300 pl-4">
-              <h4 className="font-semibold mb-3 text-green-700">3. Interoperable Credential Web</h4>
+              <h4 className="font-semibold mb-3 text-foreground">3. Interoperable Credential Web</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-green-700/90">Credentials can be verified anywhere, at any time, without needing centralized databases</span>
+                  <span className="text-foreground">Credentials can be verified anywhere, at any time, without needing centralized databases</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-green-700/90">Learners can selectively disclose or prove qualifications using zero-knowledge proofs</span>
+                  <span className="text-foreground">Learners can selectively disclose or prove qualifications using zero-knowledge proofs</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-green-700/90">Creates fluid pathways for employment, collaboration, and further learning</span>
+                  <span className="text-foreground">Creates fluid pathways for employment, collaboration, and further learning</span>
                 </li>
               </ul>
             </div>
 
             <div className="border-l-4 border-purple-300 pl-4">
-              <h4 className="font-semibold mb-3 text-purple-700">4. AI and Mentor-Supported Learning Journeys</h4>
+              <h4 className="font-semibold mb-3 text-foreground">4. AI and Mentor-Supported Learning Journeys</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-purple-700/90">Learners design personalized pathways with support from AI systems and human mentors</span>
+                  <span className="text-foreground">Learners design personalized pathways with support from AI systems and human mentors</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-purple-700/90">Learning recommendations align with purpose, context, and wellbeing—not just market demand</span>
+                  <span className="text-foreground">Learning recommendations align with purpose, context, and wellbeing—not just market demand</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-purple-700/90">Reflection and narrative become central to progress tracking</span>
+                  <span className="text-foreground">Reflection and narrative become central to progress tracking</span>
                 </li>
               </ul>
             </div>
 
             <div className="border-l-4 border-orange-300 pl-4">
-              <h4 className="font-semibold mb-3 text-orange-700">5. Community-Based Validation and Reputation</h4>
+              <h4 className="font-semibold mb-3 text-foreground">5. Community-Based Validation and Reputation</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-orange-700/90">Peers, elders, and collectives endorse growth through verifiable acknowledgments</span>
+                  <span className="text-foreground">Peers, elders, and collectives endorse growth through verifiable acknowledgments</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-orange-700/90">Learning becomes a social, relational process</span>
+                  <span className="text-foreground">Learning becomes a social, relational process</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-orange-700/90">Networks of trust replace standardized testing</span>
+                  <span className="text-foreground">Networks of trust replace standardized testing</span>
                 </li>
               </ul>
             </div>
@@ -219,8 +219,8 @@ const Education = () => {
 
       <Card className="border-green-200/50 bg-green-50/50">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-green-700">
-            <CheckCircle className="h-5 w-5" />
+          <CardTitle className="flex items-center gap-2 text-foreground">
+            <CheckCircle className="h-5 w-5 text-green-600" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
@@ -230,22 +230,22 @@ const Education = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Lifelong Learning:</strong>
-                  <span className="text-green-700"> Education extends beyond formal schooling into every phase of life</span>
+                  <strong className="text-foreground">Lifelong Learning:</strong>
+                  <span className="text-foreground"> Education extends beyond formal schooling into every phase of life</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Empowered Learners:</strong>
-                  <span className="text-green-700"> Individuals actively shape their paths, reflecting their values and callings</span>
+                  <strong className="text-foreground">Empowered Learners:</strong>
+                  <span className="text-foreground"> Individuals actively shape their paths, reflecting their values and callings</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Recognition of All Growth:</strong>
-                  <span className="text-green-700"> Learning from lived experience, contribution, healing, and creativity is honored</span>
+                  <strong className="text-foreground">Recognition of All Growth:</strong>
+                  <span className="text-foreground"> Learning from lived experience, contribution, healing, and creativity is honored</span>
                 </div>
               </div>
             </div>
@@ -253,22 +253,22 @@ const Education = () => {
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Privacy and Consent:</strong>
-                  <span className="text-green-700"> Learners share only what they choose, on their terms</span>
+                  <strong className="text-foreground">Privacy and Consent:</strong>
+                  <span className="text-foreground"> Learners share only what they choose, on their terms</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Equity Across Borders:</strong>
-                  <span className="text-green-700"> Portable credentials help migrants, refugees, and informal learners thrive globally</span>
+                  <strong className="text-foreground">Equity Across Borders:</strong>
+                  <span className="text-foreground"> Portable credentials help migrants, refugees, and informal learners thrive globally</span>
                 </div>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                 <div>
-                  <strong className="text-green-800">Cultural Relevance and Regeneration:</strong>
-                  <span className="text-green-700"> Education reflects and revitalizes local wisdom and community needs</span>
+                  <strong className="text-foreground">Cultural Relevance and Regeneration:</strong>
+                  <span className="text-foreground"> Education reflects and revitalizes local wisdom and community needs</span>
                 </div>
               </div>
             </div>
