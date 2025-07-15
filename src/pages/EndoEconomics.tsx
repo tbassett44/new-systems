@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap, Target, MapPin } from "lucide-react";
 
 const EndoEconomics = () => {
@@ -509,6 +510,253 @@ const EndoEconomics = () => {
           <p className="leading-relaxed text-lg mt-4 font-medium text-primary">
             Drafted with the intent to spark dialogue, iteration, and collaboration toward collective economic transformation.
           </p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-slate-200">
+        <CardHeader>
+          <CardTitle className="text-slate-700">References</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-8">
+          <div>
+            <h3 className="text-lg font-semibold text-slate-800 mb-4">[Data 1]</h3>
+            <p className="text-sm text-slate-600 mb-4">
+              23 Categories of Careers, representing ~92% of current US Jobs. Annual Mean Wage was multiplied by the total number of employees in that career to give a total value of wage flowing through that career. All 23 careers Total Wage Flow, adds up to the total wage flow of $9.94T.
+            </p>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="text-left">Career Group</TableHead>
+                    <TableHead className="text-right">Employment (Millions)</TableHead>
+                    <TableHead className="text-right">Annual Mean Wage (USD)</TableHead>
+                    <TableHead className="text-right">Total Wage Flow (Trillions USD)</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Management</TableCell>
+                    <TableCell className="text-right">10.5</TableCell>
+                    <TableCell className="text-right">$137,750</TableCell>
+                    <TableCell className="text-right">$1.446375</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Healthcare Practitioners & Technical</TableCell>
+                    <TableCell className="text-right">9.28</TableCell>
+                    <TableCell className="text-right">$102,060</TableCell>
+                    <TableCell className="text-right">$0.9471168</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Business & Financial Operations</TableCell>
+                    <TableCell className="text-right">10.09</TableCell>
+                    <TableCell className="text-right">$90,580</TableCell>
+                    <TableCell className="text-right">$0.9139522</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Office & Administrative Support</TableCell>
+                    <TableCell className="text-right">18.53</TableCell>
+                    <TableCell className="text-right">$47,940</TableCell>
+                    <TableCell className="text-right">$0.8883282</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Sales & Related</TableCell>
+                    <TableCell className="text-right">13.38</TableCell>
+                    <TableCell className="text-right">$53,280</TableCell>
+                    <TableCell className="text-right">$0.7128864</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Transportation & Material Moving</TableCell>
+                    <TableCell className="text-right">13.75</TableCell>
+                    <TableCell className="text-right">$46,690</TableCell>
+                    <TableCell className="text-right">$0.6419875</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Computer & Mathematical</TableCell>
+                    <TableCell className="text-right">5.18</TableCell>
+                    <TableCell className="text-right">$113,140</TableCell>
+                    <TableCell className="text-right">$0.5860652</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Education, Training & Library</TableCell>
+                    <TableCell className="text-right">8.74</TableCell>
+                    <TableCell className="text-right">$66,400</TableCell>
+                    <TableCell className="text-right">$0.580336</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Food Preparation & Serving Related</TableCell>
+                    <TableCell className="text-right">13.25</TableCell>
+                    <TableCell className="text-right">$34,490</TableCell>
+                    <TableCell className="text-right">$0.4569925</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Production</TableCell>
+                    <TableCell className="text-right">8.77</TableCell>
+                    <TableCell className="text-right">$47,620</TableCell>
+                    <TableCell className="text-right">$0.4176274</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Construction & Extraction</TableCell>
+                    <TableCell className="text-right">6.23</TableCell>
+                    <TableCell className="text-right">$61,500</TableCell>
+                    <TableCell className="text-right">$0.383145</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Installation, Maintenance & Repair</TableCell>
+                    <TableCell className="text-right">5.99</TableCell>
+                    <TableCell className="text-right">$58,500</TableCell>
+                    <TableCell className="text-right">$0.350415</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Healthcare Support</TableCell>
+                    <TableCell className="text-right">7.06</TableCell>
+                    <TableCell className="text-right">$38,220</TableCell>
+                    <TableCell className="text-right">$0.2698332</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Architecture & Engineering</TableCell>
+                    <TableCell className="text-right">2.54</TableCell>
+                    <TableCell className="text-right">$99,090</TableCell>
+                    <TableCell className="text-right">$0.2516886</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Protective Service</TableCell>
+                    <TableCell className="text-right">3.5</TableCell>
+                    <TableCell className="text-right">$57,710</TableCell>
+                    <TableCell className="text-right">$0.201985</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Building & Grounds Cleaning & Maintenance</TableCell>
+                    <TableCell className="text-right">4.43</TableCell>
+                    <TableCell className="text-right">$38,320</TableCell>
+                    <TableCell className="text-right">$0.1697576</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Legal</TableCell>
+                    <TableCell className="text-right">1.24</TableCell>
+                    <TableCell className="text-right">$133,820</TableCell>
+                    <TableCell className="text-right">$0.1659368</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Arts, Design, Entertainment, Sports & Media</TableCell>
+                    <TableCell className="text-right">2.11</TableCell>
+                    <TableCell className="text-right">$75,520</TableCell>
+                    <TableCell className="text-right">$0.1593472</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Community & Social Services</TableCell>
+                    <TableCell className="text-right">2.42</TableCell>
+                    <TableCell className="text-right">$58,980</TableCell>
+                    <TableCell className="text-right">$0.1427316</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Life, Physical & Social Science</TableCell>
+                    <TableCell className="text-right">1.39</TableCell>
+                    <TableCell className="text-right">$87,870</TableCell>
+                    <TableCell className="text-right">$0.1221393</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Personal Care & Service</TableCell>
+                    <TableCell className="text-right">3.04</TableCell>
+                    <TableCell className="text-right">$38,430</TableCell>
+                    <TableCell className="text-right">$0.1168272</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Farming, Fishing & Forestry</TableCell>
+                    <TableCell className="text-right">0.43</TableCell>
+                    <TableCell className="text-right">$39,970</TableCell>
+                    <TableCell className="text-right">$0.0171871</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold text-slate-800 mb-4">[Data 2]</h3>
+            <p className="text-sm text-slate-600 mb-4">
+              Breakdown of spending by Government Agency / Program. In total across each category, this leads to $7.36T
+            </p>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="text-left">Category</TableHead>
+                    <TableHead className="text-right">Estimated Annual Outlays</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium">Social Security (OASI + DI)</TableCell>
+                    <TableCell className="text-right">$1.23 trillion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Medicare</TableCell>
+                    <TableCell className="text-right">$900 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Medicaid (federal share)</TableCell>
+                    <TableCell className="text-right">$655 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Net interest on national debt</TableCell>
+                    <TableCell className="text-right">$952 billion (2025 projected)</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Health & Human Services (admin/other)</TableCell>
+                    <TableCell className="text-right">$945 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Defense (DoD + Intel/civilian)</TableCell>
+                    <TableCell className="text-right">$873 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Veterans Affairs (including health)</TableCell>
+                    <TableCell className="text-right">$308 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Department of Education</TableCell>
+                    <TableCell className="text-right">$250 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Agriculture</TableCell>
+                    <TableCell className="text-right">$242 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Other agencies (HUD, Interior, Commerce, Justice, Energy…)</TableCell>
+                    <TableCell className="text-right">$179 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Unemployment Insurance + other income security</TableCell>
+                    <TableCell className="text-right">~$150 billion*</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Transportation</TableCell>
+                    <TableCell className="text-right">$145 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">State & Foreign Ops</TableCell>
+                    <TableCell className="text-right">$130 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Premium Tax Credits (ACA subsidies)</TableCell>
+                    <TableCell className="text-right">$110 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Homeland Security</TableCell>
+                    <TableCell className="text-right">$102 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Supplemental SNAP</TableCell>
+                    <TableCell className="text-right">$100 billion</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium">Department of Labor</TableCell>
+                    <TableCell className="text-right">$97.5 billion</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </div>
         </CardContent>
       </Card>
     </div>;
