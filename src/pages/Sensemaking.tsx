@@ -17,7 +17,7 @@ const Sensemaking = () => {
         <Badge variant="secondary">Civic Intelligence</Badge>
         <Badge variant="secondary">AI-Enhanced</Badge>
         <Badge variant="secondary">Participatory</Badge>
-        <Badge variant="secondary">Adaptive Governance</Badge>
+        
         <Badge variant="secondary">Pattern Recognition</Badge>
       </div>
 
