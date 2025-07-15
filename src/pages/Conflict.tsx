@@ -1,19 +1,14 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, CheckCircle, AlertTriangle } from "lucide-react";
+import { CheckCircle, AlertTriangle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Conflict = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-start gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Users className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold text-primary">Conflict Transformation & Restorative Processes</h1>
-          <p className="text-xl text-muted-foreground">A Culture of Repair, Not Retribution</p>
-        </div>
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold text-primary">Conflict Transformation & Restorative Processes</h1>
+        <p className="text-xl text-muted-foreground">A Culture of Repair, Not Retribution</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">

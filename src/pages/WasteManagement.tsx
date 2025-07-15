@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Recycle, CheckCircle, AlertTriangle, TrendingUp, Leaf, Heart, Shield } from "lucide-react";
@@ -6,16 +5,11 @@ import { Recycle, CheckCircle, AlertTriangle, TrendingUp, Leaf, Heart, Shield } 
 const WasteManagement = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Recycle className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold">Toward a New Waste Management Model</h1>
-          <p className="text-xl text-muted-foreground mt-2">
-            Transforming Waste Infrastructure: A Scalable Solution for National Wellbeing, Ecological Health, and Economic Resilience
-          </p>
-        </div>
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold">Toward a New Waste Management Model</h1>
+        <p className="text-xl text-muted-foreground mt-2">
+          Transforming Waste Infrastructure: A Scalable Solution for National Wellbeing, Ecological Health, and Economic Resilience
+        </p>
       </div>
 
       <div className="bg-muted/30 p-6 rounded-lg border-l-4 border-primary">

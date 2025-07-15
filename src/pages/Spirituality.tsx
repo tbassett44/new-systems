@@ -1,18 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
 
 const Spirituality = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-start gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Sparkles className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold">Regenerative Spirituality</h1>
-          <p className="text-xl text-muted-foreground">Cultivating Sacred Infrastructure for Inner Development, Communal Ritual, and Planetary Coherence</p>
-        </div>
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold">Regenerative Spirituality</h1>
+        <p className="text-xl text-muted-foreground">Cultivating Sacred Infrastructure for Inner Development, Communal Ritual, and Planetary Coherence</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
