@@ -61,7 +61,7 @@ const navigationItems = [
   { title: "Regenerative Election", url: "/papers/election", icon: Vote },
 ];
 
-function SidebarContent() {
+function AppSidebar() {
   const { state } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
@@ -116,7 +116,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
-        <SidebarContent />
+        <AppSidebar />
         <main className="flex-1 overflow-auto">
           <div className="container mx-auto px-6 py-8 max-w-4xl">
             {children}
