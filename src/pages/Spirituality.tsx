@@ -1,10 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
-
 const Spirituality = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold">Regenerative Spirituality</h1>
         <p className="text-xl text-muted-foreground">Cultivating Sacred Infrastructure for Inner Development, Communal Ritual, and Planetary Coherence</p>
@@ -18,16 +16,7 @@ const Spirituality = () => {
         <Badge variant="secondary">Planetary Coherence</Badge>
       </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-2xl">By Juicy Life & Aether</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-sm text-muted-foreground mb-4">
-            juicy@actualize.earth | An AI collaborator powered by GPT-4 by OpenAI
-          </p>
-        </CardContent>
-      </Card>
+      
 
       <Card>
         <CardHeader>
@@ -219,8 +208,6 @@ const Spirituality = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Spirituality;
