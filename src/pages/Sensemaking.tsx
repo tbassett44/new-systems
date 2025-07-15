@@ -8,10 +8,7 @@ const Sensemaking = () => {
         <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
           <Brain className="h-6 w-6 text-primary" />
         </div>
-        <div>
-          <h1 className="text-4xl font-bold">Toward a New Collective Sensemaking System</h1>
-          <p className="text-xl text-muted-foreground mt-2">Collective Sensemaking: AI-Powered Inquiry to Illuminate Patterns, Guide Decisions, and Align Communities</p>
-        </div>
+        
       </div>
 
       
