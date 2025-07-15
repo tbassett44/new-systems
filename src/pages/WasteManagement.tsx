@@ -130,20 +130,20 @@ const WasteManagement = () => {
             </div>
           </div>
 
-          <div className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg border">
-            <h4 className="font-semibold mb-4">National Scaling Requirement</h4>
+          <div className="bg-orange-50 dark:bg-orange-950/50 p-6 rounded-lg border border-orange-200 dark:border-orange-800">
+            <h4 className="font-semibold mb-4 text-orange-900 dark:text-orange-100">National Scaling Requirement</h4>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-sm">Total U.S. daily waste:</span>
-                <span className="font-semibold">~1,000,000 tons</span>
+                <span className="text-sm text-orange-800 dark:text-orange-200">Total U.S. daily waste:</span>
+                <span className="font-semibold text-orange-900 dark:text-orange-100">~1,000,000 tons</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-sm">Number of systems needed:</span>
-                <span className="font-semibold">1,000,000 / 5,000 = 200 systems</span>
+                <span className="text-sm text-orange-800 dark:text-orange-200">Number of systems needed:</span>
+                <span className="font-semibold text-orange-900 dark:text-orange-100">1,000,000 / 5,000 = 200 systems</span>
               </div>
-              <div className="flex justify-between border-t pt-3">
-                <span className="text-sm font-medium">Total infrastructure cost:</span>
-                <span className="text-xl font-bold text-primary">200 x $1B = $200 billion</span>
+              <div className="flex justify-between border-t border-orange-200 dark:border-orange-700 pt-3">
+                <span className="text-sm font-medium text-orange-800 dark:text-orange-200">Total infrastructure cost:</span>
+                <span className="text-xl font-bold text-orange-900 dark:text-orange-100">200 x $1B = $200 billion</span>
               </div>
             </div>
           </div>
