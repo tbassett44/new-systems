@@ -33,9 +33,11 @@ import {
   Sparkles,
   Skull,
   Crown,
-  Vote
+  Vote,
+  Menu
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -113,6 +115,23 @@ function AppSidebar() {
   );
 }
 
+function MobileNavButton() {
+  const { toggleSidebar } = useSidebar();
+  const isMobile = useIsMobile();
+  
+  if (!isMobile) return null;
+  
+  return (
+    <button
+      onClick={toggleSidebar}
+      className="fixed bottom-4 right-0 z-50 p-2.5 bg-blue-600 text-white rounded-l-lg shadow-lg hover:bg-blue-700 transition-colors md:hidden"
+      aria-label="Toggle navigation menu"
+    >
+      <Menu className="h-5 w-5" />
+    </button>
+  );
+}
+
 export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
   useScrollRestoration();
 
@@ -128,6 +147,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
             {children}
           </div>
         </main>
+        <MobileNavButton />
       </div>
     </SidebarProvider>
   );
