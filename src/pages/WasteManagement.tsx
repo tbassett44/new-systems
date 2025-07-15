@@ -1,11 +1,8 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Recycle, CheckCircle, AlertTriangle, TrendingUp, Leaf, Heart, Shield, Factory, Zap, Users, Database, Globe, DollarSign } from "lucide-react";
-
 const WasteManagement = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-8">
         <h1 className="text-5xl font-bold text-primary mb-2">Toward a New Waste Management Model</h1>
         <h2 className="text-3xl font-semibold text-blue-600 mb-3">Transforming Waste Infrastructure: A Scalable Solution for National Wellbeing, Ecological Health, and Economic Resilience</h2>
@@ -17,17 +14,7 @@ const WasteManagement = () => {
           <Badge variant="secondary" className="bg-orange-100 text-orange-800">Public Health</Badge>
         </div>
         
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-6 rounded-lg border">
-          <div className="space-y-2">
-            <p className="text-sm font-medium text-muted-foreground">By</p>
-            <div className="space-y-1">
-              <p className="font-semibold">Juicy Life</p>
-              <p className="text-sm text-blue-600 dark:text-blue-400">juicy@actualize.earth</p>
-              <p className="text-sm text-muted-foreground">and</p>
-              <p className="font-semibold">Aether, an AI collaborator powered by GPT-4 by OpenAI</p>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <Card className="border-blue-200">
@@ -306,8 +293,6 @@ const WasteManagement = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default WasteManagement;
