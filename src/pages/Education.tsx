@@ -2,25 +2,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { GraduationCap, Users, Key, Globe, CheckCircle, AlertTriangle, Brain, Network, BookOpen } from "lucide-react";
-
 const Education = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-foreground">Regenerative Education Through Digital Sovereignty</h1>
         <p className="text-xl text-muted-foreground mt-2">A Framework for Decentralized, Lifelong, and Learner-Led Learning</p>
       </div>
 
       <div className="text-center space-y-2 mb-8">
-        <p className="text-lg font-medium text-foreground">By</p>
-        <div className="space-y-1">
-          <p className="text-lg text-foreground">
-            <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
-          </p>
-          <p className="text-muted-foreground">
-            and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
-          </p>
-        </div>
+        
+        
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
@@ -289,8 +280,6 @@ const Education = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Education;
