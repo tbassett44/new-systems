@@ -1,15 +1,10 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Key, Users, Lock, Zap, Globe, CheckCircle, Server } from "lucide-react";
-
 const DigitalSovereignty = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Shield className="h-6 w-6 text-primary" />
-        </div>
+        
         <div>
           <h1 className="text-4xl font-bold">Digital Sovereignty and Decentralized Infrastructure</h1>
           <p className="text-xl text-muted-foreground">Foundations for Identity, Trust, and Participation</p>
@@ -373,8 +368,6 @@ const DigitalSovereignty = () => {
           </p>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default DigitalSovereignty;
