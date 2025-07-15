@@ -137,8 +137,7 @@ const Overview = () => {
           </p>
 
           <div className="space-y-6">
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-green-500 rounded-full"></div>
+            <div className="border-l-4 border-amber-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">New Economic System - Endo Economics</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The Endo Economics whitepaper proposes a fundamental redesign of our economic system—one that shifts 
@@ -155,8 +154,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-700 rounded-full"></div>
+            <div className="border-l-4 border-green-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Waste Management</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The waste management proposal outlines a transformative approach to one of the most overlooked yet urgent 
@@ -174,8 +172,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-orange-500 rounded-full"></div>
+            <div className="border-l-4 border-orange-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Regenerative Energy Infrastructure</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The future of civilization depends on how we generate, distribute, and govern energy. Despite having access 
@@ -192,8 +189,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-500 rounded-full"></div>
+            <div className="border-l-4 border-purple-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Collective Sensemaking and Governance</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The collective sensemaking proposal introduces a new form of civic intelligence—one that harnesses AI to 
@@ -211,8 +207,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-pink-500 rounded-full"></div>
+            <div className="border-l-4 border-pink-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Wellbeing Tracking</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The wellbeing tracking proposal envisions a participatory, AI-enhanced framework for understanding and 
@@ -231,8 +226,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-purple-500 rounded-full"></div>
+            <div className="border-l-4 border-blue-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Digital Sovereignty</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The digital sovereignty and decentralized infrastructure proposal outlines a foundational shift in how 
@@ -250,8 +244,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-yellow-500 rounded-full"></div>
+            <div className="border-l-4 border-indigo-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Education</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The regenerative education proposal reimagines learning as a sovereign, lifelong, and learner-led process—unbound 
@@ -267,8 +260,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500 rounded-full"></div>
+            <div className="border-l-4 border-emerald-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Ecological Regeneration Infrastructure</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The ecological regeneration proposal outlines a bioregionally anchored system to restore the health of 
@@ -285,8 +277,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-red-500 rounded-full"></div>
+            <div className="border-l-4 border-red-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Justice</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The justice proposal reimagines law, accountability, and rehabilitation through the lens of dignity, healing, 
@@ -303,8 +294,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-teal-500 rounded-full"></div>
+            <div className="border-l-4 border-teal-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Conflict Transformation & Restorative Processes</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 This proposal reimagines how individuals and communities engage with conflict—shifting from suppression or 
@@ -320,8 +310,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-indigo-500 rounded-full"></div>
+            <div className="border-l-4 border-cyan-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Media</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The media proposal reclaims narrative, attention, and trust as public goods by building a decentralized, 
@@ -339,8 +328,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-cyan-500 rounded-full"></div>
+            <div className="border-l-4 border-violet-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Science</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The science proposal reclaims research and discovery as a collective, ethical, and regenerative pursuit—shifting 
@@ -357,8 +345,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-violet-500 rounded-full"></div>
+            <div className="border-l-4 border-fuchsia-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Arts and Culture</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The arts and culture proposal reframes creativity as a public good and catalytic force for regeneration, 
@@ -375,8 +362,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-amber-500 rounded-full"></div>
+            <div className="border-l-4 border-yellow-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Spirituality</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The spirituality proposal restores the sacred as a core dimension of societal architecture—recognizing that 
@@ -393,8 +379,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-500 rounded-full"></div>
+            <div className="border-l-4 border-gray-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Death and Dignity: Reclaiming a Conscious Relationship with Life's Final Passage</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 Modern systems often treat death as a failure—something to be avoided, hidden, or medicalized into oblivion. 
@@ -410,8 +395,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-rose-500 rounded-full"></div>
+            <div className="border-l-4 border-rose-500 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Sexual Health, Reproductive Choice, and Cultural Dignity</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 This proposal addresses the often-taboo yet deeply impactful domain of sexual and reproductive health—reframing 
@@ -427,8 +411,7 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div className="relative pl-6">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-slate-500 rounded-full"></div>
+            <div className="border-l-4 border-slate-700 pl-4 ml-2">
               <h3 className="text-lg font-semibold mb-3">Creating a Stage for the Dialogue: A Regenerative Election</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The Regenerative Election offers a visionary yet grounded approach to democratic renewal—by operating outside 
