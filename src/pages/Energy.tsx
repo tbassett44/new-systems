@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Sun, Atom, Recycle, Shield, Globe, DollarSign, CheckCircle } from "lucide-react";
@@ -8,18 +7,13 @@ const Energy = () => {
     <div className="space-y-8 max-w-4xl">
       {/* Header Section */}
       <div className="space-y-6">
-        <div className="flex items-center gap-4 mb-6">
-          <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-            <Zap className="h-6 w-6 text-primary" />
-          </div>
-          <div>
-            <h1 className="text-4xl font-bold leading-tight">
-              Regenerative Energy Infrastructure
-            </h1>
-            <p className="text-xl text-muted-foreground">
-              Powering a Thriving Civilization Beyond Carbon
-            </p>
-          </div>
+        <div className="mb-6">
+          <h1 className="text-4xl font-bold leading-tight">
+            Regenerative Energy Infrastructure
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Powering a Thriving Civilization Beyond Carbon
+          </p>
         </div>
 
         <div className="border-l-4 border-primary/30 pl-6 py-2">

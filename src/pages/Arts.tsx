@@ -6,14 +6,9 @@ import { Separator } from "@/components/ui/separator";
 const Arts = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-start gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <Palette className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold text-primary">Regenerative Arts & Culture</h1>
-          <p className="text-xl text-muted-foreground">Revitalizing Meaning, Memory, and Belonging through Creative Expression</p>
-        </div>
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold text-primary">Regenerative Arts & Culture</h1>
+        <p className="text-xl text-muted-foreground">Revitalizing Meaning, Memory, and Belonging through Creative Expression</p>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">

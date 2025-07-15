@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -7,14 +6,9 @@ import { GraduationCap, Users, Key, Globe, CheckCircle, AlertTriangle, Brain, Ne
 const Education = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-4 mb-6">
-        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-          <GraduationCap className="h-6 w-6 text-primary" />
-        </div>
-        <div>
-          <h1 className="text-4xl font-bold">Regenerative Education Through Digital Sovereignty</h1>
-          <p className="text-xl text-muted-foreground mt-2">A Framework for Decentralized, Lifelong, and Learner-Led Learning</p>
-        </div>
+      <div className="mb-6">
+        <h1 className="text-4xl font-bold">Regenerative Education Through Digital Sovereignty</h1>
+        <p className="text-xl text-muted-foreground mt-2">A Framework for Decentralized, Lifelong, and Learner-Led Learning</p>
       </div>
 
       <div className="text-center space-y-2 mb-8">
