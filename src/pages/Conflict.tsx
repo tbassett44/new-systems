@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, CheckCircle, AlertTriangle } from "lucide-react";
@@ -6,7 +7,7 @@ import { Separator } from "@/components/ui/separator";
 const Conflict = () => {
   return (
     <div className="space-y-8">
-      <div className="flex items-center gap-4 mb-6">
+      <div className="flex items-start gap-4 mb-6">
         <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
           <Users className="h-6 w-6 text-primary" />
         </div>
