@@ -1,5 +1,5 @@
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
   Sidebar, 
@@ -35,6 +35,7 @@ import {
   Crown,
   Vote
 } from "lucide-react";
+import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -113,11 +114,24 @@ function AppSidebar() {
 }
 
 export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
+  const { scrollElementRef, setScrollElement } = useScrollRestoration();
+
+  useEffect(() => {
+    const mainElement = document.querySelector('main[data-scroll-container]') as HTMLElement;
+    setScrollElement(mainElement);
+  }, [setScrollElement]);
+
   return (
     <SidebarProvider>
       <div className="min-h-screen flex w-full">
         <AppSidebar />
-        <main className="flex-1 overflow-auto">
+        <main 
+          className="flex-1 overflow-auto" 
+          data-scroll-container
+          ref={(el) => {
+            if (el) setScrollElement(el);
+          }}
+        >
           <div className="container mx-auto px-6 py-8 max-w-4xl">
             {children}
           </div>
