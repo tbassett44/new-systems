@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle } from "lucide-react";
@@ -160,7 +159,7 @@ const Science = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
+          <CardTitle className="flex items-center gap-2 text-green-600">
             <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
@@ -168,44 +167,44 @@ const Science = () => {
         <CardContent>
           <div className="grid gap-3">
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Liberated Knowledge:</strong>
+                <strong className="text-foreground">Liberated Knowledge:</strong>
                 <span className="text-muted-foreground"> Open, accessible science accelerates discovery and reduces duplication</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Participatory Insight:</strong>
+                <strong className="text-foreground">Participatory Insight:</strong>
                 <span className="text-muted-foreground"> Broader inclusion of communities, cultures, and disciplines enriches inquiry</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Ethical Innovation:</strong>
+                <strong className="text-foreground">Ethical Innovation:</strong>
                 <span className="text-muted-foreground"> Research serves life, not markets, and is governed by living systems values</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Resilient Infrastructure:</strong>
+                <strong className="text-foreground">Resilient Infrastructure:</strong>
                 <span className="text-muted-foreground"> Decentralized science networks persist through institutional collapse or disruption</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Civic Engagement:</strong>
+                <strong className="text-foreground">Civic Engagement:</strong>
                 <span className="text-muted-foreground"> People rediscover a relationship to discovery and the mysteries of life</span>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong>Holistic Evolution:</strong>
+                <strong className="text-foreground">Holistic Evolution:</strong>
                 <span className="text-muted-foreground"> Science re-integrated with spirit, story, and systems consciousness</span>
               </div>
             </div>

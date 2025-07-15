@@ -1,6 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { CheckCircle } from "lucide-react";
 
 const Spirituality = () => {
   return (
@@ -156,36 +156,54 @@ const Spirituality = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
-            <span className="w-2 h-2 bg-primary rounded-full"></span>
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-3">
-            <div className="flex items-center gap-2">
-              <span className="text-green-600">✅</span>
-              <span><strong>Spiritual Inclusion:</strong> Diverse traditions and seekers are honored without hierarchy or coercion</span>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-foreground">Spiritual Inclusion:</strong>
+                <span className="text-muted-foreground"> Diverse traditions and seekers are honored without hierarchy or coercion</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-600">✅</span>
-              <span><strong>Meaning-Making:</strong> People reconnect to purpose, mystery, and sacred rhythm</span>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-foreground">Meaning-Making:</strong>
+                <span className="text-muted-foreground"> People reconnect to purpose, mystery, and sacred rhythm</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-600">✅</span>
-              <span><strong>Community Cohesion:</strong> Ritual and shared spiritual practice strengthen social bonds</span>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-foreground">Community Cohesion:</strong>
+                <span className="text-muted-foreground"> Ritual and shared spiritual practice strengthen social bonds</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-600">✅</span>
-              <span><strong>Healing Pathways:</strong> Trauma, grief, and transition are held in sacred space</span>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-foreground">Healing Pathways:</strong>
+                <span className="text-muted-foreground"> Trauma, grief, and transition are held in sacred space</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-600">✅</span>
-              <span><strong>Inner Resilience:</strong> Individuals cultivate practices to navigate complexity and deepen presence</span>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-foreground">Inner Resilience:</strong>
+                <span className="text-muted-foreground"> Individuals cultivate practices to navigate complexity and deepen presence</span>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-green-600">✅</span>
-              <span><strong>Ethical Rooting:</strong> Wisdom traditions offer moral guidance in turbulent times</span>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <strong className="text-foreground">Ethical Rooting:</strong>
+                <span className="text-muted-foreground"> Wisdom traditions offer moral guidance in turbulent times</span>
+              </div>
             </div>
           </div>
         </CardContent>

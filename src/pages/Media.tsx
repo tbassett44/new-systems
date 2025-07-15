@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Radio, Users, Shield, Target, CheckCircle } from "lucide-react";
@@ -161,53 +160,53 @@ const Media = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
+          <CardTitle className="flex items-center gap-2 text-green-600">
             <CheckCircle className="h-5 w-5" />
             Net Positive Outcomes
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid md:grid-cols-2 gap-3">
-            <div className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+          <div className="grid gap-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-medium">Restored Trust</p>
-                <p className="text-sm text-muted-foreground">Transparent processes and feedback systems increase public confidence</p>
+                <strong className="text-foreground">Restored Trust:</strong>
+                <span className="text-muted-foreground"> Transparent processes and feedback systems increase public confidence</span>
               </div>
             </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-medium">Narrative Diversity</p>
-                <p className="text-sm text-muted-foreground">Local and global voices shape the collective story</p>
+                <strong className="text-foreground">Narrative Diversity:</strong>
+                <span className="text-muted-foreground"> Local and global voices shape the collective story</span>
               </div>
             </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-medium">Cultural Coherence</p>
-                <p className="text-sm text-muted-foreground">Shared understanding supports collaboration and empathy</p>
+                <strong className="text-foreground">Cultural Coherence:</strong>
+                <span className="text-muted-foreground"> Shared understanding supports collaboration and empathy</span>
               </div>
             </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-medium">Reduced Polarization</p>
-                <p className="text-sm text-muted-foreground">Signal intelligence and synthesis tools reduce division</p>
+                <strong className="text-foreground">Reduced Polarization:</strong>
+                <span className="text-muted-foreground"> Signal intelligence and synthesis tools reduce division</span>
               </div>
             </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-medium">Dignified Creative Labor</p>
-                <p className="text-sm text-muted-foreground">Media workers are supported for their contributions to collective wellbeing</p>
+                <strong className="text-foreground">Dignified Creative Labor:</strong>
+                <span className="text-muted-foreground"> Media workers are supported for their contributions to collective wellbeing</span>
               </div>
             </div>
-            <div className="flex items-start gap-2">
-              <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-medium">Wisdom Infrastructure</p>
-                <p className="text-sm text-muted-foreground">A society better equipped to process complexity and evolve in alignment</p>
+                <strong className="text-foreground">Wisdom Infrastructure:</strong>
+                <span className="text-muted-foreground"> A society better equipped to process complexity and evolve in alignment</span>
               </div>
             </div>
           </div>
