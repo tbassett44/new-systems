@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
+
 const Spirituality = () => {
   return <div className="space-y-8">
       <div className="mb-6">
@@ -15,8 +16,6 @@ const Spirituality = () => {
         <Badge variant="secondary">Communal Ritual</Badge>
         <Badge variant="secondary">Planetary Coherence</Badge>
       </div>
-
-      
 
       <Card>
         <CardHeader>
@@ -34,8 +33,7 @@ const Spirituality = () => {
 
       <Card className="border-destructive/20">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
-            <span className="w-2 h-2 bg-destructive rounded-full"></span>
+          <CardTitle className="text-destructive">
             The Problem: Disconnection from Meaning and Sacred Rhythm
           </CardTitle>
         </CardHeader>
@@ -52,8 +50,7 @@ const Spirituality = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
-            <span className="w-2 h-2 bg-primary rounded-full"></span>
+          <CardTitle className="text-primary">
             The Solution: Regenerative Spiritual Infrastructure
           </CardTitle>
         </CardHeader>
@@ -128,8 +125,7 @@ const Spirituality = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-primary">
-            <span className="w-2 h-2 bg-primary rounded-full"></span>
+          <CardTitle className="text-primary">
             Integration with Endo Economics
           </CardTitle>
         </CardHeader>
@@ -210,4 +206,5 @@ const Spirituality = () => {
       </Card>
     </div>;
 };
+
 export default Spirituality;
