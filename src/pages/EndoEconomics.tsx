@@ -330,26 +330,116 @@ const EndoEconomics = () => {
             Reclaiming Capital for Collective Evolution (~26% of GDP)
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
+        <CardContent className="space-y-6">
+          <p className="leading-relaxed">
             This portion represents capital income, business profits, investment returns, private equity, corporate R&D, and miscellaneous production outputs. If reimagined through a values-aligned lens, it becomes a powerful fund for evolutionary public benefit.
           </p>
-          <div className="grid gap-4">
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">🌱 Regenerative Infrastructure</h4>
-              <p className="text-sm text-green-700">Regenerative agriculture, circular manufacturing, decarbonized energy, ecological restoration</p>
+          <p className="leading-relaxed font-medium">
+            Here are some possibility domains to explore:
+          </p>
+          
+          <div className="space-y-6">
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-green-800 mb-4 text-lg">🌱 1. Regenerative Infrastructure</h4>
+              <p className="text-sm text-green-700 mb-4">Allocate capital toward systems that heal rather than extract:</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-green-800">Regenerative Agriculture:</p>
+                  <p className="text-sm text-green-700">Rebuild topsoil, biodiversity, and carbon sinks</p>
+                </div>
+                <div>
+                  <p className="font-medium text-green-800">Circular Manufacturing:</p>
+                  <p className="text-sm text-green-700">Decentralized, low-waste, regionally appropriate production</p>
+                </div>
+                <div>
+                  <p className="font-medium text-green-800">Decarbonized Energy:</p>
+                  <p className="text-sm text-green-700">Transition to solar, wind, geothermal, and community energy ownership</p>
+                </div>
+                <div>
+                  <p className="font-medium text-green-800">Ecological Restoration:</p>
+                  <p className="text-sm text-green-700">Watersheds, rewilding, wetland restoration, and urban greening</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-2">🧠 Human Development Systems</h4>
-              <p className="text-sm text-blue-700">Universal healthcare, lifelong learning, wellbeing technology R&D, arts & cultural stewardship</p>
+            
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-blue-800 mb-4 text-lg">🧠 2. Human Development Systems</h4>
+              <p className="text-sm text-blue-700 mb-4">Fund long-term human thriving at every scale:</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-blue-800">Universal Preventive Healthcare:</p>
+                  <p className="text-sm text-blue-700">Free physical, mental, and integrative health services</p>
+                </div>
+                <div>
+                  <p className="font-medium text-blue-800">Lifelong Learning Ecosystems:</p>
+                  <p className="text-sm text-blue-700">Open-access education hubs, mentorship programs, skill libraries</p>
+                </div>
+                <div>
+                  <p className="font-medium text-blue-800">Wellbeing Technology R&D:</p>
+                  <p className="text-sm text-blue-700">Invest in tools that enhance emotional, cognitive, and social coherence</p>
+                </div>
+                <div>
+                  <p className="font-medium text-blue-800">Art & Cultural Stewardship:</p>
+                  <p className="text-sm text-blue-700">Sustain creators, historians, and visionaries as essential workers</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-purple-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-purple-800 mb-2">🛠️ Evolutionary Governance & Infrastructure</h4>
-              <p className="text-sm text-purple-700">Open civic tech, public innovation funds, global collaboration portals</p>
+            
+            <div className="bg-purple-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-purple-800 mb-4 text-lg">🛠️ 3. Evolutionary Governance & Infrastructure</h4>
+              <p className="text-sm text-purple-700 mb-4">Support participatory and adaptive social architecture:</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-purple-800">Open Civic Tech:</p>
+                  <p className="text-sm text-purple-700">Decentralized digital platforms for governance, voting, and community insight</p>
+                </div>
+                <div>
+                  <p className="font-medium text-purple-800">Public Innovation Funds:</p>
+                  <p className="text-sm text-purple-700">Localized co-op VC models supporting citizen-led solutions</p>
+                </div>
+                <div>
+                  <p className="font-medium text-purple-800">Global Collaboration Portals:</p>
+                  <p className="text-sm text-purple-700">Coordinated planetary research and mutual aid networks</p>
+                </div>
+              </div>
             </div>
-            <div className="bg-amber-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-amber-800 mb-2">🔄 Resilience & Transformation Buffer</h4>
-              <p className="text-sm text-amber-700">Crisis response, innovation sandbox, planetary scale initiatives</p>
+            
+            <div className="bg-orange-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-orange-800 mb-4 text-lg">🫱 4. Redistributed Private Capital</h4>
+              <p className="text-sm text-orange-700 mb-4">Rather than eliminate private profit entirely, transform it:</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-orange-800">Stakeholder Dividends:</p>
+                  <p className="text-sm text-orange-700">Redirect corporate profits into citizen dividends or co-op shares</p>
+                </div>
+                <div>
+                  <p className="font-medium text-orange-800">Commons Equity Pools:</p>
+                  <p className="text-sm text-orange-700">Turn extractive gains (e.g., from land speculation or data) into social wealth funds</p>
+                </div>
+                <div>
+                  <p className="font-medium text-orange-800">Time-Bound Ownership Models:</p>
+                  <p className="text-sm text-orange-700">Corporate equity returns to commons after a fixed time unless democratically extended</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-amber-50 p-6 rounded-lg">
+              <h4 className="font-semibold text-amber-800 mb-4 text-lg">💡 5. Resilience & Transformation Buffer</h4>
+              <p className="text-sm text-amber-700 mb-4">Keep a percentage for flexible, future-facing initiatives:</p>
+              <div className="space-y-3">
+                <div>
+                  <p className="font-medium text-amber-800">Crisis Response Fund:</p>
+                  <p className="text-sm text-amber-700">Earthquakes, floods, pandemics, etc.</p>
+                </div>
+                <div>
+                  <p className="font-medium text-amber-800">Innovation Sandbox:</p>
+                  <p className="text-sm text-amber-700">Fund emerging tech, paradigm-breaking science, or collective intelligence labs</p>
+                </div>
+                <div>
+                  <p className="font-medium text-amber-800">Planetary Scale Initiatives:</p>
+                  <p className="text-sm text-amber-700">Ocean cleanup, global literacy, interspecies communication, etc.</p>
+                </div>
+              </div>
             </div>
           </div>
         </CardContent>
