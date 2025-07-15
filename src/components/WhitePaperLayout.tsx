@@ -42,24 +42,24 @@ interface WhitePaperLayoutProps {
 }
 
 const navigationItems = [
-  { title: "Overview", url: "/papers/", icon: BookOpen },
-  { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins },
-  { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
-  { title: "Energy Infrastructure", url: "/papers/energy", icon: Zap },
-  { title: "Collective Sensemaking", url: "/papers/sensemaking", icon: Brain },
-  { title: "Wellbeing Tracking", url: "/papers/wellbeing", icon: Heart },
-  { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield },
-  { title: "Education", url: "/papers/education", icon: GraduationCap },
-  { title: "Ecological Regeneration", url: "/papers/ecology", icon: Leaf },
-  { title: "Justice", url: "/papers/justice", icon: Scale },
-  { title: "Conflict Transformation", url: "/papers/conflict", icon: Users },
-  { title: "Media", url: "/papers/media", icon: Radio },
-  { title: "Science", url: "/papers/science", icon: Microscope },
-  { title: "Arts and Culture", url: "/papers/arts", icon: Palette },
-  { title: "Spirituality", url: "/papers/spirituality", icon: Sparkles },
-  { title: "Death and Dignity", url: "/papers/death", icon: Skull },
-  { title: "Sexual Health", url: "/papers/sexual-health", icon: Crown },
-  { title: "Regenerative Election", url: "/papers/election", icon: Vote },
+  { title: "Overview", url: "/papers/", icon: BookOpen, color: "rgb(59, 130, 246)" }, // blue-500
+  { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins, color: "rgb(34, 197, 94)" }, // green-500
+  { title: "Waste Management", url: "/papers/waste-management", icon: Recycle, color: "rgb(132, 204, 22)" }, // lime-500
+  { title: "Energy Infrastructure", url: "/papers/energy", icon: Zap, color: "rgb(251, 191, 36)" }, // amber-500
+  { title: "Collective Sensemaking", url: "/papers/sensemaking", icon: Brain, color: "rgb(139, 92, 246)" }, // violet-500
+  { title: "Wellbeing Tracking", url: "/papers/wellbeing", icon: Heart, color: "rgb(236, 72, 153)" }, // pink-500
+  { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield, color: "rgb(71, 85, 105)" }, // slate-600
+  { title: "Education", url: "/papers/education", icon: GraduationCap, color: "rgb(249, 115, 22)" }, // orange-500
+  { title: "Ecological Regeneration", url: "/papers/ecology", icon: Leaf, color: "rgb(22, 163, 74)" }, // green-600
+  { title: "Justice", url: "/papers/justice", icon: Scale, color: "rgb(161, 161, 170)" }, // zinc-400
+  { title: "Conflict Transformation", url: "/papers/conflict", icon: Users, color: "rgb(220, 38, 38)" }, // red-600
+  { title: "Media", url: "/papers/media", icon: Radio, color: "rgb(147, 51, 234)" }, // purple-600
+  { title: "Science", url: "/papers/science", icon: Microscope, color: "rgb(14, 165, 233)" }, // sky-500
+  { title: "Arts and Culture", url: "/papers/arts", icon: Palette, color: "rgb(217, 70, 239)" }, // fuchsia-500
+  { title: "Spirituality", url: "/papers/spirituality", icon: Sparkles, color: "rgb(168, 85, 247)" }, // purple-500
+  { title: "Death and Dignity", url: "/papers/death", icon: Skull, color: "rgb(75, 85, 99)" }, // gray-600
+  { title: "Sexual Health", url: "/papers/sexual-health", icon: Crown, color: "rgb(239, 68, 68)" }, // red-500
+  { title: "Regenerative Election", url: "/papers/election", icon: Vote, color: "rgb(16, 185, 129)" }, // emerald-500
 ];
 
 function AppSidebar() {
@@ -72,8 +72,22 @@ function AppSidebar() {
     return currentPath === path;
   };
 
+  const getActiveItem = () => {
+    return navigationItems.find(item => isActive(item.url));
+  };
+
+  const activeItem = getActiveItem();
+
   return (
-    <Sidebar className="border-r" collapsible="icon">
+    <Sidebar className="border-r relative" collapsible="icon">
+      {/* Active page color indicator */}
+      {activeItem && (
+        <div 
+          className="absolute left-0.5 top-0 bottom-0 w-1 rounded-full z-10"
+          style={{ backgroundColor: activeItem.color }}
+        />
+      )}
+      
       <SidebarHeader className="border-b">
         <div className="flex items-center justify-between">
           <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
