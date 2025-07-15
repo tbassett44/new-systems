@@ -149,40 +149,40 @@ const Death = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-3">
+          <div className="grid gap-4">
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Empowered Individuals:</strong>
-                <span className="text-muted-foreground"> People face death with clarity, agency, and peace</span>
+                <strong className="text-primary">Empowered Individuals</strong>
+                <p className="text-sm text-muted-foreground">People face death with clarity, agency, and peace</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Reduced Suffering:</strong>
-                <span className="text-muted-foreground"> Less traumatic or prolonged dying experiences</span>
+                <strong className="text-primary">Reduced Suffering</strong>
+                <p className="text-sm text-muted-foreground">Less traumatic or prolonged dying experiences</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Grief Integration:</strong>
-                <span className="text-muted-foreground"> Healthier individual and communal grieving processes</span>
+                <strong className="text-primary">Grief Integration</strong>
+                <p className="text-sm text-muted-foreground">Healthier individual and communal grieving processes</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Cultural Maturity:</strong>
-                <span className="text-muted-foreground"> Reconnection to ancestral wisdom and mortality awareness</span>
+                <strong className="text-primary">Cultural Maturity</strong>
+                <p className="text-sm text-muted-foreground">Reconnection to ancestral wisdom and mortality awareness</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Systemic Alignment:</strong>
-                <span className="text-muted-foreground"> Medical, legal, and spiritual systems aligned in service of dignity</span>
+                <strong className="text-primary">Systemic Alignment</strong>
+                <p className="text-sm text-muted-foreground">Medical, legal, and spiritual systems aligned in service of dignity</p>
               </div>
             </div>
           </div>
