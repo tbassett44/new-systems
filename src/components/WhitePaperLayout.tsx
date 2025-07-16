@@ -65,6 +65,7 @@ const navigationItems = [
   { title: "Death and Dignity", url: "/papers/death", icon: Skull },
   { title: "Sexual Health", url: "/papers/sexual-health", icon: Crown },
   { title: "Regenerative Election", url: "/papers/election", icon: Vote },
+  { title: "Glossary", url: "/papers/glossary", icon: BookOpen },
 ];
 
 function AppSidebar() {
