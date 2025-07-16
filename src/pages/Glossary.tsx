@@ -111,7 +111,7 @@ const Glossary = () => {
       {/* Category Tabs */}
       <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
         <div className="overflow-x-auto">
-          <TabsList className="grid w-max grid-cols-6 min-w-full">
+          <TabsList className="grid w-max grid-cols-7 min-w-full">
             <TabsTrigger value="all">All</TabsTrigger>
             {glossaryCategories.map(category => (
               <TabsTrigger key={category.id} value={category.id} className="whitespace-nowrap">
