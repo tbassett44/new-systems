@@ -175,26 +175,39 @@ const SexualHealth = () => {
           <p className="leading-relaxed mb-6">
             However, given the long-term nature of its effects and the current stage of global research, a cautious, data-driven rollout is essential. This proposal outlines a phased national strategy for implementation:
           </p>
-          <div className="mb-6">
-            <h4 className="font-semibold text-purple-700 mb-2">Phase 1 – Opt-In Pilot for Adults (25+)</h4>
-            <p className="leading-relaxed">
-              Voluntary access for men over 25 who declare no intent to reproduce in the next decade. Participants receive regular follow-up assessments of sperm count, health markers, and reversibility response.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h4 className="font-semibold text-purple-700 mb-2">Phase 2 – Expansion to Younger Adults (18–24)</h4>
-            <p className="leading-relaxed">
-              Pending long-term effectiveness and safety data, expand eligibility to younger adults with clear educational guidance on potential risks and reversibility uncertainties.
-            </p>
-          </div>
-          <div className="mb-6">
-            <h4 className="font-semibold text-purple-700 mb-2">Phase 3 – Full Public Access and Adolescent Inclusion</h4>
-            <p className="leading-relaxed mb-4">
-              Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings—available to adults as a safe, reliable option for reproductive responsibility.
-            </p>
-            <p className="leading-relaxed">
-              With additional ethical review, parental guidance frameworks, and community consent protocols, expand access to adolescents aged 12–18. This inclusion would be strictly opt-in, designed for youth who are sexually active and seeking non-permanent, non-hormonal protection. As with vaccines and other age-sensitive interventions, decision-making would require informed consent, maturity assessments, and clinical oversight. Access would be paired with comprehensive sexual education and counseling that centers bodily autonomy, reversibility timelines, and long-term health.
-            </p>
+          <div className="grid gap-4 mb-6">
+            <div className="border border-purple-200 rounded-lg p-4 bg-purple-50/30">
+              <h4 className="font-semibold text-purple-700 mb-2 flex items-center">
+                <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">1</span>
+                Phase 1 – Opt-In Pilot for Adults (25+)
+              </h4>
+              <p className="leading-relaxed text-sm">
+                Voluntary access for men over 25 who declare no intent to reproduce in the next decade. Participants receive regular follow-up assessments of sperm count, health markers, and reversibility response.
+              </p>
+            </div>
+            
+            <div className="border border-purple-200 rounded-lg p-4 bg-purple-50/30">
+              <h4 className="font-semibold text-purple-700 mb-2 flex items-center">
+                <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">2</span>
+                Phase 2 – Expansion to Younger Adults (18–24)
+              </h4>
+              <p className="leading-relaxed text-sm">
+                Pending long-term effectiveness and safety data, expand eligibility to younger adults with clear educational guidance on potential risks and reversibility uncertainties.
+              </p>
+            </div>
+            
+            <div className="border border-purple-200 rounded-lg p-4 bg-purple-50/30">
+              <h4 className="font-semibold text-purple-700 mb-2 flex items-center">
+                <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">3</span>
+                Phase 3 – Full Public Access and Adolescent Inclusion
+              </h4>
+              <p className="leading-relaxed text-sm mb-3">
+                Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings—available to adults as a safe, reliable option for reproductive responsibility.
+              </p>
+              <p className="leading-relaxed text-sm">
+                With additional ethical review, parental guidance frameworks, and community consent protocols, expand access to adolescents aged 12–18. This inclusion would be strictly opt-in, designed for youth who are sexually active and seeking non-permanent, non-hormonal protection. As with vaccines and other age-sensitive interventions, decision-making would require informed consent, maturity assessments, and clinical oversight. Access would be paired with comprehensive sexual education and counseling that centers bodily autonomy, reversibility timelines, and long-term health.
+              </p>
+            </div>
           </div>
           <p className="leading-relaxed">
             This broader integration into public health recognizes that adolescents are often underserved by current reproductive systems—yet frequently bear the burden of unintended pregnancy. Empowering them with choices grounded in reversibility, safety, and dignity supports both individual freedom and public health goals.
