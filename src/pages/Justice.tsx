@@ -12,11 +12,11 @@ const Justice = () => {
       
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Restorative</Badge>
-        <Badge variant="secondary">Transformative</Badge>
-        <Badge variant="secondary">Community-Centered</Badge>
-        <Badge variant="secondary">Healing-Based</Badge>
-        <Badge variant="secondary">Dignity-Focused</Badge>
+        <Badge className="bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200">Restorative</Badge>
+        <Badge className="bg-green-100 text-green-800 border-green-200 hover:bg-green-200">Transformative</Badge>
+        <Badge className="bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200">Community-Centered</Badge>
+        <Badge className="bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200">Healing-Based</Badge>
+        <Badge className="bg-red-100 text-red-800 border-red-200 hover:bg-red-200">Dignity-Focused</Badge>
       </div>
 
       <Card>
