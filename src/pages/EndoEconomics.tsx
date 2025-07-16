@@ -7,6 +7,10 @@ import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shie
 const EndoEconomics = () => {
   useEffect(() => {
     document.title = "Toward a New Economic Model | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-8">

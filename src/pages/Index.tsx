@@ -8,6 +8,10 @@ import { BookOpen, ArrowRight, Leaf, Users, Heart } from "lucide-react";
 const Index = () => {
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+    }
   }, []);
 
   return (

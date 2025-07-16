@@ -7,6 +7,10 @@ import { GraduationCap, Users, Key, Globe, CheckCircle, AlertTriangle, Brain, Ne
 const Education = () => {
   useEffect(() => {
     document.title = "Regenerative Education Through Digital Sovereignty | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-6">

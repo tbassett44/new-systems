@@ -7,6 +7,10 @@ import { Zap, Sun, Atom, Recycle, Shield, Globe, DollarSign, CheckCircle } from 
 const Energy = () => {
   useEffect(() => {
     document.title = "Regenerative Energy Infrastructure | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+    }
   }, []);
   return (
     <div className="space-y-8">

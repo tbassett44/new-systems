@@ -6,6 +6,10 @@ import { CheckCircle } from "lucide-react";
 const Spirituality = () => {
   useEffect(() => {
     document.title = "Regenerative Spirituality | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-6">

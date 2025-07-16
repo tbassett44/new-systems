@@ -6,6 +6,10 @@ const NotFound = () => {
 
   useEffect(() => {
     document.title = "404 - Page Not Found | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+    }
     console.error(
       "404 Error: User attempted to access non-existent route:",
       location.pathname
