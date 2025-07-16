@@ -48,6 +48,10 @@ interface WhitePaperLayoutProps {
 
 const navigationItems = [
   { title: "Overview", url: "/papers/", icon: BookOpen },
+  { title: "Glossary", url: "/papers/glossary", icon: BookOpen },
+];
+
+const whitePaperItems = [
   { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins },
   { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
   { title: "Energy Infrastructure", url: "/papers/energy", icon: Zap },
@@ -65,7 +69,6 @@ const navigationItems = [
   { title: "Death and Dignity", url: "/papers/death", icon: Skull },
   { title: "Sexual Health", url: "/papers/sexual-health", icon: Crown },
   { title: "Regenerative Election", url: "/papers/election", icon: Vote },
-  { title: "Glossary", url: "/papers/glossary", icon: BookOpen },
 ];
 
 function AppSidebar() {
@@ -120,6 +123,33 @@ function AppSidebar() {
                     <NavLink 
                       to={item.url} 
                       end={item.url === "/papers/"}
+                      className="flex items-center gap-3 w-full"
+                    >
+                      <item.icon className="h-4 w-4 shrink-0" />
+                      {state !== "collapsed" && (
+                        <span className="truncate">{item.title}</span>
+                      )}
+                    </NavLink>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+        
+        <div className="px-3 py-2">
+          <hr className="border-border" />
+        </div>
+        
+        <SidebarGroup>
+          <SidebarGroupLabel>White Papers</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {whitePaperItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
+                    <NavLink 
+                      to={item.url} 
                       className="flex items-center gap-3 w-full"
                     >
                       <item.icon className="h-4 w-4 shrink-0" />

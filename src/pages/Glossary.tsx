@@ -108,83 +108,18 @@ const Glossary = () => {
         </div>
       </div>
 
-      {/* Search and Filter Controls */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Search className="h-5 w-5" />
-            Search & Filter
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col md:flex-row gap-4">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-              <Input
-                placeholder="Search terms, definitions, or tags..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10"
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <Filter className="h-4 w-4 text-muted-foreground" />
-              <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-3 py-2 border rounded-md bg-background"
-              >
-                <option value="all">All Categories</option>
-                {glossaryCategories.map(category => (
-                  <option key={category.id} value={category.id}>
-                    {category.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Quick Navigation */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Hash className="h-5 w-5" />
-            Quick Navigation
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-wrap gap-2">
-            {alphabet.map(letter => {
-              const hasTerms = getTermsByLetter(letter).length > 0;
-              return (
-                <Button
-                  key={letter}
-                  variant={hasTerms ? "outline" : "ghost"}
-                  size="sm"
-                  onClick={() => scrollToLetter(letter)}
-                  disabled={!hasTerms}
-                  className="w-10 h-10"
-                >
-                  {letter}
-                </Button>
-              );
-            })}
-          </div>
-        </CardContent>
-      </Card>
-
       {/* Category Tabs */}
       <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6">
-          <TabsTrigger value="all">All</TabsTrigger>
-          {glossaryCategories.map(category => (
-            <TabsTrigger key={category.id} value={category.id} className="text-xs">
-              {category.label}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+        <div className="overflow-x-auto">
+          <TabsList className="grid w-max grid-cols-6 min-w-full">
+            <TabsTrigger value="all">All</TabsTrigger>
+            {glossaryCategories.map(category => (
+              <TabsTrigger key={category.id} value={category.id} className="whitespace-nowrap">
+                {category.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </div>
 
         <TabsContent value="all" className="mt-6">
           <div className="space-y-6">
