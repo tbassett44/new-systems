@@ -11,10 +11,10 @@ const Media = () => {
       
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary">Decentralized</Badge>
-        <Badge variant="secondary">Trust-Centered</Badge>
-        <Badge variant="secondary">Participatory</Badge>
-        <Badge variant="secondary">Narrative Integrity</Badge>
+        <Badge className="bg-blue-100 text-blue-800 border-blue-200 hover:bg-blue-200">Decentralized</Badge>
+        <Badge className="bg-green-100 text-green-800 border-green-200 hover:bg-green-200">Trust-Centered</Badge>
+        <Badge className="bg-purple-100 text-purple-800 border-purple-200 hover:bg-purple-200">Participatory</Badge>
+        <Badge className="bg-orange-100 text-orange-800 border-orange-200 hover:bg-orange-200">Narrative Integrity</Badge>
       </div>
 
       <Card>
