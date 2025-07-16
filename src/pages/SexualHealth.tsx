@@ -152,14 +152,52 @@ const SexualHealth = () => {
           <CardTitle className="text-primary">💰 Economic Impact of STI Testing as a Public Service</CardTitle>
         </CardHeader>
         <CardContent className="prose max-w-none">
-          <p className="leading-relaxed">
+          <p className="leading-relaxed mb-6">
             Preventative sexual health services are not only a matter of dignity and public wellbeing—they're a smart investment. As of 2024, the U.S. spent approximately $2.8 billion annually on STI testing and detection. While this may seem like a significant figure, it's modest in comparison to the $16 billion per year the healthcare system spends treating new STI cases alone. These costs include chronic conditions such as HIV, HPV-related cancers, pelvic inflammatory disease, infertility, and other long-term complications resulting from untreated infections.
           </p>
-          <p className="leading-relaxed">
+          <p className="leading-relaxed mb-6">
             By providing free, anonymous, and widely accessible STI testing as a public health service, we could dramatically reduce transmission rates, especially when paired with sovereign identity systems that allow for private yet verifiable STI status sharing between partners. Early detection reduces downstream health impacts, cuts treatment costs, and lowers the burden on emergency care and Medicaid systems.
           </p>
           <p className="leading-relaxed">
             In short, the financial argument is clear: Investing in public STI screening infrastructure yields outsized returns, both in terms of dollars saved and human suffering averted. When integrated with digital tools for privacy, notification, and counseling, this becomes a cornerstone policy for a healthier, more dignified society.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="border-purple-200">
+        <CardHeader>
+          <CardTitle className="text-primary">🧬 Advancing Male Contraception: A Phased Approach to Innovation</CardTitle>
+        </CardHeader>
+        <CardContent className="prose max-w-none">
+          <p className="leading-relaxed mb-6">
+            Despite decades of effort toward reproductive equity, the majority of contraceptive responsibility still falls on those who can become pregnant. Yet a promising innovation is on the horizon: a non-hormonal male contraceptive injection into the vas deferens that has shown up to 99% effectiveness in clinical trials. This polymer-based method (such as Vasalgel or RISUG) blocks the transport of sperm, is minimally invasive, and is potentially reversible.
+          </p>
+          <p className="leading-relaxed mb-6">
+            However, given the long-term nature of its effects and the current stage of global research, a cautious, data-driven rollout is essential. This proposal outlines a phased national strategy for implementation:
+          </p>
+          <div className="mb-6">
+            <h4 className="font-semibold text-purple-700 mb-2">Phase 1 – Opt-In Pilot for Adults (25+)</h4>
+            <p className="leading-relaxed">
+              Voluntary access for men over 25 who declare no intent to reproduce in the next decade. Participants receive regular follow-up assessments of sperm count, health markers, and reversibility response.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold text-purple-700 mb-2">Phase 2 – Expansion to Younger Adults (18–24)</h4>
+            <p className="leading-relaxed">
+              Pending long-term effectiveness and safety data, expand eligibility to younger adults with clear educational guidance on potential risks and reversibility uncertainties.
+            </p>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-semibold text-purple-700 mb-2">Phase 3 – Full Public Access and Adolescent Inclusion</h4>
+            <p className="leading-relaxed mb-4">
+              Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings—available to adults as a safe, reliable option for reproductive responsibility.
+            </p>
+            <p className="leading-relaxed">
+              With additional ethical review, parental guidance frameworks, and community consent protocols, expand access to adolescents aged 12–18. This inclusion would be strictly opt-in, designed for youth who are sexually active and seeking non-permanent, non-hormonal protection. As with vaccines and other age-sensitive interventions, decision-making would require informed consent, maturity assessments, and clinical oversight. Access would be paired with comprehensive sexual education and counseling that centers bodily autonomy, reversibility timelines, and long-term health.
+            </p>
+          </div>
+          <p className="leading-relaxed">
+            This broader integration into public health recognizes that adolescents are often underserved by current reproductive systems—yet frequently bear the burden of unintended pregnancy. Empowering them with choices grounded in reversibility, safety, and dignity supports both individual freedom and public health goals.
           </p>
         </CardContent>
       </Card>
