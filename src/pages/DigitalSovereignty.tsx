@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Key, Users, Lock, Zap, Globe, CheckCircle, Server } from "lucide-react";
+
 const DigitalSovereignty = () => {
+  useEffect(() => {
+    document.title = "Digital Sovereignty and Decentralized Infrastructure | New Systems and Structures";
+  }, []);
   return <div className="space-y-8">
       <div className="flex items-center gap-4 mb-6">
         

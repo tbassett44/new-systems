@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Skull, AlertTriangle, CheckCircle, Heart, Shield, Users, Brain } from "lucide-react";
 
 const Death = () => {
+  useEffect(() => {
+    document.title = "Death and Dignity | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-8">

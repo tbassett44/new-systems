@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Leaf, AlertTriangle, CheckCircle, Users, Heart, Globe, TreePine, Droplets, Sprout } from "lucide-react";
 
 const Ecology = () => {
+  useEffect(() => {
+    document.title = "Ecological Regeneration Infrastructure | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-6">

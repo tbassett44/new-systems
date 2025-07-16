@@ -1,10 +1,13 @@
 
-
+import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Zap, Sun, Atom, Recycle, Shield, Globe, DollarSign, CheckCircle } from "lucide-react";
 
 const Energy = () => {
+  useEffect(() => {
+    document.title = "Regenerative Energy Infrastructure | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-8">

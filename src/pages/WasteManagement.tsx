@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Recycle, CheckCircle, AlertTriangle, TrendingUp, Leaf, Heart, Shield, Factory, Zap, Users, Database, Globe, DollarSign } from "lucide-react";
+
 const WasteManagement = () => {
+  useEffect(() => {
+    document.title = "Toward a New Waste Management Model | New Systems and Structures";
+  }, []);
   return <div className="space-y-8">
       <div className="mb-8">
         <h1 className="text-5xl font-bold text-primary mb-2">Toward a New Waste Management Model</h1>

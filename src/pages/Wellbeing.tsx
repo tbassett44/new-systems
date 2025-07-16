@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Users, Brain, Shield, Activity, Target, CheckCircle, AlertTriangle, Smartphone, BarChart, Lock } from "lucide-react";
 
 const Wellbeing = () => {
+  useEffect(() => {
+    document.title = "Wellbeing Tracking | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-8">

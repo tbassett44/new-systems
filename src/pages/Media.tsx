@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Radio, Users, Shield, Target, CheckCircle } from "lucide-react";
+
 const Media = () => {
+  useEffect(() => {
+    document.title = "Regenerative Media | New Systems and Structures";
+  }, []);
   return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-foreground">Regenerative Media</h1>

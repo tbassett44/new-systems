@@ -1,10 +1,14 @@
 
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Vote, AlertTriangle, CheckCircle, Users, Heart, Lightbulb } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Election = () => {
+  useEffect(() => {
+    document.title = "Regenerative Election | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-8">

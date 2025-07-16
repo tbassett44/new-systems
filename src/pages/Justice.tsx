@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Scale, CheckCircle, AlertTriangle, Users, Heart, Shield } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 const Justice = () => {
+  useEffect(() => {
+    document.title = "Regenerative Justice | New Systems and Structures";
+  }, []);
+
   return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-primary">Regenerative Justice</h1>

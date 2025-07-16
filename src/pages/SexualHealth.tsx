@@ -1,9 +1,13 @@
 
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { AlertTriangle, CheckCircle } from "lucide-react";
 
 const SexualHealth = () => {
+  useEffect(() => {
+    document.title = "Sexual Health, Reproductive Choice, and Cultural Dignity | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-8">

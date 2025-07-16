@@ -1,10 +1,15 @@
 
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowRight, Leaf, Users, Heart } from "lucide-react";
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       <div className="container mx-auto px-6 py-12">

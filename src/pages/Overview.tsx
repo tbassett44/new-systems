@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,9 @@ import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Overview = () => {
+  useEffect(() => {
+    document.title = "System Regeneration | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div>

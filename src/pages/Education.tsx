@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { GraduationCap, Users, Key, Globe, CheckCircle, AlertTriangle, Brain, Network, BookOpen } from "lucide-react";
+
 const Education = () => {
+  useEffect(() => {
+    document.title = "Regenerative Education Through Digital Sovereignty | New Systems and Structures";
+  }, []);
   return <div className="space-y-8">
       <div className="mb-6">
         <h1 className="text-4xl font-bold text-foreground">Regenerative Education Through Digital Sovereignty</h1>

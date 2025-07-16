@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Science = () => {
+  useEffect(() => {
+    document.title = "Regenerative Science | New Systems and Structures";
+  }, []);
+
   return (
     <div className="space-y-8">
       <div className="mb-6">

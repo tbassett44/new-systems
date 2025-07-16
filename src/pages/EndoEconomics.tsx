@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap, Target, MapPin } from "lucide-react";
 
 const EndoEconomics = () => {
+  useEffect(() => {
+    document.title = "Toward a New Economic Model | New Systems and Structures";
+  }, []);
   return <div className="space-y-8">
       <div className="mb-8">
         <h1 className="text-5xl font-bold text-primary mb-2">Toward a New Economic Model</h1>

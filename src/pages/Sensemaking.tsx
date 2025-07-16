@@ -1,10 +1,14 @@
 
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Brain, Users, Target, Shield, Eye, MessageSquare, CheckCircle, AlertTriangle } from "lucide-react";
 
 const Sensemaking = () => {
+  useEffect(() => {
+    document.title = "Collective Sensemaking | New Systems and Structures";
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-8">
