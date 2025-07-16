@@ -147,6 +147,23 @@ const SexualHealth = () => {
         </CardContent>
       </Card>
 
+      <Card className="border-yellow-200">
+        <CardHeader>
+          <CardTitle className="text-primary">💰 Economic Impact of STI Testing as a Public Service</CardTitle>
+        </CardHeader>
+        <CardContent className="prose max-w-none">
+          <p className="leading-relaxed">
+            Preventative sexual health services are not only a matter of dignity and public wellbeing—they're a smart investment. As of 2024, the U.S. spent approximately $2.8 billion annually on STI testing and detection. While this may seem like a significant figure, it's modest in comparison to the $16 billion per year the healthcare system spends treating new STI cases alone. These costs include chronic conditions such as HIV, HPV-related cancers, pelvic inflammatory disease, infertility, and other long-term complications resulting from untreated infections.
+          </p>
+          <p className="leading-relaxed">
+            By providing free, anonymous, and widely accessible STI testing as a public health service, we could dramatically reduce transmission rates, especially when paired with sovereign identity systems that allow for private yet verifiable STI status sharing between partners. Early detection reduces downstream health impacts, cuts treatment costs, and lowers the burden on emergency care and Medicaid systems.
+          </p>
+          <p className="leading-relaxed">
+            In short, the financial argument is clear: Investing in public STI screening infrastructure yields outsized returns, both in terms of dollars saved and human suffering averted. When integrated with digital tools for privacy, notification, and counseling, this becomes a cornerstone policy for a healthier, more dignified society.
+          </p>
+        </CardContent>
+      </Card>
+
       <Card className="border-blue-200">
         <CardHeader>
           <CardTitle className="text-primary">Operational Framework</CardTitle>
