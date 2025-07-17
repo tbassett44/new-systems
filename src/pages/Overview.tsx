@@ -163,6 +163,24 @@ const Overview = () => {
             </div>
 
             <div>
+              <h3 className="text-lg font-semibold mb-3">Digital Sovereignty</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                The digital sovereignty and decentralized infrastructure proposal outlines a foundational shift in how 
+                identity, trust, and participation function in the digital age. At a time when centralized platforms 
+                dominate access and control, this approach empowers individuals with self-owned digital identities that 
+                are portable, verifiable, and privacy-preserving. By leveraging decentralized identifiers (DIDs), verifiable 
+                credentials (VCs), and cryptographic protocols, we can create a trust layer for the internet that respects 
+                autonomy while enabling secure, seamless interaction across platforms. This infrastructure not only protects 
+                civil liberties and reduces systemic vulnerability, but also forms the connective tissue needed for regenerative 
+                governance, economic participation, and wellbeing support—ensuring people are seen, trusted, and respected 
+                wherever they go.
+              </p>
+              <Button asChild variant="outline" size="sm">
+                <NavLink to="/papers/digital-sovereignty">View the Digital Sovereignty White Paper</NavLink>
+              </Button>
+            </div>
+
+            <div>
               <h3 className="text-lg font-semibold mb-3">Waste Management</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The waste management proposal outlines a transformative approach to one of the most overlooked yet urgent 
@@ -231,24 +249,6 @@ const Overview = () => {
               </p>
               <Button asChild variant="outline" size="sm">
                 <NavLink to="/papers/wellbeing">View the Wellbeing Tracking White Paper</NavLink>
-              </Button>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Digital Sovereignty</h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                The digital sovereignty and decentralized infrastructure proposal outlines a foundational shift in how 
-                identity, trust, and participation function in the digital age. At a time when centralized platforms 
-                dominate access and control, this approach empowers individuals with self-owned digital identities that 
-                are portable, verifiable, and privacy-preserving. By leveraging decentralized identifiers (DIDs), verifiable 
-                credentials (VCs), and cryptographic protocols, we can create a trust layer for the internet that respects 
-                autonomy while enabling secure, seamless interaction across platforms. This infrastructure not only protects 
-                civil liberties and reduces systemic vulnerability, but also forms the connective tissue needed for regenerative 
-                governance, economic participation, and wellbeing support—ensuring people are seen, trusted, and respected 
-                wherever they go.
-              </p>
-              <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/digital-sovereignty">View the Digital Sovereignty White Paper</NavLink>
               </Button>
             </div>
 

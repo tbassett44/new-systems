@@ -53,11 +53,11 @@ const navigationItems = [
 
 const whitePaperItems = [
   { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins },
+  { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield },
   { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
   { title: "Energy Infrastructure", url: "/papers/energy", icon: Zap },
   { title: "Collective Sensemaking", url: "/papers/sensemaking", icon: Brain },
   { title: "Wellbeing Tracking", url: "/papers/wellbeing", icon: Heart },
-  { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield },
   { title: "Education", url: "/papers/education", icon: GraduationCap },
   { title: "Ecological Regeneration", url: "/papers/ecology", icon: Leaf },
   { title: "Justice", url: "/papers/justice", icon: Scale },
