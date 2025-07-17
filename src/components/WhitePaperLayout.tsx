@@ -72,14 +72,21 @@ const whitePaperItems = [
 ];
 
 function AppSidebar() {
-  const { state } = useSidebar();
+  const { state, toggleSidebar } = useSidebar();
   const location = useLocation();
   const currentPath = location.pathname;
   const [searchOpen, setSearchOpen] = useState(false);
+  const isMobile = useIsMobile();
 
   const isActive = (path: string) => {
     if (path === "/papers/" && currentPath === "/papers") return true;
     return currentPath === path;
+  };
+
+  const handleNavClick = () => {
+    if (isMobile) {
+      toggleSidebar();
+    }
   };
 
   return (
@@ -124,6 +131,7 @@ function AppSidebar() {
                       to={item.url} 
                       end={item.url === "/papers/"}
                       className="flex items-center gap-3 w-full"
+                      onClick={handleNavClick}
                     >
                       <item.icon className="h-4 w-4 shrink-0" />
                       {state !== "collapsed" && (
@@ -151,6 +159,7 @@ function AppSidebar() {
                     <NavLink 
                       to={item.url} 
                       className="flex items-center gap-3 w-full"
+                      onClick={handleNavClick}
                     >
                       <item.icon className="h-4 w-4 shrink-0" />
                       {state !== "collapsed" && (
