@@ -118,7 +118,7 @@ const Wellbeing = () => {
               <h4 className="font-semibold mb-3 text-purple-700">Edge-Based Data</h4>
               <ul className="space-y-2 text-sm">
                 <li>• Personal devices store all raw data</li>
-                <li>• No centralized data collection</li>
+                
                 <li>• User controls all sharing permissions</li>
                 <li>• Encrypted local storage</li>
               </ul>
