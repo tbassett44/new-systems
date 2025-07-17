@@ -8,7 +8,7 @@ const Justice = () => {
     document.title = "Regenerative Justice | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Explore regenerative justice systems that focus on healing, restoration, and community accountability rather than punishment, creating safer and more equitable societies.');
     }
   }, []);
 

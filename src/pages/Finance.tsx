@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle } from "lucide-react";
@@ -5,6 +6,13 @@ import { Separator } from "@/components/ui/separator";
 import { PiggyBank, AlertOctagon, Coins } from "lucide-react";
 
 const Finance = () => {
+  useEffect(() => {
+    document.title = "Regenerative Finance & Economic Systems | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover regenerative finance and economic systems that prioritize community wealth, ecological health, and values-based investment over extractive financial models.');
+    }
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-6">

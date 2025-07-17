@@ -8,7 +8,7 @@ const Ecology = () => {
     document.title = "Ecological Regeneration Infrastructure | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Discover ecological regeneration infrastructure that builds bioregional systems to heal land, life, and climate through regenerative practices and ecosystem restoration.');
     }
   }, []);
   return (

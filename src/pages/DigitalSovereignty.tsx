@@ -8,7 +8,7 @@ const DigitalSovereignty = () => {
     document.title = "Digital Sovereignty and Decentralized Infrastructure | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Learn about digital sovereignty and decentralized infrastructure that creates foundations for identity, trust, and participation while protecting privacy and human agency.');
     }
   }, []);
   return <div className="space-y-8">

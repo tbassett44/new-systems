@@ -9,7 +9,7 @@ const EndoEconomics = () => {
     document.title = "Toward a New Economic Model | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Explore Endo Economics, a new economic model that redirects GDP flow toward collective wellbeing, life-supporting activities, and regenerative systems.');
     }
   }, []);
   return <div className="space-y-8">

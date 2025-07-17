@@ -9,7 +9,7 @@ const Arts = () => {
     document.title = "Regenerative Arts & Culture | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Explore regenerative arts and culture systems that foster community creativity, cultural diversity, and artistic expression as tools for social healing and transformation.');
     }
   }, []);
 

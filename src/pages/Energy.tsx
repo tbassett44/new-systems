@@ -9,7 +9,7 @@ const Energy = () => {
     document.title = "Regenerative Energy Infrastructure | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Learn about regenerative energy infrastructure that powers a thriving civilization beyond carbon through decentralized renewable energy systems and community resilience.');
     }
   }, []);
   return (

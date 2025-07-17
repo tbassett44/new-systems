@@ -9,7 +9,7 @@ const Education = () => {
     document.title = "Regenerative Education Through Digital Sovereignty | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Discover regenerative education systems that prioritize decentralized, lifelong, and learner-led learning through digital sovereignty and collaborative knowledge creation.');
     }
   }, []);
   return <div className="space-y-8">

@@ -10,7 +10,7 @@ const Election = () => {
     document.title = "Regenerative Election | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Explore regenerative election systems that prototype new models of democratic participation and civic imagination through participatory governance and collective decision-making.');
     }
   }, []);
   return (

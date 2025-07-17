@@ -1,8 +1,16 @@
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle } from "lucide-react";
 
 const Technology = () => {
+  useEffect(() => {
+    document.title = "Regenerative Technology & Digital Sovereignty | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Explore regenerative technology and digital sovereignty approaches that prioritize human agency, privacy, and life-serving innovation over surveillance and extraction.');
+    }
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-6">

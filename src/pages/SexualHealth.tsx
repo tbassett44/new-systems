@@ -9,7 +9,7 @@ const SexualHealth = () => {
     document.title = "Sexual Health, Reproductive Choice, and Cultural Dignity | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Explore sexual health, reproductive choice, and cultural dignity through regenerative approaches to harm reduction, empowered consent, and comprehensive wellbeing.');
     }
   }, []);
   return (

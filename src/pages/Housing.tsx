@@ -1,10 +1,18 @@
 
+import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, AlertTriangle, Home, Users, Heart, Trees } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Housing = () => {
+  useEffect(() => {
+    document.title = "Regenerative Housing & Communities | New Systems and Structures";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Learn about regenerative housing and community systems that create affordable, ecological, and socially connected living environments that support human and planetary well-being.');
+    }
+  }, []);
   return (
     <div className="space-y-8">
       <div className="mb-6">

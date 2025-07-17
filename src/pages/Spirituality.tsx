@@ -8,7 +8,7 @@ const Spirituality = () => {
     document.title = "Regenerative Spirituality | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'Discover regenerative spirituality that integrates contemplative practices, earth-based wisdom, and community ritual to support personal and collective healing and transformation.');
     }
   }, []);
   return <div className="space-y-8">
