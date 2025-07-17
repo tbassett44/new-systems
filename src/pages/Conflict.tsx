@@ -11,6 +11,10 @@ const Conflict = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Learn about conflict transformation and restorative processes that create a culture of repair, not retribution, through healing-centered approaches to interpersonal and community conflict.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Conflict Transformation & Restorative Processes | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

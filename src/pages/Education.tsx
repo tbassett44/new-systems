@@ -11,6 +11,10 @@ const Education = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover regenerative education systems that prioritize decentralized, lifelong, and learner-led learning through digital sovereignty and collaborative knowledge creation.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Education Through Digital Sovereignty | New Systems and Structures');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-6">

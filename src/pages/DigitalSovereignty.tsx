@@ -10,6 +10,10 @@ const DigitalSovereignty = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Learn about digital sovereignty and decentralized infrastructure that creates foundations for identity, trust, and participation while protecting privacy and human agency.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Digital Sovereignty and Decentralized Infrastructure | New Systems and Structures');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="flex items-center gap-4 mb-6">

@@ -11,6 +11,10 @@ const SexualHealth = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore sexual health, reproductive choice, and cultural dignity through regenerative approaches to harm reduction, empowered consent, and comprehensive wellbeing.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Sexual Health, Reproductive Choice, and Cultural Dignity | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

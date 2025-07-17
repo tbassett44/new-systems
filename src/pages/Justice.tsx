@@ -10,6 +10,10 @@ const Justice = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore regenerative justice systems that focus on healing, restoration, and community accountability rather than punishment, creating safer and more equitable societies.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Justice | New Systems and Structures');
+    }
   }, []);
 
   return <div className="space-y-8">

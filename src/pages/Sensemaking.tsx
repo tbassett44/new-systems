@@ -12,6 +12,10 @@ const Sensemaking = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover collective sensemaking frameworks that enhance participatory intelligence through AI-enhanced tools for navigating complexity and making wise decisions together.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Collective Sensemaking | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

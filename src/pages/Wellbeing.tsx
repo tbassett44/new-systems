@@ -10,6 +10,10 @@ const Wellbeing = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore privacy-first wellbeing tracking systems that support mental health, community resilience, and collective flourishing without surveillance or data exploitation.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Wellbeing Tracking | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

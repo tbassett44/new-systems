@@ -10,6 +10,10 @@ const Spirituality = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover regenerative spirituality that integrates contemplative practices, earth-based wisdom, and community ritual to support personal and collective healing and transformation.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Spirituality | New Systems and Structures');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-6">

@@ -10,6 +10,10 @@ const Media = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore regenerative media systems that rebuild trust, narrative integrity, and cultural coherence in a decentralized age through participatory journalism and community-centered storytelling.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Media | New Systems and Structures');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-6">

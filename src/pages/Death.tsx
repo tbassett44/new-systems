@@ -10,6 +10,10 @@ const Death = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore conscious death and dignity frameworks that honor end-of-life as a sacred transition, supporting individuals and communities in healing-centered approaches to mortality and grief.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Death and Dignity | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

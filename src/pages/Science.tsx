@@ -11,6 +11,10 @@ const Science = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover regenerative science that unlocks open discovery, collective intelligence, and ethical innovation for the benefit of all life through collaborative research and transparent knowledge sharing.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Science | New Systems and Structures');
+    }
   }, []);
 
   return (

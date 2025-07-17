@@ -12,6 +12,10 @@ const Finance = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover regenerative finance and economic systems that prioritize community wealth, ecological health, and values-based investment over extractive financial models.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Finance & Economic Systems | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

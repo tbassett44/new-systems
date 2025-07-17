@@ -12,6 +12,10 @@ const Housing = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Learn about regenerative housing and community systems that create affordable, ecological, and socially connected living environments that support human and planetary well-being.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Housing & Communities | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

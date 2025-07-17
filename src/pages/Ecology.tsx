@@ -10,6 +10,10 @@ const Ecology = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover ecological regeneration infrastructure that builds bioregional systems to heal land, life, and climate through regenerative practices and ecosystem restoration.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Ecological Regeneration Infrastructure | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

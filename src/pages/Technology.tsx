@@ -10,6 +10,10 @@ const Technology = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore regenerative technology and digital sovereignty approaches that prioritize human agency, privacy, and life-serving innovation over surveillance and extraction.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Technology & Digital Sovereignty | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

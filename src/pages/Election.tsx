@@ -12,6 +12,10 @@ const Election = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore regenerative election systems that prototype new models of democratic participation and civic imagination through participatory governance and collective decision-making.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Election | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

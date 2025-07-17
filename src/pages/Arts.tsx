@@ -11,6 +11,10 @@ const Arts = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore regenerative arts and culture systems that foster community creativity, cultural diversity, and artistic expression as tools for social healing and transformation.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Arts & Culture | New Systems and Structures');
+    }
   }, []);
 
   return (

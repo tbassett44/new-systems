@@ -10,6 +10,10 @@ const WasteManagement = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover transformative waste management infrastructure that converts waste into resources, supporting national wellbeing, ecological health, and economic resilience through scalable solutions.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Toward a New Waste Management Model | New Systems and Structures');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-8">

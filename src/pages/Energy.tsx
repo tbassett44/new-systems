@@ -11,6 +11,10 @@ const Energy = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Learn about regenerative energy infrastructure that powers a thriving civilization beyond carbon through decentralized renewable energy systems and community resilience.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Regenerative Energy Infrastructure | New Systems and Structures');
+    }
   }, []);
   return (
     <div className="space-y-8">

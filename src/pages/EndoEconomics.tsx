@@ -11,6 +11,10 @@ const EndoEconomics = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Explore Endo Economics, a new economic model that redirects GDP flow toward collective wellbeing, life-supporting activities, and regenerative systems.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'Toward a New Economic Model | New Systems and Structures');
+    }
   }, []);
   return <div className="space-y-8">
       <div className="mb-8">
