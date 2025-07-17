@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { Palette, AlertTriangle, CheckCircle, Users, Heart, Sparkles } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
@@ -21,11 +21,11 @@ const Arts = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Cultural Stewardship</Badge>
-        <Badge variant="secondary" className="bg-green-100 text-green-800">Community-Rooted</Badge>
-        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Healing Arts</Badge>
-        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Regenerative</Badge>
-        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Sacred Expression</Badge>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-100 text-purple-800">Cultural Stewardship</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800">Community-Rooted</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-pink-100 text-pink-800">Healing Arts</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800">Regenerative</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-100 text-orange-800">Sacred Expression</div>
       </div>
 
       <Card>

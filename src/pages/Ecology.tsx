@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { Leaf, AlertTriangle, CheckCircle, Users, Heart, Globe, TreePine, Droplets, Sprout } from "lucide-react";
 
 const Ecology = () => {
@@ -19,12 +19,12 @@ const Ecology = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary" className="bg-green-100 text-green-800">Bioregional</Badge>
-        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Regenerative</Badge>
-        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Ecosystem Restoration</Badge>
-        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Community Stewardship</Badge>
-        <Badge variant="secondary" className="bg-teal-100 text-teal-800">Climate Resilience</Badge>
-        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Verified Impact</Badge>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800">Bioregional</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800">Regenerative</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-100 text-purple-800">Ecosystem Restoration</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-100 text-orange-800">Community Stewardship</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-teal-100 text-teal-800">Climate Resilience</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-pink-100 text-pink-800">Verified Impact</div>
       </div>
 
       <Card>

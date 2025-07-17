@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { GraduationCap, Users, Key, Globe, CheckCircle, AlertTriangle, Brain, Network, BookOpen } from "lucide-react";
 
@@ -24,12 +24,12 @@ const Education = () => {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-6">
-        <Badge variant="secondary" className="bg-blue-100 text-blue-800">Learner-Led</Badge>
-        <Badge variant="secondary" className="bg-purple-100 text-purple-800">Digital Sovereignty</Badge>
-        <Badge variant="secondary" className="bg-green-100 text-green-800">Lifelong Learning</Badge>
-        <Badge variant="secondary" className="bg-orange-100 text-orange-800">Self-Custody</Badge>
-        <Badge variant="secondary" className="bg-pink-100 text-pink-800">Verifiable Credentials</Badge>
-        <Badge variant="secondary" className="bg-teal-100 text-teal-800">Decentralized</Badge>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800">Learner-Led</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-100 text-purple-800">Digital Sovereignty</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800">Lifelong Learning</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-100 text-orange-800">Self-Custody</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-pink-100 text-pink-800">Verifiable Credentials</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-teal-100 text-teal-800">Decentralized</div>
       </div>
 
       <Card>
