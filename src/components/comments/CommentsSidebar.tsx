@@ -85,7 +85,7 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed right-0 top-0 h-full w-80 bg-background border-l shadow-lg z-50">
+    <div className="fixed right-0 top-0 h-full w-full md:w-[640px] bg-background border-l shadow-lg z-50">
       <div className="flex items-center justify-between p-4 border-b">
         <div className="flex items-center gap-2">
           <MessageSquare className="h-5 w-5" />
