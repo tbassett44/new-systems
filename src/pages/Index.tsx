@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, ArrowRight, Leaf, Users, Heart } from "lucide-react";
+import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -92,6 +92,58 @@ const Index = () => {
             <p className="text-muted-foreground">
               and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
             </p>
+          </div>
+        </div>
+
+        {/* Co-Creation Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">Co-Create the Future</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <Card className="border-primary/20">
+              <CardHeader>
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <GitBranch className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-center">Open Source Collaboration</CardTitle>
+                <CardDescription className="text-center">
+                  This living document is designed for continuous evolution through community input
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>• Submit improvements and suggestions</li>
+                  <li>• Edit proposals directly on GitHub</li>
+                  <li>• Propose new systems and structures</li>
+                  <li>• Review and discuss changes</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="border-primary/20">
+              <CardHeader>
+                <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                  <Github className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle className="text-center">Contribute on GitHub</CardTitle>
+                <CardDescription className="text-center">
+                  Join the collaborative effort to redesign systems for human flourishing
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="mt-4"
+                  onClick={() => window.open('https://github.com/your-repo-here', '_blank')}
+                >
+                  <a href="https://github.com/your-repo-here" target="_blank" rel="noopener noreferrer" className="group">
+                    <Github className="mr-2 h-4 w-4" />
+                    View on GitHub
+                    <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
 
