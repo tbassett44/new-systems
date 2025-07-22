@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { TextSelection } from '@/types/comments';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface CommentModalProps {
   isOpen: boolean;
@@ -21,23 +22,36 @@ interface CommentModalProps {
 export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentModalProps) {
   const [content, setContent] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth();
 
   const handleSubmit = async () => {
-    if (!content.trim() || !selection) return;
+    console.log('Modal submit clicked', { 
+      content: content.trim(), 
+      hasSelection: !!selection,
+      hasUser: !!user 
+    });
+    
+    if (!content.trim() || !selection) {
+      console.log('Missing content or selection');
+      return;
+    }
     
     setIsSubmitting(true);
     try {
+      console.log('Calling onSubmit from modal');
       await onSubmit(content.trim());
+      console.log('onSubmit completed successfully');
       setContent('');
       onClose();
     } catch (error) {
-      console.error('Error submitting comment:', error);
+      console.error('Error submitting comment from modal:', error);
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleClose = () => {
+    console.log('Modal close requested');
     setContent('');
     onClose();
   };
@@ -61,6 +75,14 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
               </p>
             </div>
           )}
+
+          {!user && (
+            <div className="p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+              <p className="text-sm text-yellow-800">
+                ⚠️ You need to be signed in to add comments.
+              </p>
+            </div>
+          )}
           
           <div>
             <Textarea
@@ -69,6 +91,7 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
               onChange={(e) => setContent(e.target.value)}
               className="min-h-[100px]"
               autoFocus
+              disabled={!user}
             />
           </div>
           
@@ -78,7 +101,7 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
             </Button>
             <Button 
               onClick={handleSubmit} 
-              disabled={!content.trim() || isSubmitting}
+              disabled={!content.trim() || isSubmitting || !selection || !user}
             >
               {isSubmitting ? 'Adding...' : 'Add Comment'}
             </Button>

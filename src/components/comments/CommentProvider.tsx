@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
 import { Comment, CommentContextType, TextSelection } from '@/types/comments';
 import { useLocation } from 'react-router-dom';
@@ -33,6 +32,8 @@ export function CommentProvider({ children }: CommentProviderProps) {
     const loadComments = async () => {
       if (!location.pathname) return;
       
+      console.log('Loading comments for path:', location.pathname);
+      
       try {
         setLoading(true);
         const { data, error } = await supabase
@@ -41,19 +42,26 @@ export function CommentProvider({ children }: CommentProviderProps) {
           .eq('page_route', location.pathname)
           .order('created_at', { ascending: true });
 
+        console.log('Comments query result:', { data, error });
+
         if (error) throw error;
 
         if (!data || data.length === 0) {
+          console.log('No comments found for this page');
           setComments([]);
           return;
         }
 
         // Get user profiles separately
         const userIds = [...new Set(data.map(c => c.user_id))];
+        console.log('Fetching profiles for user IDs:', userIds);
+        
         const { data: profiles } = await supabase
           .from('profiles')
           .select('*')
           .in('user_id', userIds);
+
+        console.log('Profiles query result:', profiles);
 
         // Get comment replies
         const commentIds = data.map(c => c.id);
@@ -138,6 +146,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
           };
         });
 
+        console.log('Transformed comments:', transformedComments);
         setComments(transformedComments);
       } catch (error) {
         console.error('Error loading comments:', error);
@@ -155,7 +164,13 @@ export function CommentProvider({ children }: CommentProviderProps) {
   }, [location.pathname, user]);
 
   const addComment = useCallback(async (selection: TextSelection, content: string) => {
-    console.log('addComment called with:', { user, selection, content, pathname: location.pathname });
+    console.log('CommentProvider.addComment called', { 
+      user: !!user, 
+      userId: user?.id,
+      selection, 
+      content, 
+      pathname: location.pathname 
+    });
     
     if (!user) {
       console.log('No user in addComment');
@@ -164,34 +179,48 @@ export function CommentProvider({ children }: CommentProviderProps) {
         description: "Please sign in to add comments.",
         variant: "destructive",
       });
-      return;
+      throw new Error('Authentication required');
     }
 
     try {
       console.log('Inserting comment into database...');
+      const commentData = {
+        user_id: user.id,
+        page_route: location.pathname,
+        text_content: content,
+        highlighted_text: selection.text,
+        start_offset: selection.startOffset,
+        end_offset: selection.endOffset,
+      };
+      console.log('Comment data to insert:', commentData);
+      
       const { data, error } = await supabase
         .from('comments')
-        .insert({
-          user_id: user.id,
-          page_route: location.pathname,
-          text_content: content,
-          highlighted_text: selection.text,
-          start_offset: selection.startOffset,
-          end_offset: selection.endOffset,
-        })
+        .insert(commentData)
         .select('*')
         .single();
 
-      console.log('Database response:', { data, error });
+      console.log('Database insert response:', { data, error });
 
-      if (error) throw error;
+      if (error) {
+        console.error('Database error:', error);
+        throw error;
+      }
 
       // Get user profile
-      const { data: profile } = await supabase
+      console.log('Fetching user profile...');
+      const { data: profile, error: profileError } = await supabase
         .from('profiles')
         .select('*')
         .eq('user_id', user.id)
         .single();
+
+      console.log('Profile fetch result:', { profile, profileError });
+
+      if (profileError) {
+        console.error('Profile fetch error:', profileError);
+        // Don't throw here, just log the error
+      }
 
       const newComment: Comment = {
         ...data,
@@ -201,13 +230,20 @@ export function CommentProvider({ children }: CommentProviderProps) {
           display_name: profile.display_name || 'Anonymous',
           avatar_url: profile.avatar_url,
           created_at: profile.created_at,
-        } : undefined,
+        } : {
+          id: user.id,
+          email: user.email || '',
+          display_name: user.email || 'Anonymous',
+          created_at: new Date().toISOString(),
+        },
         replies: [],
         likes_count: 0,
         user_has_liked: false,
       };
 
+      console.log('New comment created:', newComment);
       setComments(prev => [...prev, newComment]);
+      
       toast({
         title: "Comment added",
         description: "Your comment has been added successfully.",
@@ -219,6 +255,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
         description: "Failed to add comment. Please try again.",
         variant: "destructive",
       });
+      throw error;
     }
   }, [location.pathname, user]);
 
@@ -286,8 +323,9 @@ export function CommentProvider({ children }: CommentProviderProps) {
   }, [user]);
 
   const toggleCommentMode = useCallback(() => {
+    console.log('toggleCommentMode called, current state:', isCommentModeActive);
     setIsCommentModeActive(prev => !prev);
-  }, []);
+  }, [isCommentModeActive]);
 
   const likeComment = useCallback(async (commentId: string) => {
     if (!user) {

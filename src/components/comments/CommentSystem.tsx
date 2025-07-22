@@ -18,7 +18,7 @@ export function CommentSystem() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   
   const navigate = useNavigate();
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
   const { selection, captureSelection, clearSelection } = useTextSelection();
   const { 
     comments, 
@@ -29,18 +29,27 @@ export function CommentSystem() {
     setActiveComment 
   } = useComments();
 
+  // Debug authentication state
+  useEffect(() => {
+    console.log('Authentication state:', { user: !!user, loading, userId: user?.id });
+  }, [user, loading]);
+
   // Handle text selection when comment mode is active
   useEffect(() => {
     if (!isCommentModeActive) return;
 
     const handleMouseUp = () => {
+      console.log('Mouse up in comment mode');
       const currentSelection = captureSelection();
       if (currentSelection && currentSelection.text.length > 0) {
+        console.log('Valid selection captured, user:', !!user);
         if (!user) {
+          console.log('No user, showing login modal');
           setIsLoginModalOpen(true);
           clearSelection();
           return;
         }
+        console.log('Opening comment modal');
         setIsCommentModalOpen(true);
       }
     };
@@ -50,10 +59,22 @@ export function CommentSystem() {
   }, [isCommentModeActive, captureSelection, user, clearSelection]);
 
   const handleCommentModeToggle = () => {
+    console.log('Comment mode toggle clicked, user:', !!user, 'loading:', loading);
+    
+    if (loading) {
+      toast({
+        title: "Loading",
+        description: "Please wait while we check your authentication status.",
+      });
+      return;
+    }
+
     if (!user && !isCommentModeActive) {
+      console.log('No user, showing login modal');
       setIsLoginModalOpen(true);
       return;
     }
+    console.log('Toggling comment mode');
     toggleCommentMode();
   };
 
@@ -85,10 +106,16 @@ export function CommentSystem() {
   }, [handleCommentModeToggle, isSidebarOpen, setActiveComment, clearSelection]);
 
   const handleAddComment = async (content: string) => {
-    console.log('handleAddComment called', { selection, content, user });
+    console.log('handleAddComment called', { 
+      hasSelection: !!selection, 
+      selectionText: selection?.text,
+      content, 
+      hasUser: !!user,
+      userId: user?.id
+    });
     
     if (!selection) {
-      console.log('No selection found');
+      console.log('No selection found when submitting');
       toast({
         title: "Error",
         description: "Please select text first.",
@@ -98,27 +125,39 @@ export function CommentSystem() {
     }
 
     if (!user) {
-      console.log('No user found');
+      console.log('No user found when submitting');
       toast({
-        title: "Error",
-        description: "Please sign in first.",
+        title: "Authentication Required",
+        description: "Please sign in to add comments.",
         variant: "destructive",
       });
+      setIsLoginModalOpen(true);
       return;
     }
 
     try {
-      console.log('Calling addComment with:', { selection, content });
+      console.log('Calling addComment with selection:', selection);
       await addComment(selection, content);
+      console.log('Comment added successfully');
+      toast({
+        title: "Success",
+        description: "Your comment has been added!",
+      });
       clearSelection();
     } catch (error) {
       console.error('Error in handleAddComment:', error);
+      toast({
+        title: "Error",
+        description: "Failed to add comment. Please try again.",
+        variant: "destructive",
+      });
     }
   };
 
   const handleCloseModal = () => {
+    console.log('Closing comment modal');
     setIsCommentModalOpen(false);
-    clearSelection();
+    // Don't clear selection immediately to help with debugging
   };
 
   return (
@@ -147,8 +186,11 @@ export function CommentSystem() {
             size="sm"
             className="shadow-lg"
             title={`${isCommentModeActive ? 'Exit' : 'Enter'} comment mode (⌘M)`}
+            disabled={loading}
           >
-            {isCommentModeActive ? (
+            {loading ? (
+              <Eye className="h-4 w-4 animate-pulse" />
+            ) : isCommentModeActive ? (
               <EyeOff className="h-4 w-4" />
             ) : (
               <PenTool className="h-4 w-4" />
