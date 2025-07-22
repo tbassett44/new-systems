@@ -98,7 +98,7 @@ function AppSidebar() {
           <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
             <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
             <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
-            <h2 className="text-lg font-semibold text-primary">White Paper Collection</h2>
+            <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
           </div>
           <SidebarTrigger />
         </div>
@@ -112,7 +112,7 @@ function AppSidebar() {
             className="w-full justify-start text-muted-foreground"
           >
             <Search className="h-4 w-4 mr-2" />
-            Search all papers...
+            Search manifesto...
             <div className="ml-auto flex items-center gap-1">
               <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
                 <span className="text-xs">⌘</span>K
