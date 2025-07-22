@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch } from "lucide-react";
+import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -151,7 +151,7 @@ const Index = () => {
         </div>
 
         {/* Authors */}
-        <div className="text-center">
+        <div className="text-center mb-8">
           <h2 className="text-2xl font-semibold mb-4">Authors</h2>
           <div className="space-y-2">
             <p className="text-lg">
@@ -161,6 +161,29 @@ const Index = () => {
               and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
             </p>
           </div>
+        </div>
+
+        {/* ChatGPT Thread Link */}
+        <div className="text-center">
+          <p className="text-sm text-muted-foreground mb-4">
+            Curious about the creative process? View the complete conversation that helped compose this document:
+          </p>
+          <Button 
+            asChild 
+            variant="outline" 
+            size="sm"
+          >
+            <a 
+              href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="group"
+            >
+              <MessageCircle className="mr-2 h-4 w-4" />
+              View ChatGPT Conversation
+              <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
         </div>
       </div>
     </div>
