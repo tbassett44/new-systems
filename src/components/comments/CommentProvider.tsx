@@ -442,7 +442,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
 
     try {
       const comment = comments.find(c => c.id === commentId);
-      if (!comment || comment.user_id !== user.id) {
+      if (!comment || (comment.user_id !== user.id && user.email !== 'iamjuicylife@gmail.com')) {
         toast({
           title: "Permission denied",
           description: "You can only delete your own comments.",
@@ -473,6 +473,54 @@ export function CommentProvider({ children }: CommentProviderProps) {
     }
   }, [user, comments]);
 
+  const editComment = useCallback(async (commentId: string, content: string) => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to edit comments.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const comment = comments.find(c => c.id === commentId);
+      if (!comment || comment.user_id !== user.id) {
+        toast({
+          title: "Permission denied",
+          description: "You can only edit your own comments.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const { error } = await supabase
+        .from('comments')
+        .update({ text_content: content })
+        .eq('id', commentId);
+
+      if (error) throw error;
+
+      setComments(prev => prev.map(comment => 
+        comment.id === commentId 
+          ? { ...comment, text_content: content }
+          : comment
+      ));
+
+      toast({
+        title: "Comment updated",
+        description: "Comment has been updated successfully.",
+      });
+    } catch (error) {
+      console.error('Error editing comment:', error);
+      toast({
+        title: "Error",
+        description: "Failed to edit comment. Please try again.",
+        variant: "destructive",
+      });
+    }
+  }, [user, comments]);
+
   const contextValue: CommentContextType = {
     comments: comments.filter(comment => comment.page_route === location.pathname),
     activeComment,
@@ -484,6 +532,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
     likeComment,
     resolveComment,
     deleteComment,
+    editComment,
   };
 
   return (

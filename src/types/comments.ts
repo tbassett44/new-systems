@@ -51,4 +51,5 @@ export interface CommentContextType {
   likeComment: (commentId: string) => Promise<void>;
   resolveComment: (commentId: string) => Promise<void>;
   deleteComment: (commentId: string) => Promise<void>;
+  editComment: (commentId: string, content: string) => Promise<void>;
 }

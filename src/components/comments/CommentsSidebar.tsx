@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Comment } from '@/types/comments';
 import { useComments } from './CommentProvider';
@@ -11,13 +10,17 @@ import {
   MessageSquare, 
   Heart, 
   Reply, 
-  Check, 
   X, 
   Trash2,
-  Calendar
+  Calendar,
+  Edit,
+  Save,
+  XCircle,
+  CheckCircle
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { formatDistanceToNow } from 'date-fns';
+import { useAuth } from '@/contexts/AuthContext';
 
 interface CommentsSidebarProps {
   isOpen: boolean;
@@ -25,18 +28,22 @@ interface CommentsSidebarProps {
 }
 
 export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
+  const { user } = useAuth();
   const { 
     comments, 
     activeComment, 
     setActiveComment, 
     replyToComment, 
     likeComment, 
-    resolveComment, 
-    deleteComment 
+    deleteComment,
+    editComment 
   } = useComments();
   
   const [replyingTo, setReplyingTo] = useState<string | null>(null);
   const [replyContent, setReplyContent] = useState('');
+  const [editingComment, setEditingComment] = useState<string | null>(null);
+  const [editingReply, setEditingReply] = useState<string | null>(null);
+  const [editContent, setEditContent] = useState('');
 
   const handleReply = async (commentId: string) => {
     if (!replyContent.trim()) return;
@@ -48,6 +55,31 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
     } catch (error) {
       console.error('Error replying:', error);
     }
+  };
+
+  const handleEditComment = async (commentId: string) => {
+    if (!editContent.trim()) return;
+    
+    try {
+      await editComment(commentId, editContent.trim());
+      setEditContent('');
+      setEditingComment(null);
+    } catch (error) {
+      console.error('Error editing comment:', error);
+    }
+  };
+
+  const canDeleteComment = (comment: Comment) => {
+    return comment.user_id === user?.id || user?.email === 'iamjuicylife@gmail.com';
+  };
+
+  const canEditComment = (comment: Comment) => {
+    return comment.user_id === user?.id;
+  };
+
+  const startEdit = (comment: Comment) => {
+    setEditingComment(comment.id);
+    setEditContent(comment.text_content);
   };
 
   if (!isOpen) return null;
@@ -103,7 +135,7 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
                   <div className="flex items-center gap-1">
                     {comment.is_resolved && (
                       <Badge variant="secondary" className="text-xs">
-                        <Check className="h-3 w-3 mr-1" />
+                        <CheckCircle className="h-3 w-3 mr-1" />
                         Resolved
                       </Badge>
                     )}
@@ -116,8 +148,129 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
                     <p className="italic">"{comment.highlighted_text}"</p>
                   </div>
                   
-                  <p className="text-sm">{comment.text_content}</p>
+                  {editingComment === comment.id ? (
+                    <div className="space-y-2">
+                      <Textarea
+                        value={editContent}
+                        onChange={(e) => setEditContent(e.target.value)}
+                        className="min-h-[60px] text-sm"
+                      />
+                      <div className="flex justify-end gap-2">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => {
+                            setEditingComment(null);
+                            setEditContent('');
+                          }}
+                        >
+                          <XCircle className="h-3 w-3 mr-1" />
+                          Cancel
+                        </Button>
+                        <Button
+                          size="sm"
+                          onClick={() => handleEditComment(comment.id)}
+                          disabled={!editContent.trim()}
+                        >
+                          <Save className="h-3 w-3 mr-1" />
+                          Save
+                        </Button>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-sm">{comment.text_content}</p>
+                  )}
                 </div>
+
+                {/* Display replies */}
+                {comment.replies && comment.replies.length > 0 && (
+                  <div className="space-y-2 ml-4 border-l-2 border-muted pl-4">
+                    {comment.replies.map((reply) => (
+                      <div key={reply.id} className="bg-muted/30 rounded p-3 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Avatar className="h-5 w-5">
+                              <AvatarImage src={reply.user?.avatar_url} />
+                              <AvatarFallback className="text-xs">
+                                {reply.user?.display_name?.[0]?.toUpperCase() || 'U'}
+                              </AvatarFallback>
+                            </Avatar>
+                            <div className="text-xs">
+                              <p className="font-medium">{reply.user?.display_name || 'Anonymous'}</p>
+                              <p className="text-muted-foreground">
+                                {formatDistanceToNow(new Date(reply.created_at), { addSuffix: true })}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-1">
+                            {canEditComment({ ...comment, user_id: reply.user_id }) && (
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setEditingReply(reply.id);
+                                  setEditContent(reply.content);
+                                }}
+                                className="h-6 px-1 text-xs"
+                              >
+                                <Edit className="h-3 w-3" />
+                              </Button>
+                            )}
+                            {canDeleteComment({ ...comment, user_id: reply.user_id }) && (
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  // Note: You'll need to add deleteReply function to CommentProvider
+                                }}
+                                className="h-6 px-1 text-xs text-destructive hover:text-destructive"
+                              >
+                                <Trash2 className="h-3 w-3" />
+                              </Button>
+                            )}
+                          </div>
+                        </div>
+                        
+                        {editingReply === reply.id ? (
+                          <div className="space-y-2">
+                            <Textarea
+                              value={editContent}
+                              onChange={(e) => setEditContent(e.target.value)}
+                              className="min-h-[40px] text-xs"
+                            />
+                            <div className="flex justify-end gap-2">
+                              <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => {
+                                  setEditingReply(null);
+                                  setEditContent('');
+                                }}
+                              >
+                                Cancel
+                              </Button>
+                              <Button
+                                size="sm"
+                                onClick={() => {
+                                  // Note: You'll need to add editReply function to CommentProvider
+                                  setEditingReply(null);
+                                  setEditContent('');
+                                }}
+                                disabled={!editContent.trim()}
+                              >
+                                Save
+                              </Button>
+                            </div>
+                          </div>
+                        ) : (
+                          <p className="text-xs">{reply.content}</p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
@@ -155,29 +308,33 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
                   </div>
                   
                   <div className="flex items-center gap-1">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        resolveComment(comment.id);
-                      }}
-                      className="h-7 px-2 text-xs"
-                    >
-                      <Check className="h-3 w-3" />
-                    </Button>
+                    {canEditComment(comment) && editingComment !== comment.id && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          startEdit(comment);
+                        }}
+                        className="h-7 px-2 text-xs"
+                      >
+                        <Edit className="h-3 w-3" />
+                      </Button>
+                    )}
                     
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        deleteComment(comment.id);
-                      }}
-                      className="h-7 px-2 text-xs text-destructive hover:text-destructive"
-                    >
-                      <Trash2 className="h-3 w-3" />
-                    </Button>
+                    {canDeleteComment(comment) && (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          deleteComment(comment.id);
+                        }}
+                        className="h-7 px-2 text-xs text-destructive hover:text-destructive"
+                      >
+                        <Trash2 className="h-3 w-3" />
+                      </Button>
+                    )}
                   </div>
                 </div>
 
