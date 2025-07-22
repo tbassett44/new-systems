@@ -50,13 +50,43 @@ const Spirituality = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li><strong>Spiritual Isolation:</strong> Many lack a sense of connection to source, purpose, or sacred community.</li>
-            <li><strong>Institutional Distrust:</strong> Organized religions often fail to meet modern spiritual needs, while retaining moral and cultural authority.</li>
-            <li><strong>Ritual Deficiency:</strong> Societies lack shared ceremonies to process grief, mark transitions, or celebrate life meaningfully.</li>
-            <li><strong>Cultural Appropriation:</strong> Spiritual wisdom is often extracted and commodified without respect for its roots.</li>
-            <li><strong>Neglect of Inner Life:</strong> Fast-paced culture rarely supports stillness, reflection, or non-material growth.</li>
-          </ul>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Spiritual Isolation</p>
+                <p className="text-sm text-muted-foreground">Many lack a sense of connection to source, purpose, or sacred community.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Institutional Distrust</p>
+                <p className="text-sm text-muted-foreground">Organized religions often fail to meet modern spiritual needs, while retaining moral and cultural authority.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Ritual Deficiency</p>
+                <p className="text-sm text-muted-foreground">Societies lack shared ceremonies to process grief, mark transitions, or celebrate life meaningfully.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Cultural Appropriation</p>
+                <p className="text-sm text-muted-foreground">Spiritual wisdom is often extracted and commodified without respect for its roots.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Neglect of Inner Life</p>
+                <p className="text-sm text-muted-foreground">Fast-paced culture rarely supports stillness, reflection, or non-material growth.</p>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

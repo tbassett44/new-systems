@@ -54,32 +54,36 @@ const Finance = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Wealth Inequality:</strong> Extreme concentration of wealth in the hands of a few, leading to social and economic instability.
+                <p className="font-medium">Wealth Inequality</p>
+                <p className="text-sm text-muted-foreground">Extreme concentration of wealth in the hands of a few, leading to social and economic instability.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Speculative Markets:</strong> Financial speculation divorced from real-world value creation, leading to boom-and-bust cycles.
+                <p className="font-medium">Speculative Markets</p>
+                <p className="text-sm text-muted-foreground">Financial speculation divorced from real-world value creation, leading to boom-and-bust cycles.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Ecological Destruction:</strong> Financial incentives that prioritize short-term profits over long-term ecological health.
+                <p className="font-medium">Ecological Destruction</p>
+                <p className="text-sm text-muted-foreground">Financial incentives that prioritize short-term profits over long-term ecological health.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Lack of Transparency:</strong> Opaque financial systems that enable corruption, tax evasion, and illicit activities.
+                <p className="font-medium">Lack of Transparency</p>
+                <p className="text-sm text-muted-foreground">Opaque financial systems that enable corruption, tax evasion, and illicit activities.</p>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

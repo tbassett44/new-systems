@@ -49,38 +49,43 @@ const Conflict = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
-                Most communities lack accessible, trusted processes to address interpersonal harm or tension before it escalates.
+              <div>
+                <p className="font-medium">Lack of Accessible Processes</p>
+                <p className="text-sm text-muted-foreground">Most communities lack accessible, trusted processes to address interpersonal harm or tension before it escalates.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
-                Punitive systems prioritize blame and punishment over understanding, restitution, or healing.
+              <div>
+                <p className="font-medium">Punitive Approaches</p>
+                <p className="text-sm text-muted-foreground">Punitive systems prioritize blame and punishment over understanding, restitution, or healing.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
-                Schools, workplaces, and neighborhoods often suppress conflict or outsource it to external authorities.
+              <div>
+                <p className="font-medium">Outsourced Conflict Resolution</p>
+                <p className="text-sm text-muted-foreground">Schools, workplaces, and neighborhoods often suppress conflict or outsource it to external authorities.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
-                Many people lack the skills or models to engage in honest dialogue or reconciliation.
+              <div>
+                <p className="font-medium">Skills Gap</p>
+                <p className="text-sm text-muted-foreground">Many people lack the skills or models to engage in honest dialogue or reconciliation.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
-              <div className="text-destructive/90">
-                Early experiences of unresolved conflict (e.g., on playgrounds or in families) shape lifelong beliefs about safety, trust, and justice.
+              <div>
+                <p className="font-medium">Formative Experiences</p>
+                <p className="text-sm text-muted-foreground">Early experiences of unresolved conflict (e.g., on playgrounds or in families) shape lifelong beliefs about safety, trust, and justice.</p>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

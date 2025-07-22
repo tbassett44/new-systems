@@ -58,13 +58,43 @@ const Media = () => {
           <CardTitle className="text-destructive">The Problem: Crisis of Trust and Ownership in Media</CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-2">
-            <li><strong>Corporate Consolidation:</strong> A small number of media conglomerates control the majority of news and entertainment, limiting narrative diversity.</li>
-            <li><strong>Advertising Distortion:</strong> Attention is commodified, driving sensationalism, outrage, and superficial content.</li>
-            <li><strong>Misinformation and Manipulation:</strong> Disinformation campaigns exploit trust gaps, deepening division and disengagement.</li>
-            <li><strong>Lack of Feedback Loops:</strong> Audiences have little ability to verify, critique, or co-create the content they consume.</li>
-            <li><strong>Creative Underemployment:</strong> Millions of skilled media workers operate within extractive systems or struggle to sustain meaningful work.</li>
-          </ul>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Corporate Consolidation</p>
+                <p className="text-sm text-muted-foreground">A small number of media conglomerates control the majority of news and entertainment, limiting narrative diversity.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Advertising Distortion</p>
+                <p className="text-sm text-muted-foreground">Attention is commodified, driving sensationalism, outrage, and superficial content.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Misinformation and Manipulation</p>
+                <p className="text-sm text-muted-foreground">Disinformation campaigns exploit trust gaps, deepening division and disengagement.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Lack of Feedback Loops</p>
+                <p className="text-sm text-muted-foreground">Audiences have little ability to verify, critique, or co-create the content they consume.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Creative Underemployment</p>
+                <p className="text-sm text-muted-foreground">Millions of skilled media workers operate within extractive systems or struggle to sustain meaningful work.</p>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

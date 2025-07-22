@@ -54,38 +54,43 @@ const Arts = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-2">
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Commodified Creativity:</strong> Art is often devalued, commercialized, or algorithmically shaped for profit.
+                <p className="font-medium">Commodified Creativity</p>
+                <p className="text-sm text-muted-foreground">Art is often devalued, commercialized, or algorithmically shaped for profit.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Precarious Labor:</strong> Artists face unstable income, lack of healthcare, and limited public support.
+                <p className="font-medium">Precarious Labor</p>
+                <p className="text-sm text-muted-foreground">Artists face unstable income, lack of healthcare, and limited public support.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Cultural Amnesia:</strong> Intergenerational wisdom, ritual, and traditional arts are being lost or appropriated.
+                <p className="font-medium">Cultural Amnesia</p>
+                <p className="text-sm text-muted-foreground">Intergenerational wisdom, ritual, and traditional arts are being lost or appropriated.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Isolation of Artists:</strong> Creatives are siloed from other systems—health, education, governance—despite their connective role.
+                <p className="font-medium">Isolation of Artists</p>
+                <p className="text-sm text-muted-foreground">Creatives are siloed from other systems—health, education, governance—despite their connective role.</p>
               </div>
-            </li>
-            <li className="flex items-start gap-2">
+            </div>
+            <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
-                <strong>Lack of Public Ritual:</strong> Societies lack shared spaces to process emotion, celebrate, mourn, or envision together.
+                <p className="font-medium">Lack of Public Ritual</p>
+                <p className="text-sm text-muted-foreground">Societies lack shared spaces to process emotion, celebrate, mourn, or envision together.</p>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </CardContent>
       </Card>
 

@@ -58,27 +58,31 @@ const Ecology = () => {
         <CardContent>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-4 w-4 text-destructive mt-1 shrink-0" />
-              <div className="text-destructive/90">
-                <strong>Widespread Degradation:</strong> Deforestation, soil erosion, water contamination, and habitat loss continue at accelerating rates.
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Widespread Degradation</p>
+                <p className="text-sm text-muted-foreground">Deforestation, soil erosion, water contamination, and habitat loss continue at accelerating rates.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-4 w-4 text-destructive mt-1 shrink-0" />
-              <div className="text-destructive/90">
-                <strong>Top-Down Conservation:</strong> Many environmental efforts are bureaucratic, extractive, or disconnected from local wisdom.
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Top-Down Conservation</p>
+                <p className="text-sm text-muted-foreground">Many environmental efforts are bureaucratic, extractive, or disconnected from local wisdom.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-4 w-4 text-destructive mt-1 shrink-0" />
-              <div className="text-destructive/90">
-                <strong>Lack of Feedback Loops:</strong> Communities lack tools to track ecological change or verify regenerative efforts.
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Lack of Feedback Loops</p>
+                <p className="text-sm text-muted-foreground">Communities lack tools to track ecological change or verify regenerative efforts.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <AlertTriangle className="h-4 w-4 text-destructive mt-1 shrink-0" />
-              <div className="text-destructive/90">
-                <strong>Funding Gaps:</strong> Regeneration is often underfunded or tied to centralized grants that are slow, inequitable, or ineffective.
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Funding Gaps</p>
+                <p className="text-sm text-muted-foreground">Regeneration is often underfunded or tied to centralized grants that are slow, inequitable, or ineffective.</p>
               </div>
             </div>
           </div>

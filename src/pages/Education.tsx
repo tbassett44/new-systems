@@ -61,26 +61,41 @@ const Education = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="space-y-4">
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2 text-destructive">Standardized Curricula</h4>
-              <p className="text-destructive/80">Current systems prioritize uniformity over purpose-driven, diverse paths.</p>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Standardized Curricula</p>
+                <p className="text-sm text-muted-foreground">Current systems prioritize uniformity over purpose-driven, diverse paths.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2 text-destructive">Credential Lock-In</h4>
-              <p className="text-destructive/80">Diplomas and transcripts are controlled by institutions, inaccessible or unverifiable across systems.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Credential Lock-In</p>
+                <p className="text-sm text-muted-foreground">Diplomas and transcripts are controlled by institutions, inaccessible or unverifiable across systems.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2 text-destructive">Data Exploitation</h4>
-              <p className="text-destructive/80">Edtech platforms increasingly monetize learner data without consent.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Data Exploitation</p>
+                <p className="text-sm text-muted-foreground">Edtech platforms increasingly monetize learner data without consent.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2 text-destructive">Fragmented Learning</h4>
-              <p className="text-destructive/80">Informal, spiritual, or experiential learning is excluded or unrecognized.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Fragmented Learning</p>
+                <p className="text-sm text-muted-foreground">Informal, spiritual, or experiential learning is excluded or unrecognized.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-destructive/30 pl-4">
-              <h4 className="font-semibold mb-2 text-destructive">Limited Agency</h4>
-              <p className="text-destructive/80">Students are often passive recipients, rather than active co-creators, of their educational path.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Limited Agency</p>
+                <p className="text-sm text-muted-foreground">Students are often passive recipients, rather than active co-creators, of their educational path.</p>
+              </div>
             </div>
           </div>
         </CardContent>
