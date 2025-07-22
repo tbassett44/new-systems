@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { AlertTriangle, CheckCircle } from "lucide-react";
+import { AlertTriangle, CheckCircle, Heart, Users } from "lucide-react";
 
 const SexualHealth = () => {
   useEffect(() => {
@@ -94,58 +94,54 @@ const SexualHealth = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: A Regenerative Sexual Health System</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Male Contraceptive Innovation</h5>
-                <p className="text-sm text-muted-foreground">
-                  Advance research and public funding for vas deferens gel injections (e.g. RISUG/Vasalgel), offering long-term reversible contraception for men. Create voluntary programs for men who do not want children to test effectiveness and reversibility. Normalize male participation in reproductive responsibility.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Early Pregnancy Detection Access</h5>
-                <p className="text-sm text-muted-foreground">
-                  Massively increase access to pregnancy tests in schools, clinics, and community hubs. Pair early detection with digital or in-person counseling and support. Combine with ethical, consensus-driven timelines for abortion access informed by fetal development data.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Free, Anonymous STI Testing + Digital Sovereignty</h5>
-                <p className="text-sm text-muted-foreground">
-                  Provide universal access to free, anonymous STI testing. Use decentralized identity and zero-knowledge proof systems to allow individuals to prove their STI status to a partner without sharing sensitive data. Build this into a sovereign health data system owned by the individual.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Consent Education and Cultural Renewal</h5>
-                <p className="text-sm text-muted-foreground">
-                  Implement comprehensive consent and emotional literacy programs starting in adolescence. Address relational intelligence, communication, boundary setting, and digital sexuality.
-                </p>
-              </div>
-              <div className="border-l-4 border-orange-300 pl-4">
-                <h5 className="font-medium text-orange-700">Community-Based Sexual Health Hubs</h5>
-                <p className="text-sm text-muted-foreground">
-                  Decentralized, locally run centers offering STI testing, contraception, counseling, and reproductive services. Inclusive of LGBTQ+ needs, rural populations, and trauma recovery support.
-                </p>
-              </div>
-              <div className="border-l-4 border-teal-300 pl-4">
-                <h5 className="font-medium text-teal-700">Mental Health and Trauma Support</h5>
-                <p className="text-sm text-muted-foreground">
-                  Embed reproductive and sexual trauma care into the wellbeing ecosystem. Offer anonymous, subsidized access to therapy, mentorship, and peer support.
-                </p>
-              </div>
-              <div className="border-l-4 border-indigo-300 pl-4">
-                <h5 className="font-medium text-indigo-700">Parenthood and Readiness Support</h5>
-                <p className="text-sm text-muted-foreground">
-                  Offer wraparound services for new or expectant parents including housing, child care, nutrition, and mentorship. Reduce abortions driven by financial or emotional unpreparedness.
-                </p>
-              </div>
-              <div className="border-l-4 border-pink-300 pl-4">
-                <h5 className="font-medium text-pink-700">Emergency Contraception Access</h5>
-                <p className="text-sm text-muted-foreground">
-                  Public funding and free distribution of morning-after pills in schools, pharmacies, and health hubs.
-                </p>
-              </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <AlertTriangle className="h-4 w-4 text-green-600" />
+                1. Comprehensive Education
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Age-appropriate, culturally sensitive education covering anatomy, consent, and pleasure</li>
+                <li>Relationships and diversity across the full spectrum of human sexuality</li>
+                <li>Community-led educational programs that honor diverse perspectives</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                2. Accessible Healthcare
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Universal access to reproductive healthcare and STI prevention</li>
+                <li>Contraception and gender-affirming care without barriers</li>
+                <li>Community-based health services that prioritize dignity and autonomy</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                3. Trauma-Informed Care
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Healthcare systems that recognize the impact of sexual trauma</li>
+                <li>Healing-centered approaches to recovery and empowerment</li>
+                <li>Survivor-led support programs and advocacy initiatives</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                4. Community Support Networks
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Peer support groups and mentorship programs</li>
+                <li>Safe spaces for sexual expression and identity exploration</li>
+                <li>Community resources and mutual aid networks</li>
+              </ul>
             </div>
           </div>
         </CardContent>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, AlertTriangle } from "lucide-react";
+import { CheckCircle, AlertTriangle, Users, Shield } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Science = () => {
@@ -93,34 +93,54 @@ const Science = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: Regenerative Science Ecosystem</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3 text-primary">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Open Science Commons</h5>
-                <p className="text-sm text-muted-foreground">
-                  All publicly funded research is accessible through open platforms. Data, tools, and methodologies are shared under creative commons or copyleft licenses. AI-assisted curation and cross-disciplinary synthesis make vast knowledge navigable.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Citizen Science and Local Research Networks</h5>
-                <p className="text-sm text-muted-foreground">
-                  Community labs, schools, and bioregional councils support hands-on experimentation and applied research. Citizen observers contribute to biodiversity tracking, climate sensing, air/water quality monitoring, and more.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Ethical Innovation Frameworks</h5>
-                <p className="text-sm text-muted-foreground">
-                  All research is guided by life-affirming ethics that account for ecological, social, and intergenerational impact. Participatory review boards include non-scientists, elders, youth, and ecological stewards.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Integrative Knowledge Systems</h5>
-                <p className="text-sm text-muted-foreground">
-                  Scientific inquiry is enriched by Indigenous wisdom, spiritual cosmologies, systems theory, and biointelligence. Labs and universities become hubs for cultural exchange and multidisciplinary dialogue.
-                </p>
-              </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                1. Open Science Commons
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>All research findings, data, and methodologies made freely available globally</li>
+                <li>Remove artificial scarcity and accelerate discovery</li>
+                <li>Collaborative research platforms that enable global knowledge sharing</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                2. Citizen Science
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Communities empowered to participate directly in research processes</li>
+                <li>Contributing local knowledge and observations while building scientific literacy</li>
+                <li>Democratic participation in setting research priorities and questions</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Shield className="h-4 w-4 text-green-600" />
+                3. Ethical Innovation Frameworks
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Research guided by ecological wellbeing, social justice, and sustainability</li>
+                <li>Long-term thinking rather than short-term profit maximization</li>
+                <li>Precautionary principles that prioritize safety and regeneration</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <AlertTriangle className="h-4 w-4 text-green-600" />
+                4. Integrative Knowledge Systems
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Traditional wisdom, indigenous knowledge, and emerging science woven together</li>
+                <li>Create more complete and effective solutions through diverse perspectives</li>
+                <li>Honor multiple ways of knowing and understanding the world</li>
+              </ul>
             </div>
           </div>
         </CardContent>

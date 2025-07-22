@@ -95,27 +95,53 @@ const Wellbeing = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed mb-4">We propose a new model of wellbeing tracking that combines:</p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Personal Metrics</h4>
-                <p className="text-green-700">Mood tracking, sleep patterns, social connection, stress levels, and other self-reported indicators.</p>
-              </div>
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Community Aggregation</h4>
-                <p className="text-green-700">Anonymous, encrypted sharing that reveals population-level trends without compromising individual privacy.</p>
-              </div>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                1. Distributed Care Networks
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Communities organize their own care circles, mutual aid networks, and peer support groups</li>
+                <li>Minimal external dependency with local decision-making authority</li>
+                <li>Peer-to-peer healing modalities and community-based interventions</li>
+              </ul>
             </div>
-            <div className="space-y-4">
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Early Warning Systems</h4>
-                <p className="text-green-700">AI-powered pattern recognition that identifies emerging mental health risks at individual and community levels.</p>
-              </div>
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Intervention Networks</h4>
-                <p className="text-green-700">Connected support systems that can respond quickly and appropriately to emerging needs.</p>
-              </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Shield className="h-4 w-4 text-green-600" />
+                2. Self-Tracking Infrastructure
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Individuals control their own health data using private, secure platforms</li>
+                <li>Interface with care providers of their choice without data intermediaries</li>
+                <li>Personal sovereignty over health decisions and data sharing</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Brain className="h-4 w-4 text-green-600" />
+                3. Holistic Healing Integration
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Traditional medicine, indigenous wisdom, and emerging health technologies woven together</li>
+                <li>Personalized care protocols that honor diverse healing traditions</li>
+                <li>Integration of mental, emotional, physical, and spiritual wellbeing approaches</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                4. Commons-Based Resources
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Shared resources like community gardens, healing spaces, and knowledge libraries</li>
+                <li>Collective wellbeing infrastructure accessible to all community members</li>
+                <li>Resource sharing that reduces individual burden while maintaining autonomy</li>
+              </ul>
             </div>
           </div>
         </CardContent>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Heart, Users, Palette, Sparkles } from "lucide-react";
 
 const Spirituality = () => {
   useEffect(() => {
@@ -96,41 +96,55 @@ const Spirituality = () => {
             The Solution: Regenerative Spiritual Infrastructure
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-2">1. Public Ritual and Sacred Spaces</h4>
-            <ul className="space-y-2 ml-4">
-              <li>• Community-accessible spaces for seasonal celebrations, rites of passage, and ceremonial gatherings.</li>
-              <li>• Designated sacred spaces in urban, rural, and natural environments for reflection, meditation, and remembrance.</li>
-              <li>• Ritual design education supports local stewards in creating inclusive, resonant practices.</li>
-            </ul>
-          </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                1. Sacred Commons
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Community-tended spaces for spiritual practice and contemplation</li>
+                <li>Honor diverse traditions while fostering interfaith dialogue</li>
+                <li>Accessible sacred spaces that serve all community members</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-2">2. Interfaith and Interspiritual Councils</h4>
-            <ul className="space-y-2 ml-4">
-              <li>• Pluralistic networks of elders, spiritual leaders, and mystics from diverse paths.</li>
-              <li>• Forums for dialogue, mutual learning, and collaborative blessing of major civic moments.</li>
-              <li>• Guidance on ethical spiritual practice, lineage respect, and cultural transmission.</li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                2. Wisdom Keepers Networks
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Intergenerational networks preserving indigenous spiritual knowledge</li>
+                <li>Traditional practices and emerging wisdom traditions shared openly</li>
+                <li>Mentorship pathways connecting elders with emerging practitioners</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-2">3. Inner Development Frameworks</h4>
-            <ul className="space-y-2 ml-4">
-              <li>• Programs to cultivate presence, compassion, awareness, resilience, and forgiveness.</li>
-              <li>• Accessible contemplative tools: meditation, breathwork, prayer, silence, embodiment.</li>
-              <li>• Integration into schools, healthcare, workplaces, and justice systems.</li>
-            </ul>
-          </div>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Palette className="h-4 w-4 text-green-600" />
+                3. Embodied Spiritual Practice
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Integration of spiritual practice with daily life and ecological connection</li>
+                <li>Community service as spiritual practice and embodied compassion</li>
+                <li>Movement beyond institutional religion toward lived spirituality</li>
+              </ul>
+            </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-2">4. Spiritual Literacy and Commons</h4>
-            <ul className="space-y-2 ml-4">
-              <li>• Open-access libraries of global spiritual practices, cosmologies, and wisdom teachings.</li>
-              <li>• Storytelling projects that preserve and share ancestral spiritual knowledge.</li>
-              <li>• AI-assisted tools to help individuals find aligned practices and paths.</li>
-            </ul>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Sparkles className="h-4 w-4 text-green-600" />
+                4. Healing and Transformation
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Spiritual practices supporting individual and collective healing</li>
+                <li>Frameworks for healing trauma, disconnection, and cultural wounds</li>
+                <li>Transformational processes that foster personal and community growth</li>
+              </ul>
+            </div>
           </div>
         </CardContent>
       </Card>

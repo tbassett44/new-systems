@@ -98,34 +98,54 @@ const Arts = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: Regenerative Cultural Ecosystem</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Cultural Stewardship Networks</h5>
-                <p className="text-sm text-muted-foreground">
-                  Local and bioregional artist cooperatives, councils, and mentorship guilds. Elders, tradition keepers, and storytellers are compensated for intergenerational sharing.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Public Creative Infrastructure</h5>
-                <p className="text-sm text-muted-foreground">
-                  Cultural centers, open-air theaters, and studios accessible to all. Public murals, participatory art installations, and ritual performance spaces. Mobile art labs and traveling exhibitions reach underserved regions.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Decentralized Patronage and Distribution</h5>
-                <p className="text-sm text-muted-foreground">
-                  Platforms for direct supporter-artist connection (non-commercial). Shared ownership of cultural works through creative commons and co-licensing. Local currencies and gift economies for cultural exchange.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Art as Healing and Civic Practice</h5>
-                <p className="text-sm text-muted-foreground">
-                  Integration of expressive arts into wellbeing and trauma recovery programs. Ritual design for life transitions, community healing, and environmental grief. Artist residencies in schools, hospitals, councils, and ecological projects.
-                </p>
-              </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                1. Cultural Commons
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Shared spaces and resources where communities can create and preserve cultural expressions</li>
+                <li>Protection from commodification and extraction of cultural heritage</li>
+                <li>Open access to creative tools, studios, and performance spaces</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                2. Story Sovereignty
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Communities maintain control over their narratives and authentic representation</li>
+                <li>Prevention of cultural appropriation and misrepresentation</li>
+                <li>Platforms that amplify marginalized voices and diverse perspectives</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                3. Regenerative Funding
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Support artists through community-based funding and mutual aid</li>
+                <li>Value-aligned patronage systems that prioritize cultural wellbeing</li>
+                <li>Economic models that sustain creative work without exploitation</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Sparkles className="h-4 w-4 text-green-600" />
+                4. Healing Arts Integration
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Cultural practices recognized as essential components of healing</li>
+                <li>Integration of arts into therapeutic and transformational processes</li>
+                <li>Community-based creative practices that foster collective wellbeing</li>
+              </ul>
             </div>
           </div>
         </CardContent>

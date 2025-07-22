@@ -89,52 +89,54 @@ const Election = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: A Regenerative Election Framework</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Values-Based Platform Development</h5>
-                <p className="text-sm text-muted-foreground">
-                  Grounded in regenerative principles. Public sensemaking sessions help shape priorities and illuminate collective values.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Multi-Candidate Cooperative Field</h5>
-                <p className="text-sm text-muted-foreground">
-                  Features multiple participants who share a commitment to regenerative ethics. Dialogues prioritize listening, nuance, and co-evolution over combative debate.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Participatory Public Engagement</h5>
-                <p className="text-sm text-muted-foreground">
-                  Citizens contribute to question design, assess platform clarity, and engage in reflection events. Interactive tools allow for distributed civic input across geographies.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Wellbeing-Informed Feedback Metrics</h5>
-                <p className="text-sm text-muted-foreground">
-                  Participants assess proposals not only on logic, but how they impact physical, emotional, and social wellbeing. Data is collected and synthesized to inform collective direction.
-                </p>
-              </div>
-              <div className="border-l-4 border-orange-300 pl-4">
-                <h5 className="font-medium text-orange-700">Decentralized Civic Media</h5>
-                <p className="text-sm text-muted-foreground">
-                  Media coverage is crowd-curated and trust-layered, moving beyond clickbait or soundbites. Storytelling and public media guide the election narrative from sensationalism to depth.
-                </p>
-              </div>
-              <div className="border-l-4 border-teal-300 pl-4">
-                <h5 className="font-medium text-teal-700">Ethical Transparency & Open Process Infrastructure</h5>
-                <p className="text-sm text-muted-foreground">
-                  All budget flows, communications, and strategic processes are shared openly. Voting, polling, and data systems are verifiable, auditable, and respectful of digital sovereignty.
-                </p>
-              </div>
-              <div className="border-l-4 border-pink-300 pl-4">
-                <h5 className="font-medium text-pink-700">Ritual, Art, and Public Gathering</h5>
-                <p className="text-sm text-muted-foreground">
-                  Civic ceremonies and artistic activations accompany key moments in the process. Debates are framed as shared explorations of vision, not zero-sum contests.
-                </p>
-              </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                1. Participatory Candidate Development
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Communities identify and cultivate candidates through deliberative processes</li>
+                <li>Mentorship programs and skills development initiatives</li>
+                <li>Community-driven selection rather than self-selection or party nomination</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Vote className="h-4 w-4 text-green-600" />
+                2. Transparent Campaign Infrastructure
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Open-source platforms provide equal access to voters</li>
+                <li>Transparent funding mechanisms and collaborative policy development</li>
+                <li>Community input integrated at every stage of the campaign process</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Lightbulb className="h-4 w-4 text-green-600" />
+                3. Regenerative Governance Mechanisms
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Electoral processes prioritizing ecological restoration and social healing</li>
+                <li>Economic justice and community wellbeing as core governance principles</li>
+                <li>Accountability structures ensuring officials remain connected to community needs</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                4. Continuous Feedback Systems
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Real-time mechanisms for community input on policy decisions</li>
+                <li>Regular check-ins with constituents and adaptive governance structures</li>
+                <li>Evolution based on community needs and changing circumstances</li>
+              </ul>
             </div>
           </div>
         </CardContent>

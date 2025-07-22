@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-import { CheckCircle, AlertTriangle } from "lucide-react";
+import { CheckCircle, AlertTriangle, Heart, Shield, Users } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const Conflict = () => {
@@ -93,46 +93,54 @@ const Conflict = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: Regenerative Conflict Transformation Infrastructure</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3 text-primary">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Community-Based Restorative Hubs</h5>
-                <p className="text-sm text-primary/80">
-                  Localized spaces—integrated into schools, neighborhoods, and workplaces—where trained facilitators guide individuals and groups through nonviolent communication, conflict mapping, and restorative dialogue. Accessible to all ages, with youth-specific and elder-guided pathways.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Early Intervention in Youth Spaces</h5>
-                <p className="text-sm text-blue-700/80">
-                  Embed conflict transformation into education systems: playground peer mediation, classroom talking circles, and restorative response teams. Teach children to name feelings, take responsibility, and co-create repair.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Culturally Adaptable Mediation and Circle Processes</h5>
-                <p className="text-sm text-green-700/80">
-                  Offer a menu of conflict engagement tools (restorative justice circles, mediation, deep listening councils) tailored to cultural context. Include elders, spiritual leaders, and conflict-trained peers in facilitation.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Integrating Conflict Education into Life Skills Training</h5>
-                <p className="text-sm text-purple-700/80">
-                  Teach relational intelligence, accountability, and rupture-repair as core competencies alongside reading and math. Utilize gamified or narrative-based platforms to practice real-world scenarios.
-                </p>
-              </div>
-              <div className="border-l-4 border-orange-300 pl-4">
-                <h5 className="font-medium text-orange-700">Digital Conflict Resolution Tools</h5>
-                <p className="text-sm text-orange-700/80">
-                  Create privacy-respecting platforms for structured dialogue, facilitated check-ins, and reflective journaling. Integrate with sovereign identity and wellbeing systems.
-                </p>
-              </div>
-              <div className="border-l-4 border-teal-300 pl-4">
-                <h5 className="font-medium text-teal-700">Bridging to Justice System Alternatives</h5>
-                <p className="text-sm text-teal-700/80">
-                  Use community-based agreements, restitution processes, and healing circles to divert cases from formal systems when appropriate. Train law enforcement and legal actors in trauma-informed, restorative approaches.
-                </p>
-              </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                1. Restorative Justice Systems
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Community-led processes that prioritize healing over punishment</li>
+                <li>Focus on accountability, repair, and restoration of relationships</li>
+                <li>Inclusive decision-making that involves all affected parties</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Shield className="h-4 w-4 text-green-600" />
+                2. Conflict Prevention Networks
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Early warning systems and proactive community support</li>
+                <li>Address root causes before conflicts escalate</li>
+                <li>Community-based mediation and intervention programs</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                3. Healing-Centered Responses
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Trauma-informed approaches that recognize interconnectedness of healing</li>
+                <li>Individual and collective healing processes integrated together</li>
+                <li>Cultural and spiritual practices that support transformation</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                4. Cultural Bridge-Building
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Programs that foster understanding across difference</li>
+                <li>Build capacity for healthy dialogue and relationship</li>
+                <li>Cross-cultural exchange and collaborative problem-solving</li>
+              </ul>
             </div>
           </div>
         </CardContent>

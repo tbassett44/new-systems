@@ -96,32 +96,66 @@ const Sensemaking = () => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="leading-relaxed mb-4">We propose a new class of infrastructure that enables:</p>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="space-y-4">
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Strategic Questions</h4>
-                <p className="text-green-700">Designed to surface felt experience, collective needs, and visionary insight.</p>
-              </div>
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Distributed Participation</h4>
-                <p className="text-green-700">Individuals respond in their own words, providing a rich, qualitative dataset.</p>
-              </div>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                1. Strategic Questions
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Designed to surface felt experience, collective needs, and visionary insight</li>
+                <li>Community-driven inquiry campaigns addressing local and global challenges</li>
+                <li>Structured prompts that invite authentic reflection and diverse perspectives</li>
+              </ul>
             </div>
-            <div className="space-y-4">
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">AI Pattern Recognition</h4>
-                <p className="text-green-700">Large language models analyze this data to identify themes, contradictions, and emerging truths.</p>
-              </div>
-              <div className="border-l-4 border-green-400 pl-4">
-                <h4 className="font-semibold text-green-800 mb-2">Human-Guided Synthesis</h4>
-                <p className="text-green-700">Insights are reviewed, curated, and presented to decision-makers and communities.</p>
-              </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Brain className="h-4 w-4 text-green-600" />
+                2. Distributed Participation
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Individuals respond in their own words, providing a rich, qualitative dataset</li>
+                <li>Multiple entry points for participation across digital and physical spaces</li>
+                <li>Inclusive design that accommodates diverse communication styles and accessibility needs</li>
+              </ul>
             </div>
-          </div>
-          <div className="mt-4 border-l-4 border-green-400 pl-4">
-            <h4 className="font-semibold text-green-800 mb-2">Feedback Integration</h4>
-            <p className="text-green-700">Responses help shape policies, funding decisions, and cultural narratives.</p>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Target className="h-4 w-4 text-green-600" />
+                3. AI Pattern Recognition
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Large language models analyze data to identify themes, contradictions, and emerging truths</li>
+                <li>Real-time sentiment mapping and signal detection across communities</li>
+                <li>Predictive insights about collective needs and emerging opportunities</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <MessageSquare className="h-4 w-4 text-green-600" />
+                4. Human-Guided Synthesis
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Insights are reviewed, curated, and presented to decision-makers and communities</li>
+                <li>Transparent interpretation process with diverse review teams</li>
+                <li>Community validation of synthesized findings before public release</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                5. Feedback Integration
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Responses help shape policies, funding decisions, and cultural narratives</li>
+                <li>Direct pathways from collective insights to governance and resource allocation</li>
+                <li>Continuous learning loops that improve the system's effectiveness over time</li>
+              </ul>
+            </div>
           </div>
         </CardContent>
       </Card>

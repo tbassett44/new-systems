@@ -102,38 +102,55 @@ const Media = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: Regenerative Media Ecosystem</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-2">1. Distributed Editorial Networks</h4>
-            <p className="text-sm leading-relaxed">
-              Shift from centralized newsrooms to locally-anchored, peer-reviewed content collectives. 
-              Editors and curators operate within transparent trust graphs, rather than opaque hierarchies. 
-              Verification is social and contextual, supported by AI signal detection and human discernment.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg mb-2">2. Participatory Journalism and Storytelling</h4>
-            <p className="text-sm leading-relaxed">
-              Communities are empowered to document, reflect, and share their own stories. 
-              Citizen journalism platforms provide training, tools, and distribution without compromising sovereignty. 
-              Peer-to-peer media formats encourage collaboration across geography, identity, and discipline.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg mb-2">3. Narrative Feedback and Signal Trust Systems</h4>
-            <p className="text-sm leading-relaxed">
-              Audiences can provide real-time feedback on accuracy, tone, and perceived bias. 
-              Multi-perspective synthesis tools allow readers to explore topics from different angles. 
-              Reputation layers help surface trusted contributors over time without enforcing uniformity.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-lg mb-2">4. Media Literacy and Cultural Fluency</h4>
-            <p className="text-sm leading-relaxed">
-              Integrated media education in schools and communities builds discernment and narrative intelligence. 
-              AI-assisted tools teach people how to spot manipulation, bias, and framing devices. 
-              Intergenerational storytelling bridges ancestral wisdom with emerging perspectives.
-            </p>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Radio className="h-4 w-4 text-green-600" />
+                1. Decentralized Publishing
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Content creators and journalists publish directly to audiences without intermediary gatekeepers</li>
+                <li>Blockchain-based platforms that ensure authenticity and provenance</li>
+                <li>Creator sovereignty over content distribution and monetization</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                2. Community-Driven Fact-Checking
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Distributed networks of citizens, experts, and local knowledge holders collaborate</li>
+                <li>Transparent verification processes with accountability mechanisms</li>
+                <li>Community-based trust networks that validate information quality</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Target className="h-4 w-4 text-green-600" />
+                3. Narrative Sovereignty
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Communities maintain control over their own stories</li>
+                <li>Platforms designed to amplify marginalized voices</li>
+                <li>Counter dominant extraction-based narratives with authentic community perspectives</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Shield className="h-4 w-4 text-green-600" />
+                4. Regenerative Revenue Models
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Support quality journalism through community funding and mutual aid</li>
+                <li>Value-aligned advertising rather than surveillance capitalism</li>
+                <li>Economic structures that prioritize creator wellbeing and content quality</li>
+              </ul>
+            </div>
           </div>
         </CardContent>
       </Card>
