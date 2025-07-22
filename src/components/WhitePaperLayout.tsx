@@ -152,7 +152,7 @@ function AppSidebar() {
         </div>
         
         <SidebarGroup>
-          <SidebarGroupLabel>White Papers</SidebarGroupLabel>
+          <SidebarGroupLabel>Proposals</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {whitePaperItems.map((item) => (
