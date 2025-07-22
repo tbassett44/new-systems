@@ -3,9 +3,12 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle } from "lucide-react";
+import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle, LogIn, User } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Index = () => {
+  const { user, signOut } = useAuth();
+
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -16,6 +19,35 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+      {/* Header with Auth */}
+      <header className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="flex items-center gap-2">
+          <Leaf className="h-6 w-6 text-primary" />
+          <span className="font-semibold">Systems Change Manifesto</span>
+        </div>
+        
+        <div className="flex items-center gap-4">
+          {user ? (
+            <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <User className="h-4 w-4" />
+                <span className="text-sm">{user.user_metadata?.full_name || user.email}</span>
+              </div>
+              <Button onClick={signOut} variant="outline" size="sm">
+                Sign Out
+              </Button>
+            </div>
+          ) : (
+            <Link to="/auth">
+              <Button variant="outline" size="sm">
+                <LogIn className="mr-2 h-4 w-4" />
+                Sign In
+              </Button>
+            </Link>
+          )}
+        </div>
+      </header>
+
       <div className="container mx-auto px-6 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">

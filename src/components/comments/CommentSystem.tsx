@@ -145,11 +145,13 @@ export function CommentSystem() {
       />
 
       {/* Render comment highlights in content */}
-      <style jsx global>{`
-        .comment-highlighted-content {
-          position: relative;
-        }
-      `}</style>
+      <style>
+        {`
+          .comment-highlighted-content {
+            position: relative;
+          }
+        `}
+      </style>
     </>
   );
 }
