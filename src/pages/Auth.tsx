@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { useAuth } from '@/contexts/AuthContext';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
-import { Mail } from 'lucide-react';
+import { Mail, ArrowLeft } from 'lucide-react';
 // Force reload with this comment
 
 export default function Auth() {
@@ -89,6 +89,16 @@ export default function Auth() {
             </div>
           )}
         </CardContent>
+        <CardFooter>
+          <Button
+            variant="ghost"
+            className="flex items-center gap-1"
+            onClick={() => navigate(-1)}
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back
+          </Button>
+        </CardFooter>
       </Card>
     </div>
   );
