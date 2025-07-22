@@ -40,11 +40,19 @@ export interface TextSelection {
   containerElement: Element;
 }
 
+export interface ParagraphSelection {
+  paragraphId: string;
+  content: string;
+  elementType: 'paragraph' | 'heading';
+}
+
 export interface CommentContextType {
   comments: Comment[];
   activeComment: Comment | null;
   isCommentModeActive: boolean;
-  addComment: (selection: TextSelection, content: string) => Promise<void>;
+  selectedParagraph: ParagraphSelection | null;
+  setSelectedParagraph: (selection: ParagraphSelection | null) => void;
+  addComment: (selection: ParagraphSelection, content: string) => Promise<void>;
   replyToComment: (commentId: string, content: string) => Promise<void>;
   toggleCommentMode: () => void;
   setActiveComment: (comment: Comment | null) => void;

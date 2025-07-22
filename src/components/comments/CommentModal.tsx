@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import {
   Dialog,
@@ -9,17 +8,17 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { TextSelection } from '@/types/comments';
+import { ParagraphSelection } from '@/types/comments';
 import { useAuth } from '@/contexts/AuthContext';
 
 interface CommentModalProps {
   isOpen: boolean;
   onClose: () => void;
-  selection: TextSelection | null;
+  selectedParagraph: ParagraphSelection | null;
   onSubmit: (content: string) => void;
 }
 
-export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentModalProps) {
+export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: CommentModalProps) {
   const [content, setContent] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
@@ -27,12 +26,12 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
   const handleSubmit = async () => {
     console.log('Modal submit clicked', { 
       content: content.trim(), 
-      hasSelection: !!selection,
+      hasSelectedParagraph: !!selectedParagraph,
       hasUser: !!user 
     });
     
-    if (!content.trim() || !selection) {
-      console.log('Missing content or selection');
+    if (!content.trim() || !selectedParagraph) {
+      console.log('Missing content or selectedParagraph');
       return;
     }
     
@@ -67,11 +66,11 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
         </DialogHeader>
         
         <div className="space-y-4">
-          {selection && (
+          {selectedParagraph && (
             <div className="p-3 bg-muted rounded-md">
-              <p className="text-sm font-medium mb-1">Selected text:</p>
+              <p className="text-sm font-medium mb-1">Selected {selectedParagraph.elementType}:</p>
               <p className="text-sm text-muted-foreground italic">
-                "{selection.text}"
+                "{selectedParagraph.content}"
               </p>
             </div>
           )}
@@ -101,7 +100,7 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
             </Button>
             <Button 
               onClick={handleSubmit} 
-              disabled={!content.trim() || isSubmitting || !selection || !user}
+              disabled={!content.trim() || isSubmitting || !selectedParagraph || !user}
             >
               {isSubmitting ? 'Adding...' : 'Add Comment'}
             </Button>

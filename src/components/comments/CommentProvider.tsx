@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode, useEffect } from 'react';
-import { Comment, CommentContextType, TextSelection } from '@/types/comments';
+import { Comment, CommentContextType, ParagraphSelection } from '@/types/comments';
 import { useLocation } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -23,6 +23,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
   const [comments, setComments] = useState<Comment[]>([]);
   const [activeComment, setActiveComment] = useState<Comment | null>(null);
   const [isCommentModeActive, setIsCommentModeActive] = useState(false);
+  const [selectedParagraph, setSelectedParagraph] = useState<ParagraphSelection | null>(null);
   const [loading, setLoading] = useState(true);
   const location = useLocation();
   const { user } = useAuth();
@@ -163,7 +164,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
     loadComments();
   }, [location.pathname, user]);
 
-  const addComment = useCallback(async (selection: TextSelection, content: string) => {
+  const addComment = useCallback(async (selection: ParagraphSelection, content: string) => {
     console.log('CommentProvider.addComment called', { 
       user: !!user, 
       userId: user?.id,
@@ -188,9 +189,11 @@ export function CommentProvider({ children }: CommentProviderProps) {
         user_id: user.id,
         page_route: location.pathname,
         text_content: content,
-        highlighted_text: selection.text,
-        start_offset: selection.startOffset,
-        end_offset: selection.endOffset,
+        highlighted_text: selection.content,
+        paragraph_id: selection.paragraphId,
+        element_type: selection.elementType,
+        start_offset: 0,
+        end_offset: selection.content.length,
       };
       console.log('Comment data to insert:', commentData);
       
@@ -525,6 +528,8 @@ export function CommentProvider({ children }: CommentProviderProps) {
     comments: comments.filter(comment => comment.page_route === location.pathname),
     activeComment,
     isCommentModeActive,
+    selectedParagraph,
+    setSelectedParagraph,
     addComment,
     replyToComment,
     toggleCommentMode,
