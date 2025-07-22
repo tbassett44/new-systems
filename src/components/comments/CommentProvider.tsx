@@ -155,7 +155,10 @@ export function CommentProvider({ children }: CommentProviderProps) {
   }, [location.pathname, user]);
 
   const addComment = useCallback(async (selection: TextSelection, content: string) => {
+    console.log('addComment called with:', { user, selection, content, pathname: location.pathname });
+    
     if (!user) {
+      console.log('No user in addComment');
       toast({
         title: "Authentication required",
         description: "Please sign in to add comments.",
@@ -165,6 +168,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
     }
 
     try {
+      console.log('Inserting comment into database...');
       const { data, error } = await supabase
         .from('comments')
         .insert({
@@ -177,6 +181,8 @@ export function CommentProvider({ children }: CommentProviderProps) {
         })
         .select('*')
         .single();
+
+      console.log('Database response:', { data, error });
 
       if (error) throw error;
 

@@ -51,7 +51,8 @@ export function useTextSelection() {
 
   const clearSelection = useCallback(() => {
     setSelection(null);
-    window.getSelection()?.removeAllRanges();
+    // Don't clear browser selection automatically to preserve context
+    // window.getSelection()?.removeAllRanges();
   }, []);
 
   return {

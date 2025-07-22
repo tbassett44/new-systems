@@ -85,7 +85,10 @@ export function CommentSystem() {
   }, [handleCommentModeToggle, isSidebarOpen, setActiveComment, clearSelection]);
 
   const handleAddComment = async (content: string) => {
+    console.log('handleAddComment called', { selection, content, user });
+    
     if (!selection) {
+      console.log('No selection found');
       toast({
         title: "Error",
         description: "Please select text first.",
@@ -94,8 +97,23 @@ export function CommentSystem() {
       return;
     }
 
-    await addComment(selection, content);
-    clearSelection();
+    if (!user) {
+      console.log('No user found');
+      toast({
+        title: "Error",
+        description: "Please sign in first.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      console.log('Calling addComment with:', { selection, content });
+      await addComment(selection, content);
+      clearSelection();
+    } catch (error) {
+      console.error('Error in handleAddComment:', error);
+    }
   };
 
   const handleCloseModal = () => {
