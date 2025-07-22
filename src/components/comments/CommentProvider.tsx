@@ -525,7 +525,9 @@ export function CommentProvider({ children }: CommentProviderProps) {
   }, [user, comments]);
 
   const contextValue: CommentContextType = {
-    comments: comments.filter(comment => comment.page_route === location.pathname),
+    comments: comments
+      .filter(comment => comment.page_route === location.pathname)
+      .sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()),
     activeComment,
     isCommentModeActive,
     selectedParagraph,
