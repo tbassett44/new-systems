@@ -1,4 +1,3 @@
-
 import { ReactNode, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
@@ -42,6 +41,8 @@ import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
 import { GlobalSearch } from "@/components/GlobalSearch";
+import { CommentProvider } from "@/components/comments/CommentProvider";
+import { CommentSystem } from "@/components/comments/CommentSystem";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -204,19 +205,22 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
   useScrollRestoration();
 
   return (
-    <SidebarProvider>
-      <div className="min-h-screen flex w-full">
-        <AppSidebar />
-        <main 
-          className="flex-1 overflow-auto" 
-          data-scroll-container
-        >
-          <div className="container mx-auto px-6 py-8 max-w-4xl">
-            {children}
-          </div>
-        </main>
-        <MobileNavButton />
-      </div>
-    </SidebarProvider>
+    <CommentProvider>
+      <SidebarProvider>
+        <div className="min-h-screen flex w-full">
+          <AppSidebar />
+          <main 
+            className="flex-1 overflow-auto comment-highlighted-content" 
+            data-scroll-container
+          >
+            <div className="container mx-auto px-6 py-8 max-w-4xl">
+              {children}
+            </div>
+          </main>
+          <MobileNavButton />
+          <CommentSystem />
+        </div>
+      </SidebarProvider>
+    </CommentProvider>
   );
 }
