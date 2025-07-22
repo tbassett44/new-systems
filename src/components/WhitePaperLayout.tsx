@@ -47,6 +47,7 @@ import { CommentProvider } from "@/components/comments/CommentProvider";
 import { CommentSystem } from "@/components/comments/CommentSystem";
 import { UserProfile } from "@/components/UserProfile";
 import { useAuth } from "@/contexts/AuthContext";
+import { useParagraphIds } from "@/hooks/useParagraphIds";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -229,6 +230,7 @@ function MobileNavButton() {
 
 export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
   useScrollRestoration();
+  useParagraphIds();
 
   return (
     <CommentProvider>
