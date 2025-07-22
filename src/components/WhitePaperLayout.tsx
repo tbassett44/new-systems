@@ -147,7 +147,7 @@ function AppSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
         
-        <div className="px-3 py-2">
+        <div className="px-3 py-1">
           <hr className="border-border" />
         </div>
         
