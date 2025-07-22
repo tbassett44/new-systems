@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useTextSelection } from '@/hooks/useTextSelection';
 import { useComments } from './CommentProvider';
 import { CommentModal } from './CommentModal';
 import { CommentsSidebar } from './CommentsSidebar';
@@ -19,14 +18,15 @@ export function CommentSystem() {
   
   const navigate = useNavigate();
   const { user, loading } = useAuth();
-  const { selection, captureSelection, clearSelection } = useTextSelection();
   const { 
     comments, 
     isCommentModeActive, 
     toggleCommentMode, 
     addComment, 
     activeComment, 
-    setActiveComment 
+    setActiveComment,
+    selectedParagraph,
+    setSelectedParagraph
   } = useComments();
 
   // Debug authentication state
@@ -34,32 +34,37 @@ export function CommentSystem() {
     console.log('Authentication state:', { user: !!user, loading, userId: user?.id });
   }, [user, loading]);
 
-  // Handle text selection when comment mode is active
+  // Handle paragraph selection for comments
   useEffect(() => {
-    if (!isCommentModeActive || isCommentModalOpen || isLoginModalOpen) return;
+    if (!isCommentModeActive) return;
 
-    const handleMouseUp = () => {
-      console.log('Mouse up in comment mode');
-      // Capture selection immediately before any modal interactions
-      setTimeout(() => {
-        const currentSelection = captureSelection();
-        if (currentSelection && currentSelection.text.length > 0) {
-          console.log('Valid selection captured, user:', !!user);
+    const handleParagraphClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      const paragraph = target.closest('[data-paragraph-id]') as HTMLElement;
+      
+      if (paragraph) {
+        const paragraphId = paragraph.getAttribute('data-paragraph-id');
+        const content = paragraph.textContent || '';
+        const elementType = paragraph.tagName.toLowerCase().startsWith('h') ? 'heading' : 'paragraph';
+        
+        if (paragraphId && content) {
+          console.log('Paragraph clicked:', { paragraphId, content: content.substring(0, 50) + '...', elementType });
+          
           if (!user) {
             console.log('No user, showing login modal');
             setIsLoginModalOpen(true);
-            clearSelection();
             return;
           }
-          console.log('Opening comment modal');
+          
+          setSelectedParagraph({ paragraphId, content, elementType });
           setIsCommentModalOpen(true);
         }
-      }, 10); // Small delay to ensure selection is captured before modal focus changes
+      }
     };
 
-    document.addEventListener('mouseup', handleMouseUp);
-    return () => document.removeEventListener('mouseup', handleMouseUp);
-  }, [isCommentModeActive, isCommentModalOpen, isLoginModalOpen, captureSelection, user, clearSelection]);
+    document.addEventListener('click', handleParagraphClick);
+    return () => document.removeEventListener('click', handleParagraphClick);
+  }, [isCommentModeActive, user, setSelectedParagraph]);
 
   const handleCommentModeToggle = () => {
     console.log('Comment mode toggle clicked, user:', !!user, 'loading:', loading);
@@ -99,29 +104,29 @@ export function CommentSystem() {
         setIsCommentModalOpen(false);
         setIsSidebarOpen(false);
         setActiveComment(null);
-        clearSelection();
+        setSelectedParagraph(null);
         setIsLoginModalOpen(false);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [handleCommentModeToggle, isSidebarOpen, setActiveComment, clearSelection]);
+  }, [handleCommentModeToggle, isSidebarOpen, setActiveComment, setSelectedParagraph]);
 
   const handleAddComment = async (content: string) => {
     console.log('handleAddComment called', { 
-      hasSelection: !!selection, 
-      selectionText: selection?.text,
+      hasSelectedParagraph: !!selectedParagraph, 
+      paragraphContent: selectedParagraph?.content?.substring(0, 50),
       content, 
       hasUser: !!user,
       userId: user?.id
     });
     
-    if (!selection) {
-      console.log('No selection found when submitting');
+    if (!selectedParagraph) {
+      console.log('No paragraph selected when submitting');
       toast({
         title: "Error",
-        description: "Please select text first.",
+        description: "Please click on a paragraph first.",
         variant: "destructive",
       });
       return;
@@ -139,14 +144,14 @@ export function CommentSystem() {
     }
 
     try {
-      console.log('Calling addComment with selection:', selection);
-      await addComment(selection, content);
+      console.log('Calling addComment with paragraph context:', selectedParagraph);
+      await addComment(selectedParagraph, content);
       console.log('Comment added successfully');
       toast({
         title: "Success",
         description: "Your comment has been added!",
       });
-      clearSelection();
+      setSelectedParagraph(null);
     } catch (error) {
       console.error('Error in handleAddComment:', error);
       toast({
@@ -160,7 +165,7 @@ export function CommentSystem() {
   const handleCloseModal = () => {
     console.log('Closing comment modal');
     setIsCommentModalOpen(false);
-    // Don't clear selection immediately to help with debugging
+    setSelectedParagraph(null);
   };
 
   return (
@@ -207,7 +212,7 @@ export function CommentSystem() {
         <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
           <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg">
             <p className="text-sm font-medium">
-              💬 Comment Mode Active - Select text to add comments
+              💬 Comment Mode Active - Click on paragraphs to add comments
             </p>
           </div>
         </div>
@@ -217,7 +222,7 @@ export function CommentSystem() {
       <CommentModal
         isOpen={isCommentModalOpen}
         onClose={handleCloseModal}
-        selection={selection}
+        selectedParagraph={selectedParagraph}
         onSubmit={handleAddComment}
       />
 
@@ -257,13 +262,16 @@ export function CommentSystem() {
         </DialogContent>
       </Dialog>
 
-      {/* Render comment highlights in content */}
+      {/* Add paragraph hover styles when in comment mode */}
       <style>
-        {`
-          .comment-highlighted-content {
-            position: relative;
+        {isCommentModeActive ? `
+          [data-paragraph-id]:hover {
+            background-color: hsl(var(--primary) / 0.1);
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
           }
-        `}
+        ` : ''}
       </style>
     </>
   );
