@@ -524,6 +524,86 @@ export function CommentProvider({ children }: CommentProviderProps) {
     }
   }, [user, comments]);
 
+  const editReply = useCallback(async (replyId: string, content: string) => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to edit replies.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('comment_replies')
+        .update({ content })
+        .eq('id', replyId)
+        .eq('user_id', user.id);
+
+      if (error) throw error;
+
+      setComments(prev => prev.map(comment => ({
+        ...comment,
+        replies: comment.replies?.map(reply => 
+          reply.id === replyId 
+            ? { ...reply, content }
+            : reply
+        ) || []
+      })));
+
+      toast({
+        title: "Reply updated",
+        description: "Your reply has been updated successfully.",
+      });
+    } catch (error) {
+      console.error('Error editing reply:', error);
+      toast({
+        title: "Error",
+        description: "Failed to edit reply. Please try again.",
+        variant: "destructive",
+      });
+    }
+  }, [user]);
+
+  const deleteReply = useCallback(async (replyId: string) => {
+    if (!user) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to delete replies.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    try {
+      const { error } = await supabase
+        .from('comment_replies')
+        .delete()
+        .eq('id', replyId)
+        .eq('user_id', user.id);
+
+      if (error) throw error;
+
+      setComments(prev => prev.map(comment => ({
+        ...comment,
+        replies: comment.replies?.filter(reply => reply.id !== replyId) || []
+      })));
+
+      toast({
+        title: "Reply deleted",
+        description: "Reply has been deleted successfully.",
+      });
+    } catch (error) {
+      console.error('Error deleting reply:', error);
+      toast({
+        title: "Error",
+        description: "Failed to delete reply. Please try again.",
+        variant: "destructive",
+      });
+    }
+  }, [user]);
+
   const contextValue: CommentContextType = {
     comments: comments
       .filter(comment => comment.page_route === location.pathname)
@@ -540,6 +620,8 @@ export function CommentProvider({ children }: CommentProviderProps) {
     resolveComment,
     deleteComment,
     editComment,
+    editReply,
+    deleteReply,
   };
 
   return (

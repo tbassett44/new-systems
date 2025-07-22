@@ -36,7 +36,9 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
     replyToComment, 
     likeComment, 
     deleteComment,
-    editComment 
+    editComment,
+    editReply,
+    deleteReply
   } = useComments();
   
   const [replyingTo, setReplyingTo] = useState<string | null>(null);
@@ -66,6 +68,18 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
       setEditingComment(null);
     } catch (error) {
       console.error('Error editing comment:', error);
+    }
+  };
+
+  const handleEditReply = async (replyId: string) => {
+    if (!editContent.trim()) return;
+    
+    try {
+      await editReply(replyId, editContent.trim());
+      setEditContent('');
+      setEditingReply(null);
+    } catch (error) {
+      console.error('Error editing reply:', error);
     }
   };
 
@@ -217,19 +231,19 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
                                 <Edit className="h-3 w-3" />
                               </Button>
                             )}
-                            {canDeleteComment({ ...comment, user_id: reply.user_id }) && (
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  // Note: You'll need to add deleteReply function to CommentProvider
-                                }}
-                                className="h-6 px-1 text-xs text-destructive hover:text-destructive"
-                              >
-                                <Trash2 className="h-3 w-3" />
-                              </Button>
-                            )}
+                             {canDeleteComment({ ...comment, user_id: reply.user_id }) && (
+                               <Button
+                                 variant="ghost"
+                                 size="sm"
+                                 onClick={(e) => {
+                                   e.stopPropagation();
+                                   deleteReply(reply.id);
+                                 }}
+                                 className="h-6 px-1 text-xs text-destructive hover:text-destructive"
+                               >
+                                 <Trash2 className="h-3 w-3" />
+                               </Button>
+                             )}
                           </div>
                         </div>
                         
@@ -251,17 +265,13 @@ export function CommentsSidebar({ isOpen, onClose }: CommentsSidebarProps) {
                               >
                                 Cancel
                               </Button>
-                              <Button
-                                size="sm"
-                                onClick={() => {
-                                  // Note: You'll need to add editReply function to CommentProvider
-                                  setEditingReply(null);
-                                  setEditContent('');
-                                }}
-                                disabled={!editContent.trim()}
-                              >
-                                Save
-                              </Button>
+                               <Button
+                                 size="sm"
+                                 onClick={() => handleEditReply(reply.id)}
+                                 disabled={!editContent.trim()}
+                               >
+                                 Save
+                               </Button>
                             </div>
                           </div>
                         ) : (

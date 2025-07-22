@@ -60,4 +60,6 @@ export interface CommentContextType {
   resolveComment: (commentId: string) => Promise<void>;
   deleteComment: (commentId: string) => Promise<void>;
   editComment: (commentId: string, content: string) => Promise<void>;
+  editReply: (replyId: string, content: string) => Promise<void>;
+  deleteReply: (replyId: string) => Promise<void>;
 }
