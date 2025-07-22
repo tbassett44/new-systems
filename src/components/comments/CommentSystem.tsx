@@ -1,18 +1,24 @@
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTextSelection } from '@/hooks/useTextSelection';
 import { useComments } from './CommentProvider';
 import { CommentModal } from './CommentModal';
 import { CommentsSidebar } from './CommentsSidebar';
 import { CommentHighlight } from './CommentHighlight';
 import { Button } from '@/components/ui/button';
-import { MessageSquareText, PenTool, Eye, EyeOff } from 'lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { MessageSquareText, PenTool, Eye, EyeOff, LogIn } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
 import { toast } from '@/hooks/use-toast';
 
 export function CommentSystem() {
   const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   
+  const navigate = useNavigate();
+  const { user } = useAuth();
   const { selection, captureSelection, clearSelection } = useTextSelection();
   const { 
     comments, 
@@ -30,13 +36,26 @@ export function CommentSystem() {
     const handleMouseUp = () => {
       const currentSelection = captureSelection();
       if (currentSelection && currentSelection.text.length > 0) {
+        if (!user) {
+          setIsLoginModalOpen(true);
+          clearSelection();
+          return;
+        }
         setIsCommentModalOpen(true);
       }
     };
 
     document.addEventListener('mouseup', handleMouseUp);
     return () => document.removeEventListener('mouseup', handleMouseUp);
-  }, [isCommentModeActive, captureSelection]);
+  }, [isCommentModeActive, captureSelection, user, clearSelection]);
+
+  const handleCommentModeToggle = () => {
+    if (!user && !isCommentModeActive) {
+      setIsLoginModalOpen(true);
+      return;
+    }
+    toggleCommentMode();
+  };
 
   // Handle keyboard shortcuts
   useEffect(() => {
@@ -44,7 +63,7 @@ export function CommentSystem() {
       if (e.metaKey || e.ctrlKey) {
         if (e.key === 'm') {
           e.preventDefault();
-          toggleCommentMode();
+          handleCommentModeToggle();
         }
         if (e.key === 'k') {
           e.preventDefault();
@@ -57,12 +76,13 @@ export function CommentSystem() {
         setIsSidebarOpen(false);
         setActiveComment(null);
         clearSelection();
+        setIsLoginModalOpen(false);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [toggleCommentMode, isSidebarOpen, setActiveComment, clearSelection]);
+  }, [handleCommentModeToggle, isSidebarOpen, setActiveComment, clearSelection]);
 
   const handleAddComment = async (content: string) => {
     if (!selection) {
@@ -104,7 +124,7 @@ export function CommentSystem() {
           </Button>
           
           <Button
-            onClick={toggleCommentMode}
+            onClick={handleCommentModeToggle}
             variant={isCommentModeActive ? "default" : "outline"}
             size="sm"
             className="shadow-lg"
@@ -143,6 +163,36 @@ export function CommentSystem() {
         isOpen={isSidebarOpen}
         onClose={() => setIsSidebarOpen(false)}
       />
+
+      {/* Login Modal */}
+      <Dialog open={isLoginModalOpen} onOpenChange={setIsLoginModalOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Sign in to Comment</DialogTitle>
+            <DialogDescription>
+              You need to be signed in to add comments to the manifesto.
+            </DialogDescription>
+          </DialogHeader>
+          <DialogFooter className="flex-col sm:flex-row gap-2">
+            <Button
+              variant="outline"
+              onClick={() => setIsLoginModalOpen(false)}
+            >
+              Cancel
+            </Button>
+            <Button
+              onClick={() => {
+                setIsLoginModalOpen(false);
+                navigate('/auth');
+              }}
+              className="flex items-center gap-2"
+            >
+              <LogIn className="h-4 w-4" />
+              Sign In
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
 
       {/* Render comment highlights in content */}
       <style>
