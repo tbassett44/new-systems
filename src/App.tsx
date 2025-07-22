@@ -27,6 +27,7 @@ import Death from "./pages/Death";
 import SexualHealth from "./pages/SexualHealth";
 import Election from "./pages/Election";
 import Glossary from "./pages/Glossary";
+import Contribute from "./pages/Contribute";
 
 const queryClient = new QueryClient();
 
@@ -61,6 +62,7 @@ const App = () => (
                     <Route path="/death" element={<Death />} />
                     <Route path="/sexual-health" element={<SexualHealth />} />
                     <Route path="/election" element={<Election />} />
+                    <Route path="/contribute" element={<Contribute />} />
                     <Route path="/glossary" element={<Glossary />} />
                   </Routes>
                 </WhitePaperLayout>
