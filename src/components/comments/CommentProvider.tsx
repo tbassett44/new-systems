@@ -37,48 +37,106 @@ export function CommentProvider({ children }: CommentProviderProps) {
         setLoading(true);
         const { data, error } = await supabase
           .from('comments')
-          .select(`
-            *,
-            user:profiles(id, display_name, avatar_url, email),
-            replies:comment_replies(
-              *,
-              user:profiles(id, display_name, avatar_url, email)
-            ),
-            likes:comment_likes(count)
-          `)
+          .select('*')
           .eq('page_route', location.pathname)
           .order('created_at', { ascending: true });
 
         if (error) throw error;
 
-        // Transform data to match Comment interface
-        const transformedComments: Comment[] = data?.map(comment => {
-          // Get like count
-          const likesCount = comment.likes?.[0]?.count || 0;
+        if (!data || data.length === 0) {
+          setComments([]);
+          return;
+        }
+
+        // Get user profiles separately
+        const userIds = [...new Set(data.map(c => c.user_id))];
+        const { data: profiles } = await supabase
+          .from('profiles')
+          .select('*')
+          .in('user_id', userIds);
+
+        // Get comment replies
+        const commentIds = data.map(c => c.id);
+        const { data: replies } = await supabase
+          .from('comment_replies')
+          .select('*')
+          .in('parent_comment_id', commentIds);
+
+        // Get reply user profiles
+        const replyUserIds = [...new Set(replies?.map(r => r.user_id) || [])];
+        const { data: replyProfiles } = await supabase
+          .from('profiles')
+          .select('*')
+          .in('user_id', [...userIds, ...replyUserIds]);
+
+        // Get like counts and user likes
+        let likeCounts: Record<string, number> = {};
+        let userLikes: Record<string, boolean> = {};
+        
+        if (commentIds.length > 0) {
+          const { data: likesData } = await supabase
+            .from('comment_likes')
+            .select('comment_id')
+            .in('comment_id', commentIds);
           
+          likesData?.forEach(like => {
+            likeCounts[like.comment_id] = (likeCounts[like.comment_id] || 0) + 1;
+          });
+
+          if (user) {
+            const { data: userLikesData } = await supabase
+              .from('comment_likes')
+              .select('comment_id')
+              .in('comment_id', commentIds)
+              .eq('user_id', user.id);
+            
+            userLikesData?.forEach(like => {
+              userLikes[like.comment_id] = true;
+            });
+          }
+        }
+
+        // Create lookup maps
+        const profileMap = new Map();
+        [...(profiles || []), ...(replyProfiles || [])].forEach(profile => {
+          profileMap.set(profile.user_id, profile);
+        });
+
+        const repliesMap = new Map();
+        replies?.forEach(reply => {
+          if (!repliesMap.has(reply.parent_comment_id)) {
+            repliesMap.set(reply.parent_comment_id, []);
+          }
+          const profile = profileMap.get(reply.user_id);
+          repliesMap.get(reply.parent_comment_id).push({
+            ...reply,
+            user: profile ? {
+              id: profile.id,
+              email: profile.email || '',
+              display_name: profile.display_name || 'Anonymous',
+              avatar_url: profile.avatar_url,
+              created_at: profile.created_at,
+            } : undefined,
+          });
+        });
+
+        // Transform data to match Comment interface
+        const transformedComments: Comment[] = data.map(comment => {
+          const profile = profileMap.get(comment.user_id);
           return {
             ...comment,
-            user: comment.user ? {
-              id: comment.user.id,
-              email: comment.user.email || '',
-              display_name: comment.user.display_name || 'Anonymous',
-              avatar_url: comment.user.avatar_url,
-              created_at: new Date().toISOString(),
+            user: profile ? {
+              id: profile.id,
+              email: profile.email || '',
+              display_name: profile.display_name || 'Anonymous',
+              avatar_url: profile.avatar_url,
+              created_at: profile.created_at,
             } : undefined,
-            replies: comment.replies?.map((reply: any) => ({
-              ...reply,
-              user: reply.user ? {
-                id: reply.user.id,
-                email: reply.user.email || '',
-                display_name: reply.user.display_name || 'Anonymous',
-                avatar_url: reply.user.avatar_url,
-                created_at: new Date().toISOString(),
-              } : undefined,
-            })) || [],
-            likes_count: likesCount,
-            user_has_liked: false, // Will be calculated separately if needed
+            replies: repliesMap.get(comment.id) || [],
+            likes_count: likeCounts[comment.id] || 0,
+            user_has_liked: userLikes[comment.id] || false,
           };
-        }) || [];
+        });
 
         setComments(transformedComments);
       } catch (error) {
@@ -94,7 +152,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
     };
 
     loadComments();
-  }, [location.pathname]);
+  }, [location.pathname, user]);
 
   const addComment = useCallback(async (selection: TextSelection, content: string) => {
     if (!user) {
@@ -117,22 +175,26 @@ export function CommentProvider({ children }: CommentProviderProps) {
           start_offset: selection.startOffset,
           end_offset: selection.endOffset,
         })
-        .select(`
-          *,
-          user:profiles(id, display_name, avatar_url, email)
-        `)
+        .select('*')
         .single();
 
       if (error) throw error;
 
+      // Get user profile
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('user_id', user.id)
+        .single();
+
       const newComment: Comment = {
         ...data,
-        user: data.user ? {
-          id: data.user.id,
-          email: data.user.email || '',
-          display_name: data.user.display_name || 'Anonymous',
-          avatar_url: data.user.avatar_url,
-          created_at: new Date().toISOString(),
+        user: profile ? {
+          id: profile.id,
+          email: profile.email || '',
+          display_name: profile.display_name || 'Anonymous',
+          avatar_url: profile.avatar_url,
+          created_at: profile.created_at,
         } : undefined,
         replies: [],
         likes_count: 0,
@@ -172,13 +234,17 @@ export function CommentProvider({ children }: CommentProviderProps) {
           user_id: user.id,
           content,
         })
-        .select(`
-          *,
-          user:profiles(id, display_name, avatar_url, email)
-        `)
+        .select('*')
         .single();
 
       if (error) throw error;
+
+      // Get user profile
+      const { data: profile } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('user_id', user.id)
+        .single();
 
       // Update local state
       setComments(prev => prev.map(comment => 
@@ -187,12 +253,12 @@ export function CommentProvider({ children }: CommentProviderProps) {
               ...comment,
               replies: [...(comment.replies || []), {
                 ...data,
-                user: data.user ? {
-                  id: data.user.id,
-                  email: data.user.email || '',
-                  display_name: data.user.display_name || 'Anonymous',
-                  avatar_url: data.user.avatar_url,
-                  created_at: new Date().toISOString(),
+                user: profile ? {
+                  id: profile.id,
+                  email: profile.email || '',
+                  display_name: profile.display_name || 'Anonymous',
+                  avatar_url: profile.avatar_url,
+                  created_at: profile.created_at,
                 } : undefined,
               }]
             }
