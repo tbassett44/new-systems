@@ -36,7 +36,7 @@ export function CommentSystem() {
 
   // Handle text selection when comment mode is active
   useEffect(() => {
-    if (!isCommentModeActive) return;
+    if (!isCommentModeActive || isCommentModalOpen || isLoginModalOpen) return;
 
     const handleMouseUp = () => {
       console.log('Mouse up in comment mode');
@@ -59,7 +59,7 @@ export function CommentSystem() {
 
     document.addEventListener('mouseup', handleMouseUp);
     return () => document.removeEventListener('mouseup', handleMouseUp);
-  }, [isCommentModeActive, captureSelection, user, clearSelection]);
+  }, [isCommentModeActive, isCommentModalOpen, isLoginModalOpen, captureSelection, user, clearSelection]);
 
   const handleCommentModeToggle = () => {
     console.log('Comment mode toggle clicked, user:', !!user, 'loading:', loading);
