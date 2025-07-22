@@ -56,21 +56,33 @@ const Sensemaking = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Information Overload</h4>
-              <p className="text-red-700">In a world flooded with content, it's increasingly difficult to discern what matters or what is true.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Information Overload</p>
+                <p className="text-sm text-muted-foreground">In a world flooded with content, it's increasingly difficult to discern what matters or what is true.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Fragmented Worldviews</h4>
-              <p className="text-red-700">Communities lack shared mental models and data about what others are experiencing or believing.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Fragmented Worldviews</p>
+                <p className="text-sm text-muted-foreground">Communities lack shared mental models and data about what others are experiencing or believing.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Slow, Top-Down Governance</h4>
-              <p className="text-red-700">Institutions struggle to respond to nuanced local realities, especially without timely input.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Slow, Top-Down Governance</p>
+                <p className="text-sm text-muted-foreground">Institutions struggle to respond to nuanced local realities, especially without timely input.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Missing Feedback Loops</h4>
-              <p className="text-red-700">There are few systems in place to gather deep, collective insights at scale—particularly from marginalized voices.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Missing Feedback Loops</p>
+                <p className="text-sm text-muted-foreground">There are few systems in place to gather deep, collective insights at scale—particularly from marginalized voices.</p>
+              </div>
             </div>
           </div>
         </CardContent>

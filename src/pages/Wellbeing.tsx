@@ -55,21 +55,33 @@ const Wellbeing = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Rising Mental Health Challenges</h4>
-              <p className="text-red-700">Depression, anxiety, and suicide rates continue to climb, especially among young people and marginalized communities.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Rising Mental Health Challenges</p>
+                <p className="text-sm text-muted-foreground">Depression, anxiety, and suicide rates continue to climb, especially among young people and marginalized communities.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Lack of Early Detection</h4>
-              <p className="text-red-700">Current systems are reactive rather than preventive, often identifying mental health issues only after crisis points.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Lack of Early Detection</p>
+                <p className="text-sm text-muted-foreground">Current systems are reactive rather than preventive, often identifying mental health issues only after crisis points.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Data Privacy Violations</h4>
-              <p className="text-red-700">Existing mental health apps and platforms often monetize sensitive personal data without meaningful consent.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Data Privacy Violations</p>
+                <p className="text-sm text-muted-foreground">Existing mental health apps and platforms often monetize sensitive personal data without meaningful consent.</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Fragmented Support Systems</h4>
-              <p className="text-red-700">Mental health resources are siloed, expensive, and often inaccessible to those who need them most.</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Fragmented Support Systems</p>
+                <p className="text-sm text-muted-foreground">Mental health resources are siloed, expensive, and often inaccessible to those who need them most.</p>
+              </div>
             </div>
           </div>
         </CardContent>

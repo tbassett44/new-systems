@@ -59,21 +59,33 @@ const Death = () => {
             In modern systems, death is often overly medicalized, hidden behind hospital curtains, stripped of ritual and meaning. Many people face death without legal agency over their end-of-life decisions, including the right to consciously transition.
           </p>
           <div className="space-y-4">
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Medicalization of Death</h4>
-              <p className="text-sm text-red-700">Death is often overly medicalized, hidden behind hospital curtains, stripped of ritual and meaning</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Medicalization of Death</p>
+                <p className="text-sm text-muted-foreground">Death is often overly medicalized, hidden behind hospital curtains, stripped of ritual and meaning</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Lack of Autonomy</h4>
-              <p className="text-sm text-red-700">Many people face death without legal agency over their end-of-life decisions, including the right to consciously transition</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Lack of Autonomy</p>
+                <p className="text-sm text-muted-foreground">Many people face death without legal agency over their end-of-life decisions, including the right to consciously transition</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Fear and Avoidance</h4>
-              <p className="text-sm text-red-700">Cultural taboos around death foster denial, spiritual disconnection, and unprocessed grief</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Fear and Avoidance</p>
+                <p className="text-sm text-muted-foreground">Cultural taboos around death foster denial, spiritual disconnection, and unprocessed grief</p>
+              </div>
             </div>
-            <div className="border-l-4 border-red-400 pl-4">
-              <h4 className="font-semibold text-red-800 mb-2">Loneliness in Dying</h4>
-              <p className="text-sm text-red-700">Individuals often die in isolation, without communal, emotional, or spiritual support</p>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Loneliness in Dying</p>
+                <p className="text-sm text-muted-foreground">Individuals often die in isolation, without communal, emotional, or spiritual support</p>
+              </div>
             </div>
           </div>
         </CardContent>
