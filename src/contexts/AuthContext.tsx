@@ -5,9 +5,10 @@ import { supabase } from '@/integrations/supabase/client';
 interface AuthContextType {
   user: User | null;
   session: Session | null;
-  signInWithEmail: (email: string) => Promise<void>;
-  signOut: () => Promise<void>;
   loading: boolean;
+  signInWithEmail: (email: string) => Promise<void>;
+  signUpWithEmail: (email: string, password: string, name: string) => Promise<void>;
+  signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -53,6 +54,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const signUpWithEmail = async (email: string, password: string, name: string) => {
+    const redirectUrl = `${window.location.origin}/`;
+    
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        emailRedirectTo: redirectUrl,
+        data: {
+          display_name: name,
+          full_name: name
+        }
+      }
+    });
+    
+    if (error) {
+      console.error('Error signing up with email:', error);
+      throw error;
+    }
+  };
+
   const signOut = async () => {
     const { error } = await supabase.auth.signOut();
     if (error) {
@@ -65,6 +87,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     user,
     session,
     signInWithEmail,
+    signUpWithEmail,
     signOut,
     loading
   };
