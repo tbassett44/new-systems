@@ -6,7 +6,7 @@ import { CommentModal } from './CommentModal';
 import { CommentsSidebar } from './CommentsSidebar';
 import { CommentHighlight } from './CommentHighlight';
 import { Button } from '@/components/ui/button';
-import { MessageSquare, MessageSquareOff } from 'lucide-react';
+import { MessageSquareText, PenTool, Eye, EyeOff } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 export function CommentSystem() {
@@ -95,7 +95,7 @@ export function CommentSystem() {
             className="shadow-lg"
             title={`${isSidebarOpen ? 'Hide' : 'Show'} comments (⌘K)`}
           >
-            <MessageSquare className="h-4 w-4 mr-2" />
+            <MessageSquareText className="h-4 w-4 mr-2" />
             {comments.length > 0 && (
               <span className="bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs ml-1">
                 {comments.length}
@@ -111,9 +111,9 @@ export function CommentSystem() {
             title={`${isCommentModeActive ? 'Exit' : 'Enter'} comment mode (⌘M)`}
           >
             {isCommentModeActive ? (
-              <MessageSquareOff className="h-4 w-4" />
+              <EyeOff className="h-4 w-4" />
             ) : (
-              <MessageSquare className="h-4 w-4" />
+              <PenTool className="h-4 w-4" />
             )}
           </Button>
         </div>
