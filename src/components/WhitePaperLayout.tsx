@@ -11,6 +11,7 @@ import {
   SidebarMenuItem,
   SidebarTrigger,
   SidebarHeader,
+  SidebarFooter,
   SidebarProvider,
   useSidebar
 } from "@/components/ui/sidebar";
@@ -35,7 +36,8 @@ import {
   Vote,
   Menu,
   Search,
-  GitBranch
+  GitBranch,
+  LogIn
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -43,6 +45,8 @@ import { Button } from "@/components/ui/button";
 import { GlobalSearch } from "@/components/GlobalSearch";
 import { CommentProvider } from "@/components/comments/CommentProvider";
 import { CommentSystem } from "@/components/comments/CommentSystem";
+import { UserProfile } from "@/components/UserProfile";
+import { useAuth } from "@/contexts/AuthContext";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -80,6 +84,7 @@ function AppSidebar() {
   const currentPath = location.pathname;
   const [searchOpen, setSearchOpen] = useState(false);
   const isMobile = useIsMobile();
+  const { user } = useAuth();
 
   const isActive = (path: string) => {
     if (path === "/papers/" && currentPath === "/papers") return true;
@@ -122,6 +127,7 @@ function AppSidebar() {
           </Button>
         </div>
       </SidebarHeader>
+      
       
       <SidebarContent>
         <SidebarGroup>
@@ -178,6 +184,26 @@ function AppSidebar() {
       </SidebarContent>
       
       <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
+      
+      <SidebarFooter className="border-t p-3">
+        {user ? (
+          <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 h-0" : "opacity-100"}`}>
+            <UserProfile />
+          </div>
+        ) : (
+          <Button 
+            variant="outline"
+            className="w-full justify-start gap-2"
+            onClick={() => handleNavClick()}
+            asChild
+          >
+            <NavLink to="/auth">
+              <LogIn className="h-4 w-4" />
+              {state !== "collapsed" && <span>Sign In</span>}
+            </NavLink>
+          </Button>
+        )}
+      </SidebarFooter>
     </Sidebar>
   );
 }
