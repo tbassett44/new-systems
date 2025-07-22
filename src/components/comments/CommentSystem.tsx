@@ -40,18 +40,21 @@ export function CommentSystem() {
 
     const handleMouseUp = () => {
       console.log('Mouse up in comment mode');
-      const currentSelection = captureSelection();
-      if (currentSelection && currentSelection.text.length > 0) {
-        console.log('Valid selection captured, user:', !!user);
-        if (!user) {
-          console.log('No user, showing login modal');
-          setIsLoginModalOpen(true);
-          clearSelection();
-          return;
+      // Capture selection immediately before any modal interactions
+      setTimeout(() => {
+        const currentSelection = captureSelection();
+        if (currentSelection && currentSelection.text.length > 0) {
+          console.log('Valid selection captured, user:', !!user);
+          if (!user) {
+            console.log('No user, showing login modal');
+            setIsLoginModalOpen(true);
+            clearSelection();
+            return;
+          }
+          console.log('Opening comment modal');
+          setIsCommentModalOpen(true);
         }
-        console.log('Opening comment modal');
-        setIsCommentModalOpen(true);
-      }
+      }, 10); // Small delay to ensure selection is captured before modal focus changes
     };
 
     document.addEventListener('mouseup', handleMouseUp);
