@@ -27,6 +27,8 @@ export function UserProfile() {
   const navigate = useNavigate();
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [displayName, setDisplayName] = useState('');
+  const [avatar, setAvatar] = useState<File | null>(null);
+  const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
   const [profileData, setProfileData] = useState<{
     display_name: string;
     avatar_url: string | null;
@@ -53,6 +55,7 @@ export function UserProfile() {
         if (data) {
           setProfileData(data);
           setDisplayName(data.display_name);
+          setAvatarPreview(data.avatar_url);
         }
       } catch (error) {
         console.error('Error fetching user profile:', error);
@@ -73,6 +76,16 @@ export function UserProfile() {
     }
   };
 
+  const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setAvatar(file);
+      const reader = new FileReader();
+      reader.onload = () => setAvatarPreview(reader.result as string);
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleUpdateProfile = async () => {
     if (!user) return;
     
@@ -84,14 +97,42 @@ export function UserProfile() {
     setIsLoading(true);
     
     try {
+      let avatarUrl = profileData.avatar_url;
+      
+      // Upload new avatar if provided
+      if (avatar) {
+        const fileExt = avatar.name.split('.').pop();
+        const fileName = `${user.id}/${Date.now()}.${fileExt}`;
+        const { data: uploadData, error: uploadError } = await supabase.storage
+          .from('avatars')
+          .upload(fileName, avatar);
+          
+        if (uploadError) {
+          throw uploadError;
+        }
+        
+        const { data: { publicUrl } } = supabase.storage
+          .from('avatars')
+          .getPublicUrl(uploadData.path);
+        avatarUrl = publicUrl;
+      }
+      
       const { error } = await supabase
         .from('profiles')
-        .update({ display_name: displayName.trim() })
+        .update({ 
+          display_name: displayName.trim(),
+          avatar_url: avatarUrl
+        })
         .eq('user_id', user.id);
         
       if (error) throw error;
       
-      setProfileData(prev => ({ ...prev, display_name: displayName.trim() }));
+      setProfileData(prev => ({ 
+        ...prev, 
+        display_name: displayName.trim(),
+        avatar_url: avatarUrl
+      }));
+      setAvatar(null);
       setIsEditDialogOpen(false);
       toast.success('Profile updated successfully');
     } catch (error) {
@@ -177,6 +218,25 @@ export function UserProfile() {
                 onChange={(e) => setDisplayName(e.target.value)}
                 placeholder="Enter your display name"
               />
+            </div>
+            
+            <div className="space-y-2">
+              <label htmlFor="avatar" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                Profile Picture
+              </label>
+              <div className="flex items-center gap-4">
+                <Avatar className="h-16 w-16">
+                  <AvatarImage src={avatarPreview || profileData.avatar_url || undefined} />
+                  <AvatarFallback>{userInitial}</AvatarFallback>
+                </Avatar>
+                <Input
+                  type="file"
+                  id="avatar"
+                  accept="image/*"
+                  onChange={handleAvatarChange}
+                  className="file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-primary file:text-primary-foreground hover:file:bg-primary/90"
+                />
+              </div>
             </div>
           </div>
           

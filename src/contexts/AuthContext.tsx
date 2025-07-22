@@ -7,7 +7,7 @@ interface AuthContextType {
   session: Session | null;
   loading: boolean;
   signInWithEmail: (email: string) => Promise<void>;
-  signUpWithEmail: (email: string, name: string) => Promise<void>;
+  signUpWithEmail: (email: string, name: string, avatar?: File | null) => Promise<void>;
   signOut: () => Promise<void>;
 }
 
@@ -54,7 +54,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const signUpWithEmail = async (email: string, name: string) => {
+  const signUpWithEmail = async (email: string, name: string, avatar?: File | null) => {
+    let avatarUrl = null;
+    
+    // Upload avatar if provided
+    if (avatar) {
+      const fileExt = avatar.name.split('.').pop();
+      const fileName = `temp/${Date.now()}.${fileExt}`;
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(fileName, avatar);
+        
+      if (uploadError) {
+        console.error('Error uploading avatar:', uploadError);
+      } else {
+        const { data: { publicUrl } } = supabase.storage
+          .from('avatars')
+          .getPublicUrl(uploadData.path);
+        avatarUrl = publicUrl;
+      }
+    }
+    
     const redirectUrl = `${window.location.origin}/`;
     
     const { error } = await supabase.auth.signInWithOtp({
@@ -63,7 +83,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         emailRedirectTo: redirectUrl,
         data: {
           display_name: name,
-          full_name: name
+          full_name: name,
+          avatar_url: avatarUrl
         }
       }
     });
