@@ -6,6 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { Mail } from 'lucide-react';
+// Force reload with this comment
 
 export default function Auth() {
   const { user, signInWithEmail } = useAuth();
