@@ -5,6 +5,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -46,6 +47,9 @@ export function CommentModal({ isOpen, onClose, selection, onSubmit }: CommentMo
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Add Comment</DialogTitle>
+          <DialogDescription>
+            Add your thoughts about the selected text below.
+          </DialogDescription>
         </DialogHeader>
         
         <div className="space-y-4">
