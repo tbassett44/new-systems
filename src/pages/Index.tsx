@@ -31,19 +31,24 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
             Supporting Better Feedback, Effective Governance, and Improved Wellbeing
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/papers">
-              <Button size="lg" className="group">
-                <BookOpen className="mr-2 h-5 w-5" />
-                Explore White Papers
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-            </Link>
-          </div>
         </div>
 
-        {/* About Section */}
+        {/* Vision */}
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Our Vision</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-lg leading-relaxed text-center max-w-4xl mx-auto">
+              We are living in a pivotal evolutionary moment—one that mirrors the metamorphosis of 
+              a caterpillar into a butterfly. This collection offers a set of high-level, yet actionable 
+              systems change proposals that aims to support a more intelligent, responsive, and 
+              life-affirming civilization.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Core Principles */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <Card className="text-center">
             <CardHeader>
@@ -80,19 +85,6 @@ const Index = () => {
               </CardDescription>
             </CardHeader>
           </Card>
-        </div>
-
-        {/* Authors */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl font-semibold mb-4">Authors</h2>
-          <div className="space-y-2">
-            <p className="text-lg">
-              <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
-            </p>
-            <p className="text-muted-foreground">
-              and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
-            </p>
-          </div>
         </div>
 
         {/* Co-Creation Section */}
@@ -147,20 +139,29 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Vision */}
-        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">Our Vision</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-lg leading-relaxed text-center max-w-4xl mx-auto">
-              We are living in a pivotal evolutionary moment—one that mirrors the metamorphosis of 
-              a caterpillar into a butterfly. This collection offers a set of high-level, yet actionable 
-              systems change proposals that aims to support a more intelligent, responsive, and 
-              life-affirming civilization.
+        {/* Explore Manifesto */}
+        <div className="text-center mb-16">
+          <Link to="/papers">
+            <Button size="lg" className="group">
+              <BookOpen className="mr-2 h-5 w-5" />
+              Explore Manifesto
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
+        </div>
+
+        {/* Authors */}
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold mb-4">Authors</h2>
+          <div className="space-y-2">
+            <p className="text-lg">
+              <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
             </p>
-          </CardContent>
-        </Card>
+            <p className="text-muted-foreground">
+              and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
