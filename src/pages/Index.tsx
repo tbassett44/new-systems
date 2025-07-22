@@ -104,6 +104,19 @@ const Index = () => {
           </Link>
         </div>
 
+        {/* Authors */}
+        <div className="text-center mb-16">
+          <h2 className="text-2xl font-semibold mb-4">Authors</h2>
+          <div className="space-y-2">
+            <p className="text-lg">
+              <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
+            </p>
+            <p className="text-muted-foreground">
+              and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
+            </p>
+          </div>
+        </div>
+
         {/* Co-Creation Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Co-Create the Future</h2>
@@ -153,20 +166,6 @@ const Index = () => {
                 </Button>
               </CardContent>
             </Card>
-          </div>
-        </div>
-
-
-        {/* Authors */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-semibold mb-4">Authors</h2>
-          <div className="space-y-2">
-            <p className="text-lg">
-              <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
-            </p>
-            <p className="text-muted-foreground">
-              and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
-            </p>
           </div>
         </div>
 
