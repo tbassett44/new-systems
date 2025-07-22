@@ -5,14 +5,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { useAuth } from '@/contexts/AuthContext';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
-import { Mail, ArrowLeft, UserPlus, LogIn } from 'lucide-react';
+import { Mail, ArrowLeft, UserPlus } from 'lucide-react';
 
 export default function Auth() {
   const { user, signInWithEmail, signUpWithEmail } = useAuth();
   const navigate = useNavigate();
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
@@ -45,21 +44,16 @@ export default function Auth() {
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !password || !name) {
+    if (!email || !name) {
       toast.error('Please fill in all fields');
-      return;
-    }
-
-    if (password.length < 6) {
-      toast.error('Password must be at least 6 characters long');
       return;
     }
 
     setIsSubmitting(true);
     try {
-      await signUpWithEmail(email, password, name);
+      await signUpWithEmail(email, name);
       setEmailSent(true);
-      toast.success('Account created! Check your email to confirm your account');
+      toast.success('Check your email for a magic link to complete your registration');
     } catch (error: any) {
       if (error.message?.includes('User already registered')) {
         toast.error('An account with this email already exists. Try signing in instead.');
@@ -74,7 +68,6 @@ export default function Auth() {
 
   const resetForm = () => {
     setEmail('');
-    setPassword('');
     setName('');
     setEmailSent(false);
     setIsSubmitting(false);
@@ -90,11 +83,11 @@ export default function Auth() {
       <Card className="w-full max-w-md">
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">
-            {isSignUp ? 'Create Account' : 'Welcome Back'}
+            {isSignUp ? 'Join the Community' : 'Welcome Back'}
           </CardTitle>
           <CardDescription>
             {isSignUp 
-              ? 'Join the Systems Change Manifesto community' 
+              ? 'Create your account to contribute to the Systems Change Manifesto' 
               : 'Sign in to access the Systems Change Manifesto and contribute to the conversation'
             }
           </CardDescription>
@@ -126,29 +119,15 @@ export default function Auth() {
                 />
               </div>
 
-              {isSignUp && (
-                <div className="space-y-2">
-                  <Input
-                    type="password"
-                    placeholder="Password (minimum 6 characters)"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="h-12"
-                    minLength={6}
-                    required
-                  />
-                </div>
-              )}
-
               <Button
                 type="submit"
                 className="w-full h-12"
-                disabled={isSubmitting || !email || (isSignUp && (!password || !name))}
+                disabled={isSubmitting || !email || (isSignUp && !name)}
               >
                 {isSignUp ? (
                   <>
                     <UserPlus className="w-5 h-5 mr-2" />
-                    {isSubmitting ? 'Creating Account...' : 'Create Account'}
+                    {isSubmitting ? 'Sending Link...' : 'Send Magic Link'}
                   </>
                 ) : (
                   <>
@@ -161,12 +140,10 @@ export default function Auth() {
           ) : (
             <div className="text-center space-y-4">
               <div className="bg-muted p-4 rounded-lg">
-                <p className="font-medium">
-                  {isSignUp ? 'Account created!' : 'Magic link sent!'}
-                </p>
+                <p className="font-medium">Magic link sent!</p>
                 <p className="text-sm text-muted-foreground mt-2">
                   {isSignUp 
-                    ? 'Check your email to confirm your account and complete registration.'
+                    ? 'Check your email for a magic link to complete your registration.'
                     : 'Check your email for a link to sign in.'
                   }
                 </p>
@@ -190,7 +167,7 @@ export default function Auth() {
               >
                 {isSignUp 
                   ? 'Already have an account? Sign in' 
-                  : 'Need an account? Sign up'
+                  : 'Need an account? Create one'
                 }
               </Button>
             </div>
