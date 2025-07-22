@@ -152,6 +152,8 @@ export function CommentSystem() {
         description: "Your comment has been added!",
       });
       setSelectedParagraph(null);
+      // Open the comments sidebar to show the new comment
+      setIsSidebarOpen(true);
     } catch (error) {
       console.error('Error in handleAddComment:', error);
       toast({
