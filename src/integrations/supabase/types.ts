@@ -92,11 +92,13 @@ export type Database = {
       comments: {
         Row: {
           created_at: string
+          element_type: string | null
           end_offset: number
           highlighted_text: string
           id: string
           is_resolved: boolean
           page_route: string
+          paragraph_id: string | null
           start_offset: number
           text_content: string
           updated_at: string
@@ -104,11 +106,13 @@ export type Database = {
         }
         Insert: {
           created_at?: string
+          element_type?: string | null
           end_offset: number
           highlighted_text: string
           id?: string
           is_resolved?: boolean
           page_route: string
+          paragraph_id?: string | null
           start_offset: number
           text_content: string
           updated_at?: string
@@ -116,11 +120,13 @@ export type Database = {
         }
         Update: {
           created_at?: string
+          element_type?: string | null
           end_offset?: number
           highlighted_text?: string
           id?: string
           is_resolved?: boolean
           page_route?: string
+          paragraph_id?: string | null
           start_offset?: number
           text_content?: string
           updated_at?: string
