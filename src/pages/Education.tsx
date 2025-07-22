@@ -110,93 +110,63 @@ const Education = () => {
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
-            <div className="border-l-4 border-primary/30 pl-4">
-              <h4 className="font-semibold mb-3 text-foreground">1. Self-Sovereign Learner Profiles</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Each learner has a digital identity wallet containing their learning records, values, goals, and reflections</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Credentials can represent knowledge, skills, experiences, contributions, and character traits</span>
-                </li>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                1. Self-Sovereign Learner Profiles
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Each learner has a digital identity wallet containing their learning records, values, goals, and reflections</li>
+                <li>Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions</li>
+                <li>Credentials can represent knowledge, skills, experiences, contributions, and character traits</li>
               </ul>
             </div>
 
-            <div className="border-l-4 border-blue-300 pl-4">
-              <h4 className="font-semibold mb-3 text-foreground">2. Modular Learning Ecosystem</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">All nodes can issue credentials if aligned with community standards and interoperability protocols</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Encourages learning in context—rooted in place, culture, and purpose</span>
-                </li>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Globe className="h-4 w-4 text-green-600" />
+                2. Modular Learning Ecosystem
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</li>
+                <li>All nodes can issue credentials if aligned with community standards and interoperability protocols</li>
+                <li>Encourages learning in context—rooted in place, culture, and purpose</li>
               </ul>
             </div>
 
-            <div className="border-l-4 border-green-300 pl-4">
-              <h4 className="font-semibold mb-3 text-foreground">3. Interoperable Credential Web</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Credentials can be verified anywhere, at any time, without needing centralized databases</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Learners can selectively disclose or prove qualifications using zero-knowledge proofs</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Creates fluid pathways for employment, collaboration, and further learning</span>
-                </li>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <CheckCircle className="h-4 w-4 text-green-600" />
+                3. Interoperable Credential Web
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Credentials can be verified anywhere, at any time, without needing centralized databases</li>
+                <li>Learners can selectively disclose or prove qualifications using zero-knowledge proofs</li>
+                <li>Creates fluid pathways for employment, collaboration, and further learning</li>
               </ul>
             </div>
 
-            <div className="border-l-4 border-purple-300 pl-4">
-              <h4 className="font-semibold mb-3 text-foreground">4. AI and Mentor-Supported Learning Journeys</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Learners design personalized pathways with support from AI systems and human mentors</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Learning recommendations align with purpose, context, and wellbeing—not just market demand</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-purple-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Reflection and narrative become central to progress tracking</span>
-                </li>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Brain className="h-4 w-4 text-green-600" />
+                4. AI and Mentor-Supported Learning Journeys
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Learners design personalized pathways with support from AI systems and human mentors</li>
+                <li>Learning recommendations align with purpose, context, and wellbeing—not just market demand</li>
+                <li>Reflection and narrative become central to progress tracking</li>
               </ul>
             </div>
 
-            <div className="border-l-4 border-orange-300 pl-4">
-              <h4 className="font-semibold mb-3 text-foreground">5. Community-Based Validation and Reputation</h4>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Peers, elders, and collectives endorse growth through verifiable acknowledgments</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Learning becomes a social, relational process</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-4 w-4 text-orange-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-foreground">Networks of trust replace standardized testing</span>
-                </li>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Network className="h-4 w-4 text-green-600" />
+                5. Community-Based Validation and Reputation
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Peers, elders, and collectives endorse growth through verifiable acknowledgments</li>
+                <li>Learning becomes a social, relational process</li>
+                <li>Networks of trust replace standardized testing</li>
               </ul>
             </div>
           </div>

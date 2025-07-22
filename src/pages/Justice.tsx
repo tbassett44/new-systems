@@ -87,34 +87,54 @@ const Justice = () => {
         <CardHeader>
           <CardTitle className="text-primary">The Solution: Regenerative Justice Infrastructure</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div>
-            <h4 className="font-semibold text-lg mb-3">Core Components:</h4>
-            <div className="space-y-4">
-              <div className="border-l-4 border-primary/30 pl-4">
-                <h5 className="font-medium text-primary">Community Accountability Circles</h5>
-                <p className="text-sm text-muted-foreground">
-                  Local groups trained in restorative practices facilitate dialogues between affected parties. Focus on acknowledgment of harm, repair, reintegration, and shared understanding.
-                </p>
-              </div>
-              <div className="border-l-4 border-blue-300 pl-4">
-                <h5 className="font-medium text-blue-700">Regenerative Rehabilitation Centers</h5>
-                <p className="text-sm text-muted-foreground">
-                  Replace prisons with healing-based campuses offering education, vocational training, therapy, and rites of passage. Residents are supported in trauma healing and skill-building.
-                </p>
-              </div>
-              <div className="border-l-4 border-green-300 pl-4">
-                <h5 className="font-medium text-green-700">Decentralized Legal Support Systems</h5>
-                <p className="text-sm text-muted-foreground">
-                  Open-source platforms offer access to legal aid, peer-to-peer mediation, and reputation-informed conflict resolution with AI-supported equitable case analysis.
-                </p>
-              </div>
-              <div className="border-l-4 border-purple-300 pl-4">
-                <h5 className="font-medium text-purple-700">Sentencing Transformation Framework</h5>
-                <p className="text-sm text-muted-foreground">
-                  Shift sentencing models from punitive timeframes to outcome-based regeneration, with accountability tied to personal and social growth.
-                </p>
-              </div>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                1. Community Accountability Circles
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Local groups trained in restorative practices facilitate dialogues between affected parties</li>
+                <li>Focus on acknowledgment of harm, repair, reintegration, and shared understanding</li>
+                <li>Community-based mediation that prioritizes healing over punishment</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                2. Regenerative Rehabilitation Centers
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Replace prisons with healing-based campuses offering education, vocational training, therapy, and rites of passage</li>
+                <li>Residents are supported in trauma healing and skill-building</li>
+                <li>Focus on personal transformation and reintegration into community</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Shield className="h-4 w-4 text-green-600" />
+                3. Decentralized Legal Support Systems
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Open-source platforms offer access to legal aid, peer-to-peer mediation</li>
+                <li>Reputation-informed conflict resolution with AI-supported equitable case analysis</li>
+                <li>Community-based legal support networks that serve marginalized populations</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Scale className="h-4 w-4 text-green-600" />
+                4. Sentencing Transformation Framework
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Shift sentencing models from punitive timeframes to outcome-based regeneration</li>
+                <li>Accountability tied to personal and social growth rather than time served</li>
+                <li>Community involvement in determining appropriate responses to harm</li>
+              </ul>
             </div>
           </div>
         </CardContent>

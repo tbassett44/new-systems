@@ -98,31 +98,54 @@ const Death = () => {
             The Solution: Conscious Death as a Regenerative Practice
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <p className="leading-relaxed">
-            A holistic approach that acknowledges death as a sacred and natural process, restoring dignity, autonomy, and presence to the final phase of life through cultural renewal, legal reform, and spiritual integration.
-          </p>
-          
-          <div className="grid gap-4">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-2">Legal Recognition of End-of-Life Autonomy</h4>
-              <p className="text-sm text-blue-700">Expand Death with Dignity laws to ensure the right to medically or spiritually supported self-assisted transition. Create protocols to safeguard informed consent, mental clarity, and ethical review.</p>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Shield className="h-4 w-4 text-green-600" />
+                1. Legal Recognition of End-of-Life Autonomy
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Expand Death with Dignity laws to ensure the right to medically or spiritually supported self-assisted transition</li>
+                <li>Create protocols to safeguard informed consent, mental clarity, and ethical review</li>
+                <li>Establish legal frameworks that honor individual sovereignty over end-of-life decisions</li>
+              </ul>
             </div>
-            <div className="bg-green-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-2">Integration of Death Doulas and Spiritual Midwives</h4>
-              <p className="text-sm text-green-700">Support training and certification programs for non-medical end-of-life companions. Incorporate spiritual, emotional, and ritual practices that honor each person's beliefs and lineage.</p>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Users className="h-4 w-4 text-green-600" />
+                2. Integration of Death Doulas and Spiritual Midwives
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Support training and certification programs for non-medical end-of-life companions</li>
+                <li>Incorporate spiritual, emotional, and ritual practices that honor each person's beliefs and lineage</li>
+                <li>Create networks of trained practitioners available to support families and communities</li>
+              </ul>
             </div>
-            <div className="bg-purple-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-purple-800 mb-2">Community-Based Death Literacy</h4>
-              <p className="text-sm text-purple-700">Develop public education programs that normalize conversations about mortality. Encourage communal rituals, storytelling, and grief-sharing as part of civic life.</p>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Brain className="h-4 w-4 text-green-600" />
+                3. Community-Based Death Literacy
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Develop public education programs that normalize conversations about mortality</li>
+                <li>Encourage communal rituals, storytelling, and grief-sharing as part of civic life</li>
+                <li>Integration of death awareness into educational curricula and community programming</li>
+              </ul>
             </div>
-            <div className="bg-orange-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-orange-800 mb-2">Expanded Palliative and Hospice Care</h4>
-              <p className="text-sm text-orange-700">Ensure accessible, high-quality end-of-life care that minimizes suffering. Include emotional and spiritual care alongside physical comfort.</p>
-            </div>
-            <div className="bg-teal-50 p-4 rounded-lg">
-              <h4 className="font-semibold text-teal-800 mb-2">Digital and Legal Infrastructure for End-of-Life Intentions</h4>
-              <p className="text-sm text-teal-700">Create sovereign digital identity tools to document and share end-of-life wishes. Use decentralized platforms for trusted witnesses and legal validation.</p>
+
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Heart className="h-4 w-4 text-green-600" />
+                4. Expanded Palliative and Hospice Care
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Ensure accessible, high-quality end-of-life care that minimizes suffering</li>
+                <li>Include emotional and spiritual care alongside physical comfort</li>
+                <li>Create sovereign digital identity tools to document and share end-of-life wishes</li>
+              </ul>
             </div>
           </div>
         </CardContent>

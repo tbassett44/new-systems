@@ -92,102 +92,61 @@ const Energy = () => {
             The Solution: Decentralized and Safe Next-Gen Energy Systems
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-6">
-          <div className="bg-blue-50 dark:bg-blue-950/50 p-6 rounded-lg border border-blue-200 dark:border-blue-800">
-            <div className="flex items-center gap-3 mb-4">
-              <Atom className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-              <h3 className="text-xl font-semibold text-blue-900 dark:text-blue-100">1. Thorium Molten Salt Reactors</h3>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Atom className="h-4 w-4 text-green-600" />
+                1. Thorium Molten Salt Reactors
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Safer than traditional uranium reactors (inherent safety, low pressure)</li>
+                <li>Produce less long-lived radioactive waste</li>
+                <li>Cannot melt down like conventional nuclear plants</li>
+                <li>Abundant fuel supply (thorium is more common than uranium)</li>
+                <li>Prototypes proven as early as the 1960s (Oak Ridge National Laboratory)</li>
+              </ul>
             </div>
-            <div className="space-y-2">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-blue-800 dark:text-blue-200">Safer than traditional uranium reactors (inherent safety, low pressure)</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-blue-800 dark:text-blue-200">Produce less long-lived radioactive waste</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-blue-800 dark:text-blue-200">Cannot melt down like conventional nuclear plants</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-blue-800 dark:text-blue-200">Abundant fuel supply (thorium is more common than uranium)</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-blue-800 dark:text-blue-200">Prototypes proven as early as the 1960s (Oak Ridge National Laboratory)</div>
-              </div>
-            </div>
-          </div>
 
-          <div className="bg-green-50 dark:bg-green-950/50 p-6 rounded-lg border border-green-200 dark:border-green-800">
-            <div className="flex items-center gap-3 mb-4">
-              <Sun className="h-6 w-6 text-green-600 dark:text-green-400" />
-              <h3 className="text-xl font-semibold text-green-900 dark:text-green-100">2. Tokamak Fusion Reactors</h3>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Sun className="h-4 w-4 text-green-600" />
+                2. Tokamak Fusion Reactors
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Mimic the energy generation of the sun via nuclear fusion</li>
+                <li>Produce massive energy output with zero carbon emissions</li>
+                <li>Minimal radioactive waste and no risk of meltdown</li>
+                <li>International collaboration already underway (e.g., ITER project)</li>
+                <li>Once commercialized, could provide virtually limitless power</li>
+              </ul>
             </div>
-            <div className="space-y-2">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-green-800 dark:text-green-200">Mimic the energy generation of the sun via nuclear fusion</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-green-800 dark:text-green-200">Produce massive energy output with zero carbon emissions</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-green-800 dark:text-green-200">Minimal radioactive waste and no risk of meltdown</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-green-800 dark:text-green-200">International collaboration already underway (e.g., ITER project)</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-green-800 dark:text-green-200">Once commercialized, could provide virtually limitless power</div>
-              </div>
-            </div>
-          </div>
 
-          <div className="bg-purple-50 dark:bg-purple-950/50 p-6 rounded-lg border border-purple-200 dark:border-purple-800">
-            <div className="flex items-center gap-3 mb-4">
-              <Zap className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-              <h3 className="text-xl font-semibold text-purple-900 dark:text-purple-100">3. Regenerative Grid Architecture</h3>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Zap className="h-4 w-4 text-green-600" />
+                3. Regenerative Grid Architecture
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Distributed renewable energy systems (solar, wind, geothermal)</li>
+                <li>Microgrids and community-scale storage</li>
+                <li>AI-assisted energy flow optimization</li>
+                <li>Open-source hardware and peer-managed infrastructure</li>
+              </ul>
             </div>
-            <div className="space-y-2">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-purple-800 dark:text-purple-200">Distributed renewable energy systems (solar, wind, geothermal)</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-purple-800 dark:text-purple-200">Microgrids and community-scale storage</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-purple-800 dark:text-purple-200">AI-assisted energy flow optimization</div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="text-purple-800 dark:text-purple-200">Open-source hardware and peer-managed infrastructure</div>
-              </div>
-            </div>
-          </div>
 
-          <div className="bg-amber-50 dark:bg-amber-950/50 p-6 rounded-lg border border-amber-200 dark:border-amber-800">
-            <h3 className="text-lg font-semibold mb-3 text-amber-900 dark:text-amber-100">4. A Note on Solar Energy</h3>
-            <p className="text-amber-800 dark:text-amber-200 leading-relaxed">
-              While solar power has played a key role in decentralizing energy and reducing operational 
-              emissions, its regenerative potential must be assessed holistically. The production of 
-              photovoltaic panels involves high material throughput, often using rare or difficult-to-recycle 
-              elements sourced through extractive practices. Additionally, solar's relatively low energy 
-              return on investment (EROI) compared to nuclear and fusion, combined with its dependence 
-              on energy storage systems, raises long-term sustainability concerns. For solar to remain 
-              a positive contributor, it must be deployed with lifecycle accountability, integrated into 
-              mixed energy systems, and supported by robust recycling and material recovery programs.
-            </p>
+            <div>
+              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
+                <Recycle className="h-4 w-4 text-green-600" />
+                4. Holistic Solar Integration
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
+                <li>Lifecycle accountability for photovoltaic panel production and disposal</li>
+                <li>Integration into mixed energy systems rather than standalone deployment</li>
+                <li>Robust recycling and material recovery programs</li>
+                <li>Focus on community-scale installations with shared ownership models</li>
+              </ul>
+            </div>
           </div>
         </CardContent>
       </Card>
