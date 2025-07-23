@@ -185,7 +185,6 @@ export function CommentSystem() {
             <span className="bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs mr-2">
               {comments.length}
             </span>
-            <MessageSquareText className="h-4 w-4 mr-2" />
             Comments
           </Button>
           
