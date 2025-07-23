@@ -55,7 +55,7 @@ const Education = () => {
 
       <Card className="border-destructive/20 bg-destructive/5">
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
+          <CardTitle className="flex items-center gap-2 text-red-700">
             <AlertTriangle className="h-5 w-5" />
             The Problem: Centralized, Rigid, and Siloed Education Systems
           </CardTitle>

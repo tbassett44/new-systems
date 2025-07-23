@@ -46,7 +46,7 @@ const Technology = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-destructive">
+          <CardTitle className="flex items-center gap-2 text-red-700">
             <AlertTriangle className="h-5 w-5" />
             The Problem: Extractive and Centralized Technology
           </CardTitle>

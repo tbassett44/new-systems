@@ -55,7 +55,7 @@ const Media = () => {
 
       <Card className="border-destructive/20">
         <CardHeader>
-          <CardTitle className="text-destructive">The Problem: Crisis of Trust and Ownership in Media</CardTitle>
+          <CardTitle className="text-red-700">The Problem: Crisis of Trust and Ownership in Media</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">

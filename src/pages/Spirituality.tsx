@@ -45,7 +45,7 @@ const Spirituality = () => {
 
       <Card className="border-destructive/20">
         <CardHeader>
-          <CardTitle className="text-destructive">
+          <CardTitle className="text-red-700">
             The Problem: Disconnection from Meaning and Sacred Rhythm
           </CardTitle>
         </CardHeader>
