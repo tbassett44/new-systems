@@ -90,3 +90,22 @@ export const trackExternalLinkClick = (destinationUrl: string, sourcePage: strin
     link_text: linkText,
   });
 };
+
+export const trackCommentLiked = (commentId: string, currentPage: string, isLiked: boolean) => {
+  if (!isTrackingEnabled) return;
+  
+  amplitude.track('comment_liked', {
+    comment_id: commentId,
+    current_page: currentPage,
+    action: isLiked ? 'liked' : 'unliked',
+  });
+};
+
+export const trackCommentReplyAdded = (parentCommentId: string, currentPage: string) => {
+  if (!isTrackingEnabled) return;
+  
+  amplitude.track('comment_reply_added', {
+    parent_comment_id: parentCommentId,
+    current_page: currentPage,
+  });
+};

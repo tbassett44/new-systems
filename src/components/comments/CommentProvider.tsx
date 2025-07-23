@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
+import { trackCommentLiked, trackCommentReplyAdded } from '@/lib/analytics';
 
 const CommentContext = createContext<CommentContextType | undefined>(undefined);
 
@@ -292,6 +293,9 @@ export function CommentProvider({ children }: CommentProviderProps) {
         .eq('user_id', user.id)
         .single();
 
+      // Track the reply
+      trackCommentReplyAdded(commentId, location.pathname);
+
       // Update local state
       setComments(prev => prev.map(comment => 
         comment.id === commentId 
@@ -364,6 +368,9 @@ export function CommentProvider({ children }: CommentProviderProps) {
 
         if (error) throw error;
       }
+
+      // Track the like/unlike action
+      trackCommentLiked(commentId, location.pathname, !comment.user_has_liked);
 
       // Update local state
       setComments(prev => prev.map(comment => 
