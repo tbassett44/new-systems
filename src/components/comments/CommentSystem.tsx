@@ -10,6 +10,7 @@ import { MessageSquareText, PenTool, Eye, EyeOff, LogIn } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from '@/hooks/use-toast';
 import { trackCommentModeToggle, trackCommentsViewed, trackCommentAdded } from '@/lib/analytics';
+import { useSidebar } from '@/components/ui/sidebar';
 
 export function CommentSystem() {
   const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
@@ -18,6 +19,7 @@ export function CommentSystem() {
   
   const navigate = useNavigate();
   const { user, loading } = useAuth();
+  const { state: sidebarState } = useSidebar();
   const { 
     comments, 
     isCommentModeActive, 
@@ -229,8 +231,14 @@ export function CommentSystem() {
 
       {/* Comment Mode Indicator */}
       {isCommentModeActive && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl shadow-2xl border-2 border-white/20 animate-pulse">
+        <div 
+          className="fixed top-4 z-50"
+          style={{
+            left: sidebarState === "collapsed" ? "calc(56px + 50%)" : "calc(256px + 50%)",
+            transform: "translateX(-50%)"
+          }}
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl shadow-2xl border-2 border-white/20">
             <p className="text-base font-semibold text-center">
               💬 Comment Mode Active - Click on paragraphs to add comments
             </p>
