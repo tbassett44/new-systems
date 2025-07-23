@@ -57,7 +57,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md fixed left-[50%] top-[20%] translate-x-[-50%] translate-y-0 mb-[300px] sm:top-[50%] sm:translate-y-[-50%] sm:mb-0">
+      <DialogContent className="sm:max-w-md my-8 mb-[300px]">
         <DialogHeader>
           <DialogTitle>Add Comment</DialogTitle>
           <DialogDescription>
@@ -88,7 +88,11 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
               placeholder="Write your comment..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              className="min-h-[100px]"
+              className="resize-none overflow-hidden"
+              style={{
+                minHeight: '100px',
+                height: Math.max(100, content.split('\n').length * 24 + 24) + 'px'
+              }}
               autoFocus
               disabled={!user}
             />
