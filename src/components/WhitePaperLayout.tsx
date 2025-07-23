@@ -154,7 +154,7 @@ function AppSidebar() {
                             <item.icon className="h-4 w-4 shrink-0" />
                           </NavLink>
                         </TooltipTrigger>
-                        <TooltipContent side="right">
+                        <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
                           <p>{item.title}</p>
                         </TooltipContent>
                       </Tooltip>
@@ -198,7 +198,7 @@ function AppSidebar() {
                             <item.icon className="h-4 w-4 shrink-0" />
                           </NavLink>
                         </TooltipTrigger>
-                        <TooltipContent side="right">
+                        <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
                           <p>{item.title}</p>
                         </TooltipContent>
                       </Tooltip>
