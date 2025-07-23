@@ -192,12 +192,11 @@ export function CommentSystem() {
                 trackCommentsViewed(comments.length, window.location.pathname);
               }
             }}
-            variant={isSidebarOpen ? "default" : "outline"}
             size="sm"
-            className="shadow-lg"
+            className="bg-blue-800 hover:bg-blue-700 text-white shadow-lg border-0"
             title={`${isSidebarOpen ? 'Hide' : 'Show'} comments (⌘K)`}
           >
-            <span className="bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs mr-2">
+            <span className="bg-white text-blue-800 rounded-full px-2 py-0.5 text-xs mr-2 font-semibold">
               {comments.length}
             </span>
             Comments
@@ -205,9 +204,12 @@ export function CommentSystem() {
           
           <Button
             onClick={handleCommentModeToggle}
-            variant={isCommentModeActive ? "default" : "outline"}
             size="sm"
-            className="shadow-lg"
+            className={`shadow-lg border-0 text-white ${
+              isCommentModeActive 
+                ? "bg-green-700 hover:bg-green-600" 
+                : "bg-blue-800 hover:bg-blue-700"
+            }`}
             title={`${isCommentModeActive ? 'Exit' : 'Enter'} comment mode (⌘M)`}
             disabled={loading}
           >
@@ -216,7 +218,7 @@ export function CommentSystem() {
             ) : (
               <span className="text-sm">
                 Commenting:{" "}
-                <span className={isCommentModeActive ? "text-green-500" : "text-red-500"}>
+                <span className="font-semibold">
                   {isCommentModeActive ? "On" : "Off"}
                 </span>
               </span>
