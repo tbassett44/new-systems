@@ -199,11 +199,14 @@ export function CommentSystem() {
             disabled={loading}
           >
             {loading ? (
-              <Eye className="h-4 w-4 animate-pulse" />
-            ) : isCommentModeActive ? (
-              <EyeOff className="h-4 w-4" />
+              <span className="text-sm">Loading...</span>
             ) : (
-              <PenTool className="h-4 w-4" />
+              <span className="text-sm">
+                Commenting:{" "}
+                <span className={isCommentModeActive ? "text-green-500" : "text-red-500"}>
+                  {isCommentModeActive ? "On" : "Off"}
+                </span>
+              </span>
             )}
           </Button>
         </div>
