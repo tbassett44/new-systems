@@ -364,8 +364,8 @@ const Wellbeing = () => {
               <p className="text-white">All AI models and analysis methods must be open-source and auditable by the community.</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800 mb-2">Crisis Response Protocols</h4>
-              <p className="text-yellow-700">Clear guidelines for when and how the system can override privacy settings in genuine emergency situations.</p>
+              <h4 className="font-semibold text-white mb-2">Crisis Response Protocols</h4>
+              <p className="text-white">Clear guidelines for when and how the system can override privacy settings in genuine emergency situations.</p>
             </div>
           </div>
         </CardContent>
