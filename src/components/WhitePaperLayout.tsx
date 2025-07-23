@@ -38,7 +38,9 @@ import {
   Search,
   GitBranch,
   LogIn,
-  ScrollText
+  ScrollText,
+  LogOut,
+  Settings
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -49,6 +51,7 @@ import { CommentSystem } from "@/components/comments/CommentSystem";
 import { UserProfile } from "@/components/UserProfile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
 import { supabase } from "@/integrations/supabase/client";
@@ -122,6 +125,17 @@ function AppSidebar() {
     
     fetchProfile();
   }, [user]);
+
+  const handleSignOut = async () => {
+    try {
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
+
+  const userInitial = profileData.display_name?.[0]?.toUpperCase() || user?.email?.[0]?.toUpperCase() || '?';
 
   const isActive = (path: string) => {
     if (path === "/papers/" && currentPath === "/papers") return true;
@@ -259,21 +273,54 @@ function AppSidebar() {
       <SidebarFooter className="border-t p-3">
         {user ? (
           state === "collapsed" ? (
-            <Tooltip>
-              <TooltipTrigger asChild>
+            <Popover>
+              <PopoverTrigger asChild>
                 <Button variant="ghost" className="w-full h-8 p-0 justify-center">
                   <Avatar className="h-6 w-6">
                     <AvatarImage src={profileData.avatar_url || undefined} />
-                    <AvatarFallback>
-                      {profileData.display_name?.[0]?.toUpperCase() || user.email?.[0]?.toUpperCase() || '?'}
-                    </AvatarFallback>
+                    <AvatarFallback>{userInitial}</AvatarFallback>
                   </Avatar>
                 </Button>
-              </TooltipTrigger>
-              <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
-                <p>{profileData.display_name || 'User Profile'}</p>
-              </TooltipContent>
-            </Tooltip>
+              </PopoverTrigger>
+              <PopoverContent className="w-56 p-2" align="start" side="right">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 justify-center">
+                    <Avatar className="h-10 w-10">
+                      <AvatarImage src={profileData.avatar_url || undefined} />
+                      <AvatarFallback>{userInitial}</AvatarFallback>
+                    </Avatar>
+                    <div className="grid gap-0.5">
+                      <p className="text-sm font-medium">{profileData.display_name || 'User'}</p>
+                      <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="grid gap-1">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="justify-start gap-2"
+                      onClick={() => handleNavClick()}
+                      asChild
+                    >
+                      <NavLink to="/auth">
+                        <Settings className="h-4 w-4" />
+                        Edit Profile
+                      </NavLink>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="justify-start gap-2 text-red-700"
+                      onClick={handleSignOut}
+                    >
+                      <LogOut className="h-4 w-4" />
+                      Sign Out
+                    </Button>
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
           ) : (
             <UserProfile />
           )
