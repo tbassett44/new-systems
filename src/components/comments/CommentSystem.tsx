@@ -218,7 +218,7 @@ export function CommentSystem() {
             ) : (
               <span className="text-sm">
                 Commenting:{" "}
-                <span className="font-semibold">
+                <span className={`font-semibold ${isCommentModeActive ? "text-green-300" : "text-red-300"}`}>
                   {isCommentModeActive ? "On" : "Off"}
                 </span>
               </span>
