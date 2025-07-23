@@ -234,7 +234,7 @@ export function CommentSystem() {
         <div 
           className="fixed top-4 z-50"
           style={{
-            left: sidebarState === "collapsed" ? "calc(56px + 50%)" : "calc(256px + 50%)",
+            left: sidebarState === "collapsed" ? "calc(28px + 50%)" : "calc(128px + 50%)",
             transform: "translateX(-50%)"
           }}
         >
