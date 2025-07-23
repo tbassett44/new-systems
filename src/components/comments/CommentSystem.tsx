@@ -227,9 +227,9 @@ export function CommentSystem() {
 
       {/* Comment Mode Indicator */}
       {isCommentModeActive && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-          <div className="bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg">
-            <p className="text-sm font-medium">
+        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl shadow-2xl border-2 border-white/20 animate-pulse">
+            <p className="text-base font-semibold text-center">
               💬 Comment Mode Active - Click on paragraphs to add comments
             </p>
           </div>
