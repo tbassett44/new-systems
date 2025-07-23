@@ -30,11 +30,38 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   // Auto-scroll to bottom on mobile when modal opens
   useEffect(() => {
     if (isOpen && isMobile && modalContentRef.current) {
+      console.log('Modal opened on mobile, attempting to scroll');
+      console.log('Modal content element:', modalContentRef.current);
+      console.log('Initial scrollHeight:', modalContentRef.current.scrollHeight);
+      console.log('Initial scrollTop:', modalContentRef.current.scrollTop);
+      console.log('Initial clientHeight:', modalContentRef.current.clientHeight);
+      
       setTimeout(() => {
-        modalContentRef.current?.scrollTo({
-          top: modalContentRef.current.scrollHeight,
-          behavior: 'smooth'
-        });
+        if (modalContentRef.current) {
+          console.log('After 500ms delay:');
+          console.log('Modal content element:', modalContentRef.current);
+          console.log('ScrollHeight before scroll:', modalContentRef.current.scrollHeight);
+          console.log('ScrollTop before scroll:', modalContentRef.current.scrollTop);
+          console.log('ClientHeight before scroll:', modalContentRef.current.clientHeight);
+          
+          modalContentRef.current.scrollTo({
+            top: modalContentRef.current.scrollHeight,
+            behavior: 'smooth'
+          });
+          
+          console.log('Scroll command executed, scrolling to:', modalContentRef.current.scrollHeight);
+          
+          // Check scroll position after a brief delay
+          setTimeout(() => {
+            if (modalContentRef.current) {
+              console.log('After scroll attempt:');
+              console.log('Final scrollTop:', modalContentRef.current.scrollTop);
+              console.log('Final scrollHeight:', modalContentRef.current.scrollHeight);
+            }
+          }, 100);
+        } else {
+          console.log('Modal content ref is null after 500ms delay');
+        }
       }, 500); // Delay to ensure modal and keyboard animations complete
     }
   }, [isOpen, isMobile]);
