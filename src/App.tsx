@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 import Index from "./pages/Index";
 import WhitePaperLayout from "./components/WhitePaperLayout";
 import EndoEconomics from "./pages/EndoEconomics";
@@ -36,7 +36,7 @@ function AppContent() {
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/auth" element={<Auth />} />
-      <Route path="/papers" element={<WhitePaperLayout><div /></WhitePaperLayout>}>
+      <Route path="/papers" element={<WhitePaperLayout><Outlet /></WhitePaperLayout>}>
         <Route index element={<Index />} />
         <Route path="contribute" element={<Contribute />} />
         <Route path="glossary" element={<Glossary />} />
