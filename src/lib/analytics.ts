@@ -29,7 +29,11 @@ export const identifyUser = (userId: string, userProperties?: Record<string, any
   
   amplitude.setUserId(userId);
   if (userProperties) {
-    amplitude.identify(new amplitude.Identify().set(userProperties));
+    const identifyObj = new amplitude.Identify();
+    Object.keys(userProperties).forEach(key => {
+      identifyObj.set(key, userProperties[key]);
+    });
+    amplitude.identify(identifyObj);
   }
 };
 

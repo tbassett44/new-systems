@@ -6,7 +6,7 @@ import EndoEconomics from "./pages/EndoEconomics";
 import DigitalSovereignty from "./pages/DigitalSovereignty";
 import WasteManagement from "./pages/WasteManagement";
 import Energy from "./pages/Energy";
-import CollectiveSensemaking from "./pages/CollectiveSensemaking";
+import Sensemaking from "./pages/Sensemaking";
 import Wellbeing from "./pages/Wellbeing";
 import Education from "./pages/Education";
 import Ecology from "./pages/Ecology";
@@ -43,7 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/papers" element={<WhitePaperLayout />}>
+          <Route path="/papers" element={<WhitePaperLayout><div /></WhitePaperLayout>}>
             <Route index element={<Index />} />
             <Route path="contribute" element={<Contribute />} />
             <Route path="glossary" element={<Glossary />} />
@@ -51,7 +51,7 @@ function App() {
             <Route path="digital-sovereignty" element={<DigitalSovereignty />} />
             <Route path="waste-management" element={<WasteManagement />} />
             <Route path="energy" element={<Energy />} />
-            <Route path="sensemaking" element={<CollectiveSensemaking />} />
+            <Route path="sensemaking" element={<Sensemaking />} />
             <Route path="wellbeing" element={<Wellbeing />} />
             <Route path="education" element={<Education />} />
             <Route path="ecology" element={<Ecology />} />
