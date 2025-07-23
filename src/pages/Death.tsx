@@ -245,19 +245,19 @@ const Death = () => {
         <CardContent>
           <div className="space-y-4">
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800">Cultural Sensitivity</h4>
-              <p className="text-sm text-yellow-700 mb-2">Risk: Different cultural and religious approaches to death may conflict</p>
-              <p className="text-sm text-yellow-600">Mitigation: Multi-faith dialogue, culturally adaptive frameworks, and community-led implementation</p>
+              <h4 className="font-semibold text-white">Cultural Sensitivity</h4>
+              <p className="text-sm text-white mb-2">Risk: Different cultural and religious approaches to death may conflict</p>
+              <p className="text-sm text-white">Mitigation: Multi-faith dialogue, culturally adaptive frameworks, and community-led implementation</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800">Legal and Ethical Safeguards</h4>
-              <p className="text-sm text-yellow-700 mb-2">Risk: Potential for abuse or coercion in end-of-life decisions</p>
-              <p className="text-sm text-yellow-600">Mitigation: Robust consent processes, independent advocacy, and ethical oversight committees</p>
+              <h4 className="font-semibold text-white">Legal and Ethical Safeguards</h4>
+              <p className="text-sm text-white mb-2">Risk: Potential for abuse or coercion in end-of-life decisions</p>
+              <p className="text-sm text-white">Mitigation: Robust consent processes, independent advocacy, and ethical oversight committees</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800">System Resistance</h4>
-              <p className="text-sm text-yellow-700 mb-2">Risk: Medical and legal institutions may resist changes to current practices</p>
-              <p className="text-sm text-yellow-600">Mitigation: Gradual integration, pilot programs, and stakeholder education</p>
+              <h4 className="font-semibold text-white">System Resistance</h4>
+              <p className="text-sm text-white mb-2">Risk: Medical and legal institutions may resist changes to current practices</p>
+              <p className="text-sm text-white">Mitigation: Gradual integration, pilot programs, and stakeholder education</p>
             </div>
           </div>
         </CardContent>
