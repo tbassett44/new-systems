@@ -49,6 +49,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string, additionalPr
   amplitude.track('page_view', {
     page_path: pagePath,
     page_title: pageTitle || document.title,
+    referrer: document.referrer || 'direct',
     is_authenticated: !!additionalProps?.isAuthenticated,
     ...additionalProps,
   });
