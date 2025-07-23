@@ -46,6 +46,7 @@ import { GlobalSearch } from "@/components/GlobalSearch";
 import { CommentProvider } from "@/components/comments/CommentProvider";
 import { CommentSystem } from "@/components/comments/CommentSystem";
 import { UserProfile } from "@/components/UserProfile";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
 
@@ -99,7 +100,8 @@ function AppSidebar() {
   };
 
   return (
-    <Sidebar className="border-r" collapsible="icon">
+    <TooltipProvider>
+      <Sidebar className="border-r" collapsible="icon">
       <SidebarHeader className="border-b">
         <div className={`flex items-center ${state === "collapsed" ? "justify-center" : "justify-between"}`}>
           {state !== "collapsed" && (
@@ -139,17 +141,33 @@ function AppSidebar() {
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                    <NavLink 
-                      to={item.url} 
-                      end={item.url === "/papers/"}
-                      className="flex items-center gap-3 w-full"
-                      onClick={handleNavClick}
-                    >
-                      <item.icon className="h-4 w-4 shrink-0" />
-                      {state !== "collapsed" && (
+                    {state === "collapsed" ? (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <NavLink 
+                            to={item.url} 
+                            end={item.url === "/papers/"}
+                            className="flex items-center gap-3 w-full"
+                            onClick={handleNavClick}
+                          >
+                            <item.icon className="h-4 w-4 shrink-0" />
+                          </NavLink>
+                        </TooltipTrigger>
+                        <TooltipContent side="right">
+                          <p>{item.title}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    ) : (
+                      <NavLink 
+                        to={item.url} 
+                        end={item.url === "/papers/"}
+                        className="flex items-center gap-3 w-full"
+                        onClick={handleNavClick}
+                      >
+                        <item.icon className="h-4 w-4 shrink-0" />
                         <span className="truncate">{item.title}</span>
-                      )}
-                    </NavLink>
+                      </NavLink>
+                    )}
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -168,16 +186,31 @@ function AppSidebar() {
               {whitePaperItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                    <NavLink 
-                      to={item.url} 
-                      className="flex items-center gap-3 w-full"
-                      onClick={handleNavClick}
-                    >
-                      <item.icon className="h-4 w-4 shrink-0" />
-                      {state !== "collapsed" && (
+                    {state === "collapsed" ? (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <NavLink 
+                            to={item.url} 
+                            className="flex items-center gap-3 w-full"
+                            onClick={handleNavClick}
+                          >
+                            <item.icon className="h-4 w-4 shrink-0" />
+                          </NavLink>
+                        </TooltipTrigger>
+                        <TooltipContent side="right">
+                          <p>{item.title}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    ) : (
+                      <NavLink 
+                        to={item.url} 
+                        className="flex items-center gap-3 w-full"
+                        onClick={handleNavClick}
+                      >
+                        <item.icon className="h-4 w-4 shrink-0" />
                         <span className="truncate">{item.title}</span>
-                      )}
-                    </NavLink>
+                      </NavLink>
+                    )}
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -208,6 +241,7 @@ function AppSidebar() {
         )}
       </SidebarFooter>
     </Sidebar>
+    </TooltipProvider>
   );
 }
 
