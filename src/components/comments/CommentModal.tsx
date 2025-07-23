@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -25,6 +25,19 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const { user } = useAuth();
   const isMobile = useIsMobile();
+  const modalContentRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom on mobile when modal opens
+  useEffect(() => {
+    if (isOpen && isMobile && modalContentRef.current) {
+      setTimeout(() => {
+        modalContentRef.current?.scrollTo({
+          top: modalContentRef.current.scrollHeight,
+          behavior: 'smooth'
+        });
+      }, 100); // Small delay to ensure modal is fully rendered
+    }
+  }, [isOpen, isMobile]);
 
   const handleSubmit = async () => {
     console.log('Modal submit clicked', { 
@@ -60,7 +73,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
+      <DialogContent ref={modalContentRef} className="sm:max-w-md max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Add Comment</DialogTitle>
           <DialogDescription>
