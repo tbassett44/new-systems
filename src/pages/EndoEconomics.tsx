@@ -217,9 +217,9 @@ const EndoEconomics = () => {
             The proposal is to use these two dominant flows as the foundation of a redesigned economic system that ensures access to essential needs, dignified livelihoods, and systemic wellbeing for all people. Rather than letting economic flows accumulate into extractive corporate profits or passive capital gains, we ask:
           </p>
           <div className="space-y-2 mb-4">
-            <p className="text-emerald-700 font-medium">• What if we restructured these flows to be values-aligned, regenerative, and participatory?</p>
-            <p className="text-emerald-700 font-medium">• What if wages reflected collective priorities, social benefit, and ecological restoration?</p>
-            <p className="text-emerald-700 font-medium">• What if public spending was participatory and transparent?</p>
+            <p className="text-white font-medium">• What if we restructured these flows to be values-aligned, regenerative, and participatory?</p>
+            <p className="text-white font-medium">• What if wages reflected collective priorities, social benefit, and ecological restoration?</p>
+            <p className="text-white font-medium">• What if public spending was participatory and transparent?</p>
           </div>
           <div className="bg-emerald-100 p-4 rounded-lg">
             <p className="text-emerald-800 font-medium">
