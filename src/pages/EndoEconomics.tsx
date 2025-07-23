@@ -40,7 +40,7 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This whitepaper is a call to reimagine the very architecture of our economy at a moment of deep systemic misalignment. While the U.S. GDP exceeds $30 trillion annually, a staggering portion of that value fails to translate into human wellbeing, ecological regeneration, or long-term resilience. This document illuminates the hidden flows beneath that number—wages, public spending, and capital—and proposes a practical, values-driven framework to distribute these resources in service of collective thriving. It offers not just critique, but blueprint: a vision for an economy that works for people and planet, and a roadmap to begin building it now.
+            This proposal is a call to reimagine the very architecture of our economy at a moment of deep systemic misalignment. While the U.S. GDP exceeds $30 trillion annually, a staggering portion of that value fails to translate into human wellbeing, ecological regeneration, or long-term resilience. This document illuminates the hidden flows beneath that number—wages, public spending, and capital—and proposes a practical, values-driven framework to distribute these resources in service of collective thriving. It offers not just critique, but blueprint: a vision for an economy that works for people and planet, and a roadmap to begin building it now.
           </p>
         </CardContent>
       </Card>
