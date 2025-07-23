@@ -20,6 +20,7 @@ import Death from "./pages/Death";
 import SexualHealth from "./pages/SexualHealth";
 import Election from "./pages/Election";
 import Glossary from "./pages/Glossary";
+import Overview from "./pages/Overview";
 import Contribute from "./pages/Contribute";
 import Auth from "./pages/Auth";
 import { AuthProvider } from './contexts/AuthContext';
@@ -37,7 +38,7 @@ function AppContent() {
       <Route path="/" element={<Index />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/papers" element={<WhitePaperLayout><Outlet /></WhitePaperLayout>}>
-        <Route index element={<Index />} />
+        <Route index element={<Overview />} />
         <Route path="contribute" element={<Contribute />} />
         <Route path="glossary" element={<Glossary />} />
         <Route path="endo-economics" element={<EndoEconomics />} />
