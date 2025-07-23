@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useComments } from './CommentProvider';
@@ -10,6 +9,7 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { MessageSquareText, PenTool, Eye, EyeOff, LogIn } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from '@/hooks/use-toast';
+import { trackCommentModeToggle, trackCommentsViewed, trackCommentAdded } from '@/lib/analytics';
 
 export function CommentSystem() {
   const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
@@ -82,8 +82,13 @@ export function CommentSystem() {
       setIsLoginModalOpen(true);
       return;
     }
+    
     console.log('Toggling comment mode');
+    const newState = !isCommentModeActive;
     toggleCommentMode();
+    
+    // Track comment mode toggle
+    trackCommentModeToggle(newState, window.location.pathname);
   };
 
   // Handle keyboard shortcuts
@@ -147,6 +152,10 @@ export function CommentSystem() {
       console.log('Calling addComment with paragraph context:', selectedParagraph);
       await addComment(selectedParagraph, content);
       console.log('Comment added successfully');
+      
+      // Track comment added
+      trackCommentAdded(selectedParagraph.elementType, window.location.pathname);
+      
       toast({
         title: "Success",
         description: "Your comment has been added!",
@@ -176,7 +185,13 @@ export function CommentSystem() {
       <div className="fixed bottom-4 right-4 z-40">
         <div className="flex flex-col gap-2">
           <Button
-            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            onClick={() => {
+              setIsSidebarOpen(!isSidebarOpen);
+              // Track comments viewed when opening sidebar
+              if (!isSidebarOpen) {
+                trackCommentsViewed(comments.length, window.location.pathname);
+              }
+            }}
             variant={isSidebarOpen ? "default" : "outline"}
             size="sm"
             className="shadow-lg"
