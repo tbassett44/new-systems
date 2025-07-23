@@ -132,7 +132,7 @@ function AppSidebar() {
       </SidebarHeader>
       
       
-      <SidebarContent>
+      <SidebarContent className="overflow-y-auto">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -196,7 +196,7 @@ function AppSidebar() {
         ) : (
           <Button 
             variant="outline"
-            className="w-full justify-start gap-2"
+            className={`w-full ${state === "collapsed" ? "justify-center" : "justify-start gap-2"}`}
             onClick={() => handleNavClick()}
             asChild
           >
