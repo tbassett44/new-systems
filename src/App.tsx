@@ -27,45 +27,51 @@ import { initializeAmplitude } from '@/lib/analytics';
 import { useAmplitudePageTracking } from '@/hooks/useAmplitudePageTracking';
 import { useExternalLinkTracking } from '@/hooks/useExternalLinkTracking';
 
+function AppContent() {
+  // Add page tracking and external link tracking inside Router context
+  useAmplitudePageTracking();
+  useExternalLinkTracking();
+
+  return (
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/auth" element={<Auth />} />
+      <Route path="/papers" element={<WhitePaperLayout><div /></WhitePaperLayout>}>
+        <Route index element={<Index />} />
+        <Route path="contribute" element={<Contribute />} />
+        <Route path="glossary" element={<Glossary />} />
+        <Route path="endo-economics" element={<EndoEconomics />} />
+        <Route path="digital-sovereignty" element={<DigitalSovereignty />} />
+        <Route path="waste-management" element={<WasteManagement />} />
+        <Route path="energy" element={<Energy />} />
+        <Route path="sensemaking" element={<Sensemaking />} />
+        <Route path="wellbeing" element={<Wellbeing />} />
+        <Route path="education" element={<Education />} />
+        <Route path="ecology" element={<Ecology />} />
+        <Route path="justice" element={<Justice />} />
+        <Route path="conflict" element={<Conflict />} />
+        <Route path="media" element={<Media />} />
+        <Route path="science" element={<Science />} />
+        <Route path="arts" element={<Arts />} />
+        <Route path="spirituality" element={<Spirituality />} />
+        <Route path="death" element={<Death />} />
+        <Route path="sexual-health" element={<SexualHealth />} />
+        <Route path="election" element={<Election />} />
+      </Route>
+    </Routes>
+  );
+}
+
 function App() {
   // Initialize Amplitude when app starts
   useEffect(() => {
     initializeAmplitude();
   }, []);
 
-  // Add page tracking and external link tracking
-  useAmplitudePageTracking();
-  useExternalLinkTracking();
-
   return (
     <AuthProvider>
       <Router>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/papers" element={<WhitePaperLayout><div /></WhitePaperLayout>}>
-            <Route index element={<Index />} />
-            <Route path="contribute" element={<Contribute />} />
-            <Route path="glossary" element={<Glossary />} />
-            <Route path="endo-economics" element={<EndoEconomics />} />
-            <Route path="digital-sovereignty" element={<DigitalSovereignty />} />
-            <Route path="waste-management" element={<WasteManagement />} />
-            <Route path="energy" element={<Energy />} />
-            <Route path="sensemaking" element={<Sensemaking />} />
-            <Route path="wellbeing" element={<Wellbeing />} />
-            <Route path="education" element={<Education />} />
-            <Route path="ecology" element={<Ecology />} />
-            <Route path="justice" element={<Justice />} />
-            <Route path="conflict" element={<Conflict />} />
-            <Route path="media" element={<Media />} />
-            <Route path="science" element={<Science />} />
-            <Route path="arts" element={<Arts />} />
-            <Route path="spirituality" element={<Spirituality />} />
-            <Route path="death" element={<Death />} />
-            <Route path="sexual-health" element={<SexualHealth />} />
-            <Route path="election" element={<Election />} />
-          </Route>
-        </Routes>
+        <AppContent />
       </Router>
     </AuthProvider>
   );
