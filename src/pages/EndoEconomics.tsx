@@ -493,19 +493,19 @@ const EndoEconomics = () => {
         <CardContent>
           <div className="space-y-4">
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800">Value Drift or Exploitation</h4>
-              <p className="text-sm text-yellow-700 mb-2">Risk: Participants could seek to game the system</p>
-              <p className="text-sm text-yellow-600">Mitigation: Multi-layered verification with AI-assisted pattern recognition and peer reputation systems</p>
+              <h4 className="font-semibold text-white">Value Drift or Exploitation</h4>
+              <p className="text-sm text-white mb-2">Risk: Participants could seek to game the system</p>
+              <p className="text-sm text-white">Mitigation: Multi-layered verification with AI-assisted pattern recognition and peer reputation systems</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800">Transition Shock</h4>
-              <p className="text-sm text-yellow-700 mb-2">Risk: Sudden restructuring could disrupt existing sectors</p>
-              <p className="text-sm text-yellow-600">Mitigation: Pilot programs, localized trials, and phased rollouts</p>
+              <h4 className="font-semibold text-white">Transition Shock</h4>
+              <p className="text-sm text-white mb-2">Risk: Sudden restructuring could disrupt existing sectors</p>
+              <p className="text-sm text-white">Mitigation: Pilot programs, localized trials, and phased rollouts</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800">System Capture</h4>
-              <p className="text-sm text-yellow-700 mb-2">Risk: Power could re-concentrate in hidden forms</p>
-              <p className="text-sm text-yellow-600">Mitigation: Open-source protocols, decentralized infrastructure, and regenerative checks-and-balances</p>
+              <h4 className="font-semibold text-white">System Capture</h4>
+              <p className="text-sm text-white mb-2">Risk: Power could re-concentrate in hidden forms</p>
+              <p className="text-sm text-white">Mitigation: Open-source protocols, decentralized infrastructure, and regenerative checks-and-balances</p>
             </div>
           </div>
         </CardContent>
