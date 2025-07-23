@@ -352,7 +352,7 @@ function MobileNavButton() {
   return (
     <button
       onClick={toggleSidebar}
-      className={`fixed bottom-4 z-50 p-2.5 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 md:hidden ${
+      className={`fixed bottom-4 z-50 p-2.5 bg-blue-800 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-all duration-300 md:hidden ${
         openMobile ? 'left-72' : 'left-4'
       }`}
       aria-label="Toggle navigation menu"
