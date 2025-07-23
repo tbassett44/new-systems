@@ -40,8 +40,8 @@ const Overview = () => {
         <CardContent>
           <p className="leading-relaxed">
             This paper serves as a living blueprint for systems redesign—presenting a high-level overview 
-            and a series of linked whitepapers that address the core sectors of society. Each proposal is 
-            designed to clearly articulate the central problems and offer grounded, implementable solutions. 
+            and a series of linked proposals that address the core sectors of society. Each proposal is 
+            designed to clearly articulate the central problems and offer grounded, implementable solutions.
             The language throughout is intentionally concise and accessible, offering a practical foundation 
             for reflection, collaboration, and action. This collection is not exhaustive, but it is coherent—meant 
             to spark dialogue, inspire experimentation, and guide systemic regeneration across scales.
@@ -61,8 +61,8 @@ const Overview = () => {
             distribution.
           </p>
           <p className="leading-relaxed">
-            This whitepaper is a call to conscious redesign. It offers a set of high-level, yet actionable systems 
-            change proposals that aims to support a more intelligent, responsive, and life-affirming civilization. 
+            This proposal is a call to conscious redesign. It offers a set of high-level, yet actionable systems 
+            change proposals that aims to support a more intelligent, responsive, and life-affirming civilization.
             By aligning our governance, infrastructure, and technological tools with the wellbeing of both people 
             and planet, we can move beyond survival-based structures into a more regenerative and participatory 
             era—one worthy of the potential humanity holds.
@@ -88,7 +88,7 @@ const Overview = () => {
             sectors, systems are optimized for control, compliance, or extraction—not care.
           </p>
           <p className="leading-relaxed mb-4">
-            This whitepaper is, at its core, a call to restore dignity at every level of our shared existence—economically, 
+            This proposal is, at its core, a call to restore dignity at every level of our shared existence—economically, 
             ecologically, socially, and spiritually. Each proposal within it—whether guaranteed income, restorative justice, 
             regenerative infrastructure, or collective sensemaking—aims to restructure power and flow in service of dignity.
           </p>
@@ -134,8 +134,8 @@ const Overview = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-6">
-            The systems change proposals outlined in this whitepaper are organized in relationship to Barbara Marx 
-            Hubbard's Wheel of Co-Creation—a visionary framework that maps the twelve key sectors of society as 
+            The systems change proposals outlined in this proposal are organized in relationship to Barbara Marx 
+            Hubbard's Wheel of Co-Creation—a visionary framework that maps the twelve key sectors of society as
             evolving expressions of our collective potential. Rather than treating these domains—such as education, 
             economics, health, media, and justice—as isolated silos, the wheel reveals them as interdependent aspects 
             of a living societal system. Each proposal presented here offers a regenerative blueprint for transforming 
@@ -148,8 +148,8 @@ const Overview = () => {
             <div>
               <h3 className="text-lg font-semibold mb-3">New Economic System - Endo Economics</h3>
               <p className="text-sm text-muted-foreground mb-3">
-                The Endo Economics whitepaper proposes a fundamental redesign of our economic system—one that shifts 
-                from extraction to symbiosis, from scarcity-driven accumulation to regenerative value creation. Inspired 
+                The Endo Economics proposal proposes a fundamental redesign of our economic system—one that shifts 
+                from extraction to symbiosis, from scarcity-driven accumulation to regenerative value creation. Inspired
                 by the biological principle of endosymbiosis, this model frames the economy as a living system where 
                 each part contributes to the health of the whole. In contrast to current systems that concentrate wealth 
                 and externalize harm, Endo Economics offers a framework for equitable distribution, adaptive feedback, 
@@ -158,7 +158,7 @@ const Overview = () => {
                 creativity, purpose, and collaboration that remain dormant under today's extractive norms.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/endo-economics">View the Endo Economics White Paper</NavLink>
+                <NavLink to="/papers/endo-economics">View the Endo Economics Proposal</NavLink>
               </Button>
             </div>
 
@@ -176,7 +176,7 @@ const Overview = () => {
                 wherever they go.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/digital-sovereignty">View the Digital Sovereignty White Paper</NavLink>
+                <NavLink to="/papers/digital-sovereignty">View the Digital Sovereignty Proposal</NavLink>
               </Button>
             </div>
 
@@ -194,7 +194,7 @@ const Overview = () => {
                 a cornerstone of a circular, regenerative infrastructure—unlocking massive environmental and social gains.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/waste-management">View the Waste Management White Paper</NavLink>
+                <NavLink to="/papers/waste-management">View the Waste Management Proposal</NavLink>
               </Button>
             </div>
 
@@ -211,7 +211,7 @@ const Overview = () => {
                 the principles of Endo Economics to ensure energy serves people and planet—not profit alone.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/energy">View the Regenerative Energy Infrastructure White Paper</NavLink>
+                <NavLink to="/papers/energy">View the Regenerative Energy Infrastructure Proposal</NavLink>
               </Button>
             </div>
 
@@ -229,7 +229,7 @@ const Overview = () => {
                 into wisdom—illuminating pathways that no single perspective could see alone.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/sensemaking">View the Collective Sensemaking White Paper</NavLink>
+                <NavLink to="/papers/sensemaking">View the Collective Sensemaking Proposal</NavLink>
               </Button>
             </div>
 
@@ -248,7 +248,7 @@ const Overview = () => {
                 truly supports human thriving.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/wellbeing">View the Wellbeing Tracking White Paper</NavLink>
+                <NavLink to="/papers/wellbeing">View the Wellbeing Tracking Proposal</NavLink>
               </Button>
             </div>
 
@@ -264,7 +264,7 @@ const Overview = () => {
                 interoperable process—restoring purpose, dignity, and adaptability to how we learn and grow.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/education">View the Regenerative Education White Paper</NavLink>
+                <NavLink to="/papers/education">View the Regenerative Education Proposal</NavLink>
               </Button>
             </div>
 
@@ -281,7 +281,7 @@ const Overview = () => {
                 one that treats the Earth as a partner in our collective evolution.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/ecology">View the Ecological Regeneration White Paper</NavLink>
+                <NavLink to="/papers/ecology">View the Ecological Regeneration Proposal</NavLink>
               </Button>
             </div>
 
@@ -298,7 +298,7 @@ const Overview = () => {
                 to become a catalyst for personal transformation and societal evolution.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/justice">View The Regenerative Justice White Paper</NavLink>
+                <NavLink to="/papers/justice">View The Regenerative Justice Proposal</NavLink>
               </Button>
             </div>
 
@@ -314,7 +314,7 @@ const Overview = () => {
                 resilient society.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/conflict">View the Conflict Transformation & Restorative Processes White Paper</NavLink>
+                <NavLink to="/papers/conflict">View the Conflict Transformation & Restorative Processes Proposal</NavLink>
               </Button>
             </div>
 
@@ -332,7 +332,7 @@ const Overview = () => {
                 and trust-building narratives that support the wellbeing of individuals, communities, and the collective imagination.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/media">View the Regenerative Media White Paper</NavLink>
+                <NavLink to="/papers/media">View the Regenerative Media Proposal</NavLink>
               </Button>
             </div>
 
@@ -349,7 +349,7 @@ const Overview = () => {
                 the evolution of collective intelligence.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/science">View the Regenerative Science White Paper</NavLink>
+                <NavLink to="/papers/science">View the Regenerative Science Proposal</NavLink>
               </Button>
             </div>
 
@@ -366,7 +366,7 @@ const Overview = () => {
                 culture becomes not just a reflection of change, but an active participant in shaping a more beautiful world.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/arts">View the Regenerative Arts and Culture White Paper</NavLink>
+                <NavLink to="/papers/arts">View the Regenerative Arts and Culture Proposal</NavLink>
               </Button>
             </div>
 
@@ -383,7 +383,7 @@ const Overview = () => {
                 not only in intelligence and innovation, but in humility, compassion, and the mystery that connects us all.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/spirituality">View the Regenerative Spirituality White Paper</NavLink>
+                <NavLink to="/papers/spirituality">View the Regenerative Spirituality Proposal</NavLink>
               </Button>
             </div>
 
@@ -399,7 +399,7 @@ const Overview = () => {
                 about liberating life from fear and returning sovereignty to its final chapter.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/death">View the Death and Dignity White Paper</NavLink>
+                <NavLink to="/papers/death">View the Death and Dignity Proposal</NavLink>
               </Button>
             </div>
 
@@ -415,7 +415,7 @@ const Overview = () => {
                 cultivates a culture of informed responsibility, equitable access, and mutual respect.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/sexual-health">View the Sexual Health, Reproductive Choice, and Cultural Dignity White Paper</NavLink>
+                <NavLink to="/papers/sexual-health">View the Sexual Health, Reproductive Choice, and Cultural Dignity Proposal</NavLink>
               </Button>
             </div>
 
@@ -432,7 +432,7 @@ const Overview = () => {
                 but of co-creation with.
               </p>
               <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/election">View the Regenerative Election White Paper</NavLink>
+                <NavLink to="/papers/election">View the Regenerative Election Proposal</NavLink>
               </Button>
             </div>
           </div>
@@ -445,7 +445,7 @@ const Overview = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            Across all proposed systems and whitepapers, there exists a shared risk: that good intentions, if implemented 
+            Across all proposed systems and proposals, there exists a shared risk: that good intentions, if implemented 
             without humility or reflection, can create new forms of imbalance or harm. This section synthesizes the most 
             salient potential pitfalls identified throughout the proposals—offered not as reasons to halt progress, but 
             as reminders to design with care, adaptability, and reverence for complexity.
@@ -559,7 +559,7 @@ const Overview = () => {
               transformation of the caterpillar into the butterfly, where the old dissolves to make way for the emergent.
             </p>
             <p className="leading-relaxed">
-              This whitepaper offers a comprehensive framework for such a transformation. Inspired by Barbara Marx 
+              This proposal offers a comprehensive framework for such a transformation. Inspired by Barbara Marx 
               Hubbard's Wheel of Co-Creation, it presents regenerative proposals across all twelve core sectors of 
               society: Health, Education, Economics, Governance, Justice, Media, Science, Spirituality, Arts & Culture, 
               Environment, Infrastructure, and Relations. Each proposal is a coherent system redesign, grounded in 
@@ -579,7 +579,7 @@ const Overview = () => {
               dignity—unlocking the vast, untapped wealth of talent, time, and love that remains dormant in the current paradigm.
             </p>
             <p className="leading-relaxed">
-              Across all sectors, this whitepaper proposes digital and decentralized infrastructure—from self-custodied 
+              Across all sectors, this proposal proposes digital and decentralized infrastructure—from self-custodied 
               identity to distributed data sovereignty—to empower individuals and communities while preserving autonomy 
               and trust. Through collective sensemaking tools, AI-supported wellbeing tracking, and citizen science 
               platforms, we build the nervous system of a conscious civilization: one capable of seeing itself clearly, 
