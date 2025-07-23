@@ -1,4 +1,4 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { 
   Sidebar, 
@@ -48,8 +48,10 @@ import { CommentProvider } from "@/components/comments/CommentProvider";
 import { CommentSystem } from "@/components/comments/CommentSystem";
 import { UserProfile } from "@/components/UserProfile";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
+import { supabase } from "@/integrations/supabase/client";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -88,6 +90,38 @@ function AppSidebar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const isMobile = useIsMobile();
   const { user } = useAuth();
+  const [profileData, setProfileData] = useState<{
+    display_name: string;
+    avatar_url: string | null;
+  }>({
+    display_name: '',
+    avatar_url: null
+  });
+
+  // Fetch user profile data when user is available
+  useEffect(() => {
+    async function fetchProfile() {
+      if (!user) return;
+      
+      try {
+        const { data, error } = await supabase
+          .from('profiles')
+          .select('display_name, avatar_url')
+          .eq('user_id', user.id)
+          .single();
+          
+        if (error) throw error;
+        
+        if (data) {
+          setProfileData(data);
+        }
+      } catch (error) {
+        console.error('Error fetching user profile:', error);
+      }
+    }
+    
+    fetchProfile();
+  }, [user]);
 
   const isActive = (path: string) => {
     if (path === "/papers/" && currentPath === "/papers") return true;
@@ -224,9 +258,25 @@ function AppSidebar() {
       
       <SidebarFooter className="border-t p-3">
         {user ? (
-          <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 h-0" : "opacity-100"}`}>
+          state === "collapsed" ? (
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="ghost" className="w-full h-8 p-0 justify-center">
+                  <Avatar className="h-6 w-6">
+                    <AvatarImage src={profileData.avatar_url || undefined} />
+                    <AvatarFallback>
+                      {profileData.display_name?.[0]?.toUpperCase() || user.email?.[0]?.toUpperCase() || '?'}
+                    </AvatarFallback>
+                  </Avatar>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
+                <p>{profileData.display_name || 'User Profile'}</p>
+              </TooltipContent>
+            </Tooltip>
+          ) : (
             <UserProfile />
-          </div>
+          )
         ) : (
           <Button 
             variant="outline"
