@@ -177,7 +177,7 @@ const SexualHealth = () => {
           </p>
           <div className="grid gap-4 mb-6">
             <div className="border border-purple-300 rounded-lg p-4 bg-purple-900/10 dark:bg-purple-900/20">
-              <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2 flex items-center">
+              <h4 className="font-semibold text-purple-300 dark:text-purple-300 mb-2 flex items-center">
                 <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">1</span>
                 Phase 1 – Opt-In Pilot for Adults (25+)
               </h4>
@@ -187,7 +187,7 @@ const SexualHealth = () => {
             </div>
             
             <div className="border border-purple-300 rounded-lg p-4 bg-purple-900/10 dark:bg-purple-900/20">
-              <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2 flex items-center">
+              <h4 className="font-semibold text-purple-300 dark:text-purple-300 mb-2 flex items-center">
                 <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">2</span>
                 Phase 2 – Expansion to Younger Adults (18–24)
               </h4>
@@ -197,7 +197,7 @@ const SexualHealth = () => {
             </div>
             
             <div className="border border-purple-300 rounded-lg p-4 bg-purple-900/10 dark:bg-purple-900/20">
-              <h4 className="font-semibold text-purple-800 dark:text-purple-200 mb-2 flex items-center">
+              <h4 className="font-semibold text-purple-300 dark:text-purple-300 mb-2 flex items-center">
                 <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3">3</span>
                 Phase 3 – Full Public Access and Adolescent Inclusion
               </h4>
