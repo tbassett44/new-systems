@@ -182,12 +182,11 @@ export function CommentSystem() {
             className="shadow-lg"
             title={`${isSidebarOpen ? 'Hide' : 'Show'} comments (⌘K)`}
           >
+            <span className="bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs mr-2">
+              {comments.length}
+            </span>
             <MessageSquareText className="h-4 w-4 mr-2" />
-            {comments.length > 0 && (
-              <span className="bg-primary text-primary-foreground rounded-full px-2 py-0.5 text-xs ml-1">
-                {comments.length}
-              </span>
-            )}
+            Comments
           </Button>
           
           <Button
