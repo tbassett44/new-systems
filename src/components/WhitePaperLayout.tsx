@@ -147,7 +147,7 @@ function AppSidebar() {
                           <NavLink 
                             to={item.url} 
                             end={item.url === "/papers/"}
-                            className="flex items-center gap-3 w-full"
+                            className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
                             onClick={handleNavClick}
                           >
                             <item.icon className="h-4 w-4 shrink-0" />
@@ -191,7 +191,7 @@ function AppSidebar() {
                         <TooltipTrigger asChild>
                           <NavLink 
                             to={item.url} 
-                            className="flex items-center gap-3 w-full"
+                            className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
                             onClick={handleNavClick}
                           >
                             <item.icon className="h-4 w-4 shrink-0" />
