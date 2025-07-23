@@ -352,16 +352,16 @@ const Wellbeing = () => {
         <CardContent>
           <div className="space-y-4">
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800 mb-2">Consent and Agency</h4>
-              <p className="text-yellow-700">All data sharing must be explicit, informed, and revocable. Users maintain granular control over what data is shared and with whom.</p>
+              <h4 className="font-semibold text-white mb-2">Consent and Agency</h4>
+              <p className="text-white">All data sharing must be explicit, informed, and revocable. Users maintain granular control over what data is shared and with whom.</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800 mb-2">Anonymization and Security</h4>
-              <p className="text-yellow-700">Advanced cryptographic techniques ensure that community insights cannot be traced back to individuals.</p>
+              <h4 className="font-semibold text-white mb-2">Anonymization and Security</h4>
+              <p className="text-white">Advanced cryptographic techniques ensure that community insights cannot be traced back to individuals.</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-yellow-800 mb-2">Algorithmic Transparency</h4>
-              <p className="text-yellow-700">All AI models and analysis methods must be open-source and auditable by the community.</p>
+              <h4 className="font-semibold text-white mb-2">Algorithmic Transparency</h4>
+              <p className="text-white">All AI models and analysis methods must be open-source and auditable by the community.</p>
             </div>
             <div className="border-l-4 border-yellow-400 pl-4">
               <h4 className="font-semibold text-yellow-800 mb-2">Crisis Response Protocols</h4>
