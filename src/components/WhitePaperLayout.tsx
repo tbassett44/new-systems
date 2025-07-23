@@ -102,11 +102,13 @@ function AppSidebar() {
     <Sidebar className="border-r" collapsible="icon">
       <SidebarHeader className="border-b">
         <div className={`flex items-center ${state === "collapsed" ? "justify-center" : "justify-between"}`}>
-          <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 w-0" : "opacity-100"}`}>
-            <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
-            <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
-            <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
-          </div>
+          {state !== "collapsed" && (
+            <div>
+              <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
+              <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
+              <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
+            </div>
+          )}
           <SidebarTrigger className={`${state === "collapsed" ? "mx-auto" : ""}`} />
         </div>
         
