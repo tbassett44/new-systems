@@ -38,7 +38,7 @@ const Justice = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This whitepaper outlines a transformative framework for reimagining justice systems in alignment with human dignity, rehabilitation, and systemic coherence. Moving beyond punitive, carceral models rooted in isolation and punishment, this proposal invites a regenerative approach—where justice becomes a vehicle for personal transformation, communal healing, and societal learning.
+            This proposal outlines a transformative framework for reimagining justice systems in alignment with human dignity, rehabilitation, and systemic coherence. Moving beyond punitive, carceral models rooted in isolation and punishment, this proposal invites a regenerative approach—where justice becomes a vehicle for personal transformation, communal healing, and societal learning.
           </p>
           <p className="leading-relaxed">
             Drawing inspiration from restorative and transformative justice traditions, as well as emerging technologies in AI and decentralized governance, this model supports a shift from retribution to restoration. By embedding feedback loops, relational accountability, and resourcing pathways into the justice process, individuals and communities can move from cycles of harm to cycles of growth.

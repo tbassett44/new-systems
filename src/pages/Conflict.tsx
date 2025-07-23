@@ -36,7 +36,7 @@ const Conflict = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-foreground">
-            This whitepaper proposes a shift from reactive, punitive models of conflict resolution to a proactive, regenerative culture of repair. It recognizes conflict as a natural part of human relationships and communities—one that, when skillfully engaged, can lead to deeper understanding, stronger bonds, and collective growth. Rather than waiting for harm to escalate into criminal justice involvement, this framework introduces tools and systems that foster early intervention, relational accountability, and long-term healing.
+            This proposal proposes a shift from reactive, punitive models of conflict resolution to a proactive, regenerative culture of repair. It recognizes conflict as a natural part of human relationships and communities—one that, when skillfully engaged, can lead to deeper understanding, stronger bonds, and collective growth. Rather than waiting for harm to escalate into criminal justice involvement, this framework introduces tools and systems that foster early intervention, relational accountability, and long-term healing.
           </p>
         </CardContent>
       </Card>

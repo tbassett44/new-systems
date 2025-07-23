@@ -38,7 +38,7 @@ const Housing = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This whitepaper proposes a regenerative approach to housing and community development—one that prioritizes affordability, ecological harmony, and social connection. Rather than treating housing as a commodity or isolated structure, this framework envisions homes as integrated components of living systems: embedded in local ecologies, economies, and cultures.
+            This proposal proposes a regenerative approach to housing and community development—one that prioritizes affordability, ecological harmony, and social connection. Rather than treating housing as a commodity or isolated structure, this framework envisions homes as integrated components of living systems: embedded in local ecologies, economies, and cultures.
           </p>
           <p className="leading-relaxed">
             The regenerative housing model supports the creation of diverse, resilient communities that meet human needs while enhancing the health of the planet. By integrating permaculture design, natural building techniques, community land trusts, and decentralized finance, this model enables the flourishing of both people and place.

@@ -44,7 +44,7 @@ const DigitalSovereignty = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            This whitepaper explores the emerging foundation of decentralized digital infrastructure focused on 
+            This proposal explores the emerging foundation of decentralized digital infrastructure focused on 
             self-sovereign identity (SSI), digital authentication, and data agency. As the internet becomes increasingly 
             centralized, vulnerable to surveillance, censorship, and data exploitation, we need resilient alternatives 
             that restore power and trust to individuals.

@@ -40,7 +40,7 @@ const Energy = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This whitepaper outlines a pathway toward a clean, abundant, and regenerative energy future. 
+            This proposal outlines a pathway toward a clean, abundant, and regenerative energy future. 
             Grounded in the principles of systemic wellbeing and long-term resilience, it highlights 
             underfunded but promising technologies—such as thorium molten salt reactors and Tokamak 
             fusion reactors—that offer scalable alternatives to fossil fuels. By redirecting investment 

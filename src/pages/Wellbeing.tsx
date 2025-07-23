@@ -38,7 +38,7 @@ const Wellbeing = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            This whitepaper outlines a framework for distributed, privacy-first wellbeing tracking that empowers individuals and communities to monitor, understand, and improve mental health outcomes while maintaining complete data sovereignty. The system combines personal wellbeing metrics with community-level insights to create a comprehensive picture of collective mental health.
+            This proposal outlines a framework for distributed, privacy-first wellbeing tracking that empowers individuals and communities to monitor, understand, and improve mental health outcomes while maintaining complete data sovereignty. The system combines personal wellbeing metrics with community-level insights to create a comprehensive picture of collective mental health.
           </p>
           <p className="leading-relaxed">
             The goal is to create early warning systems for mental health crises, identify effective interventions, and build resilient communities—all while ensuring that personal data remains under individual control and is never exploited by external parties.

@@ -37,7 +37,7 @@ const SexualHealth = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This whitepaper proposes a regenerative framework for sexual and reproductive health—one that honors bodily autonomy, fosters consent culture, and reduces harm through education, technology, and universal access to care. It moves beyond polarized political debates and instead seeks to create systems that empower individuals to make informed, sovereign decisions about their bodies, relationships, and futures.
+            This proposal proposes a regenerative framework for sexual and reproductive health—one that honors bodily autonomy, fosters consent culture, and reduces harm through education, technology, and universal access to care. It moves beyond polarized political debates and instead seeks to create systems that empower individuals to make informed, sovereign decisions about their bodies, relationships, and futures.
           </p>
         </CardContent>
       </Card>

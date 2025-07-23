@@ -36,7 +36,7 @@ const Technology = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This whitepaper proposes a framework for regenerative technology—one that prioritizes human agency, ecological wellbeing, and systemic resilience. Moving beyond extractive, surveillance-based models, this vision calls for technology that empowers individuals, strengthens communities, and supports a thriving planet.
+            This proposal proposes a framework for regenerative technology—one that prioritizes human agency, ecological wellbeing, and systemic resilience. Moving beyond extractive, surveillance-based models, this vision calls for technology that empowers individuals, strengthens communities, and supports a thriving planet.
           </p>
           <p className="leading-relaxed">
             By embracing digital sovereignty, open-source principles, and privacy-enhancing design, we can build a technological landscape that serves life rather than undermining it. This framework invites technologists, policymakers, and citizens to co-create a future where technology amplifies our collective potential for regeneration.

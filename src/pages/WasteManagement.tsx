@@ -39,7 +39,7 @@ const WasteManagement = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg mb-4">
-            This whitepaper presents a strategic vision and operational framework for addressing the United States' waste crisis through scalable, high-efficiency waste processing infrastructure. Utilizing technology such as Eden Energy's advanced systems, we explore how a $200 billion investment could fully process the nation's waste while generating profound benefits for public health, ecological regeneration, economic efficiency, and systemic resilience.
+            This proposal presents a strategic vision and operational framework for addressing the United States' waste crisis through scalable, high-efficiency waste processing infrastructure. Utilizing technology such as Eden Energy's advanced systems, we explore how a $200 billion investment could fully process the nation's waste while generating profound benefits for public health, ecological regeneration, economic efficiency, and systemic resilience.
           </p>
           <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg border border-primary/20">
             <p className="text-sm font-medium">
@@ -301,7 +301,7 @@ const WasteManagement = () => {
           </p>
           <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg border border-primary/20">
             <p className="text-sm font-medium">
-              This whitepaper is intended to inspire alignment across policy makers, engineers, investors, and community leaders to prioritize this critical and attainable shift.
+              This proposal is intended to inspire alignment across policy makers, engineers, investors, and community leaders to prioritize this critical and attainable shift.
             </p>
           </div>
         </CardContent>

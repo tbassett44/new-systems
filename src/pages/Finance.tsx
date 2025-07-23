@@ -38,7 +38,7 @@ const Finance = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This whitepaper proposes a shift from extractive, speculative financial systems to regenerative models that prioritize community wealth, ecological stewardship, and long-term resilience. It envisions a world where finance serves as a tool for healing, connection, and shared prosperity—not as an end in itself.
+            This proposal proposes a shift from extractive, speculative financial systems to regenerative models that prioritize community wealth, ecological stewardship, and long-term resilience. It envisions a world where finance serves as a tool for healing, connection, and shared prosperity—not as an end in itself.
           </p>
           <p className="leading-relaxed">
             By integrating decentralized technologies, community-led governance, and values-based investment strategies, this framework outlines pathways for building financial ecosystems that are more equitable, transparent, and aligned with the needs of a thriving planet.

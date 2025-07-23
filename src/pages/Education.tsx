@@ -45,7 +45,7 @@ const Education = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4 text-foreground">
-            This whitepaper proposes a new model for education grounded in the principles of digital sovereignty, self-custody, and decentralized identity. The traditional education system, characterized by centralized control, one-size-fits-all curricula, and locked-down credentials, no longer meets the needs of a rapidly evolving world.
+            This proposal proposes a new model for education grounded in the principles of digital sovereignty, self-custody, and decentralized identity. The traditional education system, characterized by centralized control, one-size-fits-all curricula, and locked-down credentials, no longer meets the needs of a rapidly evolving world.
           </p>
           <p className="leading-relaxed text-foreground">
             In contrast, this new framework envisions a regenerative, learner-centered ecosystem where education is lifelong, locally rooted, globally recognized, and holistically measured. By integrating decentralized infrastructure, self-sovereign identity, and verifiable credentials, we aim to empower individuals to design and own their learning journeys. This system honors informal, community-based, and interdisciplinary learning while ensuring privacy, security, and autonomy for every learner.

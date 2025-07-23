@@ -40,7 +40,7 @@ const Ecology = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4 text-foreground">
-            This whitepaper proposes a scalable, decentralized infrastructure to support ecological regeneration at the local, regional, and planetary levels. Grounded in the recognition that human and planetary wellbeing are inseparable, this model seeks to align technology, governance, and funding with the living systems that sustain us.
+            This proposal proposes a scalable, decentralized infrastructure to support ecological regeneration at the local, regional, and planetary levels. Grounded in the recognition that human and planetary wellbeing are inseparable, this model seeks to align technology, governance, and funding with the living systems that sustain us.
           </p>
           <p className="leading-relaxed text-foreground">
             Rather than viewing nature as a passive resource to be managed, this framework treats ecosystems as dynamic partners in the evolution of human civilization. By leveraging satellite imagery, AI-supported mapping, community observation, and regenerative finance tools, we can prioritize, fund, and measure projects that restore the health of watersheds, soil systems, forests, and biodiversity.

@@ -38,7 +38,7 @@ const Science = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-foreground">
-            This whitepaper proposes a regenerative science infrastructure that shifts research, discovery, and technological development from isolated, competitive, and profit-driven silos to open, participatory, and life-aligned ecosystems. Science, as the disciplined pursuit of understanding, holds transformative power—but in its current institutional form, it is often constrained by corporate interests, inaccessible knowledge systems, and narrow metrics of success.
+            This proposal proposes a regenerative science infrastructure that shifts research, discovery, and technological development from isolated, competitive, and profit-driven silos to open, participatory, and life-aligned ecosystems. Science, as the disciplined pursuit of understanding, holds transformative power—but in its current institutional form, it is often constrained by corporate interests, inaccessible knowledge systems, and narrow metrics of success.
           </p>
           <p className="leading-relaxed text-foreground">
             In this regenerative model, science becomes a collaborative, decentralized, and ethics-rooted process that serves both the planet and humanity. It invites a rebalancing of traditional inquiry with intuitive insight, ancestral knowledge, and planetary feedback. Aligned with the Endo Economics framework, scientific talent and research energy are redirected toward collective wellbeing, resilience, and the evolution of our shared understanding.

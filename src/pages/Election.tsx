@@ -38,7 +38,7 @@ const Election = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This whitepaper introduces the concept of a Regenerative Election — a pre-ballot, participatory, values-driven electoral process designed to prototype the future of democracy before it enters the constraints of the legacy electoral system. It serves as a public experiment in democratic evolution, inviting civic imagination, fostering trust, and modeling a dignified, generative alternative to polarizing politics. The Regenerative Election is not about partisanship or power-seeking, but about demonstrating what governance can feel like when it is rooted in feedback, transparency, collective intelligence, and care.
+            This proposal introduces the concept of a Regenerative Election — a pre-ballot, participatory, values-driven electoral process designed to prototype the future of democracy before it enters the constraints of the legacy electoral system. It serves as a public experiment in democratic evolution, inviting civic imagination, fostering trust, and modeling a dignified, generative alternative to polarizing politics. The Regenerative Election is not about partisanship or power-seeking, but about demonstrating what governance can feel like when it is rooted in feedback, transparency, collective intelligence, and care.
           </p>
         </CardContent>
       </Card>

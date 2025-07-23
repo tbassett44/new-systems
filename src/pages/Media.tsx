@@ -39,7 +39,7 @@ const Media = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed text-foreground">
-            This whitepaper proposes a regenerative, decentralized model for media—one that restores integrity to the public 
+            This proposal proposes a regenerative, decentralized model for media—one that restores integrity to the public 
             narrative, supports cultural coherence, and replaces corporate-controlled content pipelines with participatory, 
             trust-centered systems. As misinformation, polarization, and click-driven sensationalism erode public trust and 
             democratic discourse, the need for media rooted in transparency, care, and collective wisdom becomes a matter of civic survival.

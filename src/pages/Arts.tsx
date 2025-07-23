@@ -38,7 +38,7 @@ const Arts = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This whitepaper proposes a regenerative infrastructure for arts and culture—one that positions creative expression not as luxury or entertainment, but as essential societal infrastructure. In a time of ecological crisis, social fragmentation, and cultural commodification, we must restore the sacred role of art: to reveal truth, transmit wisdom, and reweave connection across time, space, and identity.
+            This proposal proposes a regenerative infrastructure for arts and culture—one that positions creative expression not as luxury or entertainment, but as essential societal infrastructure. In a time of ecological crisis, social fragmentation, and cultural commodification, we must restore the sacred role of art: to reveal truth, transmit wisdom, and reweave connection across time, space, and identity.
           </p>
           <p className="leading-relaxed">
             The regenerative arts and culture framework supports artists, tradition-bearers, and culture-makers as central stewards of imagination and coherence. Through public support, decentralized creation, and integration with healing and education systems, this model enables the flourishing of beauty, meaning, and community memory. When aligned with Endo Economics, cultural labor becomes not extractive or precarious, but reciprocal and honored—nourishing the soul of society.

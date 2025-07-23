@@ -39,7 +39,7 @@ const Death = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This whitepaper proposes a holistic reframing of how society approaches death. Rather than treating it as a failure or medical emergency to be avoided at all costs, this framework acknowledges death as a sacred and natural process that, when consciously approached, can become a deeply meaningful and empowering transition. It seeks to restore dignity, autonomy, and presence to the final phase of life through cultural renewal, legal reform, and the integration of spiritual and community-based practices.
+            This proposal proposes a holistic reframing of how society approaches death. Rather than treating it as a failure or medical emergency to be avoided at all costs, this framework acknowledges death as a sacred and natural process that, when consciously approached, can become a deeply meaningful and empowering transition. It seeks to restore dignity, autonomy, and presence to the final phase of life through cultural renewal, legal reform, and the integration of spiritual and community-based practices.
           </p>
           <p className="leading-relaxed text-lg">
             This document outlines pathways for supporting conscious dying, including legal rights to assisted transitions, expanded palliative care, the role of death doulas, and the reintegration of death into communal and spiritual life. It invites systems-level redesign around how we die—one that honors individual sovereignty, reduces suffering, and reclaims death as a vital dimension of a regenerative culture.
