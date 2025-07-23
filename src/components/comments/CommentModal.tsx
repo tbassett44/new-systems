@@ -57,7 +57,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md mb-[300px]">
+      <DialogContent className="sm:max-w-md fixed left-[50%] top-[20%] translate-x-[-50%] translate-y-0 mb-[300px] sm:top-[50%] sm:translate-y-[-50%] sm:mb-0">
         <DialogHeader>
           <DialogTitle>Add Comment</DialogTitle>
           <DialogDescription>
