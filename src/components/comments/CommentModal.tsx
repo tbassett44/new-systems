@@ -35,7 +35,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
           top: modalContentRef.current.scrollHeight,
           behavior: 'smooth'
         });
-      }, 100); // Small delay to ensure modal is fully rendered
+      }, 500); // Delay to ensure modal and keyboard animations complete
     }
   }, [isOpen, isMobile]);
 
