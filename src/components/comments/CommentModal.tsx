@@ -10,6 +10,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { ParagraphSelection } from '@/types/comments';
 import { useAuth } from '@/contexts/AuthContext';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface CommentModalProps {
   isOpen: boolean;
@@ -21,7 +22,9 @@ interface CommentModalProps {
 export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: CommentModalProps) {
   const [content, setContent] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const { user } = useAuth();
+  const isMobile = useIsMobile();
 
   const handleSubmit = async () => {
     console.log('Modal submit clicked', { 
@@ -57,7 +60,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="sm:max-w-md my-8 mb-[300px]">
+      <DialogContent className="sm:max-w-md max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Add Comment</DialogTitle>
           <DialogDescription>
@@ -88,6 +91,8 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
               placeholder="Write your comment..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
+              onFocus={() => setIsTextareaFocused(true)}
+              onBlur={() => setIsTextareaFocused(false)}
               className="resize-none overflow-hidden"
               style={{
                 minHeight: '100px',
@@ -109,6 +114,11 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
               {isSubmitting ? 'Adding...' : 'Add Comment'}
             </Button>
           </div>
+          
+          {/* Add spacing for mobile keyboard when textarea is focused */}
+          {isMobile && isTextareaFocused && (
+            <div style={{ height: '300px' }} />
+          )}
         </div>
       </DialogContent>
     </Dialog>
