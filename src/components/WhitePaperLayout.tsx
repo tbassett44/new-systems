@@ -37,7 +37,8 @@ import {
   Menu,
   Search,
   GitBranch,
-  LogIn
+  LogIn,
+  ScrollText
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -57,7 +58,7 @@ interface WhitePaperLayoutProps {
 const navigationItems = [
   { title: "Overview", url: "/papers/", icon: BookOpen },
   { title: "Contribute", url: "/papers/contribute", icon: GitBranch },
-  { title: "Glossary", url: "/papers/glossary", icon: BookOpen },
+  { title: "Glossary", url: "/papers/glossary", icon: ScrollText },
 ];
 
 const whitePaperItems = [
