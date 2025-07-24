@@ -193,6 +193,7 @@ function AppSidebar() {
         
         <SidebarContent className="overflow-y-auto">
           <SidebarGroup>
+            <SidebarGroupLabel>Navigation</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
                 {navigationItems.map((item) => (
