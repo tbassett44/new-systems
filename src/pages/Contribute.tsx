@@ -47,13 +47,13 @@ const Contribute = () => {
       </Card>
 
       {/* Built-in Commenting System */}
-      <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 border-blue-200 dark:border-blue-800">
+      <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
         <CardHeader>
           <CardTitle className="text-2xl flex items-center gap-2">
-            <MessageCircle className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+            <MessageCircle className="h-6 w-6 text-primary" />
             Share Your Voice Instantly
           </CardTitle>
-          <CardDescription className="text-blue-700 dark:text-blue-300">
+          <CardDescription>
             No GitHub account needed—start contributing right now
           </CardDescription>
         </CardHeader>
@@ -62,23 +62,23 @@ const Contribute = () => {
             Every page in this manifesto has a built-in commenting system where you can share your thoughts, 
             suggestions, and insights directly. Simply navigate to any proposal and add your voice to the conversation.
           </p>
-          <div className="bg-white/50 dark:bg-gray-900/50 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
-            <h4 className="font-semibold mb-2 text-blue-800 dark:text-blue-200">How it works:</h4>
+          <div className="bg-background/50 rounded-lg p-4 border border-primary/20">
+            <h4 className="font-semibold mb-2">How it works:</h4>
             <ul className="space-y-1 text-sm">
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 Browse any proposal page
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 Click on any paragraph to leave a comment
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 Engage with others' comments and build on ideas
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 No account required—just start contributing!
               </li>
             </ul>
