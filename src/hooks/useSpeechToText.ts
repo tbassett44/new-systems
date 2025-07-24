@@ -32,8 +32,15 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
       };
 
       mediaRecorder.onstop = async () => {
+        console.log('MediaRecorder stopped, processing audio...');
         const audioBlob = new Blob(chunksRef.current, { type: 'audio/webm' });
-        await transcribeAudio(audioBlob);
+        console.log('Audio blob created:', { size: audioBlob.size, type: audioBlob.type });
+        
+        try {
+          await transcribeAudio(audioBlob);
+        } catch (error) {
+          console.error('Error in transcription:', error);
+        }
         
         // Stop all tracks
         stream.getTracks().forEach(track => track.stop());

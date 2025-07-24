@@ -28,7 +28,12 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const { user } = useAuth();
   const isMobile = useIsMobile();
   const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text) => {
-    setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
+    console.log('Transcription callback received:', text);
+    setContent(prevContent => {
+      const newContent = prevContent + (prevContent ? ' ' : '') + text;
+      console.log('Setting new content:', newContent);
+      return newContent;
+    });
   });
   const modalContentRef = useRef<HTMLDivElement>(null);
 
@@ -178,7 +183,14 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
               size="sm"
               variant="ghost"
               className={`absolute right-2 top-2 h-8 w-8 p-0 ${isRecording ? 'text-red-500' : ''}`}
-              onClick={handleSpeechToText}
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleSpeechToText();
+              }}
+              onMouseDown={(e) => {
+                e.preventDefault(); // Prevent focus loss from textarea
+              }}
               disabled={!user || isProcessing}
               title={isRecording ? 'Stop recording' : 'Start voice recording'}
             >
