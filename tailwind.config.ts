@@ -87,22 +87,18 @@ export default {
 				},
 				'slide-down': {
 					'0%': {
-						transform: 'translateY(0)',
-						opacity: '1'
+						transform: 'translateY(0)'
 					},
 					'100%': {
-						transform: 'translateY(100vh)',
-						opacity: '0'
+						transform: 'translateY(100vh)'
 					}
 				},
 				'slide-up': {
 					'0%': {
-						transform: 'translateY(100vh)',
-						opacity: '0'
+						transform: 'translateY(100vh)'
 					},
 					'100%': {
-						transform: 'translateY(0)',
-						opacity: '1'
+						transform: 'translateY(0)'
 					}
 				},
 				'fade-in': {
