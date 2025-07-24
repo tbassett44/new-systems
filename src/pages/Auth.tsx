@@ -37,6 +37,16 @@ export default function Auth() {
       setEmailSent(true);
       toast.success('Check your email for a magic link to sign in');
     } catch (error: any) {
+      // Check if the error indicates the user doesn't exist
+      if (error.message?.includes('User not found') || 
+          error.message?.includes('Invalid login credentials') ||
+          error.message?.includes('Email not confirmed')) {
+        toast.error('No account found with this email address.');
+        // Auto-switch to sign up mode
+        setIsSignUp(true);
+        setIsSubmitting(false);
+        return;
+      }
       toast.error(error.message || 'Failed to send login link');
       console.error(error);
     } finally {
