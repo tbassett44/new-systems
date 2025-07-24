@@ -227,7 +227,6 @@ function AppSidebar() {
                            </TooltipContent>
                          </Tooltip>
                        ) : (
-                         <>
                            {item.url === "/" ? (
                              <NavLink 
                                to={item.url}
@@ -248,7 +247,6 @@ function AppSidebar() {
                                <span className="truncate">{item.title}</span>
                              </NavLink>
                            )}
-                         </>
                        )}
                      </SidebarMenuButton>
                   </SidebarMenuItem>
