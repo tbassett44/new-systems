@@ -74,37 +74,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const signUpWithEmail = async (email: string, name: string, avatar?: File | null) => {
-    let avatarUrl = null;
-    
-    // Upload avatar if provided
-    if (avatar) {
-      const fileExt = avatar.name.split('.').pop();
-      const fileName = `temp/${Date.now()}.${fileExt}`;
-      const { data: uploadData, error: uploadError } = await supabase.storage
-        .from('avatars')
-        .upload(fileName, avatar);
-        
-      if (uploadError) {
-        console.error('Error uploading avatar:', uploadError);
-      } else {
-        const { data: { publicUrl } } = supabase.storage
-          .from('avatars')
-          .getPublicUrl(uploadData.path);
-        avatarUrl = publicUrl;
-      }
-    }
-    
     const redirectUrl = `${window.location.origin}/`;
     
-    const { error } = await supabase.auth.signUp({
+    // Create user account first
+    const { data, error } = await supabase.auth.signUp({
       email,
       password: 'dummy-password', // Required but not used for OTP
       options: {
         emailRedirectTo: redirectUrl,
         data: {
           display_name: name,
-          full_name: name,
-          avatar_url: avatarUrl
+          full_name: name
         }
       }
     });
@@ -112,6 +92,32 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (error) {
       console.error('Error signing up with email:', error);
       throw error;
+    }
+
+    // If user created successfully and avatar provided, upload avatar to user-specific folder
+    if (data.user && avatar) {
+      const fileExt = avatar.name.split('.').pop();
+      const fileName = `${data.user.id}/avatar.${fileExt}`;
+      
+      const { data: uploadData, error: uploadError } = await supabase.storage
+        .from('avatars')
+        .upload(fileName, avatar, {
+          upsert: true // Allow overwriting existing avatar
+        });
+        
+      if (uploadError) {
+        console.error('Error uploading avatar:', uploadError);
+      } else {
+        // Update the user's metadata with the avatar URL
+        const { data: { publicUrl } } = supabase.storage
+          .from('avatars')
+          .getPublicUrl(uploadData.path);
+          
+        // Update the user's profile with the avatar URL
+        await supabase.auth.updateUser({
+          data: { avatar_url: publicUrl }
+        });
+      }
     }
   };
 
