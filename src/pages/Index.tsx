@@ -27,11 +27,13 @@ const Index = () => {
     if (transitionPhase === 'animating-in' && animationState === 'papers-to-home') {
       return 'animate-slide-up';
     }
-    // Hide content during incoming transition until animation starts
-    if (transitionPhase === 'navigating' || (transitionPhase === 'animating-in' && animationState === 'papers-to-home')) {
-      return transitionPhase === 'navigating' ? 'opacity-0' : 'animate-slide-up';
-    }
     return '';
+  };
+
+  // Check if content should be hidden (during incoming transition before animation)
+  const shouldHideContent = () => {
+    return animationState === 'papers-to-home' && 
+           (transitionPhase === 'navigating' || transitionPhase === 'animating-in');
   };
 
   const handleNavigateToPapers = (e: React.MouseEvent) => {
@@ -40,7 +42,7 @@ const Index = () => {
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-background via-background to-muted/20 ${getAnimationClasses()}`}>
+    <div className={`min-h-screen bg-gradient-to-br from-background via-background to-muted/20 ${getAnimationClasses()} ${shouldHideContent() ? 'opacity-0' : ''}`}>
       {/* Header with Auth */}
       <header className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
