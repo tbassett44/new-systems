@@ -5,6 +5,7 @@ import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { trackCommentLiked, trackCommentReplyAdded } from '@/lib/analytics';
+import { sanitizeText } from '@/lib/security';
 
 const CommentContext = createContext<CommentContextType | undefined>(undefined);
 
@@ -187,8 +188,8 @@ export function CommentProvider({ children }: CommentProviderProps) {
       const commentData = {
         user_id: user.id,
         page_route: location.pathname,
-        text_content: content,
-        highlighted_text: selection.content,
+        text_content: sanitizeText(content),
+        highlighted_text: sanitizeText(selection.content),
         paragraph_id: selection.paragraphId,
         element_type: selection.elementType,
         start_offset: 0,
@@ -277,7 +278,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
         .insert({
           parent_comment_id: commentId,
           user_id: user.id,
-          content,
+          content: sanitizeText(content),
         })
         .select('*')
         .single();
@@ -450,7 +451,14 @@ export function CommentProvider({ children }: CommentProviderProps) {
 
     try {
       const comment = comments.find(c => c.id === commentId);
-      if (!comment || (comment.user_id !== user.id && user.email !== 'iamjuicylife@gmail.com')) {
+      
+      // Check if user owns the comment or is an admin
+      const isAdmin = await supabase.rpc('has_role', {
+        _user_id: user.id,
+        _role: 'admin'
+      });
+      
+      if (!comment || (comment.user_id !== user.id && !isAdmin.data)) {
         toast({
           title: "Permission denied",
           description: "You can only delete your own comments.",
@@ -504,7 +512,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
 
       const { error } = await supabase
         .from('comments')
-        .update({ text_content: content })
+        .update({ text_content: sanitizeText(content) })
         .eq('id', commentId);
 
       if (error) throw error;
@@ -542,7 +550,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
     try {
       const { error } = await supabase
         .from('comment_replies')
-        .update({ content })
+        .update({ content: sanitizeText(content) })
         .eq('id', replyId)
         .eq('user_id', user.id);
 

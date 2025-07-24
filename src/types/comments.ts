@@ -31,6 +31,7 @@ export interface User {
   display_name: string;
   avatar_url?: string;
   created_at: string;
+  role?: 'admin' | 'moderator' | 'user';
 }
 
 export interface TextSelection {

@@ -76,10 +76,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const signUpWithEmail = async (email: string, name: string) => {
     const redirectUrl = `${window.location.origin}/`;
     
-    // Create user account first
-    const { data, error } = await supabase.auth.signUp({
+    // Use magic link signup - no password required
+    const { data, error } = await supabase.auth.signInWithOtp({
       email,
-      password: 'dummy-password', // Required but not used for OTP
       options: {
         emailRedirectTo: redirectUrl,
         data: {
