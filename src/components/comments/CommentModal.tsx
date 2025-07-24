@@ -29,6 +29,8 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
 
   // Auto-scroll to bottom on mobile when modal opens
   useEffect(() => {
+    console.log('useEffect triggered:', { isOpen, isMobile, modalContentRef: modalContentRef.current });
+    
     if (isOpen && isMobile && modalContentRef.current) {
       console.log('Modal opened on mobile, attempting to scroll');
       console.log('Modal content element:', modalContentRef.current);
