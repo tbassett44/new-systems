@@ -1,110 +1,117 @@
-import { useState, useRef, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client';
+import { useState, useRef } from 'react';
+
+// Declare Web Speech API types
+declare global {
+  interface Window {
+    SpeechRecognition: typeof SpeechRecognition;
+    webkitSpeechRecognition: typeof SpeechRecognition;
+  }
+}
+
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean;
+  interimResults: boolean;
+  lang: string;
+  start(): void;
+  stop(): void;
+  onstart: ((this: SpeechRecognition, ev: Event) => any) | null;
+  onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null;
+  onerror: ((this: SpeechRecognition, ev: SpeechRecognitionErrorEvent) => any) | null;
+  onend: ((this: SpeechRecognition, ev: Event) => any) | null;
+}
+
+interface SpeechRecognitionEvent extends Event {
+  results: SpeechRecognitionResultList;
+}
+
+interface SpeechRecognitionErrorEvent extends Event {
+  error: string;
+}
+
+interface SpeechRecognitionResultList {
+  length: number;
+  [index: number]: SpeechRecognitionResult;
+}
+
+interface SpeechRecognitionResult {
+  isFinal: boolean;
+  [index: number]: SpeechRecognitionAlternative;
+}
+
+interface SpeechRecognitionAlternative {
+  transcript: string;
+  confidence: number;
+}
+
+declare var SpeechRecognition: {
+  prototype: SpeechRecognition;
+  new(): SpeechRecognition;
+};
 
 export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void) => {
   const [isRecording, setIsRecording] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
-  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
-  const chunksRef = useRef<Blob[]>([]);
+  const recognitionRef = useRef<SpeechRecognition | null>(null);
 
   const startRecording = async () => {
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ 
-        audio: {
-          sampleRate: 44100,
-          channelCount: 1,
-          echoCancellation: true,
-          noiseSuppression: true,
-          autoGainControl: true
+      // Check if browser supports speech recognition
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) {
+        throw new Error('Speech recognition not supported in this browser');
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+
+      recognition.onstart = () => {
+        console.log('Speech recognition started');
+        setIsRecording(true);
+      };
+
+      recognition.onresult = (event) => {
+        console.log('Speech recognition result:', event);
+        let finalTranscript = '';
+        
+        for (let i = 0; i < event.results.length; i++) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          }
         }
-      });
-
-      const mediaRecorder = new MediaRecorder(stream, {
-        mimeType: 'audio/webm;codecs=opus'
-      });
-
-      chunksRef.current = [];
-      
-      mediaRecorder.ondataavailable = (event) => {
-        if (event.data.size > 0) {
-          chunksRef.current.push(event.data);
+        
+        if (finalTranscript && onTranscriptionComplete) {
+          console.log('Final transcript:', finalTranscript);
+          onTranscriptionComplete(finalTranscript);
         }
       };
 
-      mediaRecorder.onstop = async () => {
-        console.log('MediaRecorder stopped, processing audio...');
-        const audioBlob = new Blob(chunksRef.current, { type: 'audio/webm' });
-        console.log('Audio blob created:', { size: audioBlob.size, type: audioBlob.type });
-        
-        try {
-          await transcribeAudio(audioBlob);
-        } catch (error) {
-          console.error('Error in transcription:', error);
-        }
-        
-        // Stop all tracks
-        stream.getTracks().forEach(track => track.stop());
+      recognition.onerror = (event) => {
+        console.error('Speech recognition error:', event.error);
+        setIsRecording(false);
+        setIsProcessing(false);
       };
 
-      mediaRecorderRef.current = mediaRecorder;
-      mediaRecorder.start();
-      setIsRecording(true);
-      
-      console.log('Recording started');
+      recognition.onend = () => {
+        console.log('Speech recognition ended');
+        setIsRecording(false);
+        setIsProcessing(false);
+      };
+
+      recognitionRef.current = recognition;
+      recognition.start();
     } catch (error) {
-      console.error('Error starting recording:', error);
+      console.error('Error starting speech recognition:', error);
+      setIsRecording(false);
       throw error;
     }
   };
 
   const stopRecording = () => {
-    if (mediaRecorderRef.current && isRecording) {
-      mediaRecorderRef.current.stop();
-      setIsRecording(false);
-      console.log('Recording stopped');
-    }
-  };
-
-  const transcribeAudio = async (audioBlob: Blob): Promise<string> => {
-    setIsProcessing(true);
-    
-    try {
-      // Convert blob to base64
-      const arrayBuffer = await audioBlob.arrayBuffer();
-      const uint8Array = new Uint8Array(arrayBuffer);
-      let binary = '';
-      const chunkSize = 0x8000;
-      
-      for (let i = 0; i < uint8Array.length; i += chunkSize) {
-        const chunk = uint8Array.subarray(i, Math.min(i + chunkSize, uint8Array.length));
-        binary += String.fromCharCode.apply(null, Array.from(chunk));
-      }
-      
-      const base64Audio = btoa(binary);
-      
-      console.log('Sending audio for transcription...');
-      
-      // Call the edge function
-      const { data, error } = await supabase.functions.invoke('voice-to-text', {
-        body: { audio: base64Audio }
-      });
-
-      if (error) {
-        console.error('Transcription error:', error);
-        throw error;
-      }
-
-      console.log('Transcription result:', data);
-      const transcribedText = data.text || '';
-      if (transcribedText && onTranscriptionComplete) {
-        onTranscriptionComplete(transcribedText);
-      }
-      return transcribedText;
-    } catch (error) {
-      console.error('Error transcribing audio:', error);
-      throw error;
-    } finally {
-      setIsProcessing(false);
+    if (recognitionRef.current && isRecording) {
+      recognitionRef.current.stop();
+      console.log('Speech recognition stopped');
     }
   };
 
@@ -112,7 +119,6 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
     isRecording,
     isProcessing,
     startRecording,
-    stopRecording,
-    transcribeAudio
+    stopRecording
   };
 };
