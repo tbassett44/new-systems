@@ -108,15 +108,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       if (uploadError) {
         console.error('Error uploading avatar:', uploadError);
       } else {
-        // Update the user's metadata with the avatar URL
+        // Update the user's metadata and profile with the avatar URL
         const { data: { publicUrl } } = supabase.storage
           .from('avatars')
           .getPublicUrl(uploadData.path);
           
-        // Update the user's profile with the avatar URL
-        await supabase.auth.updateUser({
-          data: { avatar_url: publicUrl }
-        });
+        // Update both user metadata and profile record
+        await Promise.all([
+          supabase.auth.updateUser({
+            data: { avatar_url: publicUrl }
+          }),
+          supabase
+            .from('profiles')
+            .update({ avatar_url: publicUrl })
+            .eq('user_id', data.user.id)
+        ]);
       }
     }
   };
