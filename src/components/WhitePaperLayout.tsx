@@ -204,12 +204,16 @@ function AppSidebar() {
                          <Tooltip>
                            <TooltipTrigger asChild>
                              {item.url === "/" ? (
-                               <button
+                               <a
+                                 href="/"
                                  className="flex w-full items-center justify-center"
-                                 onClick={() => handleNavClick(item.url)}
+                                 onClick={(e) => {
+                                   e.preventDefault();
+                                   handleNavClick(item.url);
+                                 }}
                                >
                                  <item.icon className="h-4 w-4 shrink-0" />
-                               </button>
+                               </a>
                              ) : (
                                <NavLink 
                                  to={item.url} 
@@ -228,13 +232,17 @@ function AppSidebar() {
                        ) : (
                          <>
                            {item.url === "/" ? (
-                             <button
+                             <a
+                               href="/"
                                className="flex w-full items-center gap-2"
-                               onClick={() => handleNavClick(item.url)}
+                               onClick={(e) => {
+                                 e.preventDefault();
+                                 handleNavClick(item.url);
+                               }}
                              >
                                <item.icon className="h-4 w-4 shrink-0" />
                                <span className="truncate">{item.title}</span>
-                             </button>
+                             </a>
                            ) : (
                              <NavLink 
                                to={item.url} 
