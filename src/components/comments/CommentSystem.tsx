@@ -246,7 +246,7 @@ export function CommentSystem() {
             transform: "translateX(-50%)"
           }}
         >
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-16 py-2 rounded-xl shadow-2xl border-2 border-white/20">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-[10px] py-2 rounded-xl shadow-2xl border-2 border-white/20">
             <p className="text-sm font-semibold text-center">
               <span className="hidden sm:inline">💬 </span>Click on paragraphs to add comments
             </p>
