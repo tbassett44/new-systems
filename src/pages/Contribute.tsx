@@ -77,11 +77,13 @@ const Contribute = () => {
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
                 Engage with others' comments and build on ideas
               </li>
-              <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                No account required—just start contributing!
-              </li>
             </ul>
+            <Button asChild className="w-full mt-4">
+              <a href="/auth" className="group">
+                Create Account to Join the Discussion
+                <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
           </div>
         </CardContent>
       </Card>
