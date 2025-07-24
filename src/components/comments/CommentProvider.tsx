@@ -328,7 +328,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
   }, [user]);
 
   const toggleCommentMode = useCallback(() => {
-    console.log('toggleCommentMode called, current state:', isCommentModeActive);
+    
     setIsCommentModeActive(prev => !prev);
   }, [isCommentModeActive]);
 

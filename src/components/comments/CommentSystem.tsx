@@ -77,7 +77,7 @@ export function CommentSystem() {
   }, [isCommentModeActive, user, setSelectedParagraph, lastClickTime]);
 
   const handleCommentModeToggle = () => {
-    console.log('Comment mode toggle clicked, user:', !!user, 'loading:', loading);
+    
     
     if (loading) {
       toast({
@@ -93,7 +93,7 @@ export function CommentSystem() {
       return;
     }
     
-    console.log('Toggling comment mode');
+    
     const newState = !isCommentModeActive;
     toggleCommentMode();
     
