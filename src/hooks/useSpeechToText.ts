@@ -48,7 +48,7 @@ declare var SpeechRecognition: {
   new(): SpeechRecognition;
 };
 
-export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void) => {
+export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInterim?: boolean) => void) => {
   const [isRecording, setIsRecording] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
@@ -74,7 +74,7 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
 
       const recognition = new SpeechRecognition();
       recognition.continuous = true;
-      recognition.interimResults = false;
+      recognition.interimResults = true; // Enable real-time results
       recognition.lang = 'en-US';
 
       recognition.onstart = () => {
@@ -90,19 +90,32 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
           clearTimeout(timeoutRef.current);
         }
         
-        let newTranscript = '';
+        let interimTranscript = '';
+        let finalTranscript = '';
         
-        // Only process new results since last callback
-        for (let i = resultIndexRef.current; i < event.results.length; i++) {
+        // Process all results to get interim and final text
+        for (let i = 0; i < event.results.length; i++) {
+          const transcript = event.results[i][0].transcript;
           if (event.results[i].isFinal) {
-            newTranscript += event.results[i][0].transcript;
-            resultIndexRef.current = i + 1; // Update index to track processed results
+            if (i >= resultIndexRef.current) {
+              finalTranscript += transcript;
+              resultIndexRef.current = i + 1;
+            }
+          } else {
+            interimTranscript += transcript;
           }
         }
         
-        if (newTranscript && onTranscriptionComplete) {
-          console.log('New transcript since last update:', newTranscript);
-          onTranscriptionComplete(newTranscript);
+        // Send interim results for real-time display
+        if (interimTranscript && onTranscriptionComplete) {
+          console.log('Interim transcript:', interimTranscript);
+          onTranscriptionComplete(interimTranscript, true);
+        }
+        
+        // Send final results
+        if (finalTranscript && onTranscriptionComplete) {
+          console.log('Final transcript:', finalTranscript);
+          onTranscriptionComplete(finalTranscript, false);
         }
         
         // Set timeout to stop recording after 2 seconds of silence

@@ -28,34 +28,46 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const { user } = useAuth();
   const isMobile = useIsMobile();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text) => {
-    console.log('Transcription callback received:', text);
+  const interimTextRef = useRef<string>('');
+  const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text, isInterim) => {
+    console.log('Transcription callback received:', text, 'isInterim:', isInterim);
     
-    // Insert text at cursor position if textarea is focused, otherwise append
     if (textareaRef.current) {
       const textarea = textareaRef.current;
-      const cursorPosition = textarea.selectionStart;
-      const currentValue = textarea.value;
       
-      if (document.activeElement === textarea) {
-        // Insert at cursor position
-        const newValue = currentValue.slice(0, cursorPosition) + 
-                        (cursorPosition > 0 ? ' ' : '') + text + 
-                        currentValue.slice(cursorPosition);
-        setContent(newValue);
-        
-        // Set cursor position after inserted text
-        setTimeout(() => {
-          const newCursorPos = cursorPosition + (cursorPosition > 0 ? 1 : 0) + text.length;
-          textarea.setSelectionRange(newCursorPos, newCursorPos);
-        }, 0);
+      if (isInterim) {
+        // Store interim text and display it temporarily
+        interimTextRef.current = text;
+        const baseContent = content.replace(interimTextRef.current, ''); // Remove any previous interim text
+        textarea.value = baseContent + (baseContent ? ' ' : '') + text;
+        // Auto-resize for interim text
+        textarea.style.height = 'auto';
+        textarea.style.height = Math.max(100, textarea.scrollHeight) + 'px';
       } else {
-        // Append to end
-        setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
+        // Final text - permanently add to content
+        const cursorPosition = textarea.selectionStart;
+        const currentValue = content;
+        
+        if (document.activeElement === textarea) {
+          // Insert at cursor position
+          const newValue = currentValue.slice(0, cursorPosition) + 
+                          (cursorPosition > 0 ? ' ' : '') + text + 
+                          currentValue.slice(cursorPosition);
+          setContent(newValue);
+          
+          // Set cursor position after inserted text
+          setTimeout(() => {
+            const newCursorPos = cursorPosition + (cursorPosition > 0 ? 1 : 0) + text.length;
+            textarea.setSelectionRange(newCursorPos, newCursorPos);
+          }, 0);
+        } else {
+          // Append to end
+          setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
+        }
+        
+        // Clear interim text reference
+        interimTextRef.current = '';
       }
-    } else {
-      // Fallback to append
-      setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
     }
   });
   const modalContentRef = useRef<HTMLDivElement>(null);
