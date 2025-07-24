@@ -226,28 +226,28 @@ function AppSidebar() {
                              <p>{item.title}</p>
                            </TooltipContent>
                          </Tooltip>
-                       ) : (
-                           {item.url === "/" ? (
-                             <NavLink 
-                               to={item.url}
-                               className="flex w-full items-center gap-2"
-                               onClick={() => handleNavClick(item.url)}
-                             >
-                               <item.icon className="h-4 w-4 shrink-0" />
-                               <span className="truncate">{item.title}</span>
-                             </NavLink>
-                           ) : (
-                             <NavLink 
-                               to={item.url} 
-                               end={item.url === "/papers/"}
-                               className="flex w-full items-center gap-2"
-                               onClick={() => handleNavClick(item.url)}
-                             >
-                               <item.icon className="h-4 w-4 shrink-0" />
-                               <span className="truncate">{item.title}</span>
-                             </NavLink>
-                           )}
-                       )}
+                        ) : (
+                          item.url === "/" ? (
+                            <NavLink 
+                              to={item.url}
+                              className="flex w-full items-center gap-2"
+                              onClick={() => handleNavClick(item.url)}
+                            >
+                              <item.icon className="h-4 w-4 shrink-0" />
+                              <span className="truncate">{item.title}</span>
+                            </NavLink>
+                          ) : (
+                            <NavLink 
+                              to={item.url} 
+                              end={item.url === "/papers/"}
+                              className="flex w-full items-center gap-2"
+                              onClick={() => handleNavClick(item.url)}
+                            >
+                              <item.icon className="h-4 w-4 shrink-0" />
+                              <span className="truncate">{item.title}</span>
+                            </NavLink>
+                          )
+                        )}
                      </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
