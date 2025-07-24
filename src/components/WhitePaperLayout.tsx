@@ -13,6 +13,7 @@ import {
   SidebarHeader,
   SidebarFooter,
   SidebarProvider,
+  SidebarSeparator,
   useSidebar
 } from "@/components/ui/sidebar";
 import { 
@@ -254,9 +255,7 @@ function AppSidebar() {
             </SidebarGroupContent>
           </SidebarGroup>
           
-          <div className="px-3 py-0.5">
-            <hr className="border-border" />
-          </div>
+          <SidebarSeparator />
           
           <SidebarGroup>
             <SidebarGroupLabel>Proposals</SidebarGroupLabel>
