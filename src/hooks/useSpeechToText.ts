@@ -106,12 +106,12 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInter
       recognition.lang = 'en-US';
 
       recognition.onstart = () => {
-        console.log('Speech recognition started');
+        
         setIsRecording(true);
       };
 
       recognition.onresult = (event) => {
-        console.log('Speech recognition result:', event, 'resultIndex:', resultIndexRef.current);
+        
         
         // Clear existing timeout
         if (timeoutRef.current) {
@@ -137,20 +137,20 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInter
         // Send interim results for real-time display (with speech commands processed)
         if (interimTranscript && onTranscriptionComplete) {
           const processedInterim = processSpeechCommands(interimTranscript);
-          console.log('Interim transcript:', interimTranscript, '-> processed:', processedInterim);
+          
           onTranscriptionComplete(processedInterim, true);
         }
         
         // Send final results (with speech commands processed)
         if (finalTranscript && onTranscriptionComplete) {
           const processedFinal = processSpeechCommands(finalTranscript);
-          console.log('Final transcript:', finalTranscript, '-> processed:', processedFinal);
+          
           onTranscriptionComplete(processedFinal, false);
         }
         
         // Set timeout to stop recording after 2 seconds of silence
         timeoutRef.current = setTimeout(() => {
-          console.log('Auto-stopping speech recognition due to silence');
+          
           if (recognitionRef.current) {
             recognitionRef.current.stop();
           }
@@ -164,7 +164,7 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInter
       };
 
       recognition.onend = () => {
-        console.log('Speech recognition ended');
+        
         // Clear timeout when recognition ends
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
@@ -186,7 +186,7 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInter
   const stopRecording = () => {
     if (recognitionRef.current && isRecording) {
       recognitionRef.current.stop();
-      console.log('Speech recognition stopped');
+      
     }
   };
 
