@@ -14,8 +14,6 @@ export default function Auth() {
   const [isSignUp, setIsSignUp] = useState(false);
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
-  const [avatar, setAvatar] = useState<File | null>(null);
-  const [avatarPreview, setAvatarPreview] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
 
@@ -60,15 +58,6 @@ export default function Auth() {
     }
   };
 
-  const handleAvatarChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      setAvatar(file);
-      const reader = new FileReader();
-      reader.onload = () => setAvatarPreview(reader.result as string);
-      reader.readAsDataURL(file);
-    }
-  };
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -79,7 +68,7 @@ export default function Auth() {
 
     setIsSubmitting(true);
     try {
-      await signUpWithEmail(email, name, avatar);
+      await signUpWithEmail(email, name);
       setEmailSent(true);
       toast.success('Check your email for a magic link to complete your registration');
     } catch (error: any) {
@@ -97,8 +86,6 @@ export default function Auth() {
   const resetForm = () => {
     setEmail('');
     setName('');
-    setAvatar(null);
-    setAvatarPreview(null);
     setEmailSent(false);
     setIsSubmitting(false);
   };
@@ -138,28 +125,6 @@ export default function Auth() {
                     />
                   </div>
                   
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-muted-foreground">
-                      Profile Picture (optional)
-                    </label>
-                    <div className="flex items-center gap-4">
-                      {avatarPreview && (
-                        <div className="w-16 h-16 rounded-full overflow-hidden bg-muted">
-                          <img 
-                            src={avatarPreview} 
-                            alt="Preview" 
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                      )}
-                      <Input
-                        type="file"
-                        accept="image/*"
-                        onChange={handleAvatarChange}
-                        className="file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-primary file:text-primary-foreground hover:file:bg-primary/90"
-                      />
-                    </div>
-                  </div>
                 </>
               )}
               
