@@ -16,6 +16,7 @@ export function CommentSystem() {
   const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [lastClickTime, setLastClickTime] = useState(0);
   
   const navigate = useNavigate();
   const { user, loading } = useAuth();
@@ -40,7 +41,18 @@ export function CommentSystem() {
   useEffect(() => {
     if (!isCommentModeActive) return;
 
-    const handleParagraphClick = (event: MouseEvent) => {
+    const handleParagraphClick = (event: MouseEvent | TouchEvent) => {
+      // Prevent double-triggers on mobile (touch + click events)
+      const currentTime = Date.now();
+      if (currentTime - lastClickTime < 500) {
+        console.log('Ignoring duplicate click/touch event');
+        return;
+      }
+      setLastClickTime(currentTime);
+      
+      event.preventDefault();
+      event.stopPropagation();
+      
       const target = event.target as HTMLElement;
       const paragraph = target.closest('[data-paragraph-id]') as HTMLElement;
       
@@ -66,7 +78,7 @@ export function CommentSystem() {
 
     document.addEventListener('click', handleParagraphClick);
     return () => document.removeEventListener('click', handleParagraphClick);
-  }, [isCommentModeActive, user, setSelectedParagraph]);
+  }, [isCommentModeActive, user, setSelectedParagraph, lastClickTime]);
 
   const handleCommentModeToggle = () => {
     console.log('Comment mode toggle clicked, user:', !!user, 'loading:', loading);
