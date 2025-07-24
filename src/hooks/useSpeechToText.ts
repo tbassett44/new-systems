@@ -53,9 +53,19 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
   const [isProcessing, setIsProcessing] = useState(false);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const resultIndexRef = useRef<number>(0);
 
   const startRecording = async () => {
     try {
+      // Clear any existing timeout
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+      
+      // Reset result index for new recording
+      resultIndexRef.current = 0;
+      
       // Check if browser supports speech recognition
       const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (!SpeechRecognition) {
@@ -73,30 +83,32 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
       };
 
       recognition.onresult = (event) => {
-        console.log('Speech recognition result:', event);
+        console.log('Speech recognition result:', event, 'resultIndex:', resultIndexRef.current);
         
         // Clear existing timeout
         if (timeoutRef.current) {
           clearTimeout(timeoutRef.current);
         }
         
-        let finalTranscript = '';
+        let newTranscript = '';
         
-        for (let i = 0; i < event.results.length; i++) {
+        // Only process new results since last callback
+        for (let i = resultIndexRef.current; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
-            finalTranscript += event.results[i][0].transcript;
+            newTranscript += event.results[i][0].transcript;
+            resultIndexRef.current = i + 1; // Update index to track processed results
           }
         }
         
-        if (finalTranscript && onTranscriptionComplete) {
-          console.log('Final transcript:', finalTranscript);
-          onTranscriptionComplete(finalTranscript);
+        if (newTranscript && onTranscriptionComplete) {
+          console.log('New transcript since last update:', newTranscript);
+          onTranscriptionComplete(newTranscript);
         }
         
         // Set timeout to stop recording after 2 seconds of silence
         timeoutRef.current = setTimeout(() => {
           console.log('Auto-stopping speech recognition due to silence');
-          if (recognitionRef.current && isRecording) {
+          if (recognitionRef.current) {
             recognitionRef.current.stop();
           }
         }, 2000);
@@ -110,6 +122,11 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
 
       recognition.onend = () => {
         console.log('Speech recognition ended');
+        // Clear timeout when recognition ends
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+          timeoutRef.current = null;
+        }
         setIsRecording(false);
         setIsProcessing(false);
       };
