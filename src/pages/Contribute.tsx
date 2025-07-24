@@ -80,7 +80,7 @@ const Contribute = () => {
             </ul>
           </div>
           <Button asChild variant="default" className="w-full mt-6">
-            <a href="/auth" className="group">
+            <a href="/auth?mode=signup" className="group">
               Create Account to Join the Discussion
               <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
             </a>

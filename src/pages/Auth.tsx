@@ -11,7 +11,10 @@ import { supabase } from '@/integrations/supabase/client';
 export default function Auth() {
   const { user, signInWithEmail, signUpWithEmail } = useAuth();
   const navigate = useNavigate();
-  const [isSignUp, setIsSignUp] = useState(false);
+  
+  // Check URL params to determine if we should show signup by default
+  const searchParams = new URLSearchParams(window.location.search);
+  const [isSignUp, setIsSignUp] = useState(searchParams.get('mode') === 'signup');
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
