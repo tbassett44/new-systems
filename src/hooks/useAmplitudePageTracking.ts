@@ -16,5 +16,5 @@ export const useAmplitudePageTracking = () => {
     trackPageView(location.pathname, document.title, {
       isAuthenticated: !!user,
     });
-  }, [location.pathname, loading]); // Depend on both location and loading state
+  }, [location.pathname, loading, user]); // Depend on location, loading state, and user changes
 };
