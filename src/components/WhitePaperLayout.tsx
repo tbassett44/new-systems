@@ -204,16 +204,13 @@ function AppSidebar() {
                          <Tooltip>
                            <TooltipTrigger asChild>
                              {item.url === "/" ? (
-                               <a
-                                 href="/"
+                               <NavLink 
+                                 to={item.url}
                                  className="flex w-full items-center justify-center"
-                                 onClick={(e) => {
-                                   e.preventDefault();
-                                   handleNavClick(item.url);
-                                 }}
+                                 onClick={() => handleNavClick(item.url)}
                                >
                                  <item.icon className="h-4 w-4 shrink-0" />
-                               </a>
+                               </NavLink>
                              ) : (
                                <NavLink 
                                  to={item.url} 
@@ -232,17 +229,14 @@ function AppSidebar() {
                        ) : (
                          <>
                            {item.url === "/" ? (
-                             <a
-                               href="/"
+                             <NavLink 
+                               to={item.url}
                                className="flex w-full items-center gap-2"
-                               onClick={(e) => {
-                                 e.preventDefault();
-                                 handleNavClick(item.url);
-                               }}
+                               onClick={() => handleNavClick(item.url)}
                              >
                                <item.icon className="h-4 w-4 shrink-0" />
                                <span className="truncate">{item.title}</span>
-                             </a>
+                             </NavLink>
                            ) : (
                              <NavLink 
                                to={item.url} 
