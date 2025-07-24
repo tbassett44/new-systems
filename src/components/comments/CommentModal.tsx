@@ -31,7 +31,6 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const interimTextRef = useRef<string>('');
   const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text, isInterim) => {
-    console.log('Transcription callback received:', text, 'isInterim:', isInterim);
     
     if (textareaRef.current) {
       const textarea = textareaRef.current;
@@ -75,61 +74,30 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
 
   // Auto-scroll to bottom on mobile when modal opens
   useEffect(() => {
-    console.log('useEffect triggered:', { isOpen, isMobile, modalContentRef: modalContentRef.current });
-    
     if (isOpen && isMobile) {
-      // Wait for the modal to be fully rendered and ref to be attached
       const checkAndScroll = () => {
         if (modalContentRef.current) {
-          console.log('Modal content element found:', modalContentRef.current);
-          console.log('ScrollHeight before scroll:', modalContentRef.current.scrollHeight);
-          console.log('ScrollTop before scroll:', modalContentRef.current.scrollTop);
-          console.log('ClientHeight before scroll:', modalContentRef.current.clientHeight);
-          
           modalContentRef.current.scrollTo({
             top: modalContentRef.current.scrollHeight,
             behavior: 'smooth'
           });
-          
-          console.log('Scroll command executed, scrolling to:', modalContentRef.current.scrollHeight);
-          
-          // Check scroll position after a brief delay
-          setTimeout(() => {
-            if (modalContentRef.current) {
-              console.log('After scroll attempt:');
-              console.log('Final scrollTop:', modalContentRef.current.scrollTop);
-              console.log('Final scrollHeight:', modalContentRef.current.scrollHeight);
-            }
-          }, 100);
         } else {
-          console.log('Modal content ref still null, retrying...');
-          // Retry after a short delay if ref is not available yet
           setTimeout(checkAndScroll, 100);
         }
       };
       
-      // Start checking after a delay to allow modal to render
       setTimeout(checkAndScroll, 500);
     }
   }, [isOpen, isMobile]);
 
   const handleSubmit = async () => {
-    console.log('Modal submit clicked', { 
-      content: content.trim(), 
-      hasSelectedParagraph: !!selectedParagraph,
-      hasUser: !!user 
-    });
-    
     if (!content.trim() || !selectedParagraph) {
-      console.log('Missing content or selectedParagraph');
       return;
     }
     
     setIsSubmitting(true);
     try {
-      console.log('Calling onSubmit from modal');
       await onSubmit(content.trim());
-      console.log('onSubmit completed successfully');
       setContent('');
       onClose();
     } catch (error) {
@@ -140,7 +108,6 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   };
 
   const handleClose = () => {
-    console.log('Modal close requested');
     setContent('');
     onClose();
   };
@@ -255,11 +222,6 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
           
           <div className="flex justify-end space-x-2">
             <Button variant="outline" onClick={(e) => {
-              console.log('Cancel button clicked', { 
-                focused: document.activeElement, 
-                textarea: textareaRef.current,
-                isTextareaFocused 
-              });
               e.preventDefault();
               e.stopPropagation();
               handleClose();
