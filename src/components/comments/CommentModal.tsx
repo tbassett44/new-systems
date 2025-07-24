@@ -11,6 +11,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { ParagraphSelection } from '@/types/comments';
 import { useAuth } from '@/contexts/AuthContext';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useSpeechToText } from '@/hooks/useSpeechToText';
+import { Mic, MicOff } from 'lucide-react';
 
 interface CommentModalProps {
   isOpen: boolean;
@@ -25,6 +27,9 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const { user } = useAuth();
   const isMobile = useIsMobile();
+  const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text) => {
+    setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
+  });
   const modalContentRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom on mobile when modal opens
@@ -99,6 +104,26 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
     onClose();
   };
 
+  const handleSpeechToText = async () => {
+    if (isRecording) {
+      stopRecording();
+    } else {
+      try {
+        await startRecording();
+      } catch (error) {
+        console.error('Error starting recording:', error);
+      }
+    }
+  };
+
+  // Listen for transcription results
+  useEffect(() => {
+    if (!isRecording && !isProcessing) {
+      // Recording has stopped and processing is complete
+      // The transcription result will be handled by the hook
+    }
+  }, [isRecording, isProcessing]);
+
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent ref={modalContentRef} className="sm:max-w-md max-h-[90vh] overflow-y-auto">
@@ -127,21 +152,44 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
             </div>
           )}
           
-          <div>
+          <div className="relative">
             <Textarea
               placeholder="Write your comment..."
               value={content}
-              onChange={(e) => setContent(e.target.value)}
+              onChange={(e) => {
+                setContent(e.target.value);
+                // Auto-resize textarea
+                const target = e.target as HTMLTextAreaElement;
+                target.style.height = 'auto';
+                target.style.height = Math.max(100, target.scrollHeight) + 'px';
+              }}
               onFocus={() => setIsTextareaFocused(true)}
               onBlur={() => setIsTextareaFocused(false)}
-              className="resize-none overflow-hidden"
+              className="resize-none overflow-hidden pr-12"
               style={{
                 minHeight: '100px',
-                height: Math.max(100, content.split('\n').length * 24 + 24) + 'px'
+                height: 'auto'
               }}
               autoFocus
               disabled={!user}
             />
+            <Button
+              type="button"
+              size="sm"
+              variant="ghost"
+              className={`absolute right-2 top-2 h-8 w-8 p-0 ${isRecording ? 'text-red-500' : ''}`}
+              onClick={handleSpeechToText}
+              disabled={!user || isProcessing}
+              title={isRecording ? 'Stop recording' : 'Start voice recording'}
+            >
+              {isProcessing ? (
+                <div className="animate-spin">⏳</div>
+              ) : isRecording ? (
+                <MicOff className="h-4 w-4" />
+              ) : (
+                <Mic className="h-4 w-4" />
+              )}
+            </Button>
           </div>
           
           <div className="flex justify-end space-x-2">
