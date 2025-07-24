@@ -205,6 +205,7 @@ function AppSidebar() {
                            <TooltipTrigger asChild>
                              {item.url === "/" ? (
                                <button
+                                 className="flex w-full items-center justify-center"
                                  onClick={() => handleNavClick(item.url)}
                                >
                                  <item.icon className="h-4 w-4 shrink-0" />
@@ -213,6 +214,7 @@ function AppSidebar() {
                                <NavLink 
                                  to={item.url} 
                                  end={item.url === "/papers/"}
+                                 className="flex w-full items-center justify-center"
                                  onClick={() => handleNavClick(item.url)}
                                >
                                  <item.icon className="h-4 w-4 shrink-0" />
@@ -227,6 +229,7 @@ function AppSidebar() {
                          <>
                            {item.url === "/" ? (
                              <button
+                               className="flex w-full items-center gap-2"
                                onClick={() => handleNavClick(item.url)}
                              >
                                <item.icon className="h-4 w-4 shrink-0" />
@@ -236,6 +239,7 @@ function AppSidebar() {
                              <NavLink 
                                to={item.url} 
                                end={item.url === "/papers/"}
+                               className="flex w-full items-center gap-2"
                                onClick={() => handleNavClick(item.url)}
                              >
                                <item.icon className="h-4 w-4 shrink-0" />
@@ -265,6 +269,7 @@ function AppSidebar() {
                            <TooltipTrigger asChild>
                              <NavLink 
                                to={item.url} 
+                               className="flex w-full items-center justify-center"
                                onClick={() => handleNavClick(item.url)}
                              >
                                <item.icon className="h-4 w-4 shrink-0" />
@@ -277,6 +282,7 @@ function AppSidebar() {
                        ) : (
                          <NavLink 
                            to={item.url} 
+                           className="flex w-full items-center gap-2"
                            onClick={() => handleNavClick(item.url)}
                          >
                            <item.icon className="h-4 w-4 shrink-0" />
