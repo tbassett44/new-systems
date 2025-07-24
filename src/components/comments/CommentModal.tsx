@@ -27,13 +27,36 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const [isTextareaFocused, setIsTextareaFocused] = useState(false);
   const { user } = useAuth();
   const isMobile = useIsMobile();
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text) => {
     console.log('Transcription callback received:', text);
-    setContent(prevContent => {
-      const newContent = prevContent + (prevContent ? ' ' : '') + text;
-      console.log('Setting new content:', newContent);
-      return newContent;
-    });
+    
+    // Insert text at cursor position if textarea is focused, otherwise append
+    if (textareaRef.current) {
+      const textarea = textareaRef.current;
+      const cursorPosition = textarea.selectionStart;
+      const currentValue = textarea.value;
+      
+      if (document.activeElement === textarea) {
+        // Insert at cursor position
+        const newValue = currentValue.slice(0, cursorPosition) + 
+                        (cursorPosition > 0 ? ' ' : '') + text + 
+                        currentValue.slice(cursorPosition);
+        setContent(newValue);
+        
+        // Set cursor position after inserted text
+        setTimeout(() => {
+          const newCursorPos = cursorPosition + (cursorPosition > 0 ? 1 : 0) + text.length;
+          textarea.setSelectionRange(newCursorPos, newCursorPos);
+        }, 0);
+      } else {
+        // Append to end
+        setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
+      }
+    } else {
+      // Fallback to append
+      setContent(prevContent => prevContent + (prevContent ? ' ' : '') + text);
+    }
   });
   const modalContentRef = useRef<HTMLDivElement>(null);
 
@@ -159,6 +182,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
           
           <div className="relative">
             <Textarea
+              ref={textareaRef}
               placeholder="Write your comment..."
               value={content}
               onChange={(e) => {

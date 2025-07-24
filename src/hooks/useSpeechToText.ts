@@ -52,6 +52,7 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
   const [isRecording, setIsRecording] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const startRecording = async () => {
     try {
@@ -73,6 +74,12 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
 
       recognition.onresult = (event) => {
         console.log('Speech recognition result:', event);
+        
+        // Clear existing timeout
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+        
         let finalTranscript = '';
         
         for (let i = 0; i < event.results.length; i++) {
@@ -85,6 +92,14 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string) => void
           console.log('Final transcript:', finalTranscript);
           onTranscriptionComplete(finalTranscript);
         }
+        
+        // Set timeout to stop recording after 2 seconds of silence
+        timeoutRef.current = setTimeout(() => {
+          console.log('Auto-stopping speech recognition due to silence');
+          if (recognitionRef.current && isRecording) {
+            recognitionRef.current.stop();
+          }
+        }, 2000);
       };
 
       recognition.onerror = (event) => {
