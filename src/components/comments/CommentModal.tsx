@@ -29,6 +29,7 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
   const isMobile = useIsMobile();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const interimTextRef = useRef<string>('');
+  const blurTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { isRecording, isProcessing, startRecording, stopRecording } = useSpeechToText((text, isInterim) => {
     console.log('Transcription callback received:', text, 'isInterim:', isInterim);
     
@@ -204,8 +205,20 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
                 target.style.height = 'auto';
                 target.style.height = Math.max(100, target.scrollHeight) + 'px';
               }}
-              onFocus={() => setIsTextareaFocused(true)}
-              onBlur={() => setIsTextareaFocused(false)}
+              onFocus={() => {
+                // Clear any pending blur timeout
+                if (blurTimeoutRef.current) {
+                  clearTimeout(blurTimeoutRef.current);
+                  blurTimeoutRef.current = null;
+                }
+                setIsTextareaFocused(true);
+              }}
+              onBlur={() => {
+                // Delay the blur state change to prevent button movement during click
+                blurTimeoutRef.current = setTimeout(() => {
+                  setIsTextareaFocused(false);
+                }, 100);
+              }}
               className="resize-none overflow-hidden pr-12"
               style={{
                 minHeight: '100px',
