@@ -6,6 +6,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
 import { Mail, ArrowLeft, UserPlus } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 
 export default function Auth() {
   const { user, signInWithEmail, signUpWithEmail } = useAuth();
@@ -33,20 +34,25 @@ export default function Auth() {
 
     setIsSubmitting(true);
     try {
-      await signInWithEmail(email);
-      setEmailSent(true);
-      toast.success('Check your email for a magic link to sign in');
-    } catch (error: any) {
-      // Check if the error indicates the user doesn't exist
-      if (error.message?.includes('User not found') || 
-          error.message?.includes('Invalid login credentials') ||
-          error.message?.includes('Email not confirmed')) {
+      // First check if a profile exists with this email
+      const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('user_id')
+        .eq('email', email)
+        .single();
+
+      if (profileError || !profile) {
         toast.error('No account found with this email address.');
-        // Auto-switch to sign up mode
         setIsSignUp(true);
         setIsSubmitting(false);
         return;
       }
+
+      // Profile exists, proceed with sending magic link
+      await signInWithEmail(email);
+      setEmailSent(true);
+      toast.success('Check your email for a magic link to sign in');
+    } catch (error: any) {
       toast.error(error.message || 'Failed to send login link');
       console.error(error);
     } finally {
