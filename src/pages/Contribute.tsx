@@ -78,13 +78,13 @@ const Contribute = () => {
                 Engage with others' comments and build on ideas
               </li>
             </ul>
-            <Button asChild className="w-full mt-4">
-              <a href="/auth" className="group">
-                Create Account to Join the Discussion
-                <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
-              </a>
-            </Button>
           </div>
+          <Button asChild variant="default" className="w-full mt-6">
+            <a href="/auth" className="group">
+              Create Account to Join the Discussion
+              <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
         </CardContent>
       </Card>
 
