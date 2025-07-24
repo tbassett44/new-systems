@@ -1,5 +1,5 @@
 import { ReactNode, useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { 
   Sidebar, 
   SidebarContent, 
@@ -56,7 +56,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
-import { usePageTransition } from "@/contexts/AnimationContext";
+
 import { supabase } from "@/integrations/supabase/client";
 
 interface WhitePaperLayoutProps {
@@ -97,7 +97,7 @@ function AppSidebar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const isMobile = useIsMobile();
   const { user } = useAuth();
-  const { navigateWithAnimation } = usePageTransition();
+  const navigate = useNavigate();
   const [profileData, setProfileData] = useState<{
     display_name: string;
     avatar_url: string | null;
@@ -152,10 +152,8 @@ function AppSidebar() {
       toggleSidebar();
     }
     
-    // Special handling for Welcome button navigation
-    if (url === "/") {
-      navigateWithAnimation('/', 'papers-to-home');
-    }
+    // Regular navigation for all routes
+    navigate(url);
   };
 
   return (

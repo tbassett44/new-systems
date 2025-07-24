@@ -1,15 +1,15 @@
 
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle, LogIn, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
-import { usePageTransition } from "@/contexts/AnimationContext";
+
 
 const Index = () => {
   const { user, signOut } = useAuth();
-  const { transitionPhase, animationState, navigateWithAnimation } = usePageTransition();
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
@@ -19,30 +19,13 @@ const Index = () => {
     }
   }, []);
 
-  // Get animation classes based on current state
-  const getAnimationClasses = () => {
-    if (transitionPhase === 'animating-out' && animationState === 'home-to-papers') {
-      return 'animate-slide-down';
-    }
-    if (transitionPhase === 'animating-in' && animationState === 'papers-to-home') {
-      return 'animate-slide-up';
-    }
-    return '';
-  };
-
-  // Check if content should be hidden (during incoming transition before animation)
-  const shouldHideContent = () => {
-    return animationState === 'papers-to-home' && 
-           (transitionPhase === 'navigating' || transitionPhase === 'animating-in');
-  };
-
   const handleNavigateToPapers = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigateWithAnimation('/papers', 'home-to-papers');
+    navigate('/papers');
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-background via-background to-muted/20 ${getAnimationClasses()} ${shouldHideContent() ? 'opacity-0' : ''}`}>
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       {/* Header with Auth */}
       <header className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
