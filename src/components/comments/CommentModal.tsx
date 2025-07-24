@@ -241,7 +241,11 @@ export function CommentModal({ isOpen, onClose, selectedParagraph, onSubmit }: C
           </div>
           
           <div className="flex justify-end space-x-2">
-            <Button variant="outline" onClick={handleClose}>
+            <Button variant="outline" onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleClose();
+            }}>
               Cancel
             </Button>
             <Button 
