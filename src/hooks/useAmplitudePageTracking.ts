@@ -6,12 +6,15 @@ import { useAuth } from '@/contexts/AuthContext';
 
 export const useAmplitudePageTracking = () => {
   const location = useLocation();
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
 
   useEffect(() => {
-    // Track page view when location changes
+    // Don't track page views until auth has finished loading
+    if (loading) return;
+    
+    // Track page view when location changes (after auth is loaded)
     trackPageView(location.pathname, document.title, {
       isAuthenticated: !!user,
     });
-  }, [location.pathname]); // Only depend on location changes, not user changes
+  }, [location.pathname, loading]); // Depend on both location and loading state
 };
