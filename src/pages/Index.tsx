@@ -27,6 +27,10 @@ const Index = () => {
     if (transitionPhase === 'animating-in' && animationState === 'papers-to-home') {
       return 'animate-slide-up';
     }
+    // Hide content during incoming transition until animation starts
+    if (transitionPhase === 'navigating' || (transitionPhase === 'animating-in' && animationState === 'papers-to-home')) {
+      return transitionPhase === 'navigating' ? 'opacity-0' : 'animate-slide-up';
+    }
     return '';
   };
 
