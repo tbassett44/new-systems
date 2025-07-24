@@ -44,26 +44,24 @@ export function CommentProvider({ children }: CommentProviderProps) {
           .eq('page_route', location.pathname)
           .order('created_at', { ascending: true });
 
-        console.log('Comments query result:', { data, error });
+        
 
         if (error) throw error;
 
         if (!data || data.length === 0) {
-          console.log('No comments found for this page');
           setComments([]);
           return;
         }
 
         // Get user profiles separately
         const userIds = [...new Set(data.map(c => c.user_id))];
-        console.log('Fetching profiles for user IDs:', userIds);
         
         const { data: profiles } = await supabase
           .from('profiles')
           .select('*')
           .in('user_id', userIds);
 
-        console.log('Profiles query result:', profiles);
+        
 
         // Get comment replies
         const commentIds = data.map(c => c.id);
@@ -148,7 +146,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
           };
         });
 
-        console.log('Transformed comments:', transformedComments);
+        
         setComments(transformedComments);
       } catch (error) {
         console.error('Error loading comments:', error);
