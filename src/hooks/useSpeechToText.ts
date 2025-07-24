@@ -55,6 +55,34 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInter
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const resultIndexRef = useRef<number>(0);
 
+  // Function to replace speech commands with punctuation
+  const processSpeechCommands = (text: string): string => {
+    return text
+      // Punctuation
+      .replace(/\bperiod\b/gi, '.')
+      .replace(/\bcomma\b/gi, ',')
+      .replace(/\bquestion mark\b/gi, '?')
+      .replace(/\bexclamation mark\b/gi, '!')
+      .replace(/\bexclamation point\b/gi, '!')
+      .replace(/\bsemicolon\b/gi, ';')
+      .replace(/\bcolon\b/gi, ':')
+      .replace(/\bdash\b/gi, '-')
+      .replace(/\bhyphen\b/gi, '-')
+      .replace(/\bapostrophe\b/gi, "'")
+      .replace(/\bquote\b/gi, '"')
+      .replace(/\bopen quote\b/gi, '"')
+      .replace(/\bclose quote\b/gi, '"')
+      
+      // Line breaks
+      .replace(/\bnew paragraph\b/gi, '\n\n')
+      .replace(/\bnew line\b/gi, '\n')
+      
+      // Clean up extra spaces around punctuation
+      .replace(/\s+([.,:;?!])/g, '$1')
+      .replace(/([.,:;?!])\s*([.,:;?!])/g, '$1$2')
+      .trim();
+  };
+
   const startRecording = async () => {
     try {
       // Clear any existing timeout
@@ -106,16 +134,18 @@ export const useSpeechToText = (onTranscriptionComplete?: (text: string, isInter
           }
         }
         
-        // Send interim results for real-time display
+        // Send interim results for real-time display (with speech commands processed)
         if (interimTranscript && onTranscriptionComplete) {
-          console.log('Interim transcript:', interimTranscript);
-          onTranscriptionComplete(interimTranscript, true);
+          const processedInterim = processSpeechCommands(interimTranscript);
+          console.log('Interim transcript:', interimTranscript, '-> processed:', processedInterim);
+          onTranscriptionComplete(processedInterim, true);
         }
         
-        // Send final results
+        // Send final results (with speech commands processed)
         if (finalTranscript && onTranscriptionComplete) {
-          console.log('Final transcript:', finalTranscript);
-          onTranscriptionComplete(finalTranscript, false);
+          const processedFinal = processSpeechCommands(finalTranscript);
+          console.log('Final transcript:', finalTranscript, '-> processed:', processedFinal);
+          onTranscriptionComplete(processedFinal, false);
         }
         
         // Set timeout to stop recording after 2 seconds of silence
