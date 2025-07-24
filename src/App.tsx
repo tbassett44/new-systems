@@ -24,6 +24,7 @@ import Overview from "./pages/Overview";
 import Contribute from "./pages/Contribute";
 import Auth from "./pages/Auth";
 import { AuthProvider } from './contexts/AuthContext';
+import { AnimationProvider } from './contexts/AnimationContext';
 import { initializeAmplitude } from '@/lib/analytics';
 import { useAmplitudePageTracking } from '@/hooks/useAmplitudePageTracking';
 import { useExternalLinkTracking } from '@/hooks/useExternalLinkTracking';
@@ -72,7 +73,9 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <AppContent />
+        <AnimationProvider>
+          <AppContent />
+        </AnimationProvider>
       </Router>
     </AuthProvider>
   );

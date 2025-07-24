@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle, LogIn, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import { usePageTransition } from "@/contexts/AnimationContext";
 
 const Index = () => {
   const { user, signOut } = useAuth();
+  const { transitionPhase, animationState, navigateWithAnimation } = usePageTransition();
 
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
@@ -17,8 +19,24 @@ const Index = () => {
     }
   }, []);
 
+  // Get animation classes based on current state
+  const getAnimationClasses = () => {
+    if (transitionPhase === 'animating-out' && animationState === 'home-to-papers') {
+      return 'animate-slide-down';
+    }
+    if (transitionPhase === 'animating-in' && animationState === 'papers-to-home') {
+      return 'animate-slide-up';
+    }
+    return '';
+  };
+
+  const handleNavigateToPapers = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigateWithAnimation('/papers', 'home-to-papers');
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className={`min-h-screen bg-gradient-to-br from-background via-background to-muted/20 ${getAnimationClasses()}`}>
       {/* Header with Auth */}
       <header className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
@@ -127,13 +145,11 @@ const Index = () => {
             through collaborative refinement, inviting continuous improvement from a global community 
             of contributors.
           </p>
-          <Link to="/papers">
-            <Button size="lg" className="group">
-              <BookOpen className="mr-2 h-5 w-5" />
-              Explore Manifesto
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </Link>
+          <Button size="lg" className="group" onClick={handleNavigateToPapers}>
+            <BookOpen className="mr-2 h-5 w-5" />
+            Explore Manifesto
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Button>
         </div>
 
         {/* Authors */}

@@ -40,7 +40,8 @@ import {
   LogIn,
   ScrollText,
   LogOut,
-  Settings
+  Settings,
+  Home
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -54,6 +55,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
+import { usePageTransition } from "@/contexts/AnimationContext";
 import { supabase } from "@/integrations/supabase/client";
 
 interface WhitePaperLayoutProps {
@@ -61,6 +63,7 @@ interface WhitePaperLayoutProps {
 }
 
 const navigationItems = [
+  { title: "Welcome", url: "/", icon: Home },
   { title: "Overview", url: "/papers/", icon: BookOpen },
   { title: "Contribute", url: "/papers/contribute", icon: GitBranch },
   { title: "Glossary", url: "/papers/glossary", icon: ScrollText },
@@ -93,6 +96,7 @@ function AppSidebar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const isMobile = useIsMobile();
   const { user } = useAuth();
+  const { navigateWithAnimation } = usePageTransition();
   const [profileData, setProfileData] = useState<{
     display_name: string;
     avatar_url: string | null;
@@ -142,203 +146,228 @@ function AppSidebar() {
     return currentPath === path;
   };
 
-  const handleNavClick = () => {
+  const handleNavClick = (url: string) => {
     if (isMobile) {
       toggleSidebar();
+    }
+    
+    // Special handling for Welcome button navigation
+    if (url === "/") {
+      navigateWithAnimation('/', 'papers-to-home');
     }
   };
 
   return (
     <TooltipProvider>
       <Sidebar className="border-r" collapsible="icon">
-      <SidebarHeader className="border-b">
-        <div className={`flex items-center ${state === "collapsed" ? "justify-center" : "justify-between"}`}>
-          {state !== "collapsed" && (
-            <div>
-              <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
-              <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
-              <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
-            </div>
-          )}
-          <SidebarTrigger className={`${state === "collapsed" ? "mx-auto" : ""}`} />
-        </div>
+        <SidebarHeader className="border-b">
+          <div className={`flex items-center ${state === "collapsed" ? "justify-center" : "justify-between"}`}>
+            {state !== "collapsed" && (
+              <div>
+                <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
+                <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
+                <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
+              </div>
+            )}
+            <SidebarTrigger className={`${state === "collapsed" ? "mx-auto" : ""}`} />
+          </div>
+          
+          {/* Search section */}
+          <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 h-0" : "opacity-100 mt-4"}`}>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setSearchOpen(true)}
+              className="w-full justify-start text-muted-foreground"
+            >
+              <Search className="h-4 w-4 mr-2" />
+              Search manifesto...
+              <div className="ml-auto flex items-center gap-1">
+                <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+                  <span className="text-xs">⌘</span>K
+                </kbd>
+              </div>
+            </Button>
+          </div>
+        </SidebarHeader>
         
-        {/* Search section */}
-        <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 h-0" : "opacity-100 mt-4"}`}>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={() => setSearchOpen(true)}
-            className="w-full justify-start text-muted-foreground"
-          >
-            <Search className="h-4 w-4 mr-2" />
-            Search manifesto...
-            <div className="ml-auto flex items-center gap-1">
-              <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-                <span className="text-xs">⌘</span>K
-              </kbd>
-            </div>
-          </Button>
-        </div>
-      </SidebarHeader>
-      
-      
-      <SidebarContent className="overflow-y-auto">
-        <SidebarGroup>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {navigationItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                    {state === "collapsed" ? (
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <NavLink 
-                            to={item.url} 
-                            end={item.url === "/papers/"}
-                            className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
-                            onClick={handleNavClick}
-                          >
-                            <item.icon className="h-4 w-4 shrink-0" />
-                          </NavLink>
-                        </TooltipTrigger>
-                        <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
-                          <p>{item.title}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    ) : (
-                      <NavLink 
-                        to={item.url} 
-                        end={item.url === "/papers/"}
-                        className="flex items-center gap-3 w-full"
-                        onClick={handleNavClick}
-                      >
-                        <item.icon className="h-4 w-4 shrink-0" />
-                        <span className="truncate">{item.title}</span>
-                      </NavLink>
-                    )}
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
+        <SidebarContent className="overflow-y-auto">
+          <SidebarGroup>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {navigationItems.map((item) => (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild isActive={isActive(item.url)}>
+                      {state === "collapsed" ? (
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            {item.url === "/" ? (
+                              <button
+                                className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
+                                onClick={() => handleNavClick(item.url)}
+                              >
+                                <item.icon className="h-4 w-4 shrink-0" />
+                              </button>
+                            ) : (
+                              <NavLink 
+                                to={item.url} 
+                                end={item.url === "/papers/"}
+                                className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
+                                onClick={() => handleNavClick(item.url)}
+                              >
+                                <item.icon className="h-4 w-4 shrink-0" />
+                              </NavLink>
+                            )}
+                          </TooltipTrigger>
+                          <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
+                            <p>{item.title}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      ) : (
+                        <>
+                          {item.url === "/" ? (
+                            <button
+                              className="flex items-center gap-3 w-full"
+                              onClick={() => handleNavClick(item.url)}
+                            >
+                              <item.icon className="h-4 w-4 shrink-0" />
+                              <span className="truncate">{item.title}</span>
+                            </button>
+                          ) : (
+                            <NavLink 
+                              to={item.url} 
+                              end={item.url === "/papers/"}
+                              className="flex items-center gap-3 w-full"
+                              onClick={() => handleNavClick(item.url)}
+                            >
+                              <item.icon className="h-4 w-4 shrink-0" />
+                              <span className="truncate">{item.title}</span>
+                            </NavLink>
+                          )}
+                        </>
+                      )}
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+          
+          <div className="px-3 py-0.5">
+            <hr className="border-border" />
+          </div>
+          
+          <SidebarGroup>
+            <SidebarGroupLabel>Proposals</SidebarGroupLabel>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                {whitePaperItems.map((item) => (
+                  <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild isActive={isActive(item.url)}>
+                      {state === "collapsed" ? (
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <NavLink 
+                              to={item.url} 
+                              className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
+                              onClick={() => handleNavClick(item.url)}
+                            >
+                              <item.icon className="h-4 w-4 shrink-0" />
+                            </NavLink>
+                          </TooltipTrigger>
+                          <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
+                            <p>{item.title}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      ) : (
+                        <NavLink 
+                          to={item.url} 
+                          className="flex items-center gap-3 w-full"
+                          onClick={() => handleNavClick(item.url)}
+                        >
+                          <item.icon className="h-4 w-4 shrink-0" />
+                          <span className="truncate">{item.title}</span>
+                        </NavLink>
+                      )}
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                ))}
+              </SidebarMenu>
+            </SidebarGroupContent>
+          </SidebarGroup>
+        </SidebarContent>
         
-        <div className="px-3 py-0.5">
-          <hr className="border-border" />
-        </div>
+        <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
         
-        <SidebarGroup>
-          <SidebarGroupLabel>Proposals</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              {whitePaperItems.map((item) => (
-                <SidebarMenuItem key={item.title}>
-                  <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                    {state === "collapsed" ? (
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <NavLink 
-                            to={item.url} 
-                            className="flex items-center justify-center w-full h-8 rounded-md hover:bg-accent"
-                            onClick={handleNavClick}
-                          >
-                            <item.icon className="h-4 w-4 shrink-0" />
-                          </NavLink>
-                        </TooltipTrigger>
-                        <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
-                          <p>{item.title}</p>
-                        </TooltipContent>
-                      </Tooltip>
-                    ) : (
-                      <NavLink 
-                        to={item.url} 
-                        className="flex items-center gap-3 w-full"
-                        onClick={handleNavClick}
-                      >
-                        <item.icon className="h-4 w-4 shrink-0" />
-                        <span className="truncate">{item.title}</span>
-                      </NavLink>
-                    )}
-                  </SidebarMenuButton>
-                </SidebarMenuItem>
-              ))}
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-      </SidebarContent>
-      
-      <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
-      
-      <SidebarFooter className="border-t p-3">
-        {user ? (
-          state === "collapsed" ? (
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button variant="ghost" className="w-full h-8 p-0 justify-center">
-                  <Avatar className="h-6 w-6">
-                    <AvatarImage src={profileData.avatar_url || undefined} />
-                    <AvatarFallback>{userInitial}</AvatarFallback>
-                  </Avatar>
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-56 p-2" align="start" side="right">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2 justify-center">
-                    <Avatar className="h-10 w-10">
+        <SidebarFooter className="border-t p-3">
+          {user ? (
+            state === "collapsed" ? (
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button variant="ghost" className="w-full h-8 p-0 justify-center">
+                    <Avatar className="h-6 w-6">
                       <AvatarImage src={profileData.avatar_url || undefined} />
                       <AvatarFallback>{userInitial}</AvatarFallback>
                     </Avatar>
-                    <div className="grid gap-0.5">
-                      <p className="text-sm font-medium">{profileData.display_name || 'User'}</p>
-                      <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-56 p-2" align="start" side="right">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 justify-center">
+                      <Avatar className="h-10 w-10">
+                        <AvatarImage src={profileData.avatar_url || undefined} />
+                        <AvatarFallback>{userInitial}</AvatarFallback>
+                      </Avatar>
+                      <div className="grid gap-0.5">
+                        <p className="text-sm font-medium">{profileData.display_name || 'User'}</p>
+                        <p className="text-xs text-muted-foreground truncate">{user.email}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="grid gap-1">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="justify-start gap-2"
+                        onClick={() => handleNavClick("/auth")}
+                        asChild
+                      >
+                        <NavLink to="/auth">
+                          <Settings className="h-4 w-4" />
+                          Edit Profile
+                        </NavLink>
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="justify-start gap-2 text-red-700"
+                        onClick={handleSignOut}
+                      >
+                        <LogOut className="h-4 w-4" />
+                        Sign Out
+                      </Button>
                     </div>
                   </div>
-                  
-                  <div className="grid gap-1">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="justify-start gap-2"
-                      onClick={() => handleNavClick()}
-                      asChild
-                    >
-                      <NavLink to="/auth">
-                        <Settings className="h-4 w-4" />
-                        Edit Profile
-                      </NavLink>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="justify-start gap-2 text-red-700"
-                      onClick={handleSignOut}
-                    >
-                      <LogOut className="h-4 w-4" />
-                      Sign Out
-                    </Button>
-                  </div>
-                </div>
-              </PopoverContent>
-            </Popover>
+                </PopoverContent>
+              </Popover>
+            ) : (
+              <UserProfile />
+            )
           ) : (
-            <UserProfile />
-          )
-        ) : (
-          <Button 
-            variant="outline"
-            className={`w-full ${state === "collapsed" ? "justify-center" : "justify-start gap-2"}`}
-            onClick={() => handleNavClick()}
-            asChild
-          >
-            <NavLink to="/auth">
-              <LogIn className="h-4 w-4" />
-              {state !== "collapsed" && <span>Sign In</span>}
-            </NavLink>
-          </Button>
-        )}
-      </SidebarFooter>
-    </Sidebar>
+            <Button 
+              variant="outline"
+              className={`w-full ${state === "collapsed" ? "justify-center" : "justify-start gap-2"}`}
+              onClick={() => handleNavClick("/auth")}
+              asChild
+            >
+              <NavLink to="/auth">
+                <LogIn className="h-4 w-4" />
+                {state !== "collapsed" && <span>Sign In</span>}
+              </NavLink>
+            </Button>
+          )}
+        </SidebarFooter>
+      </Sidebar>
     </TooltipProvider>
   );
 }
