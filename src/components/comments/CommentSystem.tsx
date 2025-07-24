@@ -58,7 +58,7 @@ export function CommentSystem() {
         const elementType = paragraph.tagName.toLowerCase().startsWith('h') ? 'heading' : 'paragraph';
         
         if (paragraphId && content) {
-          console.log('Paragraph clicked:', { paragraphId, content: content.substring(0, 50) + '...', elementType });
+          
           
           if (!user) {
             console.log('No user, showing login modal');
@@ -184,7 +184,7 @@ export function CommentSystem() {
   };
 
   const handleCloseModal = () => {
-    console.log('Closing comment modal');
+    
     setIsCommentModalOpen(false);
     setSelectedParagraph(null);
   };
