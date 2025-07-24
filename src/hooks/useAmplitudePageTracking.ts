@@ -9,9 +9,19 @@ export const useAmplitudePageTracking = () => {
   const { user, loading } = useAuth();
 
   useEffect(() => {
-    // Don't track page views until auth has finished loading
-    if (loading) return;
+    console.log('useAmplitudePageTracking effect triggered:', {
+      loading,
+      user: !!user,
+      pathname: location.pathname
+    });
     
+    // Don't track page views until auth has finished loading
+    if (loading) {
+      console.log('Skipping page view - still loading auth');
+      return;
+    }
+    
+    console.log('Tracking page view with auth state:', !!user);
     // Track page view when location changes (after auth is loaded)
     trackPageView(location.pathname, document.title, {
       isAuthenticated: !!user,
