@@ -34,7 +34,7 @@ export function CommentProvider({ children }: CommentProviderProps) {
     const loadComments = async () => {
       if (!location.pathname) return;
       
-      console.log('Loading comments for path:', location.pathname);
+      
       
       try {
         setLoading(true);

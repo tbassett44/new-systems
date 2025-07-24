@@ -32,10 +32,6 @@ export function CommentSystem() {
     setSelectedParagraph
   } = useComments();
 
-  // Debug authentication state
-  useEffect(() => {
-    console.log('Authentication state:', { user: !!user, loading, userId: user?.id });
-  }, [user, loading]);
 
   // Handle paragraph selection for comments
   useEffect(() => {
