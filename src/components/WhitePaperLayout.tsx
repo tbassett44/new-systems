@@ -160,19 +160,19 @@ function AppSidebar() {
     <TooltipProvider>
       <Sidebar className="border-r" collapsible="icon">
         <SidebarHeader className="border-b">
-          <div className={`flex items-center ${state === "collapsed" ? "justify-center" : "justify-between"}`}>
-            {state !== "collapsed" && (
+          <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
+            {(state !== "collapsed" || isMobile) && (
               <div>
                 <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
                 <h2 className="text-lg font-semibold text-primary">Systems Regeneration</h2>
                 <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
               </div>
             )}
-            <SidebarTrigger className={`${state === "collapsed" ? "mx-auto" : ""}`} />
+            <SidebarTrigger className={`${state === "collapsed" && !isMobile ? "mx-auto" : ""}`} />
           </div>
           
           {/* Search section */}
-          <div className={`transition-all duration-200 ${state === "collapsed" ? "opacity-0 h-0" : "opacity-100 mt-4"}`}>
+          <div className={`transition-all duration-200 ${state === "collapsed" && !isMobile ? "opacity-0 h-0" : "opacity-100 mt-4"}`}>
             <Button
               variant="outline"
               size="sm"
