@@ -198,18 +198,18 @@ function AppSidebar() {
                 {navigationItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                      <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                       {state === "collapsed" ? (
-                         <Tooltip>
-                           <TooltipTrigger asChild>
-                             {item.url === "/" ? (
-                              <NavLink 
-                                to={item.url}
-                                className="flex w-full items-center justify-center py-[5px]"
-                                onClick={() => handleNavClick(item.url)}
-                              >
-                                <item.icon className="h-4 w-4 shrink-0" />
-                              </NavLink>
-                             ) : (
+                        {state === "collapsed" && !isMobile ? (
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              {item.url === "/" ? (
+                                <NavLink 
+                                  to={item.url}
+                                  className="flex w-full items-center justify-center py-[5px]"
+                                  onClick={() => handleNavClick(item.url)}
+                                >
+                                  <item.icon className="h-4 w-4 shrink-0" />
+                                </NavLink>
+                              ) : (
                                 <NavLink 
                                   to={item.url} 
                                   end={item.url === "/papers/"}
@@ -218,34 +218,34 @@ function AppSidebar() {
                                 >
                                   <item.icon className="h-4 w-4 shrink-0" />
                                 </NavLink>
-                             )}
-                           </TooltipTrigger>
-                           <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
-                             <p>{item.title}</p>
-                           </TooltipContent>
-                         </Tooltip>
-                        ) : (
-                          item.url === "/" ? (
-                            <NavLink 
-                              to={item.url}
-                              className="flex w-full items-center gap-2"
-                              onClick={() => handleNavClick(item.url)}
-                            >
-                              <item.icon className="h-4 w-4 shrink-0" />
-                              <span className="truncate">{item.title}</span>
-                            </NavLink>
-                          ) : (
-                            <NavLink 
-                              to={item.url} 
-                              end={item.url === "/papers/"}
-                              className="flex w-full items-center gap-2"
-                              onClick={() => handleNavClick(item.url)}
-                            >
-                              <item.icon className="h-4 w-4 shrink-0" />
-                              <span className="truncate">{item.title}</span>
-                            </NavLink>
-                          )
-                        )}
+                              )}
+                            </TooltipTrigger>
+                            <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
+                              <p>{item.title}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                         ) : (
+                           item.url === "/" ? (
+                             <NavLink 
+                               to={item.url}
+                               className="flex w-full items-center gap-2"
+                               onClick={() => handleNavClick(item.url)}
+                             >
+                               <item.icon className="h-4 w-4 shrink-0" />
+                               <span className="truncate">{item.title}</span>
+                             </NavLink>
+                           ) : (
+                             <NavLink 
+                               to={item.url} 
+                               end={item.url === "/papers/"}
+                               className="flex w-full items-center gap-2"
+                               onClick={() => handleNavClick(item.url)}
+                             >
+                               <item.icon className="h-4 w-4 shrink-0" />
+                               <span className="truncate">{item.title}</span>
+                             </NavLink>
+                           )
+                         )}
                      </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -262,9 +262,9 @@ function AppSidebar() {
                 {whitePaperItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                      <SidebarMenuButton asChild isActive={isActive(item.url)}>
-                       {state === "collapsed" ? (
-                         <Tooltip>
-                           <TooltipTrigger asChild>
+                        {state === "collapsed" && !isMobile ? (
+                          <Tooltip>
+                            <TooltipTrigger asChild>
                               <NavLink 
                                 to={item.url} 
                                 className="flex w-full items-center justify-center py-[5px]"
@@ -272,21 +272,21 @@ function AppSidebar() {
                               >
                                 <item.icon className="h-4 w-4 shrink-0" />
                               </NavLink>
-                           </TooltipTrigger>
-                           <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
-                             <p>{item.title}</p>
-                           </TooltipContent>
-                         </Tooltip>
-                       ) : (
-                         <NavLink 
-                           to={item.url} 
-                           className="flex w-full items-center gap-2"
-                           onClick={() => handleNavClick(item.url)}
-                         >
-                           <item.icon className="h-4 w-4 shrink-0" />
-                           <span className="truncate">{item.title}</span>
-                         </NavLink>
-                       )}
+                            </TooltipTrigger>
+                            <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
+                              <p>{item.title}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        ) : (
+                          <NavLink 
+                            to={item.url} 
+                            className="flex w-full items-center gap-2"
+                            onClick={() => handleNavClick(item.url)}
+                          >
+                            <item.icon className="h-4 w-4 shrink-0" />
+                            <span className="truncate">{item.title}</span>
+                          </NavLink>
+                        )}
                      </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
@@ -299,7 +299,7 @@ function AppSidebar() {
         
         <SidebarFooter className="border-t p-3">
           {user ? (
-            state === "collapsed" ? (
+            state === "collapsed" && !isMobile ? (
               <Popover>
                 <PopoverTrigger asChild>
                   <Button variant="ghost" className="w-full h-8 p-0 justify-center">
