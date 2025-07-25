@@ -354,13 +354,13 @@ function AppSidebar() {
           ) : (
             <Button 
               variant="outline"
-              className={`w-full ${state === "collapsed" ? "justify-center" : "justify-start gap-2"}`}
+              className={`w-full ${state === "collapsed" && !isMobile ? "justify-center" : "justify-start gap-2"}`}
               onClick={() => handleNavClick("/auth")}
               asChild
             >
               <NavLink to="/auth">
                 <LogIn className="h-4 w-4" />
-                {state !== "collapsed" && <span>Sign In</span>}
+                {(state !== "collapsed" || isMobile) && <span>Sign In</span>}
               </NavLink>
             </Button>
           )}
