@@ -171,7 +171,7 @@ function AppSidebar() {
             <SidebarTrigger className={`${state === "collapsed" && !isMobile ? "mx-auto" : ""}`} />
           </div>
           
-          {/* Search section */}
+          {/* Search section - temporarily hidden 
           <div className={`transition-all duration-200 ${state === "collapsed" && !isMobile ? "opacity-0 h-0" : "opacity-100 mt-4"}`}>
             <Button
               variant="outline"
@@ -188,6 +188,7 @@ function AppSidebar() {
               </div>
             </Button>
           </div>
+          */}
         </SidebarHeader>
         
         <SidebarContent className="overflow-y-auto">
