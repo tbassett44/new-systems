@@ -39,12 +39,12 @@ export interface SearchResult {
   relevance: number;
 }
 
-// Define white paper metadata
+// Define white paper metadata - only include pages that are in the navigation
 export const whitepaperMetadata = {
   'overview': {
     title: 'System Regeneration',
     subtitle: 'Supporting Better Feedback, Effective Governance, and Improved Wellbeing',
-    route: '/papers/overview',
+    route: '/papers/',
     icon: BookOpen,
     badges: ['Systems Design', 'Regenerative', 'Participatory', 'Dignity-Centered']
   },
@@ -54,6 +54,13 @@ export const whitepaperMetadata = {
     route: '/papers/endo-economics',
     icon: DollarSign,
     badges: ['Regenerative Economics', 'Systemic Wellbeing', 'Collective Prosperity', 'Economic Democracy']
+  },
+  'digital-sovereignty': {
+    title: 'Digital Sovereignty',
+    subtitle: 'Decentralized Infrastructure for Human Agency',
+    route: '/papers/digital-sovereignty',
+    icon: Key,
+    badges: ['Digital Rights', 'Decentralized', 'Privacy', 'Self-Sovereignty']
   },
   'waste-management': {
     title: 'Waste Management',
@@ -83,19 +90,19 @@ export const whitepaperMetadata = {
     icon: Heart,
     badges: ['Mental Health', 'Privacy-First', 'Community Resilience', 'Self-Sovereign Data']
   },
-  'digital-sovereignty': {
-    title: 'Digital Sovereignty',
-    subtitle: 'Decentralized Infrastructure for Human Agency',
-    route: '/papers/digital-sovereignty',
-    icon: Key,
-    badges: ['Digital Rights', 'Decentralized', 'Privacy', 'Self-Sovereignty']
-  },
   'education': {
     title: 'Regenerative Education Through Digital Sovereignty',
     subtitle: 'A Framework for Decentralized, Lifelong, and Learner-Led Learning',
     route: '/papers/education',
     icon: GraduationCap,
     badges: ['Learner-Led', 'Digital Sovereignty', 'Lifelong Learning', 'Self-Custody', 'Verifiable Credentials', 'Decentralized']
+  },
+  'ecology': {
+    title: 'Regenerative Ecology',
+    subtitle: 'Healing Our Relationship with Nature',
+    route: '/papers/ecology',
+    icon: Recycle,
+    badges: ['Ecology', 'Environment', 'Sustainability', 'Regenerative']
   },
   'justice': {
     title: 'Regenerative Justice',
@@ -104,19 +111,12 @@ export const whitepaperMetadata = {
     icon: Gavel,
     badges: ['Restorative', 'Transformative', 'Community-Centered', 'Healing-Based', 'Dignity-Focused']
   },
-  'technology': {
-    title: 'Regenerative Technology & Digital Sovereignty',
-    subtitle: 'Building Technology that Serves Life and Human Agency',
-    route: '/papers/technology',
-    icon: Cpu,
-    badges: ['Digital Sovereignty', 'Open Source', 'Privacy-Enhancing', 'Decentralized', 'Human-Centered']
-  },
-  'sexual-health': {
-    title: 'Sexual Health and Reproductive Responsibility',
-    subtitle: 'A Comprehensive Framework for Reproductive Justice',
-    route: '/papers/sexual-health',
-    icon: Heart,
-    badges: ['Sexual Health', 'Reproductive Justice', 'Public Health', 'Comprehensive Care']
+  'conflict': {
+    title: 'Conflict Transformation',
+    subtitle: 'Transforming Conflict into Collaboration',
+    route: '/papers/conflict',
+    icon: Activity,
+    badges: ['Conflict Resolution', 'Mediation', 'Collaboration', 'Peace']
   },
   'media': {
     title: 'Regenerative Media',
@@ -139,13 +139,6 @@ export const whitepaperMetadata = {
     icon: Sparkles,
     badges: ['Arts', 'Culture', 'Creative Expression', 'Community']
   },
-  'housing': {
-    title: 'Regenerative Housing',
-    subtitle: 'Community-Centered Living for All',
-    route: '/papers/housing',
-    icon: Home,
-    badges: ['Housing', 'Community', 'Affordable', 'Sustainable']
-  },
   'spirituality': {
     title: 'Regenerative Spirituality',
     subtitle: 'Fostering Spiritual Wellness and Community Connection',
@@ -153,40 +146,41 @@ export const whitepaperMetadata = {
     icon: Compass,
     badges: ['Spirituality', 'Wellness', 'Community', 'Connection']
   },
-  'finance': {
-    title: 'Regenerative Finance',
-    subtitle: 'Financial Systems for Human and Planetary Wellbeing',
-    route: '/papers/finance',
-    icon: DollarSign,
-    badges: ['Finance', 'Regenerative', 'Wellbeing', 'Sustainability']
+  'death': {
+    title: 'Death and Dignity',
+    subtitle: 'Regenerative Approaches to End-of-Life Care',
+    route: '/papers/death',
+    icon: Heart,
+    badges: ['End-of-Life', 'Death', 'Care', 'Regenerative']
   },
-  'ecology': {
-    title: 'Regenerative Ecology',
-    subtitle: 'Healing Our Relationship with Nature',
-    route: '/papers/ecology',
-    icon: Recycle,
-    badges: ['Ecology', 'Environment', 'Sustainability', 'Regenerative']
+  'sexual-health': {
+    title: 'Sexual Health and Reproductive Responsibility',
+    subtitle: 'A Comprehensive Framework for Reproductive Justice',
+    route: '/papers/sexual-health',
+    icon: Heart,
+    badges: ['Sexual Health', 'Reproductive Justice', 'Public Health', 'Comprehensive Care']
   },
   'election': {
-    title: 'Electoral Reform',
+    title: 'Regenerative Election',
     subtitle: 'Democratic Innovation for Participatory Governance',
     route: '/papers/election',
     icon: Users,
     badges: ['Democracy', 'Electoral Reform', 'Governance', 'Participation']
   },
-  'conflict': {
-    title: 'Conflict Resolution',
-    subtitle: 'Transforming Conflict into Collaboration',
-    route: '/papers/conflict',
-    icon: Activity,
-    badges: ['Conflict Resolution', 'Mediation', 'Collaboration', 'Peace']
+  // Navigation pages
+  'contribute': {
+    title: 'Contribute to the Manifesto',
+    subtitle: 'Join the Co-Creation Process',
+    route: '/papers/contribute',
+    icon: GitBranch,
+    badges: ['Collaboration', 'Community Input', 'Co-Creation', 'Open Source']
   },
-  'death': {
-    title: 'Death and Dying',
-    subtitle: 'Regenerative Approaches to End-of-Life Care',
-    route: '/papers/death',
-    icon: Heart,
-    badges: ['End-of-Life', 'Death', 'Care', 'Regenerative']
+  'glossary': {
+    title: 'Manifesto Glossary',
+    subtitle: 'Key Terms and Concepts',
+    route: '/papers/glossary',
+    icon: ScrollText,
+    badges: ['Definitions', 'Terminology', 'Concepts', 'Reference']
   }
 };
 
@@ -248,7 +242,7 @@ export function createSearchIndex(): SearchResult[] {
       id: 'overview-purpose',
       title: 'Purpose Statement',
       content: 'dignity foundation society voice matters basic needs wellbeing healthy communities democratic participation systems redesign blueprint collective thriving',
-      route: '/papers/overview',
+       route: '/papers/',
       section: 'Overview',
       icon: BookOpen,
       type: 'section',
@@ -258,7 +252,7 @@ export function createSearchIndex(): SearchResult[] {
       id: 'overview-theory-change',
       title: 'Theory of Change',
       content: 'cultural evolution democracy collective intelligence community resilience local governance decentralized networks participatory systems',
-      route: '/papers/overview',
+       route: '/papers/',
       section: 'Theory of Change',
       icon: BookOpen,
       type: 'section',
@@ -447,17 +441,6 @@ export function createSearchIndex(): SearchResult[] {
       relevance: 0
     },
 
-    // Technology sections
-    {
-      id: 'technology-overview',
-      title: 'Regenerative Technology Overview',
-      content: 'technology serves life human agency open source privacy-enhancing decentralized human-centered digital sovereignty',
-      route: '/papers/technology',
-      section: 'Overview',
-      icon: Cpu,
-      type: 'section',
-      relevance: 0
-    },
 
     // Energy sections
     {
@@ -519,19 +502,7 @@ export function createSearchIndex(): SearchResult[] {
       relevance: 0
     },
 
-    // Housing sections
-    {
-      id: 'housing-overview',
-      title: 'Regenerative Housing Overview',
-      content: 'community-centered living affordable sustainable housing cooperative community land trusts social housing',
-      route: '/papers/housing',
-      section: 'Overview',
-      icon: Home,
-      type: 'section',
-      relevance: 0
-    },
-
-    // Spirituality sections
+     // Spirituality sections
     {
       id: 'spirituality-overview',
       title: 'Regenerative Spirituality Overview',
@@ -539,18 +510,6 @@ export function createSearchIndex(): SearchResult[] {
       route: '/papers/spirituality',
       section: 'Overview',
       icon: Compass,
-      type: 'section',
-      relevance: 0
-    },
-
-    // Finance sections
-    {
-      id: 'finance-overview',
-      title: 'Regenerative Finance Overview',
-      content: 'financial systems human planetary wellbeing regenerative finance impact investing community banking',
-      route: '/papers/finance',
-      section: 'Overview',
-      icon: DollarSign,
       type: 'section',
       relevance: 0
     },
