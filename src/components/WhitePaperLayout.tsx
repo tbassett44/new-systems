@@ -202,22 +202,22 @@ function AppSidebar() {
                          <Tooltip>
                            <TooltipTrigger asChild>
                              {item.url === "/" ? (
-                               <NavLink 
-                                 to={item.url}
-                                 className="flex w-full items-center justify-center"
-                                 onClick={() => handleNavClick(item.url)}
-                               >
-                                 <item.icon className="h-4 w-4 shrink-0" />
-                               </NavLink>
+                              <NavLink 
+                                to={item.url}
+                                className="flex w-full items-center justify-center py-[5px]"
+                                onClick={() => handleNavClick(item.url)}
+                              >
+                                <item.icon className="h-4 w-4 shrink-0" />
+                              </NavLink>
                              ) : (
-                               <NavLink 
-                                 to={item.url} 
-                                 end={item.url === "/papers/"}
-                                 className="flex w-full items-center justify-center"
-                                 onClick={() => handleNavClick(item.url)}
-                               >
-                                 <item.icon className="h-4 w-4 shrink-0" />
-                               </NavLink>
+                                <NavLink 
+                                  to={item.url} 
+                                  end={item.url === "/papers/"}
+                                  className="flex w-full items-center justify-center py-[5px]"
+                                  onClick={() => handleNavClick(item.url)}
+                                >
+                                  <item.icon className="h-4 w-4 shrink-0" />
+                                </NavLink>
                              )}
                            </TooltipTrigger>
                            <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
@@ -265,13 +265,13 @@ function AppSidebar() {
                        {state === "collapsed" ? (
                          <Tooltip>
                            <TooltipTrigger asChild>
-                             <NavLink 
-                               to={item.url} 
-                               className="flex w-full items-center justify-center"
-                               onClick={() => handleNavClick(item.url)}
-                             >
-                               <item.icon className="h-4 w-4 shrink-0" />
-                             </NavLink>
+                              <NavLink 
+                                to={item.url} 
+                                className="flex w-full items-center justify-center py-[5px]"
+                                onClick={() => handleNavClick(item.url)}
+                              >
+                                <item.icon className="h-4 w-4 shrink-0" />
+                              </NavLink>
                            </TooltipTrigger>
                            <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
                              <p>{item.title}</p>
