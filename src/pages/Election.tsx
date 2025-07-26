@@ -1,5 +1,6 @@
 
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Vote, AlertTriangle, CheckCircle, Users, Heart, Lightbulb } from "lucide-react";
@@ -172,7 +173,7 @@ const Election = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-sm">Community deliberation tools powered by collective sensemaking</span>
+                  <span className="text-sm">Community deliberation tools powered by <Link to="/papers/sensemaking" className="text-blue-600 hover:text-blue-800 underline">collective sensemaking</Link></span>
                 </li>
                 <li className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
