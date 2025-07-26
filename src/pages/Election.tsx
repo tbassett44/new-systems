@@ -144,29 +144,73 @@ const Election = () => {
 
       <Card className="border-blue-200">
         <CardHeader>
-          <CardTitle className="text-primary">Operational Framework</CardTitle>
+          <CardTitle className="text-primary">🛠️ Implementation Steps for a Regenerative Election</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-4">
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Pre-Launch Phase</h4>
-              <p className="text-sm">Convene design teams, clarify ethical frameworks, recruit candidates, and develop digital tools</p>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold mb-3 text-lg">1. Convene a Regenerative Election Coalition</h4>
+              <p className="text-sm leading-relaxed">
+                Bring together independent organizers, technologists, civic innovators, and aligned leaders across sectors to design and steward the process. This includes developing transparent debate formats, digital engagement tools, a shared code of ethics, and decentralized infrastructure for participation and data integrity.
+              </p>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Platform Co-Design</h4>
-              <p className="text-sm">Regional and virtual forums gather public priorities and reflect them into draft platforms</p>
+
+            <div>
+              <h4 className="font-semibold mb-3 text-lg">2. Engage the Independent Majority</h4>
+              <p className="text-sm leading-relaxed">
+                Over 51% of U.S. voters now identify as independent, disillusioned by partisan polarization and institutional gridlock. The Regenerative Election is designed as a platform for this majority to reclaim agency in shaping the future. By creating a new public forum for leadership selection—outside traditional party primaries—it offers a coherent alternative path toward unifying representation.
+              </p>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Campaigning and Dialogue</h4>
-              <p className="text-sm">Candidates share proposals, host listening sessions, and participate in moderated dialogues</p>
+
+            <div>
+              <h4 className="font-semibold mb-3 text-lg">3. Design a Participatory Pre-Election Process</h4>
+              <p className="text-sm leading-relaxed mb-2">This includes:</p>
+              <ul className="space-y-2 ml-4">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">Public submission of candidacies</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">Community deliberation tools powered by collective sensemaking</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">Open digital debates and values-based questionnaires</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">Ranked-choice or quadratic voting to surface aligned leaders</span>
+                </li>
+              </ul>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Cultural and Civic Events</h4>
-              <p className="text-sm">Art, music, ceremony, and story shape the emotional landscape of the election</p>
+
+            <div>
+              <h4 className="font-semibold mb-3 text-lg">4. Coordinate State-by-State Ballot Access Campaigns</h4>
+              <p className="text-sm leading-relaxed mb-2">
+                While the Regenerative Election operates initially outside of the formal system, its outputs can be strategically harnessed to meet traditional ballot thresholds.
+              </p>
+              <ul className="space-y-2 ml-4">
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">Each state has unique petition and signature requirements</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">A unified independent candidate, backed by national support from Regenerative Election participants, can trigger coordinated grassroots petition drives</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <span className="text-sm">This bottom-up surge would demonstrate popular support while also satisfying legal thresholds for ballot inclusion</span>
+                </li>
+              </ul>
             </div>
-            <div className="bg-muted/30 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Closing Assembly</h4>
-              <p className="text-sm">Synthesized learnings, community votes, and a declaration for how to proceed toward ballot access or other forms of public engagement</p>
+
+            <div>
+              <h4 className="font-semibold mb-3 text-lg">5. Showcase a New Era of Political Culture</h4>
+              <p className="text-sm leading-relaxed">
+                The entire process should model the future we seek: transparent, respectful, dignified, and solutions-oriented. By demonstrating how a parallel political infrastructure can function with care and integrity, the Regenerative Election becomes both a symbol and a seed of system renewal.
+              </p>
             </div>
           </div>
         </CardContent>
