@@ -86,62 +86,6 @@ const Election = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-green-200">
-        <CardHeader>
-          <CardTitle className="text-primary">The Solution: A Regenerative Election Framework</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-6">
-            <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
-                <Users className="h-4 w-4 text-green-600" />
-                1. Participatory Candidate Development
-              </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
-                <li>Communities identify and cultivate candidates through deliberative processes</li>
-                <li>Mentorship programs and skills development initiatives</li>
-                <li>Community-driven selection rather than self-selection or party nomination</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
-                <Vote className="h-4 w-4 text-green-600" />
-                2. Transparent Campaign Infrastructure
-              </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
-                <li>Open-source platforms provide equal access to voters</li>
-                <li>Transparent funding mechanisms and collaborative policy development</li>
-                <li>Community input integrated at every stage of the campaign process</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
-                <Lightbulb className="h-4 w-4 text-green-600" />
-                3. Regenerative Governance Mechanisms
-              </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
-                <li>Electoral processes prioritizing ecological restoration and social healing</li>
-                <li>Economic justice and community wellbeing as core governance principles</li>
-                <li>Accountability structures ensuring officials remain connected to community needs</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-2 flex items-center gap-2 text-foreground">
-                <CheckCircle className="h-4 w-4 text-green-600" />
-                4. Continuous Feedback Systems
-              </h4>
-              <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
-                <li>Real-time mechanisms for community input on policy decisions</li>
-                <li>Regular check-ins with constituents and adaptive governance structures</li>
-                <li>Evolution based on community needs and changing circumstances</li>
-              </ul>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
       <Card className="border-blue-200">
         <CardHeader>
