@@ -32,7 +32,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>ℹ️  About This Document</CardTitle>
+          <CardTitle>ℹ️   About This Document</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
