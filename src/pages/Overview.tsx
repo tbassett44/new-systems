@@ -527,7 +527,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>⭐️ Conclusion: Toward a Civilization Aligned with Life</CardTitle>
+          <CardTitle>✨ Conclusion: Toward a Civilization Aligned with Life</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
