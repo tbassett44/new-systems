@@ -418,22 +418,6 @@ const Overview = () => {
               </Button>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Creating a Stage for the Dialogue: A Regenerative Election</h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                The Regenerative Election offers a visionary yet grounded approach to democratic renewal—by operating outside 
-                the constraints of the existing electoral system, it creates the freedom to prototype what participatory, 
-                trust-rich, and values-aligned politics could look like. Rather than reacting to a broken structure, it builds 
-                a living alternative: one rooted in dialogue, transparency, and wellbeing. At the same time, it serves as a 
-                catalytic pathway toward real-world influence, cultivating public support, refining policy platforms, and 
-                generating the infrastructure necessary to meet the high bar of state-by-state ballot qualification. In this 
-                way, the Regenerative Election bridges imagination and implementation, modeling a politics not of power over, 
-                but of co-creation with.
-              </p>
-              <Button asChild variant="outline" size="sm">
-                <NavLink to="/papers/election">View the Regenerative Election Proposal</NavLink>
-              </Button>
-            </div>
           </div>
         </CardContent>
       </Card>
