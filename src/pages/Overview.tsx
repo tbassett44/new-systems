@@ -1,11 +1,9 @@
-
 import { useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-
 const Overview = () => {
   useEffect(() => {
     document.title = "System Regeneration | New Systems and Structures";
@@ -14,8 +12,7 @@ const Overview = () => {
       metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
     }
   }, []);
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div>
         <h1 className="text-4xl font-bold mb-4">System Regeneration</h1>
         <p className="text-xl text-muted-foreground mb-6">
@@ -35,7 +32,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>About This Document</CardTitle>
+          <CardTitle>ℹ️  About This Document</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
@@ -51,7 +48,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Purpose Statement</CardTitle>
+          <CardTitle>⚡️ Purpose Statement</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
@@ -72,7 +69,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Dignity: The Heart of Systems Regeneration</CardTitle>
+          <CardTitle>❤️ Dignity: The Heart of Systems Regeneration</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
@@ -105,10 +102,7 @@ const Overview = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            At the heart of this manifesto lies a singular, galvanizing aim: to catalyze a <NavLink 
-            to="/papers/election" 
-            className="text-primary hover:underline font-medium"
-            >Regenerative Election</NavLink>—a new form of democratic engagement that invites the people of this nation to reimagine how we choose leadership, how we surface solutions, and how we steward our shared future. While the whitepapers that follow propose a wide array of structural innovations, they are not offered as the only answers. Rather, they are seeds—examples of what could emerge from a society grounded in dignity, equity, creativity, and care.
+            At the heart of this manifesto lies a singular, galvanizing aim: to catalyze a <NavLink to="/papers/election" className="text-primary hover:underline font-medium">Regenerative Election</NavLink>—a new form of democratic engagement that invites the people of this nation to reimagine how we choose leadership, how we surface solutions, and how we steward our shared future. While the whitepapers that follow propose a wide array of structural innovations, they are not offered as the only answers. Rather, they are seeds—examples of what could emerge from a society grounded in dignity, equity, creativity, and care.
           </p>
           <p className="leading-relaxed mb-4">
             The current electoral system is increasingly seen as unrepresentative, captured, and adversarial. Over 51% of Americans now identify as politically independent, signaling a deep hunger for approaches that transcend party lines and ideological binaries. A Regenerative Election is not merely a shift in political preference—it is a reweaving of the democratic fabric. It proposes a parallel, voluntary process where candidates are surfaced through transparent dialogue, collective sensemaking, and values-based debate—long before any ballots are cast.
@@ -129,7 +123,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Systems Change Proposals</CardTitle>
+          <CardTitle>🌀 Systems Change Proposals</CardTitle>
           <CardDescription>
             Based on Barbara Marx Hubbard's Wheel of Co-Creation
           </CardDescription>
@@ -427,7 +421,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Unseen Consequences and Adaptive Awareness</CardTitle>
+          <CardTitle>⚠️ Unseen Consequences and Adaptive Awareness</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
@@ -533,7 +527,7 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Conclusion: Toward a Civilization Aligned with Life</CardTitle>
+          <CardTitle>⭐️ Conclusion: Toward a Civilization Aligned with Life</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -612,8 +606,6 @@ const Overview = () => {
           </div>
         </CardContent>
       </Card>
-    </div>
-  );
+    </div>;
 };
-
 export default Overview;
