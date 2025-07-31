@@ -101,6 +101,29 @@ const Overview = () => {
 
       <Card>
         <CardHeader>
+          <CardTitle>✨ The Call for a Regenerative Election</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed mb-4">
+            At the heart of this manifesto lies a singular, galvanizing aim: to catalyze a <NavLink 
+            to="/papers/election" 
+            className="text-primary hover:underline font-medium"
+            >Regenerative Election</NavLink>—a new form of democratic engagement that invites the people of this nation to reimagine how we choose leadership, how we surface solutions, and how we steward our shared future. While the whitepapers that follow propose a wide array of structural innovations, they are not offered as the only answers. Rather, they are seeds—examples of what could emerge from a society grounded in dignity, equity, creativity, and care.
+          </p>
+          <p className="leading-relaxed mb-4">
+            The current electoral system is increasingly seen as unrepresentative, captured, and adversarial. Over 51% of Americans now identify as politically independent, signaling a deep hunger for approaches that transcend party lines and ideological binaries. A Regenerative Election is not merely a shift in political preference—it is a reweaving of the democratic fabric. It proposes a parallel, voluntary process where candidates are surfaced through transparent dialogue, collective sensemaking, and values-based debate—long before any ballots are cast.
+          </p>
+          <p className="leading-relaxed mb-4">
+            This initiative is not about creating a new political party. It is about creating a new civic experience—one that honors wisdom from across the political spectrum, uplifts marginalized voices, and gives rise to leadership that reflects the will and wellbeing of the whole. In doing so, it creates a legitimate and actionable pathway for any aligned candidate to earn trust, build momentum, and—through grassroots petition drives—secure official ballot access in states across the country.
+          </p>
+          <p className="leading-relaxed">
+            If nothing else is implemented from this manifesto, let it be this: an open invitation to co-create a Regenerative Election—a civic rite of passage into a more honest, intelligent, and life-affirming democracy. What follows in this document can serve as inspiration and scaffolding—but the real blueprint will be drawn by those who step forward to build it together.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
           <CardTitle>Distinguishing Endo Economics from Socialism and Communism</CardTitle>
         </CardHeader>
         <CardContent>
