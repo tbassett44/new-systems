@@ -119,6 +119,9 @@ const Overview = () => {
           <p className="leading-relaxed">
             If nothing else is implemented from this manifesto, let it be this: an open invitation to co-create a Regenerative Election—a civic rite of passage into a more honest, intelligent, and life-affirming democracy. What follows in this document can serve as inspiration and scaffolding—but the real blueprint will be drawn by those who step forward to build it together.
           </p>
+          <Button asChild variant="outline" size="sm" className="mt-4">
+            <NavLink to="/papers/election">View the Regenerative Election Proposal</NavLink>
+          </Button>
         </CardContent>
       </Card>
 
