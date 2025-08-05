@@ -216,29 +216,28 @@ function AppSidebar() {
                   <SidebarMenuItem key={item.title}>
                      {item.isPrint ? (
                        <SidebarMenuButton asChild={false}>
-                         {state === "collapsed" && !isMobile ? (
-                           <Tooltip>
-                             <TooltipTrigger asChild>
-                               <button
-                                 className="flex w-full items-center justify-center py-[5px] h-full"
-                                 onClick={() => handleNavClick(item.url, item.isPrint)}
-                               >
-                                 <item.icon className="h-4 w-4 shrink-0" />
-                               </button>
-                             </TooltipTrigger>
-                             <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
-                               <p>{item.title}</p>
-                             </TooltipContent>
-                           </Tooltip>
-                         ) : (
-                           <button
-                             className="flex w-full items-center gap-2 h-full px-2 py-1 rounded-md hover:bg-accent hover:text-accent-foreground"
-                             onClick={() => handleNavClick(item.url, item.isPrint)}
-                           >
-                             <item.icon className="h-4 w-4 shrink-0" />
-                             <span className="truncate">{item.title}</span>
-                           </button>
-                         )}
+                         <button
+                           className="w-full"
+                           onClick={() => handleNavClick(item.url, item.isPrint)}
+                         >
+                           {state === "collapsed" && !isMobile ? (
+                             <Tooltip>
+                               <TooltipTrigger asChild>
+                                 <div className="flex w-full items-center justify-center py-[5px]">
+                                   <item.icon className="h-4 w-4 shrink-0" />
+                                 </div>
+                               </TooltipTrigger>
+                               <TooltipContent side="right" className="bg-blue-800 text-white border-blue-700">
+                                 <p>{item.title}</p>
+                               </TooltipContent>
+                             </Tooltip>
+                           ) : (
+                             <div className="flex w-full items-center gap-2">
+                               <item.icon className="h-4 w-4 shrink-0" />
+                               <span className="truncate">{item.title}</span>
+                             </div>
+                           )}
+                         </button>
                        </SidebarMenuButton>
                      ) : (
                        <SidebarMenuButton asChild isActive={isActive(item.url)}>
