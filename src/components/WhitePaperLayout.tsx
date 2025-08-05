@@ -215,15 +215,12 @@ function AppSidebar() {
                 {navigationItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
                      {item.isPrint ? (
-                       <SidebarMenuButton asChild={false}>
-                         <button
-                           className="w-full"
-                           onClick={() => handleNavClick(item.url, item.isPrint)}
-                         >
+                       <SidebarMenuButton asChild>
+                         <button onClick={() => handleNavClick(item.url, item.isPrint)}>
                            {state === "collapsed" && !isMobile ? (
                              <Tooltip>
                                <TooltipTrigger asChild>
-                                 <div className="flex w-full items-center justify-center py-[5px]">
+                                 <div className="flex w-full items-center justify-center">
                                    <item.icon className="h-4 w-4 shrink-0" />
                                  </div>
                                </TooltipTrigger>
@@ -232,10 +229,10 @@ function AppSidebar() {
                                </TooltipContent>
                              </Tooltip>
                            ) : (
-                             <div className="flex w-full items-center gap-2">
+                             <>
                                <item.icon className="h-4 w-4 shrink-0" />
                                <span className="truncate">{item.title}</span>
-                             </div>
+                             </>
                            )}
                          </button>
                        </SidebarMenuButton>
