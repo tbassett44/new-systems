@@ -31,6 +31,7 @@ const pageData = [
 
 export const usePrintPDF = () => {
   const generatePDF = async () => {
+    console.log("Generate PDF button clicked!");
     try {
       toast.info("Generating PDF...", { description: "Please wait while we collect all content" });
 

@@ -159,11 +159,14 @@ function AppSidebar() {
   };
 
   const handleNavClick = (url: string, isPrint?: boolean) => {
+    console.log("handleNavClick called:", { url, isPrint });
+    
     if (isMobile) {
       toggleSidebar();
     }
     
     if (isPrint) {
+      console.log("Calling generatePDF...");
       generatePDF();
       return;
     }
