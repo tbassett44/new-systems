@@ -77,7 +77,6 @@ const navigationItems: NavigationItem[] = [
   { title: "Overview", url: "/papers/", icon: BookOpen },
   { title: "Contribute", url: "/papers/contribute", icon: GitBranch },
   { title: "Glossary", url: "/papers/glossary", icon: ScrollText },
-  { title: "Print PDF", url: "#", icon: Printer, isPrint: true },
 ];
 
 const whitePaperItems = [
