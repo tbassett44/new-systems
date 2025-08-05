@@ -42,7 +42,8 @@ import {
   ScrollText,
   LogOut,
   Settings,
-  Home
+  Home,
+  Printer
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -56,6 +57,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
+import { usePrintPDF } from "@/hooks/usePrintPDF";
 
 import { supabase } from "@/integrations/supabase/client";
 
@@ -63,11 +65,19 @@ interface WhitePaperLayoutProps {
   children: ReactNode;
 }
 
-const navigationItems = [
+interface NavigationItem {
+  title: string;
+  url: string;
+  icon: any;
+  isPrint?: boolean;
+}
+
+const navigationItems: NavigationItem[] = [
   { title: "Welcome", url: "/", icon: Home },
   { title: "Overview", url: "/papers/", icon: BookOpen },
   { title: "Contribute", url: "/papers/contribute", icon: GitBranch },
   { title: "Glossary", url: "/papers/glossary", icon: ScrollText },
+  { title: "Print PDF", url: "#", icon: Printer, isPrint: true },
 ];
 
 const whitePaperItems = [
@@ -98,6 +108,7 @@ function AppSidebar() {
   const isMobile = useIsMobile();
   const { user } = useAuth();
   const navigate = useNavigate();
+  const { generatePDF } = usePrintPDF();
   const [profileData, setProfileData] = useState<{
     display_name: string;
     avatar_url: string | null;
@@ -147,9 +158,14 @@ function AppSidebar() {
     return currentPath === path;
   };
 
-  const handleNavClick = (url: string) => {
+  const handleNavClick = (url: string, isPrint?: boolean) => {
     if (isMobile) {
       toggleSidebar();
+    }
+    
+    if (isPrint) {
+      generatePDF();
+      return;
     }
     
     // Regular navigation for all routes
@@ -198,11 +214,18 @@ function AppSidebar() {
               <SidebarMenu>
                 {navigationItems.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                     <SidebarMenuButton asChild isActive={isActive(item.url)}>
+                     <SidebarMenuButton asChild={!item.isPrint} isActive={!item.isPrint && isActive(item.url)}>
                         {state === "collapsed" && !isMobile ? (
                           <Tooltip>
                             <TooltipTrigger asChild>
-                              {item.url === "/" ? (
+                              {item.isPrint ? (
+                                <button
+                                  className="flex w-full items-center justify-center py-[5px] h-full"
+                                  onClick={() => handleNavClick(item.url, item.isPrint)}
+                                >
+                                  <item.icon className="h-4 w-4 shrink-0" />
+                                </button>
+                              ) : item.url === "/" ? (
                                 <NavLink 
                                   to={item.url}
                                   className="flex w-full items-center justify-center py-[5px]"
@@ -226,7 +249,15 @@ function AppSidebar() {
                             </TooltipContent>
                           </Tooltip>
                          ) : (
-                           item.url === "/" ? (
+                           item.isPrint ? (
+                             <button
+                               className="flex w-full items-center gap-2 h-full px-2 py-1 rounded-md hover:bg-accent hover:text-accent-foreground"
+                               onClick={() => handleNavClick(item.url, item.isPrint)}
+                             >
+                               <item.icon className="h-4 w-4 shrink-0" />
+                               <span className="truncate">{item.title}</span>
+                             </button>
+                           ) : item.url === "/" ? (
                              <NavLink 
                                to={item.url}
                                className="flex w-full items-center gap-2"
