@@ -854,29 +854,6 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-blue-200">
-        <CardHeader>
-          <CardTitle className="text-primary">Distinguishing Endo Economics from Socialism and Communism</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            As the Endo Economics model gains attention, it is essential to clearly distinguish its foundations from 
-            existing frameworks such as socialism and communism. While all three systems share a concern for equity 
-            and social wellbeing, Endo Economics is rooted in an evolutionary and ecological logic rather than 
-            ideological redistribution. It does not advocate for the state ownership of all property, nor does it 
-            seek to centralize control. Instead, it emphasizes decentralization, self-sovereignty, flow-based 
-            coordination, and a regenerative value logic inspired by living systems.
-          </p>
-          <p className="leading-relaxed">
-            Unlike socialism or communism, which often rely on centralized planning and the homogenization of incentives, 
-            Endo Economics fosters local autonomy, diversity of contribution, and multiple dimensions of value beyond labor. 
-            Resources are distributed not through coercive state apparatuses but via participatory governance, verifiable 
-            outcomes, and open reputation systems. It is not about eliminating private enterprise or standardizing outcomes—it 
-            is about creating conditions where wellbeing and mutual thriving are the primary organizing principles, with 
-            individuals empowered to contribute in ways aligned with their deepest gifts and community context.
-          </p>
-        </CardContent>
-      </Card>
     </div>;
 };
 
