@@ -121,7 +121,7 @@ const EndoEconomics = () => {
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Guaranteed Basic Income & Dignified Livelihoods</strong>
+                <strong className="text-primary">Guaranteed Basic Wage & Dignified Livelihoods</strong>
                 <p className="text-sm text-muted-foreground">Every person receives a baseline income that supports wellbeing, with the opportunity to grow through meaningful contribution.</p>
               </div>
             </div>
