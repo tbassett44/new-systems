@@ -109,6 +109,64 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
+      <Card className="border-cyan-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-cyan-700">
+            <Shield className="h-6 w-6" />
+            Radical Transparency: A Foundation for Trust
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            In the evolution toward a regenerative economic model, financial transparency is non-negotiable. The historical failures of centrally managed systems—such as in state-run socialism and authoritarian communism—stemmed not just from flawed ideologies, but from opaque control, suppressed dissent, and misaligned incentives. When economic flows are hidden behind bureaucratic walls or political agendas, corruption, inefficiency, and public distrust flourish.
+          </p>
+          <p className="leading-relaxed">
+            Endo Economics solves this not through ideology, but through design. All economic flows within the commons system are made public and auditable in real time. Every transaction, whether it's a contribution, distribution, or internal allocation, is transparently tracked and made accessible to the people. Blockchains or distributed ledgers can serve as the technological backbone to ensure integrity, permanence, and clarity—without requiring trust in any single institution.
+          </p>
+          <p className="leading-relaxed mb-4">
+            This transparency offers several key advantages:
+          </p>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Decentralized Accountability:</strong>
+                <span className="text-muted-foreground"> No single entity can hide or redirect funds without immediate visibility and social consequences.</span>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Public Oversight and Feedback:</strong>
+                <span className="text-muted-foreground"> Communities can directly see where their shared resources are going, enabling informed feedback and co-governance.</span>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Confidence in Commons-Based Systems:</strong>
+                <span className="text-muted-foreground"> When people can follow the money, they are more likely to participate, contribute, and collaborate.</span>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+              <div>
+                <strong className="text-primary">Reduced Corruption:</strong>
+                <span className="text-muted-foreground"> Open ledgers eliminate the shadows in which exploitation and embezzlement thrive.</span>
+              </div>
+            </div>
+          </div>
+          <p className="leading-relaxed">
+            While Endo Economics proposes a dramatic reorientation of how resources flow, it rejects authoritarianism and central planning in favor of radical openness, voluntary participation, and digitally enforced honesty. The integrity of the system does not rely on trusting a government—it relies on trusting the code, the visibility, and the people.
+          </p>
+          <div className="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-400">
+            <p className="text-cyan-800 font-medium">
+              This is not surveillance. It is consensual civic transparency in service to the collective good. It is the sunlight in which a truly regenerative economy can grow.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
       <Card className="border-purple-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-purple-700">
