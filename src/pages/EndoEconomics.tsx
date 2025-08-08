@@ -45,6 +45,30 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
+      <Card className="border-emerald-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-emerald-700">
+            <Heart className="h-6 w-6" />
+            The Vision
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed mb-4">
+            The proposal is to use these two dominant flows as the foundation of a redesigned economic system that ensures access to essential needs, dignified livelihoods, and systemic wellbeing for all people. Rather than letting economic flows accumulate into extractive corporate profits or passive capital gains, we ask:
+          </p>
+          <div className="space-y-2 mb-4">
+            <p className="text-white font-medium">• What if we restructured these flows to be values-aligned, regenerative, and participatory?</p>
+            <p className="text-white font-medium">• What if wages reflected collective priorities, social benefit, and ecological restoration?</p>
+            <p className="text-white font-medium">• What if public spending was participatory and transparent?</p>
+          </div>
+          <div className="bg-emerald-100 p-4 rounded-lg">
+            <p className="text-emerald-800 font-medium">
+              This informs a fundamental organizing principle that the Economic Flow is part of the Commons, where we treat wages and public spending as the commons of collective value, to be stewarded in service of thriving people and ecosystems.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+
       <Card className="border-amber-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-amber-700">
@@ -315,29 +339,6 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-emerald-200">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-emerald-700">
-            <Heart className="h-6 w-6" />
-            The Vision
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            The proposal is to use these two dominant flows as the foundation of a redesigned economic system that ensures access to essential needs, dignified livelihoods, and systemic wellbeing for all people. Rather than letting economic flows accumulate into extractive corporate profits or passive capital gains, we ask:
-          </p>
-          <div className="space-y-2 mb-4">
-            <p className="text-white font-medium">• What if we restructured these flows to be values-aligned, regenerative, and participatory?</p>
-            <p className="text-white font-medium">• What if wages reflected collective priorities, social benefit, and ecological restoration?</p>
-            <p className="text-white font-medium">• What if public spending was participatory and transparent?</p>
-          </div>
-          <div className="bg-emerald-100 p-4 rounded-lg">
-            <p className="text-emerald-800 font-medium">
-              This informs a fundamental organizing principle that the Economic Flow is part of the Commons, where we treat wages and public spending as the commons of collective value, to be stewarded in service of thriving people and ecosystems.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
 
       <Card className="border-orange-200">
         <CardHeader>
