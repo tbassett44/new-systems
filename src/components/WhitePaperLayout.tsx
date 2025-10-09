@@ -60,6 +60,7 @@ import { useParagraphIds } from "@/hooks/useParagraphIds";
 import { usePrintPDF } from "@/hooks/usePrintPDF";
 
 import { supabase } from "@/integrations/supabase/client";
+import earthImage from "@/assets/earth.jpg";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -176,7 +177,7 @@ function AppSidebar() {
 
   return (
     <TooltipProvider>
-      <Sidebar className="border-r" collapsible="icon">
+      <Sidebar className="border-r bg-background/75 backdrop-blur-[5px]" collapsible="icon">
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
             {(state !== "collapsed" || isMobile) && (
@@ -439,7 +440,14 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
   return (
     <CommentProvider>
       <SidebarProvider>
-        <div className="min-h-screen flex w-full">
+        <div className="min-h-screen flex w-full relative">
+          <div className="fixed inset-y-0 left-0 w-[--sidebar-width] overflow-hidden pointer-events-none">
+            <img 
+              src={earthImage} 
+              alt="" 
+              className="absolute inset-0 w-full h-full object-cover animate-[ken-burns_60s_ease-in-out_infinite]"
+            />
+          </div>
           <AppSidebar />
           <main 
             className="flex-1 overflow-auto comment-highlighted-content" 
