@@ -100,7 +100,7 @@ const Index = () => {
         </div>
 
         {/* Vision */}
-        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16">
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-opacity-90">
           <CardHeader>
             <CardTitle className="text-2xl text-center">Our Vision</CardTitle>
           </CardHeader>
@@ -116,7 +116,7 @@ const Index = () => {
 
         {/* Core Principles */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card className="text-center">
+          <Card className="text-center backdrop-blur-sm bg-card/80">
             <CardHeader>
               <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Heart className="h-6 w-6 text-primary" />
@@ -128,7 +128,7 @@ const Index = () => {
             </CardHeader>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center backdrop-blur-sm bg-card/80">
             <CardHeader>
               <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Leaf className="h-6 w-6 text-primary" />
@@ -140,7 +140,7 @@ const Index = () => {
             </CardHeader>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center backdrop-blur-sm bg-card/80">
             <CardHeader>
               <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-primary" />
@@ -185,7 +185,7 @@ const Index = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Co-Create the Future</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="border-primary/20">
+            <Card className="border-primary/20 backdrop-blur-sm bg-card/80">
               <CardHeader>
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <GitBranch className="h-6 w-6 text-primary" />
@@ -205,7 +205,7 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-primary/20">
+            <Card className="border-primary/20 backdrop-blur-sm bg-card/80">
               <CardHeader>
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Github className="h-6 w-6 text-primary" />
