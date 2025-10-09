@@ -441,7 +441,10 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
     <CommentProvider>
       <SidebarProvider>
         <div className="min-h-screen flex w-full relative">
-          <div className="fixed inset-y-0 left-0 w-[--sidebar-width] overflow-hidden pointer-events-none">
+          <div 
+            className="fixed inset-y-0 left-0 overflow-hidden pointer-events-none z-0" 
+            style={{ width: 'var(--sidebar-width, 16rem)' }}
+          >
             <img 
               src={earthImage} 
               alt="" 
