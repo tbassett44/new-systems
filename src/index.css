@@ -40,6 +40,10 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
+    --cta-glow: 142 76% 36%;
+    --cta-primary: 142 76% 36%;
+    --cta-secondary: 160 84% 39%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -127,6 +131,15 @@ All colors MUST be HSL.
   }
   100% {
     transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--cta-glow) / 0.5), 0 0 40px hsl(var(--cta-glow) / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--cta-glow) / 0.7), 0 0 60px hsl(var(--cta-glow) / 0.5);
   }
 }
 

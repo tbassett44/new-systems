@@ -148,7 +148,7 @@ const Index = () => {
               through collaborative refinement, inviting continuous improvement from a global community 
               of contributors.
             </p>
-            <Button size="lg" className="group" onClick={handleNavigateToPapers}>
+            <Button size="lg" variant="cta" className="group" onClick={handleNavigateToPapers}>
               <BookOpen className="mr-2 h-5 w-5" />
               Explore Manifesto
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
