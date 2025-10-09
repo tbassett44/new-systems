@@ -442,7 +442,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
       <SidebarProvider>
         <div className="min-h-screen flex w-full relative">
           <div 
-            className="fixed inset-y-0 left-0 overflow-hidden pointer-events-none z-0" 
+            className="fixed inset-y-0 left-0 overflow-hidden pointer-events-none z-0 transition-[width] duration-200 ease-linear" 
             style={{ width: 'var(--sidebar-width, 16rem)' }}
           >
             <img 
