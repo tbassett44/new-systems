@@ -1,15 +1,22 @@
-
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle, LogIn, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
+import earthImage from "@/assets/earth.jpg";
 
 
 const Index = () => {
   const { user, signOut } = useAuth();
   const navigate = useNavigate();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
@@ -24,10 +31,30 @@ const Index = () => {
     navigate('/papers');
   };
 
+  const earthTransform = Math.min(scrollY / 3, 150);
+  const earthScale = 1 + Math.min(scrollY / 1000, 0.15);
+  const earthOpacity = Math.min(0.3 + scrollY / 800, 0.7);
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
+      {/* Earth Background */}
+      <div 
+        className="fixed -bottom-1/2 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] pointer-events-none z-0"
+        style={{
+          transform: `translate(-50%, ${earthTransform}px) scale(${earthScale})`,
+          opacity: earthOpacity,
+          transition: 'transform 0.1s ease-out, opacity 0.1s ease-out'
+        }}
+      >
+        <img 
+          src={earthImage} 
+          alt="" 
+          className="w-full h-full object-contain animate-[ken-burns_30s_ease-in-out_infinite]"
+        />
+      </div>
+
       {/* Header with Auth */}
-      <header className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <header className="container relative z-10 mx-auto px-6 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Leaf className="h-6 w-6 text-primary" />
           <span className="font-semibold">Systems Change Manifesto</span>
@@ -55,7 +82,7 @@ const Index = () => {
         </div>
       </header>
 
-      <div className="container mx-auto px-6 py-12">
+      <div className="container relative z-10 mx-auto px-6 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
