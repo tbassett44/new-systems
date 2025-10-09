@@ -177,7 +177,7 @@ function AppSidebar() {
 
   return (
     <TooltipProvider>
-      <Sidebar className="border-r bg-background/75 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
+      <Sidebar className="border-r border-r-white bg-background/75 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
             {(state !== "collapsed" || isMobile) && (
