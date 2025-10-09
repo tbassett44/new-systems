@@ -5,19 +5,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { BookOpen, ArrowRight, Leaf, Users, Heart, Github, GitBranch, MessageCircle, LogIn, User } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import earthImage from "@/assets/earth.jpg";
-
-
 const Index = () => {
-  const { user, signOut } = useAuth();
+  const {
+    user,
+    signOut
+  } = useAuth();
   const navigate = useNavigate();
   const [scrollY, setScrollY] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -25,32 +24,21 @@ const Index = () => {
       metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
     }
   }, []);
-
   const handleNavigateToPapers = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate('/papers');
   };
-
   const earthTransform = Math.min(scrollY / 3, 150);
   const earthScale = 1 + Math.min(scrollY / 1000, 0.15);
   const earthOpacity = Math.min(0.3 + scrollY / 800, 0.7);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20 relative overflow-hidden">
       {/* Earth Background */}
-      <div 
-        className="fixed -bottom-1/2 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] pointer-events-none z-0"
-        style={{
-          transform: `translate(-50%, ${earthTransform}px) scale(${earthScale})`,
-          opacity: earthOpacity,
-          transition: 'transform 0.1s ease-out, opacity 0.1s ease-out'
-        }}
-      >
-        <img 
-          src={earthImage} 
-          alt="" 
-          className="w-full h-full object-contain animate-[ken-burns_30s_ease-in-out_infinite]"
-        />
+      <div className="fixed -bottom-1/2 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] pointer-events-none z-0" style={{
+      transform: `translate(-50%, ${earthTransform}px) scale(${earthScale})`,
+      opacity: earthOpacity,
+      transition: 'transform 0.1s ease-out, opacity 0.1s ease-out'
+    }}>
+        <img src={earthImage} alt="" className="w-full h-full object-contain animate-[ken-burns_30s_ease-in-out_infinite]" />
       </div>
 
       {/* Header with Auth */}
@@ -61,8 +49,7 @@ const Index = () => {
         </div>
         
         <div className="flex items-center gap-4">
-          {user ? (
-            <div className="flex items-center gap-3">
+          {user ? <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4" />
                 <span className="text-sm">{user.user_metadata?.full_name || user.email}</span>
@@ -70,15 +57,12 @@ const Index = () => {
               <Button onClick={signOut} variant="outline" size="sm">
                 Sign Out
               </Button>
-            </div>
-          ) : (
-            <Link to="/auth">
+            </div> : <Link to="/auth">
               <Button variant="outline" size="sm">
                 <LogIn className="mr-2 h-4 w-4" />
                 Sign In
               </Button>
-            </Link>
-          )}
+            </Link>}
         </div>
       </header>
 
@@ -174,7 +158,7 @@ const Index = () => {
 
         {/* Co-Creation Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Co-Create the Future</h2>
+          
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="border-primary/20 backdrop-blur-sm bg-card/80">
               <CardHeader>
@@ -207,12 +191,7 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="mt-4"
-                  onClick={() => window.open('https://github.com/your-repo-here', '_blank')}
-                >
+                <Button asChild variant="outline" className="mt-4" onClick={() => window.open('https://github.com/your-repo-here', '_blank')}>
                   <a href="https://github.com/your-repo-here" target="_blank" rel="noopener noreferrer" className="group">
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
@@ -247,17 +226,8 @@ const Index = () => {
             <p className="text-sm text-muted-foreground mb-4">
               Curious about the creative process? View the complete conversation that helped compose this document:
             </p>
-            <Button 
-              asChild 
-              variant="outline" 
-              size="sm"
-            >
-              <a 
-                href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="group"
-              >
+            <Button asChild variant="outline" size="sm">
+              <a href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" target="_blank" rel="noopener noreferrer" className="group">
                 <MessageCircle className="mr-2 h-4 w-4" />
                 View ChatGPT Conversation
                 <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
@@ -266,8 +236,6 @@ const Index = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
