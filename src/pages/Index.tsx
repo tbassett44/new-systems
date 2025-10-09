@@ -173,17 +173,21 @@ const Index = () => {
         </Card>
 
         {/* Authors */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl font-semibold mb-4">Authors</h2>
-          <div className="space-y-2">
-            <p className="text-lg">
-              <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
-            </p>
-            <p className="text-muted-foreground">
-              and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
-            </p>
-          </div>
-        </div>
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-card/80">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Authors</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <div className="space-y-2">
+              <p className="text-lg">
+                <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
+              </p>
+              <p className="text-muted-foreground">
+                and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Co-Creation Section */}
         <div className="mb-16">
@@ -238,27 +242,29 @@ const Index = () => {
         </div>
 
         {/* ChatGPT Thread Link */}
-        <div className="text-center">
-          <p className="text-sm text-muted-foreground mb-4">
-            Curious about the creative process? View the complete conversation that helped compose this document:
-          </p>
-          <Button 
-            asChild 
-            variant="outline" 
-            size="sm"
-          >
-            <a 
-              href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group"
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 backdrop-blur-sm bg-card/80">
+          <CardContent className="text-center pt-6">
+            <p className="text-sm text-muted-foreground mb-4">
+              Curious about the creative process? View the complete conversation that helped compose this document:
+            </p>
+            <Button 
+              asChild 
+              variant="outline" 
+              size="sm"
             >
-              <MessageCircle className="mr-2 h-4 w-4" />
-              View ChatGPT Conversation
-              <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-        </div>
+              <a 
+                href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group"
+              >
+                <MessageCircle className="mr-2 h-4 w-4" />
+                View ChatGPT Conversation
+                <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
