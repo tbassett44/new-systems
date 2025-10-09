@@ -100,7 +100,7 @@ const Index = () => {
         </div>
 
         {/* Vision */}
-        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-opacity-90">
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-card/80">
           <CardHeader>
             <CardTitle className="text-2xl text-center">Our Vision</CardTitle>
           </CardHeader>
