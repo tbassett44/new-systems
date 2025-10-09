@@ -154,19 +154,23 @@ const Index = () => {
         </div>
 
         {/* Explore Manifesto */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">Living Manifesto</h2>
-          <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
-            A manifesto is a public declaration of principles and beliefs. This living document evolves 
-            through collaborative refinement, inviting continuous improvement from a global community 
-            of contributors.
-          </p>
-          <Button size="lg" className="group" onClick={handleNavigateToPapers}>
-            <BookOpen className="mr-2 h-5 w-5" />
-            Explore Manifesto
-            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </div>
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-card/80">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Living Manifesto</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+              A manifesto is a public declaration of principles and beliefs. This living document evolves 
+              through collaborative refinement, inviting continuous improvement from a global community 
+              of contributors.
+            </p>
+            <Button size="lg" className="group" onClick={handleNavigateToPapers}>
+              <BookOpen className="mr-2 h-5 w-5" />
+              Explore Manifesto
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </CardContent>
+        </Card>
 
         {/* Authors */}
         <div className="text-center mb-16">
