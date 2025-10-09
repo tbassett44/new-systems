@@ -200,24 +200,7 @@ const Index = () => {
               <CardHeader>
                 <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <Github className="h-6 w-6 text-primary" />
-        </div>
-
-        {/* Authors */}
-        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-card/80">
-          <CardHeader>
-            <CardTitle className="text-2xl text-center">Authors</CardTitle>
-          </CardHeader>
-          <CardContent className="text-center">
-            <div className="space-y-2">
-              <p className="text-lg">
-                <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
-              </p>
-              <p className="text-muted-foreground">
-                and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
-              </p>
-            </div>
-          </CardContent>
-        </Card>
+                </div>
                 <CardTitle className="text-center">Contribute on GitHub</CardTitle>
                 <CardDescription className="text-center">
                   Join the collaborative effort to redesign systems for human flourishing
@@ -240,6 +223,23 @@ const Index = () => {
             </Card>
           </div>
         </div>
+
+        {/* Authors */}
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 mb-16 backdrop-blur-sm bg-card/80">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Authors</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <div className="space-y-2">
+              <p className="text-lg">
+                <strong>Juicy Life</strong> - <a href="mailto:juicy@actualize.earth" className="text-primary hover:underline">juicy@actualize.earth</a>
+              </p>
+              <p className="text-muted-foreground">
+                and <strong>Aether</strong>, an AI collaborator powered by GPT-4 by OpenAI
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* ChatGPT Thread Link */}
         <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 backdrop-blur-sm bg-card/80">
