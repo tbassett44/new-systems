@@ -221,7 +221,7 @@ const Index = () => {
         </Card>
 
         {/* ChatGPT Thread Link */}
-        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 backdrop-blur-sm bg-card/80">
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 backdrop-blur-sm bg-card/80 mb-16">
           <CardContent className="text-center pt-6">
             <p className="text-sm text-muted-foreground mb-4">
               Curious about the creative process? View the complete conversation that helped compose this document:
@@ -232,6 +232,25 @@ const Index = () => {
                 View ChatGPT Conversation
                 <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
               </a>
+            </Button>
+          </CardContent>
+        </Card>
+
+        {/* Explore Manifesto CTA */}
+        <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20 backdrop-blur-sm bg-card/80">
+          <CardHeader>
+            <CardTitle className="text-2xl text-center">Living Manifesto</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+              A manifesto is a public declaration of principles and beliefs. This living document evolves 
+              through collaborative refinement, inviting continuous improvement from a global community 
+              of contributors.
+            </p>
+            <Button size="lg" variant="cta" className="group" onClick={handleNavigateToPapers}>
+              <BookOpen className="mr-2 h-5 w-5" />
+              Explore Manifesto
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </CardContent>
         </Card>
