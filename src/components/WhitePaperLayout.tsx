@@ -442,7 +442,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
       <SidebarProvider>
         <div className="min-h-screen flex w-full relative group/layout">
           <div 
-            className="fixed inset-y-0 left-0 overflow-hidden pointer-events-none z-0 transition-[width] duration-200 ease-linear w-64 group-has-[[data-state=collapsed]]/layout:w-12" 
+            className="hidden md:block fixed inset-y-0 left-0 overflow-hidden pointer-events-none z-0 transition-[width] duration-200 ease-linear w-64 group-has-[[data-state=collapsed]]/layout:w-12" 
           >
             <img 
               src={earthImage} 
