@@ -126,7 +126,7 @@ const Contribute = () => {
                 variant="outline" 
                 className="w-full"
               >
-                <a href="https://github.com/your-repo-here" target="_blank" rel="noopener noreferrer" className="group">
+                <a href="https://github.com/tbassett44/new-systems" target="_blank" rel="noopener noreferrer" className="group">
                   <Github className="mr-2 h-4 w-4" />
                   View Repository
                   <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />

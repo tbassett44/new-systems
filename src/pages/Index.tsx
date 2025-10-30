@@ -191,8 +191,8 @@ const Index = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="text-center">
-                <Button asChild variant="outline" className="mt-4" onClick={() => window.open('https://github.com/your-repo-here', '_blank')}>
-                  <a href="https://github.com/your-repo-here" target="_blank" rel="noopener noreferrer" className="group">
+                <Button asChild variant="outline" className="mt-4" onClick={() => window.open('https://github.com/tbassett44/new-systems', '_blank')}>
+                  <a href="https://github.com/tbassett44/new-systems" target="_blank" rel="noopener noreferrer" className="group">
                     <Github className="mr-2 h-4 w-4" />
                     View on GitHub
                     <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
