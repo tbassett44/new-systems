@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Bot, Lock, Key, CheckCircle, Scale, Users, Zap, Globe, Shield } from "lucide-react";
 
 const AIEthics = () => {
   useEffect(() => {
@@ -9,29 +9,39 @@ const AIEthics = () => {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'A framework for ethical AI development that prioritizes human dignity, transparency, accountability, and the long-term flourishing of humanity and the planet.');
     }
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', 'AI Ethics | Systems Regeneration');
+    }
   }, []);
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="text-4xl font-bold mb-4">AI Ethics</h1>
-        <p className="text-xl text-muted-foreground mb-6">
-          Ensuring Artificial Intelligence Serves Human Flourishing
-        </p>
-        <div className="flex flex-wrap gap-2 mb-6">
-          <Badge variant="secondary">AI Safety</Badge>
-          <Badge variant="secondary">Human-Centered</Badge>
-          <Badge variant="secondary">Transparency</Badge>
-          <Badge variant="secondary">Accountability</Badge>
+      <div className="flex items-center gap-4 mb-6">
+        <div>
+          <h1 className="text-4xl font-bold">AI Ethics</h1>
+          <p className="text-xl text-muted-foreground">Ensuring Artificial Intelligence Serves Human Flourishing</p>
         </div>
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-6">
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-blue-100 text-blue-800">AI Safety</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-purple-100 text-purple-800">Human-Centered</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-green-100 text-green-800">Transparency</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-orange-100 text-orange-800">Accountability</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-pink-100 text-pink-800">Democratic Governance</div>
+        <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold bg-teal-100 text-teal-800">Open Source</div>
       </div>
 
       <Card>
         <CardHeader>
-          <CardTitle>Overview</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <Globe className="h-5 w-5 text-primary" />
+            Overview and Purpose
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="leading-relaxed">
+        <CardContent>
+          <p className="leading-relaxed mb-4">
             As artificial intelligence becomes increasingly integrated into every aspect of society—from healthcare 
             and education to governance and economic systems—the ethical frameworks guiding its development and 
             deployment become critical to human flourishing. This proposal outlines a regenerative approach to AI 
@@ -50,119 +60,218 @@ const AIEthics = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Core Ethical Principles</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-red-700">
+            <Lock className="h-5 w-5" />
+            The Problem: Unaligned AI Development
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <div>
-            <h3 className="font-semibold mb-2">Human Dignity and Agency</h3>
-            <p className="text-sm text-muted-foreground">
-              AI systems must be designed to enhance rather than diminish human dignity and agency. This means 
-              ensuring that humans remain in meaningful control of consequential decisions, that AI augments human 
-              capabilities rather than replacing human judgment in domains where human values and wisdom are essential, 
-              and that individuals have the right to understand and contest AI-driven decisions that affect their lives.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">Transparency and Explainability</h3>
-            <p className="text-sm text-muted-foreground">
-              AI systems should be transparent in their operation and explainable in their decision-making processes. 
-              This includes clear disclosure when AI is being used, understandable explanations of how AI systems 
-              reach their conclusions, and open documentation of training data, methodologies, and known limitations.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">Fairness and Non-Discrimination</h3>
-            <p className="text-sm text-muted-foreground">
-              AI systems must actively work to prevent and mitigate bias and discrimination. This requires diverse 
-              and representative training data, ongoing auditing for discriminatory outcomes, and mechanisms for 
-              affected communities to participate in the design and oversight of AI systems that impact them.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-2">Accountability and Governance</h3>
-            <p className="text-sm text-muted-foreground">
-              Clear lines of accountability must be established for AI systems, including legal frameworks that 
-              assign responsibility for AI-caused harms, independent oversight bodies with technical expertise and 
-              enforcement authority, and mechanisms for redress when AI systems cause damage or injustice.
-            </p>
+        <CardContent>
+          <div className="space-y-3">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Concentration of Power</p>
+                <p className="text-sm text-muted-foreground">AI development is dominated by a handful of large corporations with massive computational resources, creating power asymmetries that undermine democratic oversight.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Misaligned Incentives</p>
+                <p className="text-sm text-muted-foreground">Market pressures prioritize speed-to-market and competitive advantage over safety, ethics, and long-term societal impact.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Opacity and Proprietary Secrecy</p>
+                <p className="text-sm text-muted-foreground">Many AI systems operate as "black boxes," with their inner workings hidden from public scrutiny and independent evaluation.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Amplification of Bias</p>
+                <p className="text-sm text-muted-foreground">AI systems trained on historical data often perpetuate and amplify existing social biases and inequalities.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Erosion of Privacy</p>
+                <p className="text-sm text-muted-foreground">AI-powered surveillance and data collection threaten individual privacy and enable new forms of social control.</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <p className="font-medium">Labor Displacement</p>
+                <p className="text-sm text-muted-foreground">Rapid automation threatens to displace workers faster than new economic opportunities can be created, without adequate social safety nets.</p>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>The Problem: Unaligned AI Development</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <Key className="h-5 w-5" />
+            The Solution: Regenerative AI Governance
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="leading-relaxed">
-            Current AI development faces several critical challenges that threaten its potential to serve humanity:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
-            <li>
-              <strong>Concentration of Power:</strong> AI development is dominated by a handful of large corporations 
-              with massive computational resources, creating power asymmetries that undermine democratic oversight.
-            </li>
-            <li>
-              <strong>Misaligned Incentives:</strong> Market pressures prioritize speed-to-market and competitive 
-              advantage over safety, ethics, and long-term societal impact.
-            </li>
-            <li>
-              <strong>Opacity and Proprietary Secrecy:</strong> Many AI systems operate as "black boxes," with 
-              their inner workings hidden from public scrutiny and independent evaluation.
-            </li>
-            <li>
-              <strong>Amplification of Bias:</strong> AI systems trained on historical data often perpetuate and 
-              amplify existing social biases and inequalities.
-            </li>
-            <li>
-              <strong>Erosion of Privacy:</strong> AI-powered surveillance and data collection threaten individual 
-              privacy and enable new forms of social control.
-            </li>
-            <li>
-              <strong>Labor Displacement:</strong> Rapid automation threatens to displace workers faster than new 
-              economic opportunities can be created, without adequate social safety nets.
-            </li>
-          </ul>
-        </CardContent>
-      </Card>
+        <CardContent>
+          <div className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-lg mb-3">1. Democratic AI Governance:</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Establish participatory governance structures that give affected communities meaningful voice
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Citizen assemblies on AI policy to deliberate on high-stakes decisions
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Community impact assessments before AI deployment in sensitive domains
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Mechanisms for ongoing public deliberation about AI's role in society
+                </li>
+              </ul>
+            </div>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>The Solution: Regenerative AI Governance</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="leading-relaxed">
-            A regenerative approach to AI ethics requires systemic changes across multiple dimensions:
-          </p>
-          <div className="space-y-4">
             <div>
-              <h3 className="font-semibold mb-2">Democratic AI Governance</h3>
-              <p className="text-sm text-muted-foreground">
-                Establish participatory governance structures that give affected communities meaningful voice in 
-                AI development and deployment decisions. This includes citizen assemblies on AI policy, community 
-                impact assessments, and mechanisms for ongoing public deliberation about AI's role in society.
-              </p>
+              <h4 className="font-semibold text-lg mb-3">2. Open and Collaborative Development:</h4>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Promote open-source AI development that distributes benefits broadly
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Enable independent safety research and auditing of AI systems
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                  Collaborative research networks to share safety findings and best practices
+                </li>
+              </ul>
             </div>
+
             <div>
-              <h3 className="font-semibold mb-2">Open and Collaborative Development</h3>
-              <p className="text-sm text-muted-foreground">
-                Promote open-source AI development and collaborative research that distributes the benefits of AI 
-                more broadly and enables independent safety research and auditing.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Proactive Safety Research</h3>
+              <h4 className="font-semibold text-lg mb-3">3. Proactive Safety Research:</h4>
               <p className="text-sm text-muted-foreground">
                 Invest substantially in AI safety research, including alignment research to ensure AI systems 
                 pursue human-beneficial goals, robustness research to prevent AI failures, and interpretability 
                 research to understand AI decision-making.
               </p>
             </div>
-            <div>
-              <h3 className="font-semibold mb-2">Ethical Impact Assessment</h3>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Shield className="h-5 w-5 text-blue-500" />
+            Core Ethical Principles
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            <div className="border-l-4 border-blue-500 pl-4">
+              <h4 className="font-semibold">1. Human Dignity and Agency</h4>
+              <p className="text-sm text-muted-foreground">AI systems must enhance rather than diminish human dignity. Humans remain in meaningful control of consequential decisions, and individuals have the right to understand and contest AI-driven decisions that affect their lives.</p>
+            </div>
+            <div className="border-l-4 border-green-500 pl-4">
+              <h4 className="font-semibold">2. Transparency and Explainability</h4>
+              <p className="text-sm text-muted-foreground">AI systems should be transparent in operation and explainable in decision-making. This includes clear disclosure when AI is being used, understandable explanations, and open documentation of training data and limitations.</p>
+            </div>
+            <div className="border-l-4 border-purple-500 pl-4">
+              <h4 className="font-semibold">3. Fairness and Non-Discrimination</h4>
+              <p className="text-sm text-muted-foreground">AI systems must actively prevent and mitigate bias. This requires diverse training data, ongoing auditing for discriminatory outcomes, and mechanisms for affected communities to participate in oversight.</p>
+            </div>
+            <div className="border-l-4 border-orange-500 pl-4">
+              <h4 className="font-semibold">4. Accountability and Governance</h4>
+              <p className="text-sm text-muted-foreground">Clear lines of accountability including legal frameworks for AI-caused harms, independent oversight bodies with enforcement authority, and mechanisms for redress when AI systems cause damage.</p>
+            </div>
+            <div className="border-l-4 border-red-500 pl-4">
+              <h4 className="font-semibold">5. Environmental Sustainability</h4>
+              <p className="text-sm text-muted-foreground">AI development must account for and minimize its environmental footprint, including the energy costs of training and running large models, driving development toward more efficient approaches.</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Zap className="h-5 w-5 text-orange-500" />
+            Operational Framework
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <h4 className="font-medium">Ethical Impact Assessment</h4>
+              <p className="text-sm text-muted-foreground">Comprehensive assessments before deploying AI in high-stakes domains like healthcare, justice, education, and employment</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-medium">Ongoing Monitoring</h4>
+              <p className="text-sm text-muted-foreground">Continuous evaluation of AI systems for bias, errors, and unintended consequences with mechanisms for rapid correction</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-medium">Public Oversight Bodies</h4>
+              <p className="text-sm text-muted-foreground">Independent institutions with technical expertise and enforcement authority to audit and regulate AI systems</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-medium">Worker Transition Support</h4>
+              <p className="text-sm text-muted-foreground">Comprehensive support for workers displaced by AI including retraining, income support, and new opportunity creation</p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Scale className="h-5 w-5 text-purple-500" />
+            Integration with Endo Economics
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p className="leading-relaxed mb-4">AI ethics cannot be separated from broader economic structures. Within the Endo Economics framework, AI development would be guided by principles of symbiosis rather than extraction:</p>
+          <div className="space-y-6">
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">🤝 Shared Productivity Gains</h4>
               <p className="text-sm text-muted-foreground">
-                Require comprehensive ethical impact assessments before deploying AI systems in high-stakes domains, 
-                including healthcare, criminal justice, education, and employment.
+                AI productivity gains would be shared broadly through mechanisms like universal basic income and 
+                reduced working hours, rather than concentrated among capital owners.
+              </p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">🌱 Regenerative Investment</h4>
+              <p className="text-sm text-muted-foreground">
+                AI development funded through investment structures that prioritize long-term 
+                social benefit over short-term profit maximization.
+              </p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">🔄 Worker Transition</h4>
+              <p className="text-sm text-muted-foreground">
+                Workers displaced by AI receive comprehensive transition support, including retraining, income 
+                support, and opportunities to contribute to society in new ways.
+              </p>
+            </div>
+            <div className="bg-muted/30 p-4 rounded-lg">
+              <h4 className="font-semibold mb-2">🌍 Environmental Accountability</h4>
+              <p className="text-sm text-muted-foreground">
+                The environmental costs of AI computation fully internalized, driving development toward 
+                more efficient and sustainable approaches.
               </p>
             </div>
           </div>
@@ -171,57 +280,109 @@ const AIEthics = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Integration with Endo Economics</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <Users className="h-5 w-5 text-indigo-500" />
+            Philosophical Foundation
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="leading-relaxed">
-            AI ethics cannot be separated from broader economic structures. Within the Endo Economics framework, 
-            AI development would be guided by principles of symbiosis rather than extraction:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
-            <li>
-              AI productivity gains would be shared broadly through mechanisms like universal basic income and 
-              reduced working hours, rather than concentrated among capital owners.
-            </li>
-            <li>
-              AI development would be funded through regenerative investment structures that prioritize long-term 
-              social benefit over short-term profit maximization.
-            </li>
-            <li>
-              Workers displaced by AI would receive comprehensive transition support, including retraining, income 
-              support, and opportunities to contribute to society in new ways.
-            </li>
-            <li>
-              The environmental costs of AI computation would be fully internalized, driving development toward 
-              more efficient and sustainable approaches.
-            </li>
-          </ul>
+        <CardContent>
+          <p className="leading-relaxed mb-4">This framework rests on fundamental principles about the relationship between humanity and technology:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+              <h4 className="font-medium">Technology as Tool</h4>
+              <p className="text-sm text-muted-foreground">AI should augment human capabilities, not replace human judgment in domains where human values are essential</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-medium">Collective Stewardship</h4>
+              <p className="text-sm text-muted-foreground">AI development is a civilizational choice that should be made democratically, not by a small number of corporations</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-medium">Precautionary Wisdom</h4>
+              <p className="text-sm text-muted-foreground">Given the potential for irreversible harm, AI development should proceed with appropriate caution and foresight</p>
+            </div>
+            <div className="space-y-2">
+              <h4 className="font-medium">Inclusive Flourishing</h4>
+              <p className="text-sm text-muted-foreground">The benefits and risks of AI must be distributed fairly across all of humanity, not concentrated among the few</p>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Net Positive Outcomes</CardTitle>
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <CheckCircle className="h-5 w-5" />
+            Net Positive Outcomes
+          </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="leading-relaxed">
-            When AI development is guided by regenerative ethics, it has the potential to:
-          </p>
-          <ul className="list-disc pl-6 space-y-2 text-sm text-muted-foreground">
-            <li>Democratize access to expertise and capabilities previously available only to the privileged few</li>
-            <li>Accelerate scientific discovery and technological innovation for human benefit</li>
-            <li>Enhance human creativity and expression rather than replacing it</li>
-            <li>Support more informed and participatory democratic processes</li>
-            <li>Enable personalized education and healthcare at scale</li>
-            <li>Help coordinate collective action on complex challenges like climate change</li>
-            <li>Free humans from tedious and dangerous work to pursue more meaningful activities</li>
-          </ul>
+        <CardContent>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Democratized Expertise</p>
+                <p className="text-sm text-muted-foreground">Access to capabilities previously available only to the privileged few</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Accelerated Discovery</p>
+                <p className="text-sm text-muted-foreground">Scientific discovery and technological innovation for human benefit</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Enhanced Creativity</p>
+                <p className="text-sm text-muted-foreground">AI that augments human creativity and expression rather than replacing it</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Informed Democracy</p>
+                <p className="text-sm text-muted-foreground">Support for more informed and participatory democratic processes</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Personalized Services</p>
+                <p className="text-sm text-muted-foreground">Education and healthcare tailored to individual needs at scale</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Collective Action</p>
+                <p className="text-sm text-muted-foreground">Coordination on complex challenges like climate change</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Meaningful Work</p>
+                <p className="text-sm text-muted-foreground">Freedom from tedious and dangerous work to pursue more meaningful activities</p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-medium">Protected Rights</p>
+                <p className="text-sm text-muted-foreground">AI systems that respect and protect fundamental human rights and dignity</p>
+              </div>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
       <Card>
         <CardHeader>
-          <CardTitle>Conclusion</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <Bot className="h-5 w-5 text-primary" />
+            Conclusion
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
