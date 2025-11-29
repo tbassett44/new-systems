@@ -177,6 +177,24 @@ const Overview = () => {
             </div>
 
             <div>
+              <h3 className="text-lg font-semibold mb-3">AI Ethics</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                The AI ethics proposal outlines a regenerative approach to artificial intelligence development that 
+                prioritizes human dignity, transparency, and collective wellbeing. As AI becomes increasingly integrated 
+                into every aspect of society—from healthcare and education to governance and economic systems—the ethical 
+                frameworks guiding its development become critical to human flourishing. This proposal moves beyond 
+                reactive regulation toward proactive design principles, addressing the concentration of power, misaligned 
+                incentives, and opacity that characterize current AI development. By establishing democratic governance 
+                structures, promoting open and collaborative development, and integrating AI ethics within the Endo 
+                Economics framework, we can ensure that AI productivity gains are shared broadly and that AI becomes 
+                a powerful tool for human flourishing rather than a threat to it.
+              </p>
+              <Button asChild variant="outline" size="sm">
+                <NavLink to="/papers/ai-ethics">View the AI Ethics Proposal</NavLink>
+              </Button>
+            </div>
+
+            <div>
               <h3 className="text-lg font-semibold mb-3">Waste Management</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The waste management proposal outlines a transformative approach to one of the most overlooked yet urgent 

@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import WhitePaperLayout from "./components/WhitePaperLayout";
 import EndoEconomics from "./pages/EndoEconomics";
 import DigitalSovereignty from "./pages/DigitalSovereignty";
+import AIEthics from "./pages/AIEthics";
 import WasteManagement from "./pages/WasteManagement";
 import Energy from "./pages/Energy";
 import Sensemaking from "./pages/Sensemaking";
@@ -44,6 +45,7 @@ function AppContent() {
         <Route path="glossary" element={<Glossary />} />
         <Route path="endo-economics" element={<EndoEconomics />} />
         <Route path="digital-sovereignty" element={<DigitalSovereignty />} />
+        <Route path="ai-ethics" element={<AIEthics />} />
         <Route path="waste-management" element={<WasteManagement />} />
         <Route path="energy" element={<Energy />} />
         <Route path="sensemaking" element={<Sensemaking />} />
