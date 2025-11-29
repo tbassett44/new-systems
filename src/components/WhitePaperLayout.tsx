@@ -43,7 +43,8 @@ import {
   LogOut,
   Settings,
   Home,
-  Printer
+  Printer,
+  Bot
 } from "lucide-react";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -83,6 +84,7 @@ const navigationItems: NavigationItem[] = [
 const whitePaperItems = [
   { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins },
   { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield },
+  { title: "AI Ethics", url: "/papers/ai-ethics", icon: Bot },
   { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
   { title: "Energy Infrastructure", url: "/papers/energy", icon: Zap },
   { title: "Collective Sensemaking", url: "/papers/sensemaking", icon: Brain },
