@@ -77,6 +77,7 @@ interface NavigationItem {
 const navigationItems: NavigationItem[] = [
   { title: "Welcome", url: "/", icon: Home },
   { title: "Overview", url: "/papers/", icon: BookOpen },
+  { title: "Aether AI", url: "/papers/aether-ai", icon: Sparkles },
   { title: "Contribute", url: "/papers/contribute", icon: GitBranch },
   { title: "Glossary", url: "/papers/glossary", icon: ScrollText },
 ];
