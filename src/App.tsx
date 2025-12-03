@@ -23,6 +23,7 @@ import Election from "./pages/Election";
 import Glossary from "./pages/Glossary";
 import Overview from "./pages/Overview";
 import Contribute from "./pages/Contribute";
+import AetherAI from "./pages/AetherAI";
 import Auth from "./pages/Auth";
 import { AuthProvider } from './contexts/AuthContext';
 
@@ -41,6 +42,7 @@ function AppContent() {
       <Route path="/auth" element={<Auth />} />
       <Route path="/papers" element={<WhitePaperLayout><Outlet /></WhitePaperLayout>}>
         <Route index element={<Overview />} />
+        <Route path="aether-ai" element={<AetherAI />} />
         <Route path="contribute" element={<Contribute />} />
         <Route path="glossary" element={<Glossary />} />
         <Route path="endo-economics" element={<EndoEconomics />} />
