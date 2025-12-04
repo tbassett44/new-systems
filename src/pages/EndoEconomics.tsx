@@ -1137,17 +1137,37 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-primary">
+      <Card className="border-primary bg-gradient-to-br from-primary/5 to-blue-50">
         <CardHeader>
-          <CardTitle className="text-primary">Conclusion</CardTitle>
+          <CardTitle className="text-primary text-2xl">Conclusion</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed text-lg font-semibold text-primary">
+            A new economic architecture is not only possible—it is necessary.
+          </p>
           <p className="leading-relaxed text-lg">
-            A new economic architecture is not only possible—it is necessary. By identifying and redirecting the dominant flows of GDP already rooted in labor and public service, we can begin constructing an economy that supports wholeness, equity, and regenerative flourishing for all.
+            By identifying and redirecting the three dominant flows of GDP—<span className="font-medium text-blue-600">labor</span>, <span className="font-medium text-green-600">public services</span>, and <span className="font-medium text-purple-600">production/capital</span>—through the Commons, we can begin constructing an economy that supports wholeness, equity, and regenerative flourishing for all.
           </p>
-          <p className="leading-relaxed text-lg mt-4 font-medium text-primary">
-            Drafted with the intent to spark dialogue, iteration, and collaboration toward collective economic transformation.
-          </p>
+          <p className="leading-relaxed">Endo Economics offers:</p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+              <span>a clear diagnosis of systemic misalignment,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+              <span>a structurally coherent design for rerouting flows, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+              <span>a living blueprint for communities, cities, and nations to begin experimenting with new forms of economic life.</span>
+            </li>
+          </ul>
+          <div className="bg-primary/10 p-4 rounded-lg border border-primary/20 mt-6">
+            <p className="leading-relaxed text-lg font-medium text-primary text-center">
+              This document is drafted with the intent to spark dialogue, iteration, and collaboration toward collective economic transformation.
+            </p>
+          </div>
         </CardContent>
       </Card>
 
