@@ -170,12 +170,37 @@ const EndoEconomics = () => {
             Endosymbiotic Evolution and the Roots of Endo Economics
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            The inspiration behind "Endo Economics" arises from the evolutionary principle of endosymbiosis—a foundational process in biology through which distinct organisms merge to form a more complex, cooperative whole. This process gave rise to mitochondria and chloroplasts, essential cellular components that once existed as independent organisms. Evolution favored this integration not through domination, but through mutual benefit, shared function, and interdependence.
-          </p>
+        <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            In this spirit, Endo Economics proposes that our economic systems can evolve in the same way—by uniting previously siloed and competitive domains into cooperative ecosystems of shared value. When different parts of society (labor sectors, public systems, innovation hubs, ecological services) function in harmony toward the health of the whole, the result is greater stability, adaptability, and specialization. By embedding cooperation at the cellular level of economic architecture, we unlock the evolutionary advantage of systems designed not for domination, but for long-term flourishing. Endo Economics sees the economy not as a marketplace of isolated agents, but as a living system—dynamic, intelligent, and capable of co-evolving with humanity's deeper needs.
+            The inspiration behind <span className="font-semibold text-green-700">"Endo Economics"</span> arises from the evolutionary principle of <span className="font-semibold italic">endosymbiosis</span>—a foundational process in biology through which distinct organisms merge to form a more complex, cooperative whole. This process gave rise to mitochondria and chloroplasts, essential cellular components that once existed as independent organisms.
+          </p>
+          <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+            <p className="text-green-800 font-medium">
+              Evolution favored this integration not through domination, but through mutual benefit, shared function, and interdependence.
+            </p>
+          </div>
+          <p className="leading-relaxed">
+            In this spirit, Endo Economics proposes that our economic systems can evolve in the same way—by uniting previously siloed and competitive domains into cooperative ecosystems of shared value. When different parts of society (labor sectors, public systems, innovation hubs, ecological services) function in harmony toward the health of the whole, the result is greater:
+          </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-green-500"></span>
+              <span className="text-green-700 font-medium">stability,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-green-500"></span>
+              <span className="text-green-700 font-medium">adaptability, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-green-500"></span>
+              <span className="text-green-700 font-medium">specialization.</span>
+            </li>
+          </ul>
+          <p className="leading-relaxed">
+            By embedding cooperation at the <span className="italic">"cellular"</span> level of economic architecture, we unlock the evolutionary advantage of systems designed not for domination, but for long-term flourishing.
+          </p>
+          <p className="leading-relaxed font-medium text-green-700">
+            Endo Economics sees the economy not as a marketplace of isolated agents, but as a living system—dynamic, intelligent, and capable of co-evolving with humanity's deeper needs.
           </p>
         </CardContent>
       </Card>
