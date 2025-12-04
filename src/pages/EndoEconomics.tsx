@@ -508,6 +508,11 @@ const EndoEconomics = () => {
           {/* Business Operations via the Commons */}
           <div className="border-t border-indigo-200 pt-6">
             <h4 className="font-semibold text-indigo-800 text-lg mb-4">Business Operations via the Commons</h4>
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400 mb-4">
+              <p className="text-green-800">
+                <span className="font-bold text-xl">~$10T</span> flows annually through the Business / Production & Capital Economy. <span className="text-sm">[See <a href="#data-3" className="underline font-medium">Data 3</a>]</span>
+              </p>
+            </div>
             <p className="leading-relaxed mb-4">
               All business revenue flows into the Commons instead of sitting in private silos.
             </p>
