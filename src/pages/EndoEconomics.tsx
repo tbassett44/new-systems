@@ -615,8 +615,13 @@ const EndoEconomics = () => {
           {/* Public Services Through the Commons */}
           <div className="border-t border-indigo-200 pt-6">
             <h4 className="font-semibold text-indigo-800 text-lg mb-4">Public Services Through the Commons</h4>
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400 mb-4">
+              <p className="text-green-800">
+                <span className="font-bold text-xl">~$10T</span> flows annually through the Public Service Economy. <span className="text-sm">[See <a href="#data-2" className="underline font-medium">Data 2</a>]</span>
+              </p>
+            </div>
             <p className="leading-relaxed mb-3">
-              The existing public flows (<span className="font-semibold">~$10T</span>) are routed through the Commons into:
+              The existing public flows are routed through the Commons into:
             </p>
             <ul className="space-y-2 ml-4 mb-4">
               <li className="flex items-center gap-2">
@@ -1295,7 +1300,7 @@ const EndoEconomics = () => {
             </div>
           </div>
 
-          <div>
+          <div id="data-2">
             <h3 className="text-lg font-semibold text-white mb-4">[Data 2]</h3>
             <p className="text-sm text-white mb-4">
               Breakdown of spending by Government Agency / Program. In total across each category, this leads to $7.36T
