@@ -1386,6 +1386,69 @@ const EndoEconomics = () => {
               </Table>
             </div>
           </div>
+
+          <div id="data-3">
+            <h3 className="text-lg font-semibold text-white mb-4">[Data 3]</h3>
+            <p className="text-sm text-white mb-4">
+              Business / Production & Capital Layer — derivation of the ~$10T estimate.
+            </p>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="text-left text-white">Metric / Component</TableHead>
+                    <TableHead className="text-right text-white">Value / % of GDP</TableHead>
+                    <TableHead className="text-left text-white">Source</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-medium text-white">U.S. nominal GDP (2025)</TableCell>
+                    <TableCell className="text-right text-white">≈ $30 trillion</TableCell>
+                    <TableCell className="text-white">
+                      <a href="https://www.bea.gov/data/gdp/gross-domestic-product" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">Bureau of Economic Analysis</a>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-white">Corporate profits (after-tax, IVA/CCAdj)</TableCell>
+                    <TableCell className="text-right text-white">~9.2% of GDP</TableCell>
+                    <TableCell className="text-white">
+                      <a href="https://fred.stlouisfed.org/series/W273RE1A156NBEA" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">FRED</a>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-white">Corporate profits (alternate series)</TableCell>
+                    <TableCell className="text-right text-white">~11.0% of GDP in 2025</TableCell>
+                    <TableCell className="text-white">
+                      <a href="https://ycharts.com/indicators/corporate_profits_usgdp" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">YCharts</a>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-white">Private business sector (value-added share of GDP)</TableCell>
+                    <TableCell className="text-right text-white">Historically up to ~78% of GDP</TableCell>
+                    <TableCell className="text-white">
+                      <a href="https://fred.stlouisfed.org/release/tables" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-300">FRED</a>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-white">Implied business value-added in dollars (if 78%)</TableCell>
+                    <TableCell className="text-right text-white">~$23–24 T (on $30T GDP)</TableCell>
+                    <TableCell className="text-white">Derived</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-medium text-white">After subtracting wages & public flow (~$20T)</TableCell>
+                    <TableCell className="text-right text-white">≈ $10–11 T</TableCell>
+                    <TableCell className="text-white">Residual for business operations & surplus</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+            <div className="mt-4 p-3 bg-white/10 rounded-lg">
+              <p className="text-sm text-white italic">
+                <strong>Conclusion:</strong> Based on public data, a $10–11 trillion annual Business / Production & Capital layer is a defensible and structurally grounded approximation — not as a precise accounting outcome, but as a robust design assumption for the Commons-based model.
+              </p>
+            </div>
+          </div>
         </CardContent>
       </Card>
 
