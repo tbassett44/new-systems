@@ -1038,22 +1038,100 @@ const EndoEconomics = () => {
             Potential Unforeseen Harms and Mitigation Strategies
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-white">Value Drift or Exploitation</h4>
-              <p className="text-sm text-white mb-2">Risk: Participants could seek to game the system</p>
-              <p className="text-sm text-white">Mitigation: Multi-layered verification with AI-assisted pattern recognition and peer reputation systems</p>
+        <CardContent className="space-y-4">
+          <p className="leading-relaxed">
+            No systemic redesign is risk-free. Endo Economics explicitly considers potential harms and offers guiding mitigation strategies.
+          </p>
+          
+          <div className="space-y-6">
+            <div className="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-400">
+              <h4 className="font-semibold text-yellow-800 text-lg mb-2">Value Drift or Exploitation</h4>
+              <p className="text-yellow-700 mb-3">
+                <span className="font-medium">Risk:</span> Participants could seek to game the system or exploit transparency gaps.
+              </p>
+              <p className="text-yellow-800 font-medium mb-2">Mitigation:</p>
+              <ul className="space-y-1 ml-4">
+                <li className="flex items-center gap-2 text-yellow-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Multi-layered verification,</span>
+                </li>
+                <li className="flex items-center gap-2 text-yellow-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>AI-assisted pattern recognition,</span>
+                </li>
+                <li className="flex items-center gap-2 text-yellow-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Peer reputation systems,</span>
+                </li>
+                <li className="flex items-center gap-2 text-yellow-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Transparent governance,</span>
+                </li>
+                <li className="flex items-center gap-2 text-yellow-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+                  <span>Adaptive policy updates.</span>
+                </li>
+              </ul>
             </div>
-            <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-white">Transition Shock</h4>
-              <p className="text-sm text-white mb-2">Risk: Sudden restructuring could disrupt existing sectors</p>
-              <p className="text-sm text-white">Mitigation: Pilot programs, localized trials, and phased rollouts</p>
+            
+            <div className="bg-orange-50 p-5 rounded-lg border-l-4 border-orange-400">
+              <h4 className="font-semibold text-orange-800 text-lg mb-2">Transition Shock</h4>
+              <p className="text-orange-700 mb-3">
+                <span className="font-medium">Risk:</span> Sudden restructuring could disrupt existing sectors and livelihoods.
+              </p>
+              <p className="text-orange-800 font-medium mb-2">Mitigation:</p>
+              <ul className="space-y-1 ml-4">
+                <li className="flex items-center gap-2 text-orange-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                  <span>Pilot programs,</span>
+                </li>
+                <li className="flex items-center gap-2 text-orange-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                  <span>Localized trials,</span>
+                </li>
+                <li className="flex items-center gap-2 text-orange-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                  <span>Phased rollouts,</span>
+                </li>
+                <li className="flex items-center gap-2 text-orange-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                  <span>Safety nets and transition funds,</span>
+                </li>
+                <li className="flex items-center gap-2 text-orange-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-orange-500"></span>
+                  <span>Participatory design with affected communities.</span>
+                </li>
+              </ul>
             </div>
-            <div className="border-l-4 border-yellow-400 pl-4">
-              <h4 className="font-semibold text-white">System Capture</h4>
-              <p className="text-sm text-white mb-2">Risk: Power could re-concentrate in hidden forms</p>
-              <p className="text-sm text-white">Mitigation: Open-source protocols, decentralized infrastructure, and regenerative checks-and-balances</p>
+            
+            <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-400">
+              <h4 className="font-semibold text-red-800 text-lg mb-2">System Capture</h4>
+              <p className="text-red-700 mb-3">
+                <span className="font-medium">Risk:</span> Power could re-concentrate in hidden forms—digital oligarchies, governance cartels, or data monopolies.
+              </p>
+              <p className="text-red-800 font-medium mb-2">Mitigation:</p>
+              <ul className="space-y-1 ml-4">
+                <li className="flex items-center gap-2 text-red-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Open-source protocols,</span>
+                </li>
+                <li className="flex items-center gap-2 text-red-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Decentralized infrastructure,</span>
+                </li>
+                <li className="flex items-center gap-2 text-red-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Regenerative checks-and-balances,</span>
+                </li>
+                <li className="flex items-center gap-2 text-red-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Term limits and rotation for key roles,</span>
+                </li>
+                <li className="flex items-center gap-2 text-red-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+                  <span>Strong cultural norms around anti-capture.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </CardContent>
