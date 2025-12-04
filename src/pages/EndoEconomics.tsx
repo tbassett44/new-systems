@@ -756,64 +756,74 @@ const EndoEconomics = () => {
             Merit-Based Distribution
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6">
           <p className="leading-relaxed">
-            To ensure fairness while allowing room for excellence and growth, each category of careers will adopt a distribution model based on a standard normal distribution. This model allows for:
+            To ensure fairness while allowing room for excellence and growth, each category of careers adopts a distribution model based on a <span className="font-semibold">standard normal distribution</span>. This model allows for:
           </p>
-          <div className="grid gap-3">
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>A thriving base wage as the minimum for everyone in the category</div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>A midpoint representing the average contribution level</div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>A tail range for exceptional contributors or those with seniority, leadership, or high-impact outcomes</div>
-            </div>
-          </div>
-          <div className="bg-orange-50 p-4 rounded-lg">
-            <h4 className="font-semibold text-orange-800 mb-2">Merit Assessment Examples:</h4>
-            <p className="text-sm text-orange-700 mb-1"><strong>Surgeons:</strong> patient outcomes, peer review, malpractice rates, years of service</p>
-            <p className="text-sm text-orange-700 mb-1"><strong>Teachers:</strong> student growth, community feedback, years teaching, continuing education</p>
-            <p className="text-sm text-orange-700"><strong>Plumbers:</strong> client satisfaction, project volume, service innovation</p>
-          </div>
-        </CardContent>
-      </Card>
-
-      <Card className="border-purple-200">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-purple-700">
-            <Target className="h-6 w-6" />
-            Nested Distribution Within Careers
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="leading-relaxed">
-            This model of distribution can be recursively applied within each career category. For example, within "Healthcare Practitioners," there are sub-careers like surgeons, nurses, midwives, and therapists. Each sub-group can:
-          </p>
-          <div className="space-y-3">
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>Allocate their share of the total category budget internally</div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>Use a similar merit-based, normal distribution to support growth and diversity within the field</div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-              <div>Create custom metrics that reflect the values and outcomes specific to their role</div>
-            </div>
-          </div>
-          <div className="bg-purple-50 p-4 rounded-lg">
-            <h4 className="font-semibold text-purple-800 mb-2">This nested structure allows for:</h4>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+              <span>A <span className="font-medium text-orange-700">thriving base wage</span> as the minimum for everyone in the category</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+              <span>A <span className="font-medium text-orange-700">midpoint</span> representing the average contribution level</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-orange-500"></span>
+              <span>A <span className="font-medium text-orange-700">tail range</span> for exceptional contributors or those with seniority, leadership, or high-impact outcomes</span>
+            </li>
+          </ul>
+          
+          <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+            <h4 className="font-semibold text-orange-800 mb-3">Merit Assessment Examples:</h4>
             <div className="space-y-2">
-              <p className="text-sm text-purple-700">• Autonomy within professional ecosystems</p>
-              <p className="text-sm text-purple-700">• Precision in resource allocation</p>
-              <p className="text-sm text-purple-700">• Recognition of nuanced contributions across specialties</p>
+              <p className="text-orange-700"><span className="font-semibold">Surgeons:</span> patient outcomes, peer review, malpractice rates, years of service</p>
+              <p className="text-orange-700"><span className="font-semibold">Teachers:</span> student growth, community feedback, years teaching, continuing education</p>
+              <p className="text-orange-700"><span className="font-semibold">Plumbers:</span> client satisfaction, project volume, service innovation</p>
+            </div>
+          </div>
+
+          {/* Nested Distribution Within Careers */}
+          <div className="border-t border-orange-200 pt-6">
+            <h4 className="font-semibold text-purple-800 text-lg mb-4 flex items-center gap-2">
+              <Target className="h-5 w-5" />
+              Nested Distribution Within Careers
+            </h4>
+            <p className="leading-relaxed mb-4">
+              This model can be recursively applied within each career category. For example, within "Healthcare Practitioners," there are sub-careers like surgeons, nurses, midwives, and therapists. Each sub-group can:
+            </p>
+            <ul className="space-y-2 ml-4 mb-4">
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+                <span>Allocate their share of the total category budget internally</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+                <span>Use a similar merit-based, normal distribution to support growth and diversity within the field</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+                <span>Create custom metrics that reflect the values and outcomes specific to their role</span>
+              </li>
+            </ul>
+            
+            <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+              <h4 className="font-semibold text-purple-800 mb-2">This nested structure allows for:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2 text-purple-700">
+                  <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                  <span>Autonomy within professional ecosystems</span>
+                </li>
+                <li className="flex items-center gap-2 text-purple-700">
+                  <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                  <span>Precision in resource allocation</span>
+                </li>
+                <li className="flex items-center gap-2 text-purple-700">
+                  <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                  <span>Recognition of nuanced contributions across specialties</span>
+                </li>
+              </ul>
             </div>
           </div>
         </CardContent>
