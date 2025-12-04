@@ -961,18 +961,71 @@ const EndoEconomics = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
+          <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-400">
+            <p className="text-indigo-800 font-semibold text-lg">
+              One of the most transformative impacts of the Endo Economics model is its capacity to de-risk integrity.
+            </p>
+          </div>
+          
           <p className="leading-relaxed">
-            One of the most transformative impacts of the Endo Economics model is its capacity to de-risk integrity. In the current economy, many individuals—especially those from marginalized or precarious backgrounds—are forced to compromise their values to meet basic needs. Jobs that perpetuate harm, extractive systems, or cultural dissonance are often the only viable options for survival.
+            In the current economy, many individuals—especially those from marginalized or precarious backgrounds—are forced to compromise their values to meet basic needs. Jobs that perpetuate harm, extractive systems, or cultural dissonance are often the only viable options for survival.
           </p>
+          
           <p className="leading-relaxed">
-            By providing a guaranteed baseline of income and resource access, Endo Economics creates the conditions for ethical clarity and vocational freedom. People are no longer compelled to tolerate toxic workplaces, unethical industries, or meaningless labor. Instead, they gain the flexibility to self-organize around projects, communities, and efforts that align with their deeper sense of purpose and positive social or ecological impact.
+            By providing a guaranteed baseline of income and resource access, Endo Economics creates the conditions for <span className="font-semibold text-indigo-700">ethical clarity and vocational freedom</span>. People are no longer compelled to tolerate:
           </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span>toxic workplaces,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span>unethical industries, or</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span>meaningless labor.</span>
+            </li>
+          </ul>
+          
           <p className="leading-relaxed">
-            This shift is not just humane—it is structurally intelligent. When work becomes a field of self-organizing desire, rather than coercion, it naturally optimizes for motivation, creativity, cooperation, and resilience. The result is a distributed intelligence network of people doing what they are intrinsically called to do, rather than merely what they are economically forced to do.
+            Instead, they gain the flexibility to self-organize around projects, communities, and efforts that align with their deeper sense of purpose and positive social or ecological impact.
           </p>
-          <div className="bg-indigo-50 p-4 rounded-lg">
-            <p className="text-indigo-800 font-medium">
-              Endo Economics, in this sense, is not just an economic redesign—it is a liberation engine for cultural renewal, ethical agency, and authentic contribution.
+          
+          <p className="leading-relaxed font-semibold text-indigo-700">
+            This shift is not just humane—it is structurally intelligent.
+          </p>
+          
+          <p className="leading-relaxed">
+            When work becomes a field of self-organizing desire, rather than coercion, it naturally optimizes for:
+          </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+              <span>motivation,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+              <span>creativity,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+              <span>cooperation, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+              <span>resilience.</span>
+            </li>
+          </ul>
+          
+          <p className="leading-relaxed">
+            The result is a <span className="font-medium">distributed intelligence network</span> of people doing what they are intrinsically called to do, rather than merely what they are economically forced to do.
+          </p>
+          
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200">
+            <p className="text-indigo-800 font-medium text-center">
+              In this sense, Endo Economics is not just an economic redesign—it is a <span className="font-bold">liberation engine</span> for cultural renewal, ethical agency, and authentic contribution.
             </p>
           </div>
         </CardContent>
