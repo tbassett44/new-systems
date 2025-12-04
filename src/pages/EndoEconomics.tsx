@@ -38,10 +38,18 @@ const EndoEconomics = () => {
             Overview
           </CardTitle>
         </CardHeader>
-        <CardContent className="prose max-w-none">
+        <CardContent className="prose max-w-none space-y-4">
           <p className="leading-relaxed text-lg">
-            This proposal is a call to reimagine the very architecture of our economy at a moment of deep systemic misalignment. While the U.S. GDP exceeds $30 trillion annually, a staggering portion of that value fails to translate into human wellbeing, ecological regeneration, or long-term resilience. This document illuminates the hidden flows beneath that number—wages, public spending, and capital—and proposes a practical, values-driven framework to distribute these resources in service of collective thriving. It offers not just critique, but blueprint: a vision for an economy that works for people and planet, and a roadmap to begin building it now.
+            This proposal is a call to reimagine the very architecture of our economy at a moment of deep systemic misalignment. While the U.S. GDP exceeds <span className="font-semibold text-primary">$30 trillion annually</span>, a staggering portion of that value fails to translate into human wellbeing, ecological regeneration, or long-term resilience.
           </p>
+          <p className="leading-relaxed text-lg">
+            This document illuminates the hidden flows beneath that number—<span className="text-blue-600 font-medium">wages</span>, <span className="text-green-600 font-medium">public spending</span>, and <span className="text-purple-600 font-medium">capital/enterprise value</span>—and proposes a practical, values-driven framework to distribute these resources in service of collective thriving.
+          </p>
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-blue-800 font-medium">
+              It offers not just critique, but blueprint: a vision for an economy that works for people and planet, and a roadmap to begin building it now.
+            </p>
+          </div>
         </CardContent>
       </Card>
 
