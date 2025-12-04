@@ -394,73 +394,58 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
-      <Card className="border-purple-200">
+      <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2 text-purple-700">
-            <TrendingUp className="h-6 w-6" />
+          <CardTitle className="flex items-center gap-2 text-green-600">
+            <CheckCircle className="h-5 w-5" />
             High-Level Outcomes
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="leading-relaxed font-medium text-purple-700">
+          <p className="leading-relaxed">
             Endo Economics is designed to support a set of tangible, lived outcomes:
           </p>
-          <div className="grid gap-4">
-            <div className="flex items-start gap-3 bg-purple-50/50 p-4 rounded-lg">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Guaranteed Basic Wage & Dignified Livelihoods</strong>
-                <p className="text-muted-foreground">Every person receives a baseline income that supports wellbeing, with the opportunity to grow through meaningful contribution. <span className="font-medium text-purple-700">No one falls below a thriving threshold.</span></p>
+                <p className="font-medium">Guaranteed Basic Wage & Dignified Livelihoods</p>
+                <p className="text-sm text-muted-foreground">Every person receives a baseline income that supports wellbeing, with the opportunity to grow through meaningful contribution. No one falls below a thriving threshold.</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-purple-50/50 p-4 rounded-lg">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-primary">No More Personal or Business Income Taxes</strong>
-                <p className="text-muted-foreground">Core services and social systems are funded through distributed value flows within the Commons. Individual and business income taxation can be replaced by Commons-mediated flow allocation, dramatically simplifying financial life while increasing transparency.</p>
+                <p className="font-medium">No More Personal or Business Income Taxes</p>
+                <p className="text-sm text-muted-foreground">Core services and social systems are funded through distributed value flows within the Commons, dramatically simplifying financial life while increasing transparency.</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-purple-50/50 p-4 rounded-lg">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Adaptive Economic Flow Architecture</strong>
-                <p className="text-muted-foreground mb-2">The system flexes with:</p>
-                <ul className="space-y-1 ml-4 text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
-                    <span>changing human needs,</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
-                    <span>ecological realities, and</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <span className="h-1.5 w-1.5 rounded-full bg-purple-500"></span>
-                    <span>technological progress—</span>
-                  </li>
-                </ul>
-                <p className="text-muted-foreground mt-2">redistributing resources in real time rather than locking into rigid budget cycles.</p>
+                <p className="font-medium">Adaptive Economic Flow Architecture</p>
+                <p className="text-sm text-muted-foreground">The system flexes with changing human needs, ecological realities, and technological progress—redistributing resources in real time rather than locking into rigid budget cycles.</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-purple-50/50 p-4 rounded-lg">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Merit-Based Career Progression with Equity Floors</strong>
-                <p className="text-muted-foreground">Compensation within each career adjusts dynamically based on values-aligned merit, while ensuring no one falls below a thriving baseline. Excellence is rewarded without sacrificing equity.</p>
+                <p className="font-medium">Merit-Based Career Progression with Equity Floors</p>
+                <p className="text-sm text-muted-foreground">Compensation within each career adjusts dynamically based on values-aligned merit, while ensuring no one falls below a thriving baseline.</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-purple-50/50 p-4 rounded-lg">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Universal Access to Core Services</strong>
-                <p className="text-muted-foreground">Healthcare, education, housing, and nourishment become universally available—<span className="font-medium">not as charity, but as baseline infrastructure.</span></p>
+                <p className="font-medium">Universal Access to Core Services</p>
+                <p className="text-sm text-muted-foreground">Healthcare, education, housing, and nourishment become universally available—not as charity, but as baseline infrastructure.</p>
               </div>
             </div>
-            <div className="flex items-start gap-3 bg-purple-50/50 p-4 rounded-lg">
-              <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
+            <div className="flex items-start gap-3">
+              <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Resilience to Future Shocks</strong>
-                <p className="text-muted-foreground">By decentralizing and diversifying economic control, the model is designed to absorb and adapt to crises—whether climate, technological, or financial.</p>
+                <p className="font-medium">Resilience to Future Shocks</p>
+                <p className="text-sm text-muted-foreground">By decentralizing and diversifying economic control, the model is designed to absorb and adapt to crises—whether climate, technological, or financial.</p>
               </div>
             </div>
           </div>
