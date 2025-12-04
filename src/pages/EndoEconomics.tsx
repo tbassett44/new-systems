@@ -120,15 +120,44 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            The current economic system, while vast and complex, is fundamentally misaligned with the wellbeing of the majority of people and the long-term health of the planet. It treats value creation primarily through the lens of capital accumulation and short-term profit, often at the expense of human dignity, ecological stability, and community cohesion.
+            The current economic system, while vast and complex, is fundamentally misaligned with the wellbeing of the majority of people and the long-term health of the planet. It treats value creation primarily through the lens of capital accumulation and short-term profit, often at the expense of:
           </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span className="text-red-700 font-medium">human dignity,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span className="text-red-700 font-medium">ecological stability, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span className="text-red-700 font-medium">community cohesion.</span>
+            </li>
+          </ul>
           <p className="leading-relaxed">
-            Wealth flows disproportionately toward those who already hold capital, while millions work full-time jobs that still fail to meet their basic needs. Entire sectors of labor—caregiving, education, ecological restoration—are undervalued or ignored by traditional market mechanisms, despite their vital contributions to society.
+            Wealth flows disproportionately toward those who already hold capital, while millions work full-time jobs that still fail to meet their basic needs. Entire sectors of labor—caregiving, education, ecological restoration—are <span className="font-semibold">systematically undervalued or ignored</span> by traditional market mechanisms, despite their vital contributions to society.
           </p>
           <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
-            <h4 className="font-semibold text-red-800 mb-2">The Numbers Don't Lie</h4>
-            <p className="text-red-700">
-              As of 2024, the top 1% of Americans hold more wealth than the entire bottom 90% combined. The top 1% control over 30% of the nation's total wealth, while the bottom half holds less than 3%. CEOs now earn up to 400 times more than the average worker—a gap that has expanded dramatically since the 1970s, when the ratio was closer to 20-to-1.
+            <h4 className="font-bold text-red-800 mb-3 text-lg">The Numbers Don't Lie</h4>
+            <p className="text-red-700 mb-3">As of 2024:</p>
+            <ul className="space-y-2 text-red-700">
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>The top 1% of Americans hold more wealth than the <span className="font-semibold">entire bottom 90% combined</span>.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>The top 1% control over <span className="font-semibold">30% of the nation's total wealth</span>, while the bottom half holds less than 3%.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="font-bold">•</span>
+                <span>CEOs now earn up to <span className="font-semibold">400 times more</span> than the average worker—a gap that has expanded dramatically since the 1970s, when the ratio was closer to 20-to-1.</span>
+              </li>
+            </ul>
+            <p className="text-red-800 font-semibold mt-4 pt-3 border-t border-red-200">
+              These are not just statistics—they are signals of structural failure.
             </p>
           </div>
         </CardContent>
