@@ -583,6 +583,11 @@ const EndoEconomics = () => {
           {/* Wages Through the Commons */}
           <div className="border-t border-indigo-200 pt-6">
             <h4 className="font-semibold text-indigo-800 text-lg mb-4">Wages Through the Commons</h4>
+            <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400 mb-4">
+              <p className="text-blue-800">
+                <span className="font-bold text-xl">~$10T</span> flows annually through the Human Labor Economy. <span className="text-sm">[See <a href="#data-1" className="underline font-medium">Data 1</a>]</span>
+              </p>
+            </div>
             <p className="leading-relaxed mb-4">
               Employers no longer pay salaries directly. Instead, the Human Labor Flow is managed through the Commons as a <span className="font-semibold text-indigo-700">livelihood substrate</span>.
             </p>
@@ -1137,7 +1142,7 @@ const EndoEconomics = () => {
           <CardTitle className="text-white">References</CardTitle>
         </CardHeader>
         <CardContent className="space-y-8">
-          <div>
+          <div id="data-1">
             <h3 className="text-lg font-semibold text-white mb-4">[Data 1]</h3>
             <p className="text-sm text-white mb-4">
               23 Categories of Careers, representing ~92% of current US Jobs. Annual Mean Wage was multiplied by the total number of employees in that career to give a total value of wage flowing through that career. All 23 careers Total Wage Flow, adds up to the total wage flow of $9.94T.
