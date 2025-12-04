@@ -305,50 +305,114 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            In the evolution toward a regenerative economic model, financial transparency is non-negotiable. The historical failures of centrally managed systems—such as in state-run socialism and authoritarian communism—stemmed not just from flawed ideologies, but from opaque control, suppressed dissent, and misaligned incentives. When economic flows are hidden behind bureaucratic walls or political agendas, corruption, inefficiency, and public distrust flourish.
+            Endo Economics doesn't ask people to "just trust" a new system. Instead, it proposes to rebuild trust at the field level through:
           </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span className="text-cyan-700 font-medium">Radical transparency of flows,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span className="text-cyan-700 font-medium">Shared visibility, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span className="text-cyan-700 font-medium">Commons-based governance.</span>
+            </li>
+          </ul>
+          
           <p className="leading-relaxed">
-            Endo Economics solves this not through ideology, but through design. All economic flows within the commons system are made public and auditable in real time. Every transaction, whether it's a contribution, distribution, or internal allocation, is transparently tracked and made accessible to the people. Blockchains or distributed ledgers can serve as the technological backbone to ensure integrity, permanence, and clarity—without requiring trust in any single institution.
+            All economic flows within the Commons system are:
           </p>
-          <p className="leading-relaxed mb-4">
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span>publicly or semi-publicly auditable, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span>traceable from source to destination.</span>
+            </li>
+          </ul>
+          
+          <p className="leading-relaxed">
+            Every transaction, whether it's a contribution, distribution, or internal allocation, is logged to a ledger that people can inspect in appropriate ways.
+          </p>
+          
+          <p className="leading-relaxed">
+            Blockchains or distributed ledgers can serve as the technological backbone to ensure:
+          </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span><span className="font-medium">integrity</span> (transactions can't be altered retroactively),</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span><span className="font-medium">permanence</span> (history can't be quietly erased), and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+              <span><span className="font-medium">clarity</span> (flows can be followed across time and space) —</span>
+            </li>
+          </ul>
+          <p className="leading-relaxed italic text-muted-foreground">
+            without requiring blind faith in any single institution.
+          </p>
+          
+          <p className="leading-relaxed font-medium">
             This transparency offers several key advantages:
           </p>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Decentralized Accountability:</strong>
-                <span className="text-muted-foreground"> No single entity can hide or redirect funds without immediate visibility and social consequences.</span>
+                <strong className="text-primary">Decentralized Accountability</strong>
+                <p className="text-muted-foreground">No single entity can hide or redirect funds without immediate visibility and social consequences.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Public Oversight and Feedback:</strong>
-                <span className="text-muted-foreground"> Communities can directly see where their shared resources are going, enabling informed feedback and co-governance.</span>
+                <strong className="text-primary">Public Oversight and Feedback</strong>
+                <p className="text-muted-foreground">Communities can see where their shared resources are going, enabling informed feedback, contestation, and co-governance.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Confidence in Commons-Based Systems:</strong>
-                <span className="text-muted-foreground"> When people can follow the money, they are more likely to participate, contribute, and collaborate.</span>
+                <strong className="text-primary">Confidence in Commons-Based Systems</strong>
+                <p className="text-muted-foreground">When people can literally "follow the money," they are more likely to participate, contribute, and collaborate.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-600 mt-1 flex-shrink-0" />
               <div>
-                <strong className="text-primary">Reduced Corruption:</strong>
-                <span className="text-muted-foreground"> Open ledgers eliminate the shadows in which exploitation and embezzlement thrive.</span>
+                <strong className="text-primary">Reduced Corruption</strong>
+                <p className="text-muted-foreground">Open ledgers eliminate many of the shadows in which exploitation, backroom deals, and embezzlement have historically flourished.</p>
               </div>
             </div>
           </div>
+          
+          <div className="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-400 space-y-3">
+            <p className="text-cyan-800">
+              In this sense, <span className="font-semibold">transparency is not surveillance</span>. Surveillance concentrates power and hides its own operations; transparency distributes power and reveals the rules. The aim is not to watch people, but to let people watch the system.
+            </p>
+          </div>
+          
           <p className="leading-relaxed">
-            While Endo Economics proposes a dramatic reorientation of how resources flow, it rejects authoritarianism and central planning in favor of radical openness, voluntary participation, and digitally enforced honesty. The integrity of the system does not rely on trusting a government—it relies on trusting the code, the visibility, and the people.
+            Endo Economics does not rely on trusting a government or a corporation.<br />
+            <span className="font-medium text-cyan-700">It relies on trusting the field we create together — the code, the visibility, and each other.</span>
           </p>
-          <div className="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-400">
-            <p className="text-cyan-800 font-medium">
-              This is not surveillance. It is consensual civic transparency in service to the collective good. It is the sunlight in which a truly regenerative economy can grow.
+          
+          <p className="leading-relaxed">
+            By making flows visible and co-governed, we begin to restore what money was originally meant to be: <span className="font-medium">a trustworthy medium of coordination</span>, embedded in a culture of care rather than extraction.
+          </p>
+          
+          <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-4 rounded-lg border border-cyan-200">
+            <p className="text-cyan-800 font-medium text-center">
+              This is how radical transparency re-establishes a healthy trust field around money — and why it is a foundational pillar of a truly regenerative economy.
             </p>
           </div>
         </CardContent>
