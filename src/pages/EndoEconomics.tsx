@@ -209,23 +209,90 @@ const EndoEconomics = () => {
         <CardHeader>
           <CardTitle className="text-primary">Distinguishing Endo Economics from Socialism and Communism</CardTitle>
         </CardHeader>
-        <CardContent>
-          <p className="leading-relaxed mb-4">
-            As the Endo Economics model gains attention, it is essential to clearly distinguish its foundations from 
-            existing frameworks such as socialism and communism. While all three systems share a concern for equity 
-            and social wellbeing, Endo Economics is rooted in an evolutionary and ecological logic rather than 
-            ideological redistribution. It does not advocate for the state ownership of all property, nor does it 
-            seek to centralize control. Instead, it emphasizes decentralization, self-sovereignty, flow-based 
-            coordination, and a regenerative value logic inspired by living systems.
-          </p>
+        <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            Unlike socialism or communism, which often rely on centralized planning and the homogenization of incentives, 
-            Endo Economics fosters local autonomy, diversity of contribution, and multiple dimensions of value beyond labor. 
-            Resources are distributed not through coercive state apparatuses but via participatory governance, verifiable 
-            outcomes, and open reputation systems. It is not about eliminating private enterprise or standardizing outcomes—it 
-            is about creating conditions where wellbeing and mutual thriving are the primary organizing principles, with 
-            individuals empowered to contribute in ways aligned with their deepest gifts and community context.
+            As the Endo Economics model gains attention, it is essential to clearly distinguish its foundations from existing frameworks such as socialism and communism. While all three systems share a concern for equity and social wellbeing, Endo Economics is rooted in <span className="font-semibold">evolutionary and ecological logic</span> rather than ideological redistribution.
           </p>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-300">
+              <h4 className="font-semibold text-red-800 mb-2">It does not:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-red-700">
+                  <span className="font-bold">•</span>
+                  <span>advocate for state ownership of all property, nor</span>
+                </li>
+                <li className="flex items-start gap-2 text-red-700">
+                  <span className="font-bold">•</span>
+                  <span>seek to centralize control in a single authority.</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-300">
+              <h4 className="font-semibold text-green-800 mb-2">Instead, it emphasizes:</h4>
+              <ul className="space-y-2">
+                <li className="flex items-start gap-2 text-green-700">
+                  <span className="font-bold">•</span>
+                  <span>decentralization,</span>
+                </li>
+                <li className="flex items-start gap-2 text-green-700">
+                  <span className="font-bold">•</span>
+                  <span>self-sovereignty,</span>
+                </li>
+                <li className="flex items-start gap-2 text-green-700">
+                  <span className="font-bold">•</span>
+                  <span>flow-based coordination, and</span>
+                </li>
+                <li className="flex items-start gap-2 text-green-700">
+                  <span className="font-bold">•</span>
+                  <span>a regenerative value logic inspired by living systems.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <p className="leading-relaxed">
+            Unlike socialism or communism, which often rely on centralized planning and homogenized incentives, Endo Economics fosters:
+          </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-blue-500"></span>
+              <span className="text-blue-700 font-medium">local autonomy,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-blue-500"></span>
+              <span className="text-blue-700 font-medium">diversity of contribution, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-blue-500"></span>
+              <span className="text-blue-700 font-medium">multiple dimensions of value beyond labor alone.</span>
+            </li>
+          </ul>
+          
+          <p className="leading-relaxed">
+            Resources are distributed not through coercive state apparatuses but via:
+          </p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+              <span className="text-purple-700 font-medium">participatory governance,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+              <span className="text-purple-700 font-medium">verifiable outcomes, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-purple-500"></span>
+              <span className="text-purple-700 font-medium">open reputation systems.</span>
+            </li>
+          </ul>
+          
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-blue-800 font-medium">
+              It is not about eliminating private enterprise or standardizing outcomes—it is about creating conditions where wellbeing and mutual thriving are the primary organizing principles, with individuals empowered to contribute in ways aligned with their deepest gifts and community context.
+            </p>
+          </div>
         </CardContent>
       </Card>
 
