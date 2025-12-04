@@ -491,6 +491,198 @@ const EndoEconomics = () => {
         </CardContent>
       </Card>
 
+      <Card className="border-indigo-200">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-indigo-700">
+            <Zap className="h-6 w-6" />
+            The Three Great Rivers of GDP
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-400">
+            <p className="text-indigo-800 font-medium">
+              The central move of Endo Economics is to treat these three flows as Commons flows:
+            </p>
+            <p className="text-indigo-700 mt-2">
+              All three rivers—<span className="font-semibold">Labor</span>, <span className="font-semibold">Public</span>, and <span className="font-semibold">Production/Capital</span>—flow through a transparent Commons Treasury before being redistributed.
+            </p>
+          </div>
+          
+          <p className="leading-relaxed">This enables:</p>
+          <ul className="space-y-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+              <span className="text-indigo-700 font-medium">unified visibility,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+              <span className="text-indigo-700 font-medium">participatory governance, and</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+              <span className="text-indigo-700 font-medium">structurally aligned incentives.</span>
+            </li>
+          </ul>
+          
+          <p className="leading-relaxed">Once inside the Commons, flows are allocated into:</p>
+          <div className="grid md:grid-cols-2 gap-3">
+            <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-400">
+              <p className="font-medium text-blue-800">Individual Livelihoods</p>
+              <p className="text-sm text-blue-700">(wages and thriving baselines)</p>
+            </div>
+            <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-400">
+              <p className="font-medium text-green-800">Business Operations</p>
+              <p className="text-sm text-green-700">(hard expenses, tools, wages)</p>
+            </div>
+            <div className="bg-amber-50 p-3 rounded-lg border-l-4 border-amber-400">
+              <p className="font-medium text-amber-800">Public Services & Infrastructure</p>
+              <p className="text-sm text-amber-700">(health, education, social systems)</p>
+            </div>
+            <div className="bg-purple-50 p-3 rounded-lg border-l-4 border-purple-400">
+              <p className="font-medium text-purple-800">Evolutionary Surplus</p>
+              <p className="text-sm text-purple-700">(regeneration, innovation, resilience)</p>
+            </div>
+          </div>
+
+          {/* Business Operations via the Commons */}
+          <div className="border-t border-indigo-200 pt-6">
+            <h4 className="font-semibold text-indigo-800 text-lg mb-4">Business Operations via the Commons</h4>
+            <p className="leading-relaxed mb-4">
+              All business revenue flows into the Commons instead of sitting in private silos.
+            </p>
+            <p className="leading-relaxed mb-3">
+              Businesses receive Commons-issued company cards or credit channels to cover:
+            </p>
+            <ul className="space-y-2 ml-4 mb-4">
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+                <span>rent and facilities,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+                <span>inventory and raw materials,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+                <span>tools, utilities, logistics,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+                <span>payroll (which returns into the wage substrate),</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-indigo-500"></span>
+                <span>capital expenditures.</span>
+              </li>
+            </ul>
+            
+            <p className="leading-relaxed mb-3 font-medium">AI-assisted analysis monitors transactions:</p>
+            <ul className="space-y-2 ml-4 mb-4">
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+                <span>comparing spending to sector norms,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+                <span>adjusting for scale, geography, and seasonality,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+                <span>detecting anomalies and fraud,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+                <span>identifying early signs of distress.</span>
+              </li>
+            </ul>
+            
+            <p className="leading-relaxed mb-3 font-medium">Human oversight panels:</p>
+            <ul className="space-y-2 ml-4 mb-4">
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-amber-500"></span>
+                <span>review flagged transactions with context and nuance,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-amber-500"></span>
+                <span>approve increases in credit limits for growing or high-impact enterprises,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-amber-500"></span>
+                <span>adjust or support restructuring when risk appears.</span>
+              </li>
+            </ul>
+            
+            <div className="bg-indigo-50 p-4 rounded-lg">
+              <p className="text-indigo-800">
+                This ensures hard expenses are honored, while the Commons retains the ability to guide surplus and capital flows toward long-term collective benefit.
+              </p>
+            </div>
+          </div>
+
+          {/* Wages Through the Commons */}
+          <div className="border-t border-indigo-200 pt-6">
+            <h4 className="font-semibold text-indigo-800 text-lg mb-4">Wages Through the Commons</h4>
+            <p className="leading-relaxed mb-4">
+              Employers no longer pay salaries directly. Instead, the Human Labor Flow is managed through the Commons as a <span className="font-semibold text-indigo-700">livelihood substrate</span>.
+            </p>
+            <p className="leading-relaxed mb-3">People receive:</p>
+            <ul className="space-y-2 ml-4">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                <span>a guaranteed thriving baseline income,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                <span>career-category merit-based adjustments,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                <span>cost-of-living adjustments based on region,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
+                <span>predictable and dignified income independent of any single employer.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Public Services Through the Commons */}
+          <div className="border-t border-indigo-200 pt-6">
+            <h4 className="font-semibold text-indigo-800 text-lg mb-4">Public Services Through the Commons</h4>
+            <p className="leading-relaxed mb-3">
+              The existing public flows (<span className="font-semibold">~$10T</span>) are routed through the Commons into:
+            </p>
+            <ul className="space-y-2 ml-4 mb-4">
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                <span>healthcare,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                <span>education,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                <span>social safety nets,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                <span>infrastructure,</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-green-500"></span>
+                <span>civic institutions.</span>
+              </li>
+            </ul>
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
+              <p className="text-green-800 font-medium">
+                Public budgets become transparent and participatory, with communities helping to shape priorities and evaluate outcomes.
+              </p>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       <Card className="border-blue-200">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-blue-700">
