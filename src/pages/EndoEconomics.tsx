@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { CheckCircle, AlertTriangle, TrendingUp, Users, Leaf, Brain, Heart, Shield, Zap, Target, MapPin } from "lucide-react";
+import threeRiversDiagram from "@/assets/three-rivers-gdp-diagram.png";
 
 const EndoEconomics = () => {
   useEffect(() => {
@@ -466,6 +467,17 @@ const EndoEconomics = () => {
             </p>
             <p className="text-indigo-700 mt-2">
               All three rivers—<span className="font-semibold">Labor</span>, <span className="font-semibold">Public</span>, and <span className="font-semibold">Production/Capital</span>—flow through a transparent Commons Treasury before being redistributed.
+            </p>
+          </div>
+          
+          <div className="my-6">
+            <img 
+              src={threeRiversDiagram} 
+              alt="Diagram showing the three great rivers of GDP - Human Labor (~$10T), Public Services (~$10T), and Production & Capital (~$10-11T) - flowing through the Commons Treasury Layer"
+              className="w-full rounded-lg shadow-lg border border-indigo-100"
+            />
+            <p className="text-sm text-muted-foreground mt-2 text-center italic">
+              The Three Great Rivers of GDP flowing through the Commons Treasury Layer
             </p>
           </div>
           
