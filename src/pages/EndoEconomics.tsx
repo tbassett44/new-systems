@@ -773,28 +773,28 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            To ensure equity across geographic regions, the economic model incorporates adjustments based on local cost of living. This recognizes that a thriving wage in one area may not meet basic needs in another. Several methods are proposed, which will need additional experimentation and refinement to determine the best strategy:
+            To ensure equity across geographic regions, the economic model incorporates adjustments based on local cost of living. A thriving wage in one area may not meet basic needs in another. Several methods can be combined or tested:
           </p>
-          <div className="space-y-4">
-            <div className="bg-emerald-50 p-4 rounded-lg">
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-400">
               <h4 className="font-semibold text-emerald-800 mb-2">Regional COL Index Modifier</h4>
-              <p className="text-sm text-emerald-700">Salaries are adjusted using a multiplier based on local living cost indices, similar to federal per diem or COLA models.</p>
+              <p className="text-emerald-700">Salaries are adjusted using a multiplier based on local living cost indices, similar to federal per diem or COLA models.</p>
             </div>
-            <div className="bg-emerald-50 p-4 rounded-lg">
+            <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-400">
               <h4 className="font-semibold text-emerald-800 mb-2">Living Wage Anchoring</h4>
-              <p className="text-sm text-emerald-700">The minimum wage for any career category is tied to the local living wage, ensuring a dignified baseline for all.</p>
+              <p className="text-emerald-700">The minimum wage for any career category is tied to the local living wage, ensuring a dignified baseline for all.</p>
             </div>
-            <div className="bg-emerald-50 p-4 rounded-lg">
+            <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-400">
               <h4 className="font-semibold text-emerald-800 mb-2">Geo-Clustering</h4>
-              <p className="text-sm text-emerald-700">Locations are grouped into cost-of-living bands (e.g., high, medium, low), each with its own standardized budget calibration.</p>
+              <p className="text-emerald-700">Locations are grouped into cost-of-living bands (e.g., high, medium, low), each with its own standardized calibration.</p>
             </div>
-            <div className="bg-emerald-50 p-4 rounded-lg">
+            <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-400">
               <h4 className="font-semibold text-emerald-800 mb-2">Hybrid Factor Weighting</h4>
-              <p className="text-sm text-emerald-700">COL becomes one component (e.g., 15%) in a weighted formula that also includes merit, education, and experience.</p>
+              <p className="text-emerald-700">COL becomes one component (e.g., 15%) in a weighted formula that also includes merit, education, and experience.</p>
             </div>
           </div>
-          <div className="bg-emerald-100 p-4 rounded-lg border-l-4 border-emerald-400">
-            <p className="text-emerald-800 font-medium">
+          <div className="bg-gradient-to-r from-emerald-50 to-green-50 p-4 rounded-lg border border-emerald-200">
+            <p className="text-emerald-800 font-medium text-center">
               These adjustments ensure that the same role offers equivalent quality of life across diverse geographies, and that the model maintains both equity and adaptability over time.
             </p>
           </div>
