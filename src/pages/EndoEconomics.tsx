@@ -805,117 +805,147 @@ const EndoEconomics = () => {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-teal-700">
             <Leaf className="h-6 w-6" />
-            Reclaiming Capital for Collective Evolution (~26% of GDP)
+            Reclaiming Capital for Collective Evolution
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="leading-relaxed">
-            This portion represents capital income, business profits, investment returns, private equity, corporate R&D, and miscellaneous production outputs. If reimagined through a values-aligned lens, it becomes a powerful fund for evolutionary public benefit.
+            The <span className="font-semibold text-teal-700">Production & Capital Flow</span>—roughly the remaining third of GDP—represents:
           </p>
-          <p className="leading-relaxed font-medium">
-            Here are some possibility domains to explore:
-          </p>
+          <ul className="grid md:grid-cols-2 gap-2 ml-4">
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-teal-500"></span>
+              <span>capital income,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-teal-500"></span>
+              <span>business profits,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-teal-500"></span>
+              <span>investment returns,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-teal-500"></span>
+              <span>private equity,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-teal-500"></span>
+              <span>corporate R&D,</span>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-teal-500"></span>
+              <span>non-wage production outputs.</span>
+            </li>
+          </ul>
+          <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-400">
+            <p className="text-teal-800 font-medium">
+              If reimagined through a values-aligned lens, this becomes a powerful fund for evolutionary public benefit.
+            </p>
+          </div>
+
+          <h4 className="font-bold text-teal-800 text-xl pt-4">Domains of Evolutionary Investment</h4>
           
           <div className="space-y-6">
-            <div className="bg-green-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-green-800 mb-4 text-lg">🌱 1. Regenerative Infrastructure</h4>
-              <p className="text-sm text-green-700 mb-4">Allocate capital toward systems that heal rather than extract:</p>
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+              <h4 className="font-semibold text-green-800 mb-3 text-lg">🌱 1. Regenerative Infrastructure</h4>
+              <p className="text-green-700 mb-4">Allocate capital toward systems that heal rather than extract:</p>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-green-800">Regenerative Agriculture:</p>
-                  <p className="text-sm text-green-700">Rebuild topsoil, biodiversity, and carbon sinks</p>
+                  <p className="text-green-700">rebuild topsoil, biodiversity, and carbon sinks</p>
                 </div>
                 <div>
                   <p className="font-medium text-green-800">Circular Manufacturing:</p>
-                  <p className="text-sm text-green-700">Decentralized, low-waste, regionally appropriate production</p>
+                  <p className="text-green-700">decentralized, low-waste, regionally appropriate production</p>
                 </div>
                 <div>
                   <p className="font-medium text-green-800">Decarbonized Energy:</p>
-                  <p className="text-sm text-green-700">Transition to solar, wind, geothermal, and community energy ownership</p>
+                  <p className="text-green-700">solar, wind, geothermal, community-owned systems</p>
                 </div>
                 <div>
                   <p className="font-medium text-green-800">Ecological Restoration:</p>
-                  <p className="text-sm text-green-700">Watersheds, rewilding, wetland restoration, and urban greening</p>
+                  <p className="text-green-700">watersheds, rewilding, wetlands, urban greening</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-blue-800 mb-4 text-lg">🧠 2. Human Development Systems</h4>
-              <p className="text-sm text-blue-700 mb-4">Fund long-term human thriving at every scale:</p>
+            <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
+              <h4 className="font-semibold text-blue-800 mb-3 text-lg">🧠 2. Human Development Systems</h4>
+              <p className="text-blue-700 mb-4">Fund long-term human thriving:</p>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-blue-800">Universal Preventive Healthcare:</p>
-                  <p className="text-sm text-blue-700">Free physical, mental, and integrative health services</p>
+                  <p className="text-blue-700">physical, mental, and integrative services</p>
                 </div>
                 <div>
                   <p className="font-medium text-blue-800">Lifelong Learning Ecosystems:</p>
-                  <p className="text-sm text-blue-700">Open-access education hubs, mentorship programs, skill libraries</p>
+                  <p className="text-blue-700">open-access education hubs, mentorship networks, skill libraries</p>
                 </div>
                 <div>
                   <p className="font-medium text-blue-800">Wellbeing Technology R&D:</p>
-                  <p className="text-sm text-blue-700">Invest in tools that enhance emotional, cognitive, and social coherence</p>
+                  <p className="text-blue-700">tools for emotional, cognitive, and social coherence</p>
                 </div>
                 <div>
                   <p className="font-medium text-blue-800">Art & Cultural Stewardship:</p>
-                  <p className="text-sm text-blue-700">Sustain creators, historians, and visionaries as essential workers</p>
+                  <p className="text-blue-700">sustaining creators, historians, and visionaries as essential workers</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-purple-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-purple-800 mb-4 text-lg">🛠️ 3. Evolutionary Governance & Infrastructure</h4>
-              <p className="text-sm text-purple-700 mb-4">Support participatory and adaptive social architecture:</p>
+            <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
+              <h4 className="font-semibold text-purple-800 mb-3 text-lg">🛠️ 3. Evolutionary Governance & Infrastructure</h4>
+              <p className="text-purple-700 mb-4">Support participatory and adaptive social architecture:</p>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-purple-800">Open Civic Tech:</p>
-                  <p className="text-sm text-purple-700">Decentralized digital platforms for governance, voting, and community insight</p>
+                  <p className="text-purple-700">decentralized platforms for governance, voting, and community insight</p>
                 </div>
                 <div>
                   <p className="font-medium text-purple-800">Public Innovation Funds:</p>
-                  <p className="text-sm text-purple-700">Localized co-op VC models supporting citizen-led solutions</p>
+                  <p className="text-purple-700">localized co-op VC models supporting citizen-led solutions</p>
                 </div>
                 <div>
                   <p className="font-medium text-purple-800">Global Collaboration Portals:</p>
-                  <p className="text-sm text-purple-700">Coordinated planetary research and mutual aid networks</p>
+                  <p className="text-purple-700">coordinated planetary research and mutual aid networks</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-orange-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-orange-800 mb-4 text-lg">🫱 4. Redistributed Private Capital</h4>
-              <p className="text-sm text-orange-700 mb-4">Rather than eliminate private profit entirely, transform it:</p>
+            <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
+              <h4 className="font-semibold text-orange-800 mb-3 text-lg">🫱 4. Redistributed Private Capital</h4>
+              <p className="text-orange-700 mb-4">Rather than eliminate private profit entirely, transform it:</p>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-orange-800">Stakeholder Dividends:</p>
-                  <p className="text-sm text-orange-700">Redirect corporate profits into citizen dividends or co-op shares</p>
+                  <p className="text-orange-700">redirect corporate profits into citizen dividends or co-op shares</p>
                 </div>
                 <div>
                   <p className="font-medium text-orange-800">Commons Equity Pools:</p>
-                  <p className="text-sm text-orange-700">Turn extractive gains (e.g., from land speculation or data) into social wealth funds</p>
+                  <p className="text-orange-700">turn extractive gains (e.g., from land speculation or data) into social wealth funds</p>
                 </div>
                 <div>
                   <p className="font-medium text-orange-800">Time-Bound Ownership Models:</p>
-                  <p className="text-sm text-orange-700">Corporate equity returns to commons after a fixed time unless democratically extended</p>
+                  <p className="text-orange-700">corporate equity returns to the Commons after a fixed time unless democratically extended</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-amber-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-amber-800 mb-4 text-lg">💡 5. Resilience & Transformation Buffer</h4>
-              <p className="text-sm text-amber-700 mb-4">Keep a percentage for flexible, future-facing initiatives:</p>
+            <div className="bg-amber-50 p-6 rounded-lg border-l-4 border-amber-400">
+              <h4 className="font-semibold text-amber-800 mb-3 text-lg">💡 5. Resilience & Transformation Buffer</h4>
+              <p className="text-amber-700 mb-4">Keep a percentage for flexible, future-facing initiatives:</p>
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-amber-800">Crisis Response Fund:</p>
-                  <p className="text-sm text-amber-700">Earthquakes, floods, pandemics, etc.</p>
+                  <p className="text-amber-700">earthquakes, floods, pandemics, etc.</p>
                 </div>
                 <div>
                   <p className="font-medium text-amber-800">Innovation Sandbox:</p>
-                  <p className="text-sm text-amber-700">Fund emerging tech, paradigm-breaking science, or collective intelligence labs</p>
+                  <p className="text-amber-700">paradigm-breaking tech, science, collective intelligence labs</p>
                 </div>
                 <div>
                   <p className="font-medium text-amber-800">Planetary Scale Initiatives:</p>
-                  <p className="text-sm text-amber-700">Ocean cleanup, global literacy, interspecies communication, etc.</p>
+                  <p className="text-amber-700">ocean cleanup, global literacy, interspecies communication, etc.</p>
                 </div>
               </div>
             </div>
