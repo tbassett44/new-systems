@@ -85,19 +85,25 @@ const EndoEconomics = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="leading-relaxed">
-            The word economy comes from the Greek oikonomía—meaning the "management of the household." At its root, economics was never about abstract markets or corporate growth—it was about how we care for the resources, relationships, and responsibilities that sustain life. Our "house" is not just a personal dwelling, but our shared society and planetary ecosystem. And right now, that house is divided—economically, politically, and spiritually.
+          <p className="leading-relaxed text-lg">
+            The word <span className="font-semibold italic">economy</span> comes from the Greek <span className="font-semibold text-amber-700">oikonomía</span>—meaning the "management of the household." At its root, economics was never about abstract markets or corporate growth—it was about how we care for the resources, relationships, and responsibilities that sustain life.
           </p>
           <p className="leading-relaxed">
-            In his famous address, Abraham Lincoln warned that "a house divided against itself cannot stand." He spoke not just of political tension, but of a deeper fragmentation—a failure to recognize our interdependence. And long before him, George Washington, in his Farewell Address, cautioned that the emergence of political factions would fracture the soul of the nation, undermining the very experiment of democracy.
+            Our "house" is not just a personal dwelling, but our shared society and planetary ecosystem. And right now, that house is divided—economically, politically, and spiritually.
+          </p>
+          <p className="leading-relaxed">
+            In his famous address, Abraham Lincoln warned that <span className="italic">"a house divided against itself cannot stand."</span> He spoke not just of political tension, but of a deeper fragmentation—a failure to recognize our interdependence. Long before him, George Washington, in his Farewell Address, cautioned that the emergence of political factions would fracture the soul of the nation, undermining the very experiment of democracy.
           </p>
           <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-400">
-            <p className="text-amber-800 font-medium">
+            <p className="text-amber-800 font-semibold text-lg">
               These warnings were not just poetic—they were prophetic.
             </p>
           </div>
           <p className="leading-relaxed">
-            What we now face is a culture caught in adversarial systems, where politics, economics, and identity are weaponized against one another. The result is gridlock, exploitation, and widespread disillusionment. Endo Economics invites us to return to the original meaning of economy—not as domination, but as home care. Not as extraction, but as symbiosis.
+            What we now face is a culture caught in adversarial systems, where politics, economics, and identity are weaponized against one another. The result is gridlock, exploitation, and widespread disillusionment.
+          </p>
+          <p className="leading-relaxed font-medium text-amber-700">
+            Endo Economics invites us to return to the original meaning of economy—not as domination, but as home care. Not as extraction, but as symbiosis.
           </p>
           <p className="leading-relaxed">
             By making the flow of resources transparent, decentralized, and participatory, we rebuild the foundation of trust. By aligning resource flows with human and ecological wellbeing, we transform economics into a healing force. This is how we begin to reunify the household, not just politically but structurally. This is how we make our shared home livable again.
