@@ -44,8 +44,11 @@ import {
   Settings,
   Home,
   Printer,
-  Bot
+  Bot,
+  Moon,
+  Sun
 } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
@@ -183,6 +186,7 @@ function AppSidebar() {
       <Sidebar className="border-r bg-background/75 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
+          <div className="flex items-center gap-1">
             {(state !== "collapsed" || isMobile) && (
               <div>
                 <h1 className="text-xl font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
@@ -190,7 +194,11 @@ function AppSidebar() {
                 <h2 className="text-lg font-semibold text-primary">Manifesto</h2>
               </div>
             )}
+          </div>
+          <div className="flex items-center gap-1">
+            <ThemeToggle />
             <SidebarTrigger className={`${state === "collapsed" && !isMobile ? "mx-auto" : ""}`} />
+          </div>
           </div>
           
           {/* Search section - temporarily hidden 

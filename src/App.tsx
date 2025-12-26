@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
+import { ThemeProvider } from 'next-themes';
 import Index from "./pages/Index";
 import WhitePaperLayout from "./components/WhitePaperLayout";
 import EndoEconomics from "./pages/EndoEconomics";
@@ -75,11 +76,13 @@ function App() {
   }, []);
 
   return (
-    <AuthProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </AuthProvider>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+      <AuthProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
