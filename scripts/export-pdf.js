@@ -118,9 +118,15 @@ async function exportToPDF() {
       const url = `${BASE_URL}${pageInfo.path}`;
       console.log(`Exporting: ${pageInfo.name} (${url})`);
 
-      await page.goto(url, { 
+      // Force light mode via browser's color scheme preference
+      // This works with next-themes when enableSystem={true}
+      await page.emulateMediaFeatures([
+        { name: 'prefers-color-scheme', value: 'light' }
+      ]);
+
+      await page.goto(url, {
         waitUntil: 'networkidle0',
-        timeout: 60000 
+        timeout: 60000
       });
 
       // Wait for content to render
@@ -128,22 +134,68 @@ async function exportToPDF() {
         console.log(`  Warning: main element not found for ${pageInfo.name}`);
       });
 
-      // Add some delay for any animations
+      // Add some delay for any animations and theme to apply
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      // Hide navigation sidebar for cleaner PDF
+      // Hide UI elements and process links for cleaner PDF
       await page.evaluate(() => {
+
         // Hide sidebar navigation
         const sidebar = document.querySelector('aside');
         if (sidebar) sidebar.style.display = 'none';
-        
+
         // Expand main content
         const main = document.querySelector('main');
         if (main) {
           main.style.marginLeft = '0';
           main.style.maxWidth = '100%';
         }
+
+        // Hide comment system buttons (bottom right)
+        document.querySelectorAll('.fixed.bottom-4.right-4').forEach(el => {
+          el.style.display = 'none';
+        });
+
+        // Hide mobile nav button (bottom left)
+        document.querySelectorAll('.fixed.bottom-4.left-4, .fixed.bottom-4.left-72').forEach(el => {
+          el.style.display = 'none';
+        });
+
+        // Hide any other fixed bottom elements that might be UI controls
+        document.querySelectorAll('[class*="fixed"][class*="bottom-"]').forEach(el => {
+          // Check if it's a UI control (has buttons or is small)
+          if (el.querySelector('button') || el.classList.contains('z-40') || el.classList.contains('z-50')) {
+            el.style.display = 'none';
+          }
+        });
+
+        // Process links - hide internal, keep external
+        const currentHost = window.location.host;
+        document.querySelectorAll('a').forEach(link => {
+          const href = link.getAttribute('href');
+          if (!href) return;
+
+          // Check if it's an internal link
+          const isInternal =
+            href.startsWith('/') ||
+            href.startsWith('#') ||
+            href.startsWith('./') ||
+            href.startsWith('../') ||
+            (href.startsWith('http') && new URL(href).host === currentHost);
+
+          if (isInternal) {
+            // Replace the link with its text content (unwrap the anchor)
+            const span = document.createElement('span');
+            span.innerHTML = link.innerHTML;
+            span.style.cssText = link.style.cssText;
+            // Copy relevant classes but remove link styling
+            link.parentNode.replaceChild(span, link);
+          }
+        });
       });
+
+      // Small delay to let theme changes apply
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       const pdfPath = path.join(OUTPUT_DIR, `${pageInfo.name}.pdf`);
       await page.pdf({
