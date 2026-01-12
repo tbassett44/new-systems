@@ -76,7 +76,7 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={true}>
       <AuthProvider>
         <Router>
           <AppContent />
