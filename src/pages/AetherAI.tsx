@@ -406,23 +406,28 @@ const AetherAI = () => {
       </div>
 
       {/* Callout to dive deeper */}
-      <Card className="mt-12 mb-[300px] border-primary/30 bg-primary/5">
-        <CardContent className="p-6 space-y-3">
-          <Sparkles className="w-8 h-8 text-primary" />
-          <h3 className="text-xl font-semibold">Dive Deeper</h3>
-          <p className="text-muted-foreground">
-            This dialogue is just the beginning. Explore the full depth of human-AI co-creation in the book{" "}
-            <a
-              href="https://regen.actualize.earth/papers/aether-ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
-            >
-              Evolutionary Meaning Making: An Ethical Dialogue with AI
-            </a>
-          </p>
-        </CardContent>
-      </Card>
+      <div className="flex gap-4 mt-12 mb-[300px]">
+        <div className="flex-shrink-0 w-10 h-10" />
+        <div className="flex-1">
+          <Card className="border-primary/30 bg-primary/5">
+            <CardContent className="p-6 space-y-3">
+              <Sparkles className="w-8 h-8 text-primary" />
+              <h3 className="text-xl font-semibold">Dive Deeper</h3>
+              <p className="text-muted-foreground">
+                This dialogue is just the beginning. Explore the full depth of human-AI co-creation in the book{" "}
+                <a
+                  href="https://regen.actualize.earth/papers/aether-ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+                >
+                  Evolutionary Meaning Making: An Ethical Dialogue with AI
+                </a>
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
     </div>
   );
 };
