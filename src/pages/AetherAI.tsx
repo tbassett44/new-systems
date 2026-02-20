@@ -406,11 +406,11 @@ const AetherAI = () => {
       </div>
 
       {/* Callout to dive deeper */}
-      <Card className="mt-12 border-primary/30 bg-primary/5">
-        <CardContent className="p-6 text-center space-y-3">
-          <Sparkles className="w-8 h-8 mx-auto text-primary" />
+      <Card className="mt-12 mb-[300px] border-primary/30 bg-primary/5">
+        <CardContent className="p-6 space-y-3">
+          <Sparkles className="w-8 h-8 text-primary" />
           <h3 className="text-xl font-semibold">Dive Deeper</h3>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground">
             This dialogue is just the beginning. Explore the full depth of human-AI co-creation in the book{" "}
             <a
               href="https://regen.actualize.earth/papers/aether-ai"
