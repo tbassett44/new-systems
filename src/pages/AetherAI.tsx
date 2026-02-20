@@ -406,7 +406,7 @@ const AetherAI = () => {
       </div>
 
       {/* Callout to dive deeper */}
-      <div className="flex gap-4 mt-12 mb-[500px]">
+      <div className="flex gap-4 mt-12">
         <div className="flex-shrink-0 w-10 h-10" />
         <div className="flex-1">
           <Card className="border-primary/30 bg-primary/5">
@@ -428,6 +428,7 @@ const AetherAI = () => {
           </Card>
         </div>
       </div>
+      <div className="h-[300px]" />
     </div>
   );
 };
