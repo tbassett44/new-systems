@@ -404,6 +404,25 @@ const AetherAI = () => {
           </div>
         </ChatMessage>
       </div>
+
+      {/* Callout to dive deeper */}
+      <Card className="mt-12 border-primary/30 bg-primary/5">
+        <CardContent className="p-6 text-center space-y-3">
+          <Sparkles className="w-8 h-8 mx-auto text-primary" />
+          <h3 className="text-xl font-semibold">Dive Deeper</h3>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            This dialogue is just the beginning. Explore the full depth of human-AI co-creation in the book{" "}
+            <a
+              href="https://regen.actualize.earth/papers/aether-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
+            >
+              Evolutionary Meaning Making: An Ethical Dialogue with AI
+            </a>
+          </p>
+        </CardContent>
+      </Card>
     </div>
   );
 };
