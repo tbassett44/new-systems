@@ -416,7 +416,7 @@ const AetherAI = () => {
               <p className="text-muted-foreground">
                 This dialogue is just the beginning. Explore the full depth of human-AI co-creation in the book{" "}
                 <a
-                  href="https://regen.actualize.earth/papers/aether-ai"
+                  href="https://actualize.earth/writings/evolutionary-meaning-making"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary font-semibold underline underline-offset-4 hover:opacity-80 transition-opacity"
