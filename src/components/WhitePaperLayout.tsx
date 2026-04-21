@@ -46,7 +46,8 @@ import {
   Printer,
   Bot,
   Moon,
-  Sun
+  Sun,
+  Train
 } from "lucide-react";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { useScrollRestoration } from "@/hooks/useScrollRestoration";
@@ -87,6 +88,7 @@ const navigationItems: NavigationItem[] = [
 
 const whitePaperItems = [
   { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins },
+  { title: "Regenerative Mobility", url: "/papers/mobility", icon: Train },
   { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield },
   { title: "AI Ethics", url: "/papers/ai-ethics", icon: Bot },
   { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
