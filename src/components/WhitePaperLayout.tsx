@@ -89,9 +89,9 @@ const navigationItems: NavigationItem[] = [
 const whitePaperItems = [
   { title: "Endo Economics", url: "/papers/endo-economics", icon: Coins },
   { title: "Regenerative Mobility", url: "/papers/mobility", icon: Train },
+  { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
   { title: "Digital Sovereignty", url: "/papers/digital-sovereignty", icon: Shield },
   { title: "AI Ethics", url: "/papers/ai-ethics", icon: Bot },
-  { title: "Waste Management", url: "/papers/waste-management", icon: Recycle },
   { title: "Energy Infrastructure", url: "/papers/energy", icon: Zap },
   { title: "Collective Sensemaking", url: "/papers/sensemaking", icon: Brain },
   { title: "Wellbeing Tracking", url: "/papers/wellbeing", icon: Heart },
