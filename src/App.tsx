@@ -4,6 +4,7 @@ import { ThemeProvider } from 'next-themes';
 import Index from "./pages/Index";
 import WhitePaperLayout from "./components/WhitePaperLayout";
 import EndoEconomics from "./pages/EndoEconomics";
+import Mobility from "./pages/Mobility";
 import DigitalSovereignty from "./pages/DigitalSovereignty";
 import AIEthics from "./pages/AIEthics";
 import WasteManagement from "./pages/WasteManagement";
@@ -47,6 +48,7 @@ function AppContent() {
         <Route path="contribute" element={<Contribute />} />
         <Route path="glossary" element={<Glossary />} />
         <Route path="endo-economics" element={<EndoEconomics />} />
+        <Route path="mobility" element={<Mobility />} />
         <Route path="digital-sovereignty" element={<DigitalSovereignty />} />
         <Route path="ai-ethics" element={<AIEthics />} />
         <Route path="waste-management" element={<WasteManagement />} />
