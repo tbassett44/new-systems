@@ -10,5 +10,5 @@
 
 # Realistic Earth backdrop
 
-- [ ] Replace photograph projection with a fully rotating, realistically textured globe.
-- [ ] Verify rendering, scroll depth and reduced motion on desktop and mobile.
+- [x] Replace photograph projection with a fully rotating, realistically textured globe.
+- [x] Verify rendering, scroll depth and reduced motion on desktop and mobile.
