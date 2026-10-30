@@ -253,33 +253,6 @@ const Contribute = () => {
           </div>
         </CardContent>
       </Card>
-
-      {/* Creative Process Link */}
-      <Card className="bg-muted/50">
-        <CardContent className="pt-6 text-center">
-          <h3 className="text-lg font-semibold mb-2">Explore the Creative Process</h3>
-          <p className="text-sm text-muted-foreground mb-4">
-            Curious about how this manifesto came to be? View the complete conversation between 
-            the human and AI collaborators that helped compose this document.
-          </p>
-          <Button 
-            asChild 
-            variant="outline" 
-            size="sm"
-          >
-            <a 
-              href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group"
-            >
-              <MessageCircle className="mr-2 h-4 w-4" />
-              View ChatGPT Conversation
-              <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-        </CardContent>
-      </Card>
     </div>
   );
 };
