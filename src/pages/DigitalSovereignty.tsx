@@ -186,7 +186,7 @@ const DigitalSovereignty = () => {
             </div>
             <div className="space-y-2">
               <h4 className="font-medium">User Control</h4>
-              <p className="text-sm text-muted-foreground">Identity and data are never stored centrally. It is always under the control of the individual</p>
+              <p className="text-sm text-muted-foreground">Identity and data are never stored centrally. They remain under the control of the individual</p>
             </div>
           </div>
         </CardContent>

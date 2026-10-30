@@ -36,7 +36,7 @@ const Conflict = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-foreground">
-            This proposal outlines a shift from reactive, punitive models of conflict resolution to a proactive, regenerative culture of repair. It recognizes conflict as a natural part of human relationships and communities—one that, when skillfully engaged, can lead to deeper understanding, stronger bonds, and collective growth. Rather than waiting for harm to escalate into criminal justice involvement, this framework introduces tools and systems that foster early intervention, relational accountability, and long-term healing.
+            This proposal outlines a shift from reactive, punitive models of conflict resolution to a proactive, regenerative culture of repair. It recognizes conflict as a natural part of human relationships and communities. When handled with care, conflict can lead to deeper understanding, stronger bonds, and collective growth. Rather than waiting for harm to escalate into criminal justice involvement, this framework introduces tools and systems that foster early intervention, relational accountability, and long-term healing.
           </p>
         </CardContent>
       </Card>
@@ -233,7 +233,7 @@ const Conflict = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-foreground">
-            A society's resilience is measured not by its ability to avoid conflict, but by its capacity to transform it. By investing in restorative infrastructure (emotional, educational, and institutional) we reweave the social fabric and lay the foundation for a justice system that truly honors dignity, repair, and relationship.
+            A society's resilience is measured not by its ability to avoid conflict, but by its capacity to transform it. By investing in restorative infrastructure (emotional, educational, and institutional), we reweave the social fabric and lay the foundation for a justice system that truly honors dignity, repair, and relationship.
           </p>
           <Separator className="my-4" />
           <p className="leading-relaxed font-medium text-foreground">

@@ -202,7 +202,7 @@ const SexualHealth = () => {
                 Phase 3 – Full Public Access and Adolescent Inclusion
               </h4>
               <p className="leading-relaxed text-sm text-white mb-3">
-                Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings—available to adults as a safe, reliable option for reproductive responsibility.
+                Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings, available to adults as a safe, reliable option for reproductive responsibility.
               </p>
               <p className="leading-relaxed text-sm text-white">
                 With additional ethical review, parental guidance frameworks, and community consent protocols, expand access to adolescents aged 12–18. This inclusion would be strictly opt-in, designed for youth who are sexually active and seeking non-permanent, non-hormonal protection. As with vaccines and other age-sensitive interventions, decision-making would require informed consent, maturity assessments, and clinical oversight. Access would be paired with comprehensive sexual education and counseling that centers bodily autonomy, reversibility timelines, and long-term health.

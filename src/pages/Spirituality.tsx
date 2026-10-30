@@ -190,7 +190,7 @@ const Spirituality = () => {
             In the Endo Economics model, inner transformation and spiritual coherence are seen as foundational to collective wellbeing. Spiritual labor (holding space, blessing transitions, transmitting wisdom) is honored as vital contribution, not invisible or unpaid emotional work. Rather than being monetized through commercial spiritual industries, regenerative spiritual infrastructure is supported through rebalanced resource flows, redirected from extractive systems.
           </p>
           <p className="leading-relaxed">
-            Elders, ritualists, contemplative teachers, and sacred space stewards are resourced within the community economy, allowing them to serve without distortion or burnout. Ceremonial work, grief tending, and initiatory pathways are recognized as necessary infrastructure for resilient societies—equally as vital as healthcare, education, or governance.
+            Elders, ritualists, contemplative teachers, and sacred space stewards are resourced within the community economy, allowing them to serve without distortion or burnout. Ceremonial work, grief tending, and initiatory pathways are recognized as necessary infrastructure for resilient societies, equally as vital as healthcare, education, or governance.
           </p>
         </CardContent>
       </Card>

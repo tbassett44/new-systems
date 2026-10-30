@@ -215,7 +215,7 @@ const Housing = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Regenerative housing is not just about building homes. It's about creating living systems that support the wellbeing of people and planet. This proposal invites us to reimagine housing as a vehicle for ecological restoration, social connection, and economic empowerment. By embracing community land trusts, natural building techniques, and decentralized finance, we can create affordable, resilient communities that thrive in harmony with the natural world.
+            Regenerative housing aims to create homes and communities that support the wellbeing of people and the planet. This proposal invites us to reimagine housing as a vehicle for ecological restoration, social connection, and economic empowerment. By embracing community land trusts, natural building techniques, and decentralized finance, we can create affordable, resilient communities that thrive in harmony with the natural world.
           </p>
         </CardContent>
       </Card>

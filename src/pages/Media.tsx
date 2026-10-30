@@ -274,7 +274,7 @@ const Media = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-foreground">
-            Media is not just a mirror. It is an engine of culture, perception, and possibility. In a time of profound transition, 
+            Media reflects society and shapes its culture, perceptions, and possibilities. In a time of profound transition, 
             we must reimagine media not as a commodity, but as a regenerative force for truth, healing, and imagination. This 
             proposal offers a blueprint for building the infrastructure that enables us not only to inform, but to transform. 
             In doing so, we restore the role of narrative as a sacred civic function that weaves together the diverse threads 

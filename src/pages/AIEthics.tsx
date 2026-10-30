@@ -386,7 +386,7 @@ const AIEthics = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            The ethical development of artificial intelligence is not merely a technical challenge. It is a 
+            The ethical development of artificial intelligence is both a technical challenge and a 
             civilizational choice about the kind of future we want to create. By grounding AI development in 
             principles of human dignity, transparency, fairness, and accountability, and by embedding it within 
             regenerative economic and governance structures, we can ensure that AI becomes a powerful tool for 

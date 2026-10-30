@@ -269,7 +269,7 @@ const Death = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-lg">
-            A regenerative society does not avoid death—it honors it. Conscious dying is a doorway to deeper meaning, compassion, and presence in life. By embracing mortality as a sacred transition, we free ourselves from the fear that drives so much disconnection and dysfunction.
+            A regenerative society honors death as part of life. Conscious dying is a doorway to deeper meaning, compassion, and presence in life. By embracing mortality as a sacred transition, we free ourselves from the fear that drives so much disconnection and dysfunction.
           </p>
           <p className="leading-relaxed text-lg mt-4 font-medium text-primary">
             This proposal calls for a cultural and structural evolution that restores sovereignty, beauty, and dignity to our final moments, and to those who remain.

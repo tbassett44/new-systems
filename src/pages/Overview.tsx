@@ -9,7 +9,7 @@ const Overview = () => {
     document.title = "System Regeneration | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization—reimagining governance, economy, and culture to support human and planetary flourishing.');
+      metaDescription.setAttribute('content', 'A blueprint for a dignified civilization, reimagining governance, economy, and culture to support human and planetary flourishing.');
     }
   }, []);
   return <div className="space-y-8">
@@ -36,11 +36,11 @@ const Overview = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            This paper serves as a living blueprint for systems redesign—presenting a high-level overview 
+            This paper serves as a living blueprint for systems redesign, presenting a high-level overview 
             and a series of linked proposals that address the core sectors of society. Each proposal is 
             designed to clearly articulate the central problems and offer grounded, implementable solutions.
             The language throughout is intentionally concise and accessible, offering a practical foundation 
-            for reflection, collaboration, and action. This collection is not exhaustive, but it is coherent—meant 
+            for reflection, collaboration, and action. This collection is not exhaustive, but it is coherent, meant 
             to spark dialogue, inspire experimentation, and guide systemic regeneration across scales.
           </p>
         </CardContent>
@@ -102,10 +102,10 @@ const Overview = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            At the heart of this manifesto lies a singular, galvanizing aim: to catalyze a <NavLink to="/papers/election" className="text-primary hover:underline font-medium">Regenerative Election</NavLink>, a new form of democratic engagement that invites the people of this nation to reimagine how we choose leadership, how we surface solutions, and how we steward our shared future. While the whitepapers that follow propose a wide array of structural innovations, they are not offered as the only answers. Rather, they are seeds—examples of what could emerge from a society grounded in dignity, equity, creativity, and care.
+            This manifesto aims to support a <NavLink to="/papers/election" className="text-primary hover:underline font-medium">Regenerative Election</NavLink>, a new form of democratic engagement that invites the people of this nation to reimagine how we choose leadership, how we surface solutions, and how we steward our shared future. While the whitepapers that follow propose a wide array of structural innovations, they are not offered as the only answers. They are examples of what could emerge from a society grounded in dignity, equity, creativity, and care.
           </p>
           <p className="leading-relaxed mb-4">
-            The current electoral system is increasingly seen as unrepresentative, captured, and adversarial. Over 51% of Americans now identify as politically independent, signaling a deep hunger for approaches that transcend party lines and ideological binaries. A Regenerative Election is not merely a shift in political preference. It is a reweaving of the democratic fabric. It proposes a parallel, voluntary process where candidates are surfaced through transparent dialogue, collective sensemaking, and values-based debate—long before any ballots are cast.
+            The current electoral system is increasingly seen as unrepresentative, captured, and adversarial. Over 51% of Americans now identify as politically independent, signaling a deep hunger for approaches that transcend party lines and ideological binaries. A Regenerative Election is not merely a shift in political preference. It is a reweaving of the democratic fabric. It proposes a parallel, voluntary process where candidates are surfaced through transparent dialogue, collective sensemaking, and values-based debate long before any ballots are cast.
           </p>
           <p className="leading-relaxed mb-4">
             This initiative is not about creating a new political party. It is about creating a new civic experience that honors wisdom from across the political spectrum, uplifts marginalized voices, and gives rise to leadership that reflects the will and wellbeing of the whole. In doing so, it creates a legitimate and actionable pathway for any aligned candidate to earn trust, build momentum, and secure, through grassroots petition drives, official ballot access in states across the country.
@@ -216,10 +216,10 @@ const Overview = () => {
               <h3 className="text-lg font-semibold mb-3">Regenerative Energy Infrastructure</h3>
               <p className="text-sm text-muted-foreground mb-3">
                 The future of civilization depends on how we generate, distribute, and govern energy. Despite having access 
-                to cleaner, safer, and more efficient technologies (such as thorium molten salt reactors) political inertia 
+                to cleaner, safer, and more efficient technologies (such as thorium molten salt reactors), political inertia 
                 and entrenched fossil fuel interests have stalled their development. The story of thorium represents a broader 
                 systemic failure to invest in long-term, life-affirming innovation. As other nations, like China, move forward 
-                with next-generation energy systems, the opportunity remains for a bold, regenerative energy transition—one 
+                with next-generation energy systems, the opportunity remains for a bold, regenerative energy transition, one 
                 that embraces distributed renewables, decentralized grids, and advanced nuclear solutions to power a thriving, 
                 post-carbon world. This section explores how such a shift could be resourced, implemented, and aligned with 
                 the principles of Endo Economics to ensure energy serves people and planet, not profit alone.
@@ -240,7 +240,7 @@ const Overview = () => {
                 dataset that reveals where attention, care, and resources are most needed. This approach restores the feedback 
                 loops between people and the systems that serve them, enabling more adaptive governance, more equitable 
                 decision-making, and a culture of shared insight. When guided with care, this model turns raw public input 
-                into wisdom—illuminating pathways that no single perspective could see alone.
+                into wisdom, illuminating pathways that no single perspective could see alone.
               </p>
               <Button asChild variant="outline" size="sm">
                 <NavLink to="/papers/sensemaking">View the Collective Sensemaking Proposal</NavLink>
@@ -269,7 +269,7 @@ const Overview = () => {
             <div>
               <h3 className="text-lg font-semibold mb-3">Education</h3>
               <p className="text-sm text-muted-foreground mb-3">
-                The regenerative education proposal reimagines learning as a sovereign, lifelong, and learner-led process—unbound 
+                The regenerative education proposal reimagines learning as a sovereign, lifelong, and learner-led process, unbound 
                 by institutional silos or standardized metrics. By embedding self-custody, verifiable credentials, and decentralized 
                 infrastructure into the heart of education, this model enables individuals to design and carry their own learning 
                 journey across domains, cultures, and life stages. It honors not only academic knowledge but also lived experience, 
@@ -445,7 +445,7 @@ const Overview = () => {
           <p className="leading-relaxed mb-4">
             Across all proposed systems and proposals, there exists a shared risk: that good intentions, if implemented 
             without humility or reflection, can create new forms of imbalance or harm. This section synthesizes the most 
-            salient potential pitfalls identified throughout the proposals—offered not as reasons to halt progress, but 
+            salient potential pitfalls identified throughout the proposals, offered not as reasons to halt progress, but 
             as reminders to design with care, adaptability, and reverence for complexity.
           </p>
           
@@ -577,7 +577,7 @@ const Overview = () => {
               dignity, unlocking the vast, untapped wealth of talent, time, and love that remains dormant in the current paradigm.
             </p>
             <p className="leading-relaxed">
-              Across all sectors, this proposal proposes digital and decentralized infrastructure (from self-custodied 
+              Across all sectors, this proposal outlines digital and decentralized infrastructure (from self-custodied 
               identity to distributed data sovereignty) to empower individuals and communities while preserving autonomy 
               and trust. Through collective sensemaking tools, AI-supported wellbeing tracking, and citizen science 
               platforms, we build the nervous system of a conscious civilization: one capable of seeing itself clearly, 
@@ -590,7 +590,7 @@ const Overview = () => {
               to flourish in its own expression of harmony.
             </p>
             <p className="leading-relaxed">
-              This is not a eutopia in the imagined sense of perfection, but in the literal sense of a good place—a 
+              This is not a eutopia in the imagined sense of perfection, but in the literal sense of a good place: a 
               viable, regenerative, and beautiful future that is worthy of our collective effort. It is not a fantasy. 
               It is a direction. A north star. A fractal possibility.
             </p>
@@ -616,9 +616,9 @@ const Overview = () => {
           <div className="space-y-4 text-center italic text-muted-foreground">
             <p>Beneath the noise of breakdown,<br />there is a quieter rhythm,<br />the sound of something ancient remembering itself.</p>
             <p>It hums in mycelial webs and children's laughter,<br />in the drumbeat of hearts that still believe<br />in something more beautiful than survival.</p>
-            <p>We are not just solving problems.<br />We are composing new music.<br />not for machines,<br />but for living systems that dance, breathe,<br />and know how to heal when given the chance.</p>
+            <p>We are not just solving problems.<br />We are composing new music,<br />not for machines,<br />but for living systems that dance, breathe,<br />and know how to heal when given the chance.</p>
             <p>This is the time between stories,<br />the breath before the bloom.<br />And though the old maps are burning,<br />the constellations are still intact.</p>
-            <p>Let us navigate by the stars of compassion,<br />govern by the tides of feedback,<br />and build as if the Earth were sacred.<br />because it is.</p>
+            <p>Let us navigate by the stars of compassion,<br />govern by the tides of feedback,<br />and build as if the Earth were sacred,<br />because it is.</p>
             <p>Let our hands be covered in soil and code,<br />ritual and algorithm,<br />so that what we plant will be wise, wild,<br />and rooted in love.</p>
             <p>Let us not merely redesign systems.<br />Let us remember we are systems.</p>
           </div>

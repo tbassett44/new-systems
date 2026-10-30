@@ -296,7 +296,7 @@ const Ecology = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-foreground">
-            Ecological regeneration is not a peripheral concern. It is the foundation for any viable future. This proposal offers a structure for collective re-alignment with Earth's intelligence through open technology, participatory governance, and bioregional responsibility. It is an invitation to treat the planet not as a problem to solve, but as a partner to regenerate with—one watershed, one forest, one field at a time.
+            Ecological regeneration is not a peripheral concern. It is the foundation for any viable future. This proposal offers a structure for collective re-alignment with Earth's intelligence through open technology, participatory governance, and bioregional responsibility. It is an invitation to treat the planet not as a problem to solve, but as a partner to regenerate with, one watershed, one forest, one field at a time.
           </p>
         </CardContent>
       </Card>

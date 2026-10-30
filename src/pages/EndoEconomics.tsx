@@ -48,7 +48,7 @@ const EndoEconomics = () => {
           </p>
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
             <p className="text-blue-800 font-medium">
-              It offers not just critique, but blueprint: a vision for an economy that works for people and planet, and a roadmap to begin building it now.
+              It offers both a critique and a blueprint: a vision for an economy that works for people and planet, and a roadmap to begin building it now.
             </p>
           </div>
         </CardContent>
@@ -177,7 +177,7 @@ const EndoEconomics = () => {
             By embedding cooperation at the <span className="italic">"cellular"</span> level of economic architecture, we unlock the evolutionary advantage of systems designed not for domination, but for long-term flourishing.
           </p>
           <p className="leading-relaxed font-medium text-green-700">
-            Endo Economics sees the economy not as a marketplace of isolated agents, but as a living system—dynamic, intelligent, and capable of co-evolving with humanity's deeper needs.
+            Endo Economics sees the economy not as a marketplace of isolated agents, but as a living system: dynamic, intelligent, and capable of co-evolving with humanity's deeper needs.
           </p>
         </CardContent>
       </Card>
@@ -951,7 +951,7 @@ const EndoEconomics = () => {
         <CardContent className="space-y-4">
           <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-400">
             <p className="text-indigo-800 font-semibold text-lg">
-              One of the most transformative impacts of the Endo Economics model is its capacity to de-risk integrity.
+              Endo Economics aims to make it less risky for people to act with integrity.
             </p>
           </div>
           
@@ -1013,7 +1013,7 @@ const EndoEconomics = () => {
           
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200">
             <p className="text-indigo-800 font-medium text-center">
-              In this sense, Endo Economics is not just an economic redesign. It is a <span className="font-bold">liberation engine</span> for cultural renewal, ethical agency, and authentic contribution.
+              Endo Economics is intended to serve as a <span className="font-bold">liberation engine</span> for cultural renewal, ethical agency, and authentic contribution.
             </p>
           </div>
         </CardContent>
@@ -1462,7 +1462,7 @@ const EndoEconomics = () => {
             </div>
             <div className="mt-4 p-3 bg-white/10 rounded-lg">
               <p className="text-sm text-white italic">
-                <strong>Conclusion:</strong> Based on public data, a $10–11 trillion annual Business / Production & Capital layer is a defensible and structurally grounded approximation, not as a precise accounting outcome, but as a robust design assumption for the Commons-based model.
+                <strong>Conclusion:</strong> Based on public data, a $10–11 trillion annual Business / Production & Capital layer is a defensible and structurally grounded approximation. It is a design assumption rather than a precise accounting outcome for the Commons-based model.
               </p>
             </div>
           </div>

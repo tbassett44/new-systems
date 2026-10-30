@@ -40,7 +40,7 @@ const Contribute = () => {
           </p>
           <p className="leading-relaxed">
             Every perspective brings unique insights. Whether you're an expert in governance, 
-            technology, ecology, economics, or simply someone who cares about the future your 
+            technology, ecology, economics, or simply someone who cares about the future, your 
             contribution can help refine and improve these proposals for systems change.
           </p>
         </CardContent>

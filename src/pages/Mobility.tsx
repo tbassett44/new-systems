@@ -35,7 +35,7 @@ const Mobility = () => {
         </CardHeader>
         <CardContent className="prose max-w-none space-y-4">
           <p className="leading-relaxed text-lg">
-            Mobility is one of the most immediate ways people experience the success or failure of a society's systems. Long wait times, unreliable service, congestion, and fragmented logistics are not just inconveniences. They are signals of deeper structural misalignment.
+            Mobility is one of the most immediate ways people experience the success or failure of a society's systems. Long waits, unreliable service, congestion, and fragmented logistics point to problems in the systems behind transportation.
           </p>
           <p className="leading-relaxed text-lg">
             Transportation connects more than places. It is the <span className="font-semibold text-primary">circulatory system of civilization</span>, the mechanism through which people access opportunity, goods reach communities, and resources flow across regions.
@@ -67,7 +67,7 @@ const Mobility = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            Effective transportation systems are not defined by any single technology, but by the coherence of their layers. Just as the human body relies on a hierarchy of vessels (from high-capacity arteries to fine-grained capillaries) mobility systems must be designed across scales, with each layer optimized for its function.
+            Effective transportation systems are not defined by any single technology, but by the coherence of their layers. Just as the human body relies on a hierarchy of vessels (from high-capacity arteries to fine-grained capillaries), mobility systems must be designed across scales, with each layer optimized for its function.
           </p>
           <p className="leading-relaxed">The goal is not to promote trains, buses, or cars in isolation, but to optimize for:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -395,11 +395,11 @@ const Mobility = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
-          <div><span className="font-semibold">Cost Overruns</span> Mitigation: phased rollout, transparent oversight</div>
-          <div><span className="font-semibold">Adoption Risk</span> Mitigation: prioritize reliability over expansion</div>
-          <div><span className="font-semibold">Political Complexity</span> Mitigation: participatory governance and clear metrics</div>
-          <div><span className="font-semibold">Density Limitations</span> Mitigation: tailor solutions regionally</div>
-          <div><span className="font-semibold">Integration Risks</span> Mitigation: selective system merging rather than total integration</div>
+          <div><span className="font-semibold">Cost Overruns:</span> Mitigation: phased rollout, transparent oversight</div>
+          <div><span className="font-semibold">Adoption Risk:</span> Mitigation: prioritize reliability over expansion</div>
+          <div><span className="font-semibold">Political Complexity:</span> Mitigation: participatory governance and clear metrics</div>
+          <div><span className="font-semibold">Density Limitations:</span> Mitigation: tailor solutions regionally</div>
+          <div><span className="font-semibold">Integration Risks:</span> Mitigation: selective system merging rather than total integration</div>
         </CardContent>
       </Card>
 
@@ -411,7 +411,7 @@ const Mobility = () => {
           <p className="leading-relaxed text-lg">The question is not whether we can afford to build efficient mobility systems.</p>
           <p className="leading-relaxed text-lg">It is whether we can afford to continue operating inefficient ones.</p>
           <p className="leading-relaxed">At a regional scale, the investment required is measurable and finite. The cost of inaction is continuous and is paid in time, stress, inefficiency, and lost opportunity.</p>
-          <p className="leading-relaxed font-medium text-primary">A regenerative mobility system is not defined by any single technology, but by the intelligence of its design—layered, adaptive, and aligned with the flow of life.</p>
+          <p className="leading-relaxed font-medium text-primary">A regenerative mobility system is not defined by any single technology, but by the intelligence of its design: layered, adaptive, and aligned with the flow of life.</p>
         </CardContent>
       </Card>
     </div>

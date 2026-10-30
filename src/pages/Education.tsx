@@ -130,7 +130,7 @@ const Education = () => {
               <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</li>
                 <li>All nodes can issue credentials if aligned with community standards and interoperability protocols</li>
-                <li>Encourages learning in context—rooted in place, culture, and purpose</li>
+                <li>Encourages learning in context, rooted in place, culture, and purpose</li>
               </ul>
             </div>
 

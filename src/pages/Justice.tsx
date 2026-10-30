@@ -38,7 +38,7 @@ const Justice = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This proposal outlines a transformative framework for reimagining justice systems in alignment with human dignity, rehabilitation, and systemic coherence. Moving beyond punitive, carceral models rooted in isolation and punishment, this proposal invites a regenerative approach—where justice becomes a vehicle for personal transformation, communal healing, and societal learning.
+            This proposal outlines a transformative framework for reimagining justice systems in alignment with human dignity, rehabilitation, and systemic coherence. Moving beyond punitive, carceral models rooted in isolation and punishment, this proposal invites a regenerative approach where justice becomes a vehicle for personal transformation, communal healing, and societal learning.
           </p>
           <p className="leading-relaxed">
             Drawing inspiration from restorative and transformative justice traditions, as well as emerging technologies in AI and decentralized governance, this model supports a shift from retribution to restoration. By embedding feedback loops, relational accountability, and resourcing pathways into the justice process, individuals and communities can move from cycles of harm to cycles of growth.
@@ -289,7 +289,7 @@ const Justice = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Justice is not merely the enforcement of rules. It is the embodiment of care, accountability, and evolution within a community. This regenerative justice framework offers a clear path forward: one that replaces punishment with healing, alienation with belonging, and rigidity with responsiveness.
+            Justice should support care, accountability, and growth within a community, alongside the enforcement of rules. This regenerative justice framework offers a clear path forward: one that replaces punishment with healing, alienation with belonging, and rigidity with responsiveness.
           </p>
           <Separator className="my-4" />
           <p className="leading-relaxed font-medium">

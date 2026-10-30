@@ -199,7 +199,7 @@ const Finance = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Regenerative finance is not just about creating a more equitable and sustainable financial system. It's about building a world where finance serves as a tool for healing, connection, and shared prosperity. By embracing decentralized technologies, community-led governance, and values-based investment strategies, we can create financial ecosystems that are more aligned with the needs of a thriving planet.
+            Regenerative finance aims to make the financial system more equitable and sustainable, and to support healing, connection, and shared prosperity. By embracing decentralized technologies, community-led governance, and values-based investment strategies, we can create financial ecosystems that are more aligned with the needs of a thriving planet.
           </p>
         </CardContent>
       </Card>
