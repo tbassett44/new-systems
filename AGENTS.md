@@ -6,3 +6,4 @@
 - Legacy raw palette classes are softened for dark mode by overrides in `index.css` — avoids rewriting every page at once.
 - One Earth image serves the whole site (opening screen and proposal menu backdrop) — don't introduce a second Earth picture; the opening keeps its own `home-*` styles so changes there don't alter paper reading styles.
 - Homepage motion uses passive scroll events with animation-frame CSS-variable updates and one-time intersection reveals, honoring reduced motion — keeps animation smooth without React rerenders or altering native scrolling.
+- Homepage Earth weather uses a cloud texture extracted from the shared globe, CSS cloud drift and localized storm illumination; reduced motion stops weather animations and hides lightning to preserve comfortable reading.
