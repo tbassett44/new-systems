@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight, BookOpen, Github, Heart, Leaf, LogIn, Users } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
-import earthHorizon from "@/assets/earth.jpg";
-import earthClouds from "@/assets/earth-clouds.png";
+import { LivingEarth } from "@/components/home/LivingEarth";
 
 const principles = [
   { icon: Heart, title: "Dignity-centered", text: "Human dignity and the inherent worth of all beings, at the heart of every proposal." },
@@ -31,6 +30,8 @@ const Index = () => {
       if (!opening) return;
       const distance = Math.min(Math.max(-opening.getBoundingClientRect().top, 0), opening.offsetHeight);
       page.style.setProperty("--home-earth-offset", `${distance * 0.24}px`);
+      page.style.setProperty("--home-scroll-progress", `${distance / opening.offsetHeight}`);
+      page.style.setProperty("--home-earth-scale", `${1 + distance / opening.offsetHeight * 0.12}`);
       page.style.setProperty("--home-title-offset", `${distance * 0.1}px`);
       page.style.setProperty("--home-cue-opacity", `${Math.max(0, 1 - distance / 200)}`);
       page.style.setProperty("--home-text-emphasis", `${Math.min(1, distance / 300)}`);
@@ -45,6 +46,9 @@ const Index = () => {
       page.classList.toggle("home-motion", !motionPreference.matches);
       if (motionPreference.matches) {
         page.style.removeProperty("--home-earth-offset");
+        page.style.removeProperty("--home-scroll-progress");
+        page.style.removeProperty("--home-earth-scale");
+        page.style.removeProperty("--home-cue-opacity");
         page.style.removeProperty("--home-title-offset");
         page.style.removeProperty("--home-text-emphasis");
         return;
@@ -82,9 +86,8 @@ const Index = () => {
       <section className="home-opening" aria-labelledby="home-title">
         <div className="home-earth-layer">
           <div className="home-earth-scene">
-            <img src={earthHorizon} alt="Earth seen from space: the Americas, oceans, and clouds" width={1920} height={1920} className="home-earth" />
+            <LivingEarth />
             <div className="home-earth-weather" aria-hidden="true">
-              <img src={earthClouds} alt="" className="home-earth-clouds" />
               <span className="home-earth-lightning home-earth-lightning-pacific" />
               <span className="home-earth-lightning home-earth-lightning-atlantic" />
               <span className="home-earth-lightning home-earth-lightning-amazon" />
