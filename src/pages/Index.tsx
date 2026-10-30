@@ -77,7 +77,7 @@ const Index = () => {
     <div ref={pageRef} className="home-page min-h-screen bg-background text-foreground">
       <section className="home-opening" aria-labelledby="home-title">
         <div className="home-earth-layer">
-        <img src={earthHorizon} alt="Earth seen from space: the Americas, oceans, and clouds" width={1920} height={1920} className="home-earth" fetchPriority="high" />
+        <img src={earthHorizon} alt="Earth seen from space: the Americas, oceans, and clouds" width={1920} height={1920} className="home-earth" />
         </div>
         <div className="home-earth-shade" aria-hidden="true" />
         <header className="home-header">
