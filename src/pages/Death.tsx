@@ -39,10 +39,10 @@ const Death = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This proposal proposes a holistic reframing of how society approaches death. Rather than treating it as a failure or medical emergency to be avoided at all costs, this framework acknowledges death as a sacred and natural process that, when consciously approached, can become a deeply meaningful and empowering transition. It seeks to restore dignity, autonomy, and presence to the final phase of life through cultural renewal, legal reform, and the integration of spiritual and community-based practices.
+            This proposal outlines a holistic reframing of how society approaches death. Rather than treating it as a failure or medical emergency to be avoided at all costs, this framework acknowledges death as a sacred and natural process that, when consciously approached, can become a deeply meaningful and empowering transition. It seeks to restore dignity, autonomy, and presence to the final phase of life through cultural renewal, legal reform, and the integration of spiritual and community-based practices.
           </p>
           <p className="leading-relaxed text-lg">
-            This document outlines pathways for supporting conscious dying, including legal rights to assisted transitions, expanded palliative care, the role of death doulas, and the reintegration of death into communal and spiritual life. It invites systems-level redesign around how we die—one that honors individual sovereignty, reduces suffering, and reclaims death as a vital dimension of a regenerative culture.
+            This document outlines pathways for supporting conscious dying, including legal rights to assisted transitions, expanded palliative care, the role of death doulas, and the reintegration of death into communal and spiritual life. It invites systems-level redesign around how we die that honors individual sovereignty, reduces suffering, and reclaims death as a vital dimension of a regenerative culture.
           </p>
         </CardContent>
       </Card>
@@ -269,10 +269,10 @@ const Death = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-lg">
-            A regenerative society does not avoid death—it honors it. Conscious dying is a doorway to deeper meaning, compassion, and presence in life. By embracing mortality as a sacred transition, we free ourselves from the fear that drives so much disconnection and dysfunction.
+            A regenerative society honors death as part of life. Conscious dying is a doorway to deeper meaning, compassion, and presence in life. By embracing mortality as a sacred transition, we free ourselves from the fear that drives so much disconnection and dysfunction.
           </p>
           <p className="leading-relaxed text-lg mt-4 font-medium text-primary">
-            This proposal calls for a cultural and structural evolution that restores sovereignty, beauty, and dignity to our final moments—and to those who remain.
+            This proposal calls for a cultural and structural evolution that restores sovereignty, beauty, and dignity to our final moments, and to those who remain.
           </p>
         </CardContent>
       </Card>

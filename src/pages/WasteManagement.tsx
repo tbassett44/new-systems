@@ -74,7 +74,7 @@ const WasteManagement = () => {
                 <div>
                   <p className="font-semibold">Health Impacts</p>
                   <p className="text-sm text-muted-foreground">
-                    Landfills and incinerators emit pollutants linked to respiratory illness, cancer, neurological damage, and endocrine disruption. Communities—especially low-income ones—near waste sites face disproportionate health risks.
+                    Landfills and incinerators emit pollutants linked to respiratory illness, cancer, neurological damage, and endocrine disruption. Communities, especially low-income ones, near waste sites face disproportionate health risks.
                   </p>
                 </div>
               </div>
@@ -106,7 +106,7 @@ const WasteManagement = () => {
                 <div>
                   <p className="font-semibold">Feedback Failures</p>
                   <p className="text-sm text-muted-foreground">
-                    Our current waste systems lack feedback loops for accountability, citizen participation, and ecological metrics—further disconnecting people from the impacts of their consumption.
+                    Our current waste systems lack feedback loops for accountability, citizen participation, and ecological metrics, further disconnecting people from the impacts of their consumption.
                   </p>
                 </div>
               </div>
@@ -297,7 +297,7 @@ const WasteManagement = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-lg mb-4">
-            The transformation of waste infrastructure represents one of the most direct, actionable pathways to improving national wellbeing, regenerating ecosystems, and unlocking economic resilience. A $200 billion investment—less than one year of military spending—could catalyze this transition and signal a new era of public infrastructure designed not only to manage waste, but to restore health and harmony between people and planet.
+            The transformation of waste infrastructure represents one of the most direct, actionable pathways to improving national wellbeing, regenerating ecosystems, and unlocking economic resilience. A $200 billion investment (less than one year of military spending) could catalyze this transition and signal a new era of public infrastructure designed not only to manage waste, but to restore health and harmony between people and planet.
           </p>
           <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg border border-primary/20">
             <p className="text-sm font-medium">

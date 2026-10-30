@@ -36,10 +36,10 @@ const Technology = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This proposal proposes a framework for regenerative technology—one that prioritizes human agency, ecological wellbeing, and systemic resilience. Moving beyond extractive, surveillance-based models, this vision calls for technology that empowers individuals, strengthens communities, and supports a thriving planet.
+            This proposal outlines a framework for regenerative technology that prioritizes human agency, ecological wellbeing, and systemic resilience. Moving beyond extractive, surveillance-based models, this vision calls for technology that empowers individuals, strengthens communities, and supports a thriving planet.
           </p>
           <p className="leading-relaxed">
-            By embracing digital sovereignty, open-source principles, and privacy-enhancing design, we can build a technological landscape that serves life rather than undermining it. This framework invites technologists, policymakers, and citizens to co-create a future where technology amplifies our collective potential for regeneration.
+            Digital sovereignty, open-source principles, and privacy-focused design can help technology serve people and the environment. This framework invites technologists, policymakers, and citizens to work together on technology that supports regeneration.
           </p>
         </CardContent>
       </Card>
@@ -225,7 +225,7 @@ const Technology = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Technology is a powerful force that can be used to create a more just, equitable, and sustainable world. By embracing the principles of digital sovereignty, open-source development, and human-centered design, we can build a technological landscape that empowers individuals, strengthens communities, and regenerates ecosystems.
+            Technology can help create a more just, equitable, and sustainable world. By embracing the principles of digital sovereignty, open-source development, and human-centered design, we can build a technological landscape that empowers individuals, strengthens communities, and regenerates ecosystems.
           </p>
         </CardContent>
       </Card>

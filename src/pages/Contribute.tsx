@@ -34,13 +34,13 @@ const Contribute = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-lg leading-relaxed">
-            We are living in a pivotal evolutionary moment—one that mirrors the metamorphosis of 
+            We are living in a pivotal evolutionary moment that mirrors the metamorphosis of 
             a caterpillar into a butterfly. The systems that govern our world need fundamental 
             redesign, and this can only happen through collaborative effort.
           </p>
           <p className="leading-relaxed">
             Every perspective brings unique insights. Whether you're an expert in governance, 
-            technology, ecology, economics, or simply someone who cares about the future—your 
+            technology, ecology, economics, or simply someone who cares about the future, your 
             contribution can help refine and improve these proposals for systems change.
           </p>
         </CardContent>
@@ -54,7 +54,7 @@ const Contribute = () => {
             Share Your Voice Instantly
           </CardTitle>
           <CardDescription>
-            No GitHub account needed—start contributing right now
+            No GitHub account needed. Start contributing right now
           </CardDescription>
         </CardHeader>
         <CardContent>

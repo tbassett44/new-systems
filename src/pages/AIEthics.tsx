@@ -42,8 +42,8 @@ const AIEthics = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            As artificial intelligence becomes increasingly integrated into every aspect of society—from healthcare 
-            and education to governance and economic systems—the ethical frameworks guiding its development and 
+            As artificial intelligence becomes increasingly integrated into every aspect of society (from healthcare 
+            and education to governance and economic systems), the ethical frameworks guiding its development and 
             deployment become critical to human flourishing. This proposal outlines a regenerative approach to AI 
             ethics that moves beyond reactive regulation toward proactive design principles rooted in dignity, 
             transparency, and collective wellbeing.
@@ -386,7 +386,7 @@ const AIEthics = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            The ethical development of artificial intelligence is not merely a technical challenge—it is a 
+            The ethical development of artificial intelligence is both a technical challenge and a 
             civilizational choice about the kind of future we want to create. By grounding AI development in 
             principles of human dignity, transparency, fairness, and accountability, and by embedding it within 
             regenerative economic and governance structures, we can ensure that AI becomes a powerful tool for 

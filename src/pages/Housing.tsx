@@ -38,7 +38,7 @@ const Housing = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This proposal proposes a regenerative approach to housing and community development—one that prioritizes affordability, ecological harmony, and social connection. Rather than treating housing as a commodity or isolated structure, this framework envisions homes as integrated components of living systems: embedded in local ecologies, economies, and cultures.
+            This proposal outlines a regenerative approach to housing and community development that prioritizes affordability, ecological harmony, and social connection. Rather than treating housing as a commodity or isolated structure, this framework envisions homes as integrated components of living systems: embedded in local ecologies, economies, and cultures.
           </p>
           <p className="leading-relaxed">
             The regenerative housing model supports the creation of diverse, resilient communities that meet human needs while enhancing the health of the planet. By integrating permaculture design, natural building techniques, community land trusts, and decentralized finance, this model enables the flourishing of both people and place.
@@ -215,7 +215,7 @@ const Housing = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Regenerative housing is not just about building homes—it's about creating living systems that support the wellbeing of people and planet. This proposal invites us to reimagine housing as a vehicle for ecological restoration, social connection, and economic empowerment. By embracing community land trusts, natural building techniques, and decentralized finance, we can create affordable, resilient communities that thrive in harmony with the natural world.
+            Regenerative housing aims to create homes and communities that support the wellbeing of people and the planet. This proposal invites us to reimagine housing as a vehicle for ecological restoration, social connection, and economic empowerment. By embracing community land trusts, natural building techniques, and decentralized finance, we can create affordable, resilient communities that thrive in harmony with the natural world.
           </p>
         </CardContent>
       </Card>

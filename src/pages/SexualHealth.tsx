@@ -37,7 +37,7 @@ const SexualHealth = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This proposal proposes a regenerative framework for sexual and reproductive health—one that honors bodily autonomy, fosters consent culture, and reduces harm through education, technology, and universal access to care. It moves beyond polarized political debates and instead seeks to create systems that empower individuals to make informed, sovereign decisions about their bodies, relationships, and futures.
+            This proposal outlines a regenerative framework for sexual and reproductive health that honors bodily autonomy, fosters consent culture, and reduces harm through education, technology, and universal access to care. It moves beyond polarized political debates and instead seeks to create systems that empower individuals to make informed, sovereign decisions about their bodies, relationships, and futures.
           </p>
         </CardContent>
       </Card>
@@ -153,7 +153,7 @@ const SexualHealth = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed mb-6">
-            Preventative sexual health services are not only a matter of dignity and public wellbeing—they're a smart investment. As of 2024, the U.S. spent approximately $2.8 billion annually on STI testing and detection. While this may seem like a significant figure, it's modest in comparison to the $16 billion per year the healthcare system spends treating new STI cases alone. These costs include chronic conditions such as HIV, HPV-related cancers, pelvic inflammatory disease, infertility, and other long-term complications resulting from untreated infections.
+            Preventative sexual health services are not only a matter of dignity and public wellbeing. They're a smart investment. As of 2024, the U.S. spent approximately $2.8 billion annually on STI testing and detection. While this may seem like a significant figure, it's modest in comparison to the $16 billion per year the healthcare system spends treating new STI cases alone. These costs include chronic conditions such as HIV, HPV-related cancers, pelvic inflammatory disease, infertility, and other long-term complications resulting from untreated infections.
           </p>
           <p className="leading-relaxed mb-6">
             By providing free, anonymous, and widely accessible STI testing as a public health service, we could dramatically reduce transmission rates, especially when paired with sovereign identity systems that allow for private yet verifiable STI status sharing between partners. Early detection reduces downstream health impacts, cuts treatment costs, and lowers the burden on emergency care and Medicaid systems.
@@ -202,7 +202,7 @@ const SexualHealth = () => {
                 Phase 3 – Full Public Access and Adolescent Inclusion
               </h4>
               <p className="leading-relaxed text-sm text-white mb-3">
-                Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings—available to adults as a safe, reliable option for reproductive responsibility.
+                Upon successful demonstration of long-term efficacy, reversibility, and minimal adverse health effects, integrate the male contraceptive injection into standard public healthcare offerings, available to adults as a safe, reliable option for reproductive responsibility.
               </p>
               <p className="leading-relaxed text-sm text-white">
                 With additional ethical review, parental guidance frameworks, and community consent protocols, expand access to adolescents aged 12–18. This inclusion would be strictly opt-in, designed for youth who are sexually active and seeking non-permanent, non-hormonal protection. As with vaccines and other age-sensitive interventions, decision-making would require informed consent, maturity assessments, and clinical oversight. Access would be paired with comprehensive sexual education and counseling that centers bodily autonomy, reversibility timelines, and long-term health.
@@ -210,7 +210,7 @@ const SexualHealth = () => {
             </div>
           </div>
           <p className="leading-relaxed">
-            This broader integration into public health recognizes that adolescents are often underserved by current reproductive systems—yet frequently bear the burden of unintended pregnancy. Empowering them with choices grounded in reversibility, safety, and dignity supports both individual freedom and public health goals.
+            This broader integration into public health recognizes that adolescents are often underserved by current reproductive systems, yet frequently bear the burden of unintended pregnancy. Empowering them with choices grounded in reversibility, safety, and dignity supports both individual freedom and public health goals.
           </p>
         </CardContent>
       </Card>

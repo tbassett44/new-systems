@@ -45,7 +45,7 @@ const Education = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4 text-foreground">
-            This proposal proposes a new model for education grounded in the principles of digital sovereignty, self-custody, and decentralized identity. The traditional education system, characterized by centralized control, one-size-fits-all curricula, and locked-down credentials, no longer meets the needs of a rapidly evolving world.
+            This proposal outlines a new model for education grounded in the principles of digital sovereignty, self-custody, and decentralized identity. The traditional education system, characterized by centralized control, one-size-fits-all curricula, and locked-down credentials, no longer meets the needs of a rapidly evolving world.
           </p>
           <p className="leading-relaxed text-foreground">
             In contrast, this new framework envisions a regenerative, learner-centered ecosystem where education is lifelong, locally rooted, globally recognized, and holistically measured. By integrating decentralized infrastructure, self-sovereign identity, and verifiable credentials, we aim to empower individuals to design and own their learning journeys. This system honors informal, community-based, and interdisciplinary learning while ensuring privacy, security, and autonomy for every learner.
@@ -117,7 +117,7 @@ const Education = () => {
               </h4>
               <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Each learner has a digital identity wallet containing their learning records, values, goals, and reflections</li>
-                <li>Credentials are issued as verifiable credentials (VCs) and controlled by the learner—not institutions</li>
+                <li>Credentials are issued as verifiable credentials (VCs) and controlled by the learner, not institutions</li>
                 <li>Credentials can represent knowledge, skills, experiences, contributions, and character traits</li>
               </ul>
             </div>
@@ -130,7 +130,7 @@ const Education = () => {
               <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Education happens across diverse nodes: schools, mentors, nature programs, online platforms, spiritual traditions, maker spaces</li>
                 <li>All nodes can issue credentials if aligned with community standards and interoperability protocols</li>
-                <li>Encourages learning in context—rooted in place, culture, and purpose</li>
+                <li>Encourages learning in context, rooted in place, culture, and purpose</li>
               </ul>
             </div>
 
@@ -153,7 +153,7 @@ const Education = () => {
               </h4>
               <ul className="list-disc list-inside space-y-1 text-sm ml-6 text-foreground">
                 <li>Learners design personalized pathways with support from AI systems and human mentors</li>
-                <li>Learning recommendations align with purpose, context, and wellbeing—not just market demand</li>
+                <li>Learning recommendations align with purpose, context, and wellbeing, not just market demand</li>
                 <li>Reflection and narrative become central to progress tracking</li>
               </ul>
             </div>
@@ -274,7 +274,7 @@ const Education = () => {
         </CardHeader>
         <CardContent>
           <p className="text-lg leading-relaxed text-foreground">
-            Regenerative education is not just a shift in curriculum—it is a transformation of the very architecture through which learning is organized, tracked, and valued. By embedding digital sovereignty into the fabric of learning systems, we empower every individual to steward their growth with autonomy, dignity, and coherence. This framework invites a global transition from extractive schooling to generative learning—cultivating a civilization of creative, connected, and conscious learners prepared to navigate and shape the future.
+            Regenerative education is not just a shift in curriculum. It is a transformation of the very architecture through which learning is organized, tracked, and valued. By embedding digital sovereignty into the fabric of learning systems, we empower every individual to steward their growth with autonomy, dignity, and coherence. This framework invites a global transition from extractive schooling to generative learning, cultivating a civilization of creative, connected, and conscious learners prepared to navigate and shape the future.
           </p>
         </CardContent>
       </Card>

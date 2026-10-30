@@ -39,10 +39,10 @@ const Sensemaking = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            This section outlines a framework for distributed, AI-supported collective sensemaking—a process that allows communities, organizations, and even entire societies to surface deeper patterns of need, perception, and possibility. Through structured inquiry, qualitative data gathering, and pattern analysis, collective sensemaking can enhance governance, guide resource allocation, and support participatory cultural evolution.
+            This section outlines a framework for distributed, AI-supported collective sensemaking through a process that allows communities, organizations, and even entire societies to surface deeper patterns of need, perception, and possibility. Through structured inquiry, qualitative data gathering, and pattern analysis, collective sensemaking can enhance governance, guide resource allocation, and support participatory cultural evolution.
           </p>
           <p className="leading-relaxed">
-            The goal is to restore feedback loops between the people and the systems that serve them by transforming scattered opinions into coherent insight—allowing us to better respond to emerging challenges and opportunities.
+            The goal is to restore feedback loops between the people and the systems that serve them by transforming scattered opinions into coherent insight, allowing us to better respond to emerging challenges and opportunities.
           </p>
         </CardContent>
       </Card>
@@ -81,7 +81,7 @@ const Sensemaking = () => {
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
                 <p className="font-medium">Missing Feedback Loops</p>
-                <p className="text-sm text-muted-foreground">There are few systems in place to gather deep, collective insights at scale—particularly from marginalized voices.</p>
+                <p className="text-sm text-muted-foreground">There are few systems in place to gather deep, collective insights at scale, particularly from marginalized voices.</p>
               </div>
             </div>
           </div>
@@ -365,7 +365,7 @@ const Sensemaking = () => {
         </CardHeader>
         <CardContent>
           <p className="text-lg leading-relaxed">
-            Collective sensemaking is not merely a tool—it is a cultural posture rooted in humility, curiosity, and respect. By building systems that honor the depth of human experience and reflect it back in meaningful ways, we begin to heal the fractured mirror of our shared reality. Done well, this infrastructure becomes a cornerstone for responsive governance, adaptive culture, and wiser civilization.
+            Collective sensemaking depends on humility, curiosity, and respect. By building systems that honor the depth of human experience and reflect it back in meaningful ways, we begin to heal the fractured mirror of our shared reality. Done well, this infrastructure becomes a cornerstone for responsive governance, adaptive culture, and wiser civilization.
           </p>
         </CardContent>
       </Card>

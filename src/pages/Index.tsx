@@ -108,7 +108,7 @@ const Index = () => {
       <main className="home-content">
         <section id="our-vision" className="home-vision scroll-mt-8">
           <div className="home-reveal"><p className="home-section-label">01 / OUR SHARED FUTURE</p><h2>A living planet.<br />Life-affirming systems.</h2></div>
-          <div className="home-vision-copy home-reveal"><p>We are living in a pivotal evolutionary moment. Like a caterpillar becoming a butterfly, our civilization has the potential to transform.</p><p>These proposals reimagine how we govern, share resources, and care for one another—supporting better feedback, effective governance, and improved wellbeing.</p><Button asChild variant="link" className="px-0"><Link to="/papers">Enter the living blueprint<ArrowRight /></Link></Button></div>
+          <div className="home-vision-copy home-reveal"><p>We are living in a pivotal evolutionary moment. Like a caterpillar becoming a butterfly, our civilization has the potential to transform.</p><p>These proposals reimagine how we govern, share resources, and care for one another, supporting better feedback, effective governance, and improved wellbeing.</p><Button asChild variant="link" className="px-0"><Link to="/papers">Enter the living blueprint<ArrowRight /></Link></Button></div>
         </section>
         <section aria-label="Core principles" className="home-principles">
           {principles.map(({ icon: Icon, title, text }) => <article key={title} className="home-principle home-reveal"><Icon className="h-6 w-6 text-primary" /><h3>{title}</h3><p>{text}</p></article>)}

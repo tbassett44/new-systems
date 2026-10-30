@@ -35,10 +35,10 @@ const Spirituality = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            This proposal proposes a regenerative approach to spirituality as a vital societal function—one that nourishes inner development, honors the sacredness of life, and restores shared meaning across cultures and communities. Spirituality, often relegated to private belief or institutional religion, is reframed here as a collective capacity for coherence, reverence, and conscious evolution. In a time of ecological crisis, disconnection, and cultural fragmentation, spiritual infrastructure becomes essential: not as dogma, but as a wellspring of courage, healing, and imagination.
+            This proposal outlines a regenerative approach to spirituality as a vital societal function that nourishes inner development, honors the sacredness of life, and restores shared meaning across cultures and communities. Spirituality, often relegated to private belief or institutional religion, is reframed here as a collective capacity for coherence, reverence, and conscious evolution. In a time of ecological crisis, disconnection, and cultural fragmentation, spiritual infrastructure becomes essential: not as dogma, but as a wellspring of courage, healing, and imagination.
           </p>
           <p className="leading-relaxed">
-            Rather than promoting a single belief system, this framework supports pluralistic pathways to the sacred—integrating contemplative practice, seasonal ritual, interfaith dialogue, and spiritual literacy into public life. When rooted in inclusivity, humility, and lived experience, regenerative spirituality becomes a stabilizing and activating force in the transformation of self and society.
+            Rather than promoting a single belief system, this framework supports pluralistic pathways to the sacred, integrating contemplative practice, seasonal ritual, interfaith dialogue, and spiritual literacy into public life. When rooted in inclusivity, humility, and lived experience, regenerative spirituality becomes a stabilizing and activating force in the transformation of self and society.
           </p>
         </CardContent>
       </Card>
@@ -187,10 +187,10 @@ const Spirituality = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            In the Endo Economics model, inner transformation and spiritual coherence are seen as foundational to collective wellbeing. Spiritual labor—holding space, blessing transitions, transmitting wisdom—is honored as vital contribution, not invisible or unpaid emotional work. Rather than being monetized through commercial spiritual industries, regenerative spiritual infrastructure is supported through rebalanced resource flows, redirected from extractive systems.
+            In the Endo Economics model, inner transformation and spiritual coherence are seen as foundational to collective wellbeing. Spiritual labor (holding space, blessing transitions, transmitting wisdom) is honored as vital contribution, not invisible or unpaid emotional work. Rather than being monetized through commercial spiritual industries, regenerative spiritual infrastructure is supported through rebalanced resource flows, redirected from extractive systems.
           </p>
           <p className="leading-relaxed">
-            Elders, ritualists, contemplative teachers, and sacred space stewards are resourced within the community economy, allowing them to serve without distortion or burnout. Ceremonial work, grief tending, and initiatory pathways are recognized as necessary infrastructure for resilient societies—equally as vital as healthcare, education, or governance.
+            Elders, ritualists, contemplative teachers, and sacred space stewards are resourced within the community economy, allowing them to serve without distortion or burnout. Ceremonial work, grief tending, and initiatory pathways are recognized as necessary infrastructure for resilient societies, equally as vital as healthcare, education, or governance.
           </p>
         </CardContent>
       </Card>
@@ -256,7 +256,7 @@ const Spirituality = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Regenerative spirituality is not a return to religion—it is a reawakening of humanity's sacred intelligence. In a time of profound transformation, we must cultivate not only new systems and structures, but new myths, rituals, and inner capacities. This proposal invites a reclamation of the sacred—not as belief, but as belonging; not as doctrine, but as devotion to life. By weaving spiritual practice into the public and planetary sphere, we can meet the future not only with strategy, but with soul.
+            Regenerative spirituality is not a return to religion. It is a reawakening of humanity's sacred intelligence. In a time of profound transformation, we must cultivate not only new systems and structures, but new myths, rituals, and inner capacities. This proposal invites a reclamation of the sacred, not as belief, but as belonging; not as doctrine, but as devotion to life. By weaving spiritual practice into the public and planetary sphere, we can meet the future not only with strategy, but with soul.
           </p>
         </CardContent>
       </Card>

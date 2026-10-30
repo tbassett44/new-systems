@@ -39,7 +39,7 @@ const Election = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed text-lg">
-            This proposal introduces the concept of a Regenerative Election — a pre-ballot, participatory, values-driven electoral process designed to prototype the future of democracy before it enters the constraints of the legacy electoral system. It serves as a public experiment in democratic evolution, inviting civic imagination, fostering trust, and modeling a dignified, generative alternative to polarizing politics. The Regenerative Election is not about partisanship or power-seeking, but about demonstrating what governance can feel like when it is rooted in feedback, transparency, collective intelligence, and care.
+            This proposal introduces the concept of a Regenerative Election: a pre-ballot, participatory, values-driven electoral process designed to prototype the future of democracy before it enters the constraints of the legacy electoral system. It serves as a public experiment in democratic evolution, inviting civic imagination, fostering trust, and modeling a dignified, generative alternative to polarizing politics. The Regenerative Election is not about partisanship or power-seeking, but about demonstrating what governance can feel like when it is rooted in feedback, transparency, collective intelligence, and care.
           </p>
         </CardContent>
       </Card>
@@ -103,7 +103,7 @@ const Election = () => {
             <div>
               <h4 className="font-semibold mb-3 text-lg">2. Engage the Independent Majority</h4>
               <p className="text-sm leading-relaxed">
-                Over 51% of U.S. voters now identify as independent, disillusioned by partisan polarization and institutional gridlock. The Regenerative Election is designed as a platform for this majority to reclaim agency in shaping the future. By creating a new public forum for leadership selection—outside traditional party primaries—it offers a coherent alternative path toward unifying representation.
+                Over 51% of U.S. voters now identify as independent, disillusioned by partisan polarization and institutional gridlock. The Regenerative Election is designed as a platform for this majority to reclaim agency in shaping the future. By creating a new public forum for leadership selection outside traditional party primaries, it offers a coherent alternative path toward unifying representation.
               </p>
             </div>
 
@@ -213,7 +213,7 @@ const Election = () => {
             The Regenerative Election is not about electing a hero. It is about electing a new possibility: one where democracy becomes a living, learning, and healing process. By prototyping a new election outside the legacy timeline, we create space for trust to grow, imagination to flourish, and communities to align around values that nourish life.
           </p>
           <p className="leading-relaxed text-lg mb-4">
-            This is not a rejection of civic responsibility. It is its expansion. Let us remember that voting is not the beginning or end of political participation. It is one moment in a much longer, sacred act of choosing who we become—together.
+            This is not a rejection of civic responsibility. It is its expansion. Let us remember that voting is not the beginning or end of political participation. It is one moment in a much longer, sacred act of choosing who we become together.
           </p>
           <Separator className="my-4" />
           <p className="leading-relaxed text-lg font-medium text-primary">

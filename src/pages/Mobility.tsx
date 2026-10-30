@@ -8,7 +8,7 @@ const Mobility = () => {
     document.title = "Regenerative Mobility & Resource Flow | New Systems and Structures";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Designing efficient, layered systems for movement, access, and distribution—reframing mobility as the circulatory system of civilization.');
+      metaDescription.setAttribute('content', 'Designing efficient, layered systems for movement, access, and distribution, reframing mobility as the circulatory system of civilization.');
     }
   }, []);
 
@@ -35,10 +35,10 @@ const Mobility = () => {
         </CardHeader>
         <CardContent className="prose max-w-none space-y-4">
           <p className="leading-relaxed text-lg">
-            Mobility is one of the most immediate ways people experience the success or failure of a society's systems. Long wait times, unreliable service, congestion, and fragmented logistics are not just inconveniences—they are signals of deeper structural misalignment.
+            Mobility is one of the most immediate ways people experience the success or failure of a society's systems. Long waits, unreliable service, congestion, and fragmented logistics point to problems in the systems behind transportation.
           </p>
           <p className="leading-relaxed text-lg">
-            Transportation is not merely about getting from one place to another. It is the <span className="font-semibold text-primary">circulatory system of civilization</span>—the mechanism through which people access opportunity, goods reach communities, and resources flow across regions.
+            Transportation connects more than places. It is the <span className="font-semibold text-primary">circulatory system of civilization</span>, the mechanism through which people access opportunity, goods reach communities, and resources flow across regions.
           </p>
           <p className="leading-relaxed">In today's dominant model, mobility systems are:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -52,7 +52,7 @@ const Mobility = () => {
           </p>
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
             <p className="text-blue-800 font-medium">
-              A regenerative approach reframes mobility as an integrated, multi-scale flow system—designed for efficiency, reliability, adaptability, and dignity.
+              A regenerative approach reframes mobility as an integrated, multi-scale flow system designed for efficiency, reliability, adaptability, and dignity.
             </p>
           </div>
         </CardContent>
@@ -67,7 +67,7 @@ const Mobility = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            Effective transportation systems are not defined by any single technology, but by the coherence of their layers. Just as the human body relies on a hierarchy of vessels—from high-capacity arteries to fine-grained capillaries—mobility systems must be designed across scales, with each layer optimized for its function.
+            Effective transportation systems are not defined by any single technology, but by the coherence of their layers. Just as the human body relies on a hierarchy of vessels (from high-capacity arteries to fine-grained capillaries), mobility systems must be designed across scales, with each layer optimized for its function.
           </p>
           <p className="leading-relaxed">The goal is not to promote trains, buses, or cars in isolation, but to optimize for:</p>
           <ul className="list-disc pl-6 space-y-1">
@@ -173,7 +173,7 @@ const Mobility = () => {
               <li>Personal vehicles and shared mobility</li>
               <li>Essential in lower-density environments</li>
             </ul>
-            <p className="mt-2"><span className="font-medium">Role:</span> Supplemental—not dominant—mobility layer</p>
+            <p className="mt-2"><span className="font-medium">Role:</span> Supplemental mobility layer rather than the dominant mode</p>
           </div>
           <div className="border-l-4 border-amber-400 pl-4">
             <h3 className="font-semibold text-lg flex items-center gap-2"><Package className="h-5 w-5" /> 5. Integrated Resource Distribution Layer</h3>
@@ -194,7 +194,7 @@ const Mobility = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p>A regenerative mobility system is not static—it evolves. By integrating:</p>
+          <p>A regenerative mobility system evolves as needs change. By integrating:</p>
           <ul className="list-disc pl-6 space-y-1">
             <li>real-time usage data</li>
             <li>rider feedback</li>
@@ -226,7 +226,7 @@ const Mobility = () => {
             <li>Lower emissions and ecological impact</li>
             <li>Increased public trust through reliability</li>
           </ul>
-          <p className="mt-3 font-medium">Mobility becomes a multiplier across all systems—economic, social, and ecological.</p>
+          <p className="mt-3 font-medium">Mobility becomes a multiplier across all systems: economic, social, and ecological.</p>
         </CardContent>
       </Card>
 
@@ -395,11 +395,11 @@ const Mobility = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-3">
-          <div><span className="font-semibold">Cost Overruns —</span> Mitigation: phased rollout, transparent oversight</div>
-          <div><span className="font-semibold">Adoption Risk —</span> Mitigation: prioritize reliability over expansion</div>
-          <div><span className="font-semibold">Political Complexity —</span> Mitigation: participatory governance and clear metrics</div>
-          <div><span className="font-semibold">Density Limitations —</span> Mitigation: tailor solutions regionally</div>
-          <div><span className="font-semibold">Integration Risks —</span> Mitigation: strategic—not total—system merging</div>
+          <div><span className="font-semibold">Cost Overruns:</span> Mitigation: phased rollout, transparent oversight</div>
+          <div><span className="font-semibold">Adoption Risk:</span> Mitigation: prioritize reliability over expansion</div>
+          <div><span className="font-semibold">Political Complexity:</span> Mitigation: participatory governance and clear metrics</div>
+          <div><span className="font-semibold">Density Limitations:</span> Mitigation: tailor solutions regionally</div>
+          <div><span className="font-semibold">Integration Risks:</span> Mitigation: selective system merging rather than total integration</div>
         </CardContent>
       </Card>
 
@@ -410,8 +410,8 @@ const Mobility = () => {
         <CardContent className="space-y-4">
           <p className="leading-relaxed text-lg">The question is not whether we can afford to build efficient mobility systems.</p>
           <p className="leading-relaxed text-lg">It is whether we can afford to continue operating inefficient ones.</p>
-          <p className="leading-relaxed">At a regional scale, the investment required is measurable and finite. The cost of inaction is continuous—paid in time, stress, inefficiency, and lost opportunity.</p>
-          <p className="leading-relaxed font-medium text-primary">A regenerative mobility system is not defined by any single technology, but by the intelligence of its design—layered, adaptive, and aligned with the flow of life.</p>
+          <p className="leading-relaxed">At a regional scale, the investment required is measurable and finite. The cost of inaction is continuous and is paid in time, stress, inefficiency, and lost opportunity.</p>
+          <p className="leading-relaxed font-medium text-primary">A regenerative mobility system is not defined by any single technology, but by the intelligence of its design: layered, adaptive, and aligned with the flow of life.</p>
         </CardContent>
       </Card>
     </div>

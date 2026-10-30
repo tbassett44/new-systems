@@ -38,10 +38,10 @@ const Arts = () => {
         </CardHeader>
         <CardContent className="prose max-w-none">
           <p className="leading-relaxed">
-            This proposal proposes a regenerative infrastructure for arts and culture—one that positions creative expression not as luxury or entertainment, but as essential societal infrastructure. In a time of ecological crisis, social fragmentation, and cultural commodification, we must restore the sacred role of art: to reveal truth, transmit wisdom, and reweave connection across time, space, and identity.
+            This proposal outlines a regenerative infrastructure for arts and culture that positions creative expression not as luxury or entertainment, but as essential societal infrastructure. In a time of ecological crisis, social fragmentation, and cultural commodification, we must restore the sacred role of art: to reveal truth, transmit wisdom, and reweave connection across time, space, and identity.
           </p>
           <p className="leading-relaxed">
-            The regenerative arts and culture framework supports artists, tradition-bearers, and culture-makers as central stewards of imagination and coherence. Through public support, decentralized creation, and integration with healing and education systems, this model enables the flourishing of beauty, meaning, and community memory. When aligned with Endo Economics, cultural labor becomes not extractive or precarious, but reciprocal and honored—nourishing the soul of society.
+            The regenerative arts and culture framework supports artists, tradition-bearers, and culture-makers as central stewards of imagination and coherence. Through public support, decentralized creation, and integration with healing and education systems, this model enables the flourishing of beauty, meaning, and community memory. When aligned with Endo Economics, cultural labor becomes not extractive or precarious, but reciprocal and honored, nourishing the soul of society.
           </p>
         </CardContent>
       </Card>
@@ -80,7 +80,7 @@ const Arts = () => {
               <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0"></div>
               <div>
                 <p className="font-medium">Isolation of Artists</p>
-                <p className="text-sm text-muted-foreground">Creatives are siloed from other systems—health, education, governance—despite their connective role.</p>
+                <p className="text-sm text-muted-foreground">Creatives are siloed from other systems (health, education, governance) despite their connective role.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -187,7 +187,7 @@ const Arts = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4">
-            In the Endo Economics model, value is redefined as what nourishes life. Artistic expression—especially when relational, place-based, and healing—becomes a core form of reciprocal contribution. Instead of relying on profit from ticket sales or attention economies, artists are resourced as community members whose work supports belonging, transformation, and resilience.
+            In the Endo Economics model, value is redefined as what nourishes life. Artistic expression, especially when relational, place-based, and healing, becomes a core form of reciprocal contribution. Instead of relying on profit from ticket sales or attention economies, artists are resourced as community members whose work supports belonging, transformation, and resilience.
           </p>
           <p className="leading-relaxed">
             Cultural creation is not siloed from society but integrated: a dancer helping restore land memory, a musician tending intergroup harmony, a ritual designer helping a community grieve. With millions of creatives currently under-supported or under-employed, redirecting even a fraction of existing economic waste or inequitable surpluses could seed a renaissance of meaningful, regenerative culture.
@@ -256,7 +256,7 @@ const Arts = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Arts and culture are not peripheral—they are the pulse, breath, and memory of a living society. This proposal invites us to restore creativity to its rightful role as the connective tissue of regeneration. When artists are trusted as visionaries and healers, and when culture is treated not as commodity but as communion, we activate one of the most powerful forces for planetary transformation: the imagination of a people remembering who they are.
+            Arts and culture are not peripheral. They are the pulse, breath, and memory of a living society. This proposal invites us to restore creativity to its rightful role as the connective tissue of regeneration. When artists are trusted as visionaries and healers, and when culture is treated not as commodity but as communion, we activate one of the most powerful forces for planetary transformation: the imagination of a people remembering who they are.
           </p>
         </CardContent>
       </Card>
