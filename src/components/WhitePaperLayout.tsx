@@ -194,7 +194,7 @@ function AppSidebar() {
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
             {(state !== "collapsed" || isMobile) && (
-              <h1 className="relative z-10 -ml-4 rounded-lg border border-primary/40 bg-background px-3.5 py-2 text-base font-semibold text-primary shadow-lg shadow-primary/15">Systems Regeneration Manifesto</h1>
+              <h1 className="relative z-10 -ml-4 whitespace-nowrap rounded-lg border border-primary/40 bg-background px-3.5 py-2 text-sm font-semibold text-primary shadow-lg shadow-primary/15">Systems Regeneration Manifesto</h1>
             )}
             {state === "collapsed" && !isMobile && <SidebarTrigger className="mx-auto" />}
           </div>
