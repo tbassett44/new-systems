@@ -66,7 +66,7 @@ import { usePrintPDF } from "@/hooks/usePrintPDF";
 
 import { TableOfContents, PaperNav } from "@/components/paper/ReadingAids";
 import { supabase } from "@/integrations/supabase/client";
-import earthImage from "@/assets/earth.jpg";
+import { LivingEarth } from "@/components/home/LivingEarth";
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -454,14 +454,10 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
     <CommentProvider>
       <SidebarProvider>
         <div className="min-h-screen flex w-full relative group/layout">
-          <div 
-            className="hidden md:block fixed inset-y-0 left-0 overflow-hidden pointer-events-none z-0 transition-[width] duration-200 ease-linear w-64 group-has-[[data-state=collapsed]]/layout:w-12" 
-          >
-            <img 
-              src={earthImage} 
-              alt="" 
-              className="absolute inset-0 w-full h-full object-contain opacity-0 dark:opacity-80 mix-blend-screen animate-[ken-burns_60s_ease-in-out_infinite]"
-            />
+          <div className="paper-earth-backdrop" aria-hidden="true">
+            <div className="paper-earth-scene">
+              <LivingEarth />
+            </div>
           </div>
           <AppSidebar />
           <main 
