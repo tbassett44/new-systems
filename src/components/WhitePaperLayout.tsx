@@ -460,7 +460,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
             <img 
               src={earthImage} 
               alt="" 
-              className="absolute inset-0 w-full h-full object-contain opacity-80 mix-blend-screen animate-[ken-burns_60s_ease-in-out_infinite]"
+              className="absolute inset-0 w-full h-full object-contain opacity-0 dark:opacity-80 mix-blend-screen animate-[ken-burns_60s_ease-in-out_infinite]"
             />
           </div>
           <ReadingProgress />
