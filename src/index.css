@@ -293,6 +293,7 @@ All colors MUST be HSL.
 .home-header { position: relative; z-index: 1; max-width: 1400px; margin: auto; padding: 25px 48px; display: flex; align-items: center; justify-content: space-between; }
 .home-nav-button:hover { background: hsl(var(--home-on-space) / 0.1); color: hsl(var(--home-on-space)); }
 .home-title-block { position: relative; z-index: 1; text-align: center; padding: 35px 24px 0; transform: translate3d(0, var(--home-title-offset, 0px), 0); }
+.home-title-block::before { content: ""; position: absolute; inset: -14px -70px -34px; z-index: -1; pointer-events: none; background: radial-gradient(62% 68% at 50% 60%, hsl(var(--home-space) / calc(0.4 * var(--home-text-emphasis, 0))) 0%, hsl(var(--home-space) / calc(0.22 * var(--home-text-emphasis, 0))) 52%, transparent 78%); }
 .home-title-block > * { animation: home-content-arrive 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .home-title-block > :nth-child(2) { animation-delay: 0.12s; }
 .home-title-block > :nth-child(3) { animation-delay: 0.24s; }
@@ -306,7 +307,7 @@ All colors MUST be HSL.
 .home-eyebrow { font-size: 11px; font-weight: 700; color: hsl(var(--home-earth-accent)); margin-bottom: 21px; }
 .home-title-block h1 { font-family: Lora, Georgia, serif; font-size: 68px; font-weight: 500; line-height: 1.12; letter-spacing: 0; }
 .home-title-dot { color: hsl(var(--home-earth-accent)); }
-.home-intro { font-size: 19px; margin: 22px auto 26px; line-height: 1.5; color: hsl(var(--home-on-space) / 0.85); }
+.home-intro { font-size: 19px; margin: 22px auto 26px; line-height: 1.5; color: hsl(var(--home-on-space) / calc(0.85 + 0.15 * var(--home-text-emphasis, 0))); text-shadow: 0 1px 16px hsl(var(--home-space) / calc(0.3 + 0.45 * var(--home-text-emphasis, 0))); }
 .home-primary-button { background: hsl(var(--home-on-space)); color: hsl(var(--home-space)); border-radius: 4px; }
 .home-primary-button:hover { background: hsl(var(--home-earth-accent)); }
 .home-scroll { position: absolute; z-index: 1; bottom: 27px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; height: auto; gap: 12px; padding: 12px 20px; border-radius: 999px; border: 1px solid hsl(var(--home-on-space) / 0.16); background: hsl(var(--home-space) / 0.78); backdrop-filter: blur(12px); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; opacity: var(--home-cue-opacity, 1); transition: opacity 0.4s ease; color: hsl(var(--home-on-space) / 0.95); }

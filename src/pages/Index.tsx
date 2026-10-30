@@ -32,6 +32,7 @@ const Index = () => {
       page.style.setProperty("--home-earth-offset", `${distance * 0.24}px`);
       page.style.setProperty("--home-title-offset", `${distance * 0.1}px`);
       page.style.setProperty("--home-cue-opacity", `${Math.max(0, 1 - distance / 200)}`);
+      page.style.setProperty("--home-text-emphasis", `${Math.min(1, distance / 300)}`);
     };
     const onScroll = () => {
       if (!motionPreference.matches && !frame) frame = window.requestAnimationFrame(updateParallax);
