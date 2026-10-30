@@ -83,13 +83,15 @@ const Index = () => {
 
   return (
     <div ref={pageRef} className="home-page min-h-screen bg-background text-foreground">
-      <section className="home-opening" aria-labelledby="home-title">
+      <div className="home-earth-fixed" aria-hidden="true">
         <div className="home-earth-layer">
           <div className="home-earth-scene">
             <LivingEarth />
           </div>
         </div>
-        <div className="home-earth-shade" aria-hidden="true" />
+        <div className="home-earth-shade" />
+      </div>
+      <section className="home-opening" aria-labelledby="home-title">
         <header className="home-header">
           <Link to="/" className="flex items-center gap-2.5" aria-label="Actualize Earth home">
             <Leaf className="h-5 w-5" />
