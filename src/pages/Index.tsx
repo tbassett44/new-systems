@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight, BookOpen, Github, Heart, Leaf, LogIn, MessageCircle, Users } from "lucide-react";
@@ -13,8 +13,60 @@ const principles = [
 
 const Index = () => {
   const { user, signOut } = useAuth();
+  const pageRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     document.title = "New Systems and Structures | Living Blueprint for Systems Redesign";
+  }, []);
+
+  useEffect(() => {
+    const page = pageRef.current;
+    if (!page) return;
+    const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let frame = 0;
+    let observer: IntersectionObserver | undefined;
+    const updateParallax = () => {
+      frame = 0;
+      const opening = page.querySelector<HTMLElement>(".home-opening");
+      if (!opening) return;
+      const distance = Math.min(Math.max(-opening.getBoundingClientRect().top, 0), opening.offsetHeight);
+      page.style.setProperty("--home-earth-offset", `${distance * 0.24}px`);
+      page.style.setProperty("--home-title-offset", `${distance * 0.1}px`);
+    };
+    const onScroll = () => {
+      if (!motionPreference.matches && !frame) frame = window.requestAnimationFrame(updateParallax);
+    };
+    const configureMotion = () => {
+      observer?.disconnect();
+      window.cancelAnimationFrame(frame);
+      frame = 0;
+      page.classList.toggle("home-motion", !motionPreference.matches);
+      if (motionPreference.matches) {
+        page.style.removeProperty("--home-earth-offset");
+        page.style.removeProperty("--home-title-offset");
+        return;
+      }
+      observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("home-revealed");
+            observer?.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      page.querySelectorAll(".home-reveal").forEach((element) => observer?.observe(element));
+      updateParallax();
+    };
+    configureMotion();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    motionPreference.addEventListener("change", configureMotion);
+    return () => {
+      observer?.disconnect();
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      motionPreference.removeEventListener("change", configureMotion);
+    };
   }, []);
 
   const scrollToVision = () => {
@@ -22,9 +74,11 @@ const Index = () => {
   };
 
   return (
-    <div className="home-page min-h-screen bg-background text-foreground">
+    <div ref={pageRef} className="home-page min-h-screen bg-background text-foreground">
       <section className="home-opening" aria-labelledby="home-title">
+        <div className="home-earth-layer">
         <img src={earthHorizon} alt="Earth’s blue horizon, oceans, and clouds seen from space" width={1920} height={1280} className="home-earth" fetchPriority="high" />
+        </div>
         <div className="home-earth-shade" aria-hidden="true" />
         <header className="home-header">
           <Link to="/" className="flex items-center gap-2.5" aria-label="Actualize Earth home">
@@ -50,13 +104,13 @@ const Index = () => {
 
       <main className="home-content">
         <section id="our-vision" className="home-vision scroll-mt-8">
-          <div><p className="home-section-label">01 / OUR SHARED FUTURE</p><h2>A living planet.<br />Life-affirming systems.</h2></div>
-          <div className="home-vision-copy"><p>We are living in a pivotal evolutionary moment. Like a caterpillar becoming a butterfly, our civilization has the potential to transform.</p><p>These proposals reimagine how we govern, share resources, and care for one another—supporting better feedback, effective governance, and improved wellbeing.</p><Button asChild variant="link" className="px-0"><Link to="/papers">Enter the living blueprint<ArrowRight /></Link></Button></div>
+          <div className="home-reveal"><p className="home-section-label">01 / OUR SHARED FUTURE</p><h2>A living planet.<br />Life-affirming systems.</h2></div>
+          <div className="home-vision-copy home-reveal"><p>We are living in a pivotal evolutionary moment. Like a caterpillar becoming a butterfly, our civilization has the potential to transform.</p><p>These proposals reimagine how we govern, share resources, and care for one another—supporting better feedback, effective governance, and improved wellbeing.</p><Button asChild variant="link" className="px-0"><Link to="/papers">Enter the living blueprint<ArrowRight /></Link></Button></div>
         </section>
         <section aria-label="Core principles" className="home-principles">
-          {principles.map(({ icon: Icon, title, text }) => <article key={title} className="home-principle"><Icon className="h-6 w-6 text-primary" /><h3>{title}</h3><p>{text}</p></article>)}
+          {principles.map(({ icon: Icon, title, text }) => <article key={title} className="home-principle home-reveal"><Icon className="h-6 w-6 text-primary" /><h3>{title}</h3><p>{text}</p></article>)}
         </section>
-        <section className="home-invitation">
+        <section className="home-invitation home-reveal">
           <p className="home-section-label">02 / AN OPEN INVITATION</p>
           <h2>The future is something<br />we create together.</h2>
           <p>This is a living manifesto, not a finished answer. Explore the proposals, question the ideas, and help shape what comes next.</p>
