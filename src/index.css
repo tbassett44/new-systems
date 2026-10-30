@@ -42,7 +42,7 @@ All colors MUST be HSL.
     --home-space: 180 12% 3%;
     --home-on-space: 0 0% 97%;
     --home-earth-accent: 160 48% 72%;
-    --home-space-edge: var(--home-space);
+    --home-space-edge: var(--background);
     --home-image-overlay: radial-gradient(120% 85% at 50% 14%, hsl(var(--home-space) / 0.82) 0%, hsl(var(--home-space) / 0.5) 34%, hsl(var(--home-space) / 0.12) 58%, transparent 72%), linear-gradient(180deg, transparent 80%, hsl(var(--home-space) / 0.5) 90%, hsl(var(--home-space-edge)) 100%);
 
     --tone-info: 155 55% 28%;
