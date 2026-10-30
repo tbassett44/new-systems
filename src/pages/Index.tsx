@@ -45,6 +45,7 @@ const Index = () => {
       if (motionPreference.matches) {
         page.style.removeProperty("--home-earth-offset");
         page.style.removeProperty("--home-title-offset");
+        page.style.removeProperty("--home-text-emphasis");
         return;
       }
       observer = new IntersectionObserver((entries) => {
