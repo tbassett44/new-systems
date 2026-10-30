@@ -8,7 +8,7 @@ import oceanAsset from "@/assets/earth-oceans.jpg.asset.json";
 
 // Local Vite does not serve the hosted asset path; production uses same-origin CDN delivery.
 const assetUrl = (url: string) => import.meta.env.DEV ? `https://id-preview--f9370550-045a-48bb-b616-30daf984e610.lovable.app${url}` : url;
-const INITIAL_ROTATION = 2.4;
+const INITIAL_ROTATION = -0.6;
 const SURFACE_SPEED = 0.035;
 const CLOUD_SPEED = 0.048;
 
@@ -54,18 +54,18 @@ function Planet({ reduced, host, atmosphere, sunlight }: { reduced: boolean; hos
     <group ref={groupRef} rotation={[0.18, 0, -0.12]}>
       <mesh ref={earthRef} rotation={[0, INITIAL_ROTATION, 0]}>
         <sphereGeometry args={[1, 96, 64]} />
-        <meshPhongMaterial map={surface} normalMap={normal} normalScale={new THREE.Vector2(0.65, 0.65)} specularMap={ocean} specular={atmosphere} shininess={22} />
+        <meshPhongMaterial map={surface} normalMap={normal} normalScale={new THREE.Vector2(0.25, 0.25)} specularMap={ocean} specular={sunlight.clone().multiplyScalar(0.12)} shininess={35} />
       </mesh>
       <mesh ref={cloudRef} scale={1.008} rotation={[0, INITIAL_ROTATION, 0]}>
         <sphereGeometry args={[1, 72, 48]} />
         <meshPhongMaterial map={cloud} transparent opacity={0.72} depthWrite={false} />
       </mesh>
-      <mesh scale={1.035}>
+      <mesh scale={1.016}>
         <sphereGeometry args={[1, 64, 48]} />
         <shaderMaterial transparent depthWrite={false} side={THREE.BackSide} blending={THREE.AdditiveBlending}
           uniforms={{ atmosphere: { value: atmosphere } }}
           vertexShader={`varying vec3 n; varying vec3 v; void main(){ vec4 p=modelViewMatrix*vec4(position,1.0); n=normalize(normalMatrix*normal); v=normalize(-p.xyz); gl_Position=projectionMatrix*p; }`}
-          fragmentShader={`uniform vec3 atmosphere; varying vec3 n; varying vec3 v; void main(){ float rim=pow(1.0-abs(dot(normalize(n),normalize(v))),3.0); gl_FragColor=vec4(atmosphere,rim*0.38); }`} />
+          fragmentShader={`uniform vec3 atmosphere; varying vec3 n; varying vec3 v; void main(){ float rim=pow(1.0-abs(dot(normalize(n),normalize(v))),4.0); gl_FragColor=vec4(atmosphere,rim*0.28); }`} />
       </mesh>
     </group>
   </>;
