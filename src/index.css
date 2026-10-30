@@ -341,7 +341,7 @@ All colors MUST be HSL.
 .home-principle p { color: hsl(var(--muted-foreground)); font-size: 15px; line-height: 1.75; }
 .home-invitation { text-align: center; padding: 65px 0; }
 .home-invitation > p:not(.home-section-label) { max-width: 540px; margin: 23px auto 26px; color: hsl(var(--muted-foreground)); font-size: 17px; line-height: 1.8; }
-.home-footer { padding: 28px 0 35px; border-top: 1px solid hsl(var(--border)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.home-footer { padding: 28px 0 35px; border-top: 1px solid hsl(var(--border)); display: flex; align-items: center; justify-content: center; text-align: center; gap: 24px; }
 @keyframes home-earth-arrive { from { transform: translateY(3.5%) scale(1.04); opacity: 0.35; } to { transform: translateY(0) scale(1); opacity: 1; } }
 @keyframes home-atmosphere-breathe { from { opacity: 0.35; } to { opacity: 0.8; } }
 @keyframes home-storm-pulse { 0%, 2%, 3.5%, 5%, 100% { opacity: 0; } 2.6% { opacity: 0.45; } 4.2% { opacity: 0.28; } }
