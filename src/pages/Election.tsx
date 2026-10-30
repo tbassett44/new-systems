@@ -103,7 +103,7 @@ const Election = () => {
             <div>
               <h4 className="font-semibold mb-3 text-lg">2. Engage the Independent Majority</h4>
               <p className="text-sm leading-relaxed">
-                Over 51% of U.S. voters now identify as independent, disillusioned by partisan polarization and institutional gridlock. The Regenerative Election is designed as a platform for this majority to reclaim agency in shaping the future. By creating a new public forum for leadership selection—outside traditional party primaries—it offers a coherent alternative path toward unifying representation.
+                Over 51% of U.S. voters now identify as independent, disillusioned by partisan polarization and institutional gridlock. The Regenerative Election is designed as a platform for this majority to reclaim agency in shaping the future. By creating a new public forum for leadership selection outside traditional party primaries, it offers a coherent alternative path toward unifying representation.
               </p>
             </div>
 

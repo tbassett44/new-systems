@@ -289,7 +289,7 @@ const Justice = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed">
-            Justice is not merely the enforcement of rules—it is the embodiment of care, accountability, and evolution within a community. This regenerative justice framework offers a clear path forward: one that replaces punishment with healing, alienation with belonging, and rigidity with responsiveness.
+            Justice is not merely the enforcement of rules. It is the embodiment of care, accountability, and evolution within a community. This regenerative justice framework offers a clear path forward: one that replaces punishment with healing, alienation with belonging, and rigidity with responsiveness.
           </p>
           <Separator className="my-4" />
           <p className="leading-relaxed font-medium">

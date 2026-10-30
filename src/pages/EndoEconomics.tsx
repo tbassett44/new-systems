@@ -44,7 +44,7 @@ const EndoEconomics = () => {
             This proposal is a call to reimagine the very architecture of our economy at a moment of deep systemic misalignment. While the U.S. GDP exceeds <span className="font-semibold text-primary">$30 trillion annually</span>, a staggering portion of that value fails to translate into human wellbeing, ecological regeneration, or long-term resilience.
           </p>
           <p className="leading-relaxed text-lg">
-            This document illuminates the hidden flows beneath that number—<span className="text-blue-600 font-medium">wages</span>, <span className="text-green-600 font-medium">public spending</span>, and <span className="text-purple-600 font-medium">capital/enterprise value</span>—and proposes a practical, values-driven framework to distribute these resources in service of collective thriving.
+            This document illuminates the hidden flows beneath that number (<span className="text-blue-600 font-medium">wages</span>, <span className="text-green-600 font-medium">public spending</span>, and <span className="text-purple-600 font-medium">capital/enterprise value</span>) and proposes a practical, values-driven framework to distribute these resources in service of collective thriving.
           </p>
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
             <p className="text-blue-800 font-medium">
@@ -63,24 +63,24 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed text-lg">
-            The word <span className="font-semibold italic">economy</span> comes from the Greek <span className="font-semibold text-amber-700">oikonomía</span>—meaning the "management of the household." At its root, economics was never about abstract markets or corporate growth—it was about how we care for the resources, relationships, and responsibilities that sustain life.
+            The word <span className="font-semibold italic">economy</span> comes from the Greek <span className="font-semibold text-amber-700">oikonomía</span> meaning the "management of the household." At its root, economics was never about abstract markets or corporate growth. It was about how we care for the resources, relationships, and responsibilities that sustain life.
           </p>
           <p className="leading-relaxed">
-            Our "house" is not just a personal dwelling, but our shared society and planetary ecosystem. And right now, that house is divided—economically, politically, and spiritually.
+            Our "house" is not just a personal dwelling, but our shared society and planetary ecosystem. And right now, that house is divided: economically, politically, and spiritually.
           </p>
           <p className="leading-relaxed">
-            In his famous address, Abraham Lincoln warned that <span className="italic">"a house divided against itself cannot stand."</span> He spoke not just of political tension, but of a deeper fragmentation—a failure to recognize our interdependence. Long before him, George Washington, in his Farewell Address, cautioned that the emergence of political factions would fracture the soul of the nation, undermining the very experiment of democracy.
+            In his famous address, Abraham Lincoln warned that <span className="italic">"a house divided against itself cannot stand."</span> He spoke not just of political tension, but of a deeper fragmentation, a failure to recognize our interdependence. Long before him, George Washington, in his Farewell Address, cautioned that the emergence of political factions would fracture the soul of the nation, undermining the very experiment of democracy.
           </p>
           <div className="bg-amber-50 p-4 rounded-lg border-l-4 border-amber-400">
             <p className="text-amber-800 font-semibold text-lg">
-              These warnings were not just poetic—they were prophetic.
+              These warnings still speak to the divisions we face today.
             </p>
           </div>
           <p className="leading-relaxed">
             What we now face is a culture caught in adversarial systems, where politics, economics, and identity are weaponized against one another. The result is gridlock, exploitation, and widespread disillusionment.
           </p>
           <p className="leading-relaxed font-medium text-amber-700">
-            Endo Economics invites us to return to the original meaning of economy—not as domination, but as home care. Not as extraction, but as symbiosis.
+            Endo Economics invites us to return to the original meaning of economy, not as domination, but as home care. Not as extraction, but as symbiosis.
           </p>
           <p className="leading-relaxed">
             By making the flow of resources transparent, decentralized, and participatory, we rebuild the foundation of trust. By aligning resource flows with human and ecological wellbeing, we transform economics into a healing force. This is how we begin to reunify the household, not just politically but structurally. This is how we make our shared home livable again.
@@ -114,7 +114,7 @@ const EndoEconomics = () => {
             </li>
           </ul>
           <p className="leading-relaxed">
-            Wealth flows disproportionately toward those who already hold capital, while millions work full-time jobs that still fail to meet their basic needs. Entire sectors of labor—caregiving, education, ecological restoration—are <span className="font-semibold">systematically undervalued or ignored</span> by traditional market mechanisms, despite their vital contributions to society.
+            Wealth flows disproportionately toward those who already hold capital, while millions work full-time jobs that still fail to meet their basic needs. Entire sectors of labor (caregiving, education, ecological restoration) are <span className="font-semibold">systematically undervalued or ignored</span> by traditional market mechanisms, despite their vital contributions to society.
           </p>
           <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
             <h4 className="font-bold text-red-800 mb-3 text-lg">The Numbers Don't Lie</h4>
@@ -130,11 +130,11 @@ const EndoEconomics = () => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="font-bold">•</span>
-                <span>CEOs now earn up to <span className="font-semibold">400 times more</span> than the average worker—a gap that has expanded dramatically since the 1970s, when the ratio was closer to 20-to-1.</span>
+                <span>CEOs now earn up to <span className="font-semibold">400 times more</span> than the average worker. This gap that has expanded dramatically since the 1970s, when the ratio was closer to 20-to-1.</span>
               </li>
             </ul>
             <p className="text-red-800 font-semibold mt-4 pt-3 border-t border-red-200">
-              These are not just statistics—they are signals of structural failure.
+              These figures point to structural failure.
             </p>
           </div>
         </CardContent>
@@ -149,7 +149,7 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed">
-            The inspiration behind <span className="font-semibold text-green-700">"Endo Economics"</span> arises from the evolutionary principle of <span className="font-semibold italic">endosymbiosis</span>—a foundational process in biology through which distinct organisms merge to form a more complex, cooperative whole. This process gave rise to mitochondria and chloroplasts, essential cellular components that once existed as independent organisms.
+            The inspiration behind <span className="font-semibold text-green-700">"Endo Economics"</span> arises from the evolutionary principle of <span className="font-semibold italic">endosymbiosis</span>, a foundational process in biology through which distinct organisms merge to form a more complex, cooperative whole. This process gave rise to mitochondria and chloroplasts, essential cellular components that once existed as independent organisms.
           </p>
           <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">
             <p className="text-green-800 font-medium">
@@ -157,7 +157,7 @@ const EndoEconomics = () => {
             </p>
           </div>
           <p className="leading-relaxed">
-            In this spirit, Endo Economics proposes that our economic systems can evolve in the same way—by uniting previously siloed and competitive domains into cooperative ecosystems of shared value. When different parts of society (labor sectors, public systems, innovation hubs, ecological services) function in harmony toward the health of the whole, the result is greater:
+            In this spirit, Endo Economics proposes that our economic systems can evolve in the same way by uniting previously siloed and competitive domains into cooperative ecosystems of shared value. When different parts of society (labor sectors, public systems, innovation hubs, ecological services) function in harmony toward the health of the whole, the result is greater:
           </p>
           <ul className="space-y-2 ml-4">
             <li className="flex items-center gap-2">
@@ -267,7 +267,7 @@ const EndoEconomics = () => {
           
           <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
             <p className="text-blue-800 font-medium">
-              It is not about eliminating private enterprise or standardizing outcomes—it is about creating conditions where wellbeing and mutual thriving are the primary organizing principles, with individuals empowered to contribute in ways aligned with their deepest gifts and community context.
+              It is not about eliminating private enterprise or standardizing outcomes. It is about creating conditions where wellbeing and mutual thriving are the primary organizing principles, with individuals empowered to contribute in ways aligned with their deepest gifts and community context.
             </p>
           </div>
         </CardContent>
@@ -331,7 +331,7 @@ const EndoEconomics = () => {
             </li>
             <li className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-cyan-500"></span>
-              <span><span className="font-medium">clarity</span> (flows can be followed across time and space) —</span>
+              <span><span className="font-medium">clarity</span> (flows can be followed across time and space)</span>
             </li>
           </ul>
           <p className="leading-relaxed italic text-muted-foreground">
@@ -380,7 +380,7 @@ const EndoEconomics = () => {
           
           <p className="leading-relaxed">
             Endo Economics does not rely on trusting a government or a corporation.<br />
-            <span className="font-medium text-cyan-700">It relies on trusting the field we create together — the code, the visibility, and each other.</span>
+            <span className="font-medium text-cyan-700">It relies on trusting the field we create together: the code, the visibility, and each other.</span>
           </p>
           
           <p className="leading-relaxed">
@@ -389,7 +389,7 @@ const EndoEconomics = () => {
           
           <div className="bg-gradient-to-r from-cyan-50 to-blue-50 p-4 rounded-lg border border-cyan-200">
             <p className="text-cyan-800 font-medium text-center">
-              This is how radical transparency re-establishes a healthy trust field around money — and why it is a foundational pillar of a truly regenerative economy.
+              This is how radical transparency re-establishes a healthy trust field around money, and why it is a foundational pillar of a truly regenerative economy.
             </p>
           </div>
         </CardContent>
@@ -425,7 +425,7 @@ const EndoEconomics = () => {
               <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium">Adaptive Economic Flow Architecture</p>
-                <p className="text-sm text-muted-foreground">The system flexes with changing human needs, ecological realities, and technological progress—redistributing resources in real time rather than locking into rigid budget cycles.</p>
+                <p className="text-sm text-muted-foreground">The system flexes with changing human needs, ecological realities, and technological progress, redistributing resources in real time rather than locking into rigid budget cycles.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -439,14 +439,14 @@ const EndoEconomics = () => {
               <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium">Universal Access to Core Services</p>
-                <p className="text-sm text-muted-foreground">Healthcare, education, housing, and nourishment become universally available—not as charity, but as baseline infrastructure.</p>
+                <p className="text-sm text-muted-foreground">Healthcare, education, housing, and nourishment become universally available, not as charity, but as baseline infrastructure.</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-medium">Resilience to Future Shocks</p>
-                <p className="text-sm text-muted-foreground">By decentralizing and diversifying economic control, the model is designed to absorb and adapt to crises—whether climate, technological, or financial.</p>
+                <p className="text-sm text-muted-foreground">By decentralizing and diversifying economic control, the model is designed to absorb and adapt to crises whether climate, technological, or financial.</p>
               </div>
             </div>
           </div>
@@ -466,7 +466,7 @@ const EndoEconomics = () => {
               The central move of Endo Economics is to treat these three flows as Commons flows:
             </p>
             <p className="text-indigo-700 mt-2">
-              All three rivers—<span className="font-semibold">Labor</span>, <span className="font-semibold">Public</span>, and <span className="font-semibold">Production/Capital</span>—flow through a transparent Commons Treasury before being redistributed.
+              All three rivers (<span className="font-semibold">Labor</span>, <span className="font-semibold">Public</span>, and <span className="font-semibold">Production/Capital</span>) flow through a transparent Commons Treasury before being redistributed.
             </p>
           </div>
           
@@ -798,7 +798,7 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-6">
           <p className="leading-relaxed">
-            The <span className="font-semibold text-teal-700">Production & Capital Flow</span>—roughly the remaining third of GDP—represents:
+            The <span className="font-semibold text-teal-700">Production & Capital Flow</span> (roughly the remaining third of GDP) represents:
           </p>
           <ul className="grid md:grid-cols-2 gap-2 ml-4">
             <li className="flex items-center gap-2">
@@ -925,7 +925,7 @@ const EndoEconomics = () => {
               <div className="space-y-3">
                 <div>
                   <p className="font-medium text-amber-800">Crisis Response Fund:</p>
-                  <p className="text-amber-700">earthquakes, floods, pandemics, etc.</p>
+                  <p className="text-amber-700">responses to crises such as earthquakes, floods, and pandemics</p>
                 </div>
                 <div>
                   <p className="font-medium text-amber-800">Innovation Sandbox:</p>
@@ -933,7 +933,7 @@ const EndoEconomics = () => {
                 </div>
                 <div>
                   <p className="font-medium text-amber-800">Planetary Scale Initiatives:</p>
-                  <p className="text-amber-700">ocean cleanup, global literacy, interspecies communication, etc.</p>
+                  <p className="text-amber-700">initiatives such as ocean cleanup, global literacy, and interspecies communication</p>
                 </div>
               </div>
             </div>
@@ -956,7 +956,7 @@ const EndoEconomics = () => {
           </div>
           
           <p className="leading-relaxed">
-            In the current economy, many individuals—especially those from marginalized or precarious backgrounds—are forced to compromise their values to meet basic needs. Jobs that perpetuate harm, extractive systems, or cultural dissonance are often the only viable options for survival.
+            In the current economy, many individuals, especially those from marginalized or precarious backgrounds, are forced to compromise their values to meet basic needs. Jobs that perpetuate harm, extractive systems, or cultural dissonance are often the only viable options for survival.
           </p>
           
           <p className="leading-relaxed">
@@ -982,7 +982,7 @@ const EndoEconomics = () => {
           </p>
           
           <p className="leading-relaxed font-semibold text-indigo-700">
-            This shift is not just humane—it is structurally intelligent.
+            This shift supports human dignity and makes the system more adaptable.
           </p>
           
           <p className="leading-relaxed">
@@ -1013,7 +1013,7 @@ const EndoEconomics = () => {
           
           <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-200">
             <p className="text-indigo-800 font-medium text-center">
-              In this sense, Endo Economics is not just an economic redesign—it is a <span className="font-bold">liberation engine</span> for cultural renewal, ethical agency, and authentic contribution.
+              In this sense, Endo Economics is not just an economic redesign. It is a <span className="font-bold">liberation engine</span> for cultural renewal, ethical agency, and authentic contribution.
             </p>
           </div>
         </CardContent>
@@ -1095,7 +1095,7 @@ const EndoEconomics = () => {
             <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-400">
               <h4 className="font-semibold text-red-800 text-lg mb-2">System Capture</h4>
               <p className="text-red-700 mb-3">
-                <span className="font-medium">Risk:</span> Power could re-concentrate in hidden forms—digital oligarchies, governance cartels, or data monopolies.
+                <span className="font-medium">Risk:</span> Power could re-concentrate in hidden forms, including digital oligarchies, governance cartels, or data monopolies.
               </p>
               <p className="text-red-800 font-medium mb-2">Mitigation:</p>
               <ul className="space-y-1 ml-4">
@@ -1131,10 +1131,10 @@ const EndoEconomics = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed text-lg font-semibold text-primary">
-            A new economic architecture is not only possible—it is necessary.
+            We need a new economic architecture, and we can build one.
           </p>
           <p className="leading-relaxed text-lg">
-            By identifying and redirecting the three dominant flows of GDP—<span className="font-medium text-blue-600">labor</span>, <span className="font-medium text-green-600">public services</span>, and <span className="font-medium text-purple-600">production/capital</span>—through the Commons, we can begin constructing an economy that supports wholeness, equity, and regenerative flourishing for all.
+            By identifying and redirecting the three dominant flows of GDP (<span className="font-medium text-blue-600">labor</span>, <span className="font-medium text-green-600">public services</span>, and <span className="font-medium text-purple-600">production/capital</span>) through the Commons, we can begin constructing an economy that supports wholeness, equity, and regenerative flourishing for all.
           </p>
           <p className="leading-relaxed">Endo Economics offers:</p>
           <ul className="space-y-2 ml-4">
@@ -1407,7 +1407,7 @@ const EndoEconomics = () => {
           <div id="data-3">
             <h3 className="text-lg font-semibold text-white mb-4">[Data 3]</h3>
             <p className="text-sm text-white mb-4">
-              Business / Production & Capital Layer — derivation of the ~$10T estimate.
+              Business / Production & Capital Layer: derivation of the ~$10T estimate.
             </p>
             <div className="overflow-x-auto">
               <Table>
@@ -1462,7 +1462,7 @@ const EndoEconomics = () => {
             </div>
             <div className="mt-4 p-3 bg-white/10 rounded-lg">
               <p className="text-sm text-white italic">
-                <strong>Conclusion:</strong> Based on public data, a $10–11 trillion annual Business / Production & Capital layer is a defensible and structurally grounded approximation — not as a precise accounting outcome, but as a robust design assumption for the Commons-based model.
+                <strong>Conclusion:</strong> Based on public data, a $10–11 trillion annual Business / Production & Capital layer is a defensible and structurally grounded approximation, not as a precise accounting outcome, but as a robust design assumption for the Commons-based model.
               </p>
             </div>
           </div>

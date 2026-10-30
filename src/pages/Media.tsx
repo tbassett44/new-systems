@@ -39,7 +39,7 @@ const Media = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="leading-relaxed text-foreground">
-            This proposal proposes a regenerative, decentralized model for media—one that restores integrity to the public 
+            This proposal outlines a regenerative, decentralized model for media that restores integrity to the public 
             narrative, supports cultural coherence, and replaces corporate-controlled content pipelines with participatory, 
             trust-centered systems. As misinformation, polarization, and click-driven sensationalism erode public trust and 
             democratic discourse, the need for media rooted in transparency, care, and collective wisdom becomes a matter of civic survival.
@@ -205,7 +205,7 @@ const Media = () => {
           </p>
           <p className="leading-relaxed">
             The U.S. media sector employs over 2 million people and spends approximately $150 billion annually on salaries. 
-            Many of these professionals—journalists, filmmakers, editors, researchers, audio engineers, and designers—could 
+            Many of these professionals (journalists, filmmakers, editors, researchers, audio engineers, and designers) could 
             be supported by restructured public-interest funding, collaborative cultural institutions, and community-based 
             distribution models. Instead of competing for attention in an oversaturated market, they become stewards of 
             narrative ecosystems that support wellbeing, clarity, and civic participation.
@@ -274,10 +274,10 @@ const Media = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-foreground">
-            Media is not just a mirror—it is an engine of culture, perception, and possibility. In a time of profound transition, 
+            Media is not just a mirror. It is an engine of culture, perception, and possibility. In a time of profound transition, 
             we must reimagine media not as a commodity, but as a regenerative force for truth, healing, and imagination. This 
             proposal offers a blueprint for building the infrastructure that enables us not only to inform, but to transform. 
-            In doing so, we restore the role of narrative as a sacred civic function—one that weaves together the diverse threads 
+            In doing so, we restore the role of narrative as a sacred civic function that weaves together the diverse threads 
             of humanity into a shared story worth living into.
           </p>
         </CardContent>

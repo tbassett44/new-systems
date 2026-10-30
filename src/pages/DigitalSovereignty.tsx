@@ -51,7 +51,7 @@ const DigitalSovereignty = () => {
           </p>
           <p className="leading-relaxed">
             The purpose of this document is to outline how decentralized identifiers (DIDs), verifiable credentials (VCs), 
-            and cryptographic proof structures can serve as the new digital backbone for a free and regenerative society—enabling 
+            and cryptographic proof structures can serve as the new digital backbone for a free and regenerative society, enabling 
             individuals to move fluidly, securely, and privately across platforms and domains while retaining ownership 
             of their identity and contributions.
           </p>
@@ -186,7 +186,7 @@ const DigitalSovereignty = () => {
             </div>
             <div className="space-y-2">
               <h4 className="font-medium">User Control</h4>
-              <p className="text-sm text-muted-foreground">Identity and data are never stored centrally—always under the control of the individual</p>
+              <p className="text-sm text-muted-foreground">Identity and data are never stored centrally. It is always under the control of the individual</p>
             </div>
           </div>
         </CardContent>
@@ -203,7 +203,7 @@ const DigitalSovereignty = () => {
           <div className="space-y-4">
             <div className="border-l-4 border-blue-500 pl-4">
               <h4 className="font-semibold">1. Self-Custody of Identity</h4>
-              <p className="text-sm text-muted-foreground">Each individual controls the storage, access, and permissioning of their identity—just like they might control a physical passport or house key.</p>
+              <p className="text-sm text-muted-foreground">Each individual controls the storage, access, and permissioning of their identity just like they might control a physical passport or house key.</p>
             </div>
             <div className="border-l-4 border-green-500 pl-4">
               <h4 className="font-semibold">2. Edge-Based Ownership</h4>
@@ -215,11 +215,11 @@ const DigitalSovereignty = () => {
             </div>
             <div className="border-l-4 border-orange-500 pl-4">
               <h4 className="font-semibold">4. Non-Seizability</h4>
-              <p className="text-sm text-muted-foreground">Your identity, credentials, and access to participation cannot be suspended, revoked, or seized by governments or corporations—unless you violate transparent, peer-accountable community protocols.</p>
+              <p className="text-sm text-muted-foreground">Your identity, credentials, and access to participation cannot be suspended, revoked, or seized by governments or corporations unless you violate transparent, peer-accountable community protocols.</p>
             </div>
             <div className="border-l-4 border-red-500 pl-4">
               <h4 className="font-semibold">5. Distributed Resilience</h4>
-              <p className="text-sm text-muted-foreground">Critical components like key recovery, access approval, and audit trails are spread across trusted networks—not reliant on any single entity.</p>
+              <p className="text-sm text-muted-foreground">Critical components like key recovery, access approval, and audit trails are spread across trusted networks, not reliant on any single entity.</p>
             </div>
           </div>
         </CardContent>
@@ -291,7 +291,7 @@ const DigitalSovereignty = () => {
             </div>
             <div className="space-y-2">
               <h4 className="font-medium">Responsibility</h4>
-              <p className="text-sm text-muted-foreground">Identity isn't something handed down by a government—it's something you tend</p>
+              <p className="text-sm text-muted-foreground">Identity isn't something handed down by a government. It's something you tend</p>
             </div>
             <div className="space-y-2">
               <h4 className="font-medium">Community</h4>
@@ -371,7 +371,7 @@ const DigitalSovereignty = () => {
           <p className="leading-relaxed">
             Digital sovereignty is the cornerstone of a truly free and participatory future. By establishing decentralized 
             identity and authentication systems as public infrastructure, we can protect autonomy, build trust, and enable 
-            fluid movement between digital and physical spaces. These technologies are not simply upgrades to legacy systems—they 
+            fluid movement between digital and physical spaces. These technologies are not simply upgrades to legacy systems. They 
             are the beginning of an entirely new paradigm for how individuals relate to institutions, to one another, and to 
             the digital world at large.
           </p>

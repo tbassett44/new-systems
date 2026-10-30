@@ -40,7 +40,7 @@ const Ecology = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed mb-4 text-foreground">
-            This proposal proposes a scalable, decentralized infrastructure to support ecological regeneration at the local, regional, and planetary levels. Grounded in the recognition that human and planetary wellbeing are inseparable, this model seeks to align technology, governance, and funding with the living systems that sustain us.
+            This proposal outlines a scalable, decentralized infrastructure to support ecological regeneration at the local, regional, and planetary levels. Grounded in the recognition that human and planetary wellbeing are inseparable, this model seeks to align technology, governance, and funding with the living systems that sustain us.
           </p>
           <p className="leading-relaxed text-foreground">
             Rather than viewing nature as a passive resource to be managed, this framework treats ecosystems as dynamic partners in the evolution of human civilization. By leveraging satellite imagery, AI-supported mapping, community observation, and regenerative finance tools, we can prioritize, fund, and measure projects that restore the health of watersheds, soil systems, forests, and biodiversity.
@@ -248,7 +248,7 @@ const Ecology = () => {
             </div>
           </div>
           <p className="text-sm text-muted-foreground mt-4">
-            These investments generate long-term dividends in food security, carbon drawdown, water retention, biodiversity, and climate adaptation—and when embedded in the Endo Economics flow, they become self-reinforcing components of an economy built on mutual thriving.
+            These investments generate long-term dividends in food security, carbon drawdown, water retention, biodiversity, and climate adaptation, and when embedded in the Endo Economics flow, they become self-reinforcing components of an economy built on mutual thriving.
           </p>
         </CardContent>
       </Card>
@@ -296,7 +296,7 @@ const Ecology = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-foreground">
-            Ecological regeneration is not a peripheral concern—it is the foundation for any viable future. This proposal offers a structure for collective re-alignment with Earth's intelligence through open technology, participatory governance, and bioregional responsibility. It is an invitation to treat the planet not as a problem to solve, but as a partner to regenerate with—one watershed, one forest, one field at a time.
+            Ecological regeneration is not a peripheral concern. It is the foundation for any viable future. This proposal offers a structure for collective re-alignment with Earth's intelligence through open technology, participatory governance, and bioregional responsibility. It is an invitation to treat the planet not as a problem to solve, but as a partner to regenerate with—one watershed, one forest, one field at a time.
           </p>
         </CardContent>
       </Card>

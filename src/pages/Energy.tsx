@@ -42,8 +42,8 @@ const Energy = () => {
           <p className="leading-relaxed text-lg">
             This proposal outlines a pathway toward a clean, abundant, and regenerative energy future. 
             Grounded in the principles of systemic wellbeing and long-term resilience, it highlights 
-            underfunded but promising technologies—such as thorium molten salt reactors and Tokamak 
-            fusion reactors—that offer scalable alternatives to fossil fuels. By redirecting investment 
+            underfunded but promising technologies (such as thorium molten salt reactors and Tokamak 
+            fusion reactors) that offer scalable alternatives to fossil fuels. By redirecting investment 
             flows through an Endo Economics lens, we can catalyze a global energy transition that 
             prioritizes safety, decentralization, and planetary health.
           </p>
@@ -191,7 +191,7 @@ const Energy = () => {
             The Endo Economics model unlocks resource flow toward solutions that serve collective wellbeing. 
             Instead of funding extraction, public wealth can be redirected toward energy systems that support 
             long-term health and climate stability. Guaranteed income and transparent resource allocation 
-            give communities agency to co-own their energy future—aligning economic incentives with planetary needs.
+            give communities agency to co-own their energy future, aligning economic incentives with planetary needs.
           </p>
         </CardContent>
       </Card>
@@ -284,7 +284,7 @@ const Energy = () => {
         </CardHeader>
         <CardContent>
           <p className="leading-relaxed text-lg">
-            A regenerative energy infrastructure is not only possible—it is essential. We must reclaim 
+            We need regenerative energy infrastructure, and we have the means to build it. We must reclaim 
             innovation, liberate funding, and prioritize the health of both people and planet. With 
             technologies like thorium and fusion on the horizon, and distributed renewables already 
             in hand, we stand at the threshold of an energy renaissance. This proposal is an invitation 
