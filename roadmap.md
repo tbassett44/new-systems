@@ -5,5 +5,5 @@
 
 # Earth animation
 
-- [ ] Review Actualize Earth's animation and adapt its motion to the shared globe.
-- [ ] Verify parallax, rendering, and reduced-motion behavior across screen sizes.
+- [x] Review Actualize Earth's animation and adapt its motion to the shared globe.
+- [x] Verify parallax, rendering, and reduced-motion behavior across screen sizes.
