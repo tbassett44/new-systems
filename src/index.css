@@ -276,3 +276,5 @@ All colors MUST be HSL.
 .dark .from-gray-50, .dark .to-gray-50, .dark .via-gray-50 { --tw-gradient-from: hsl(var(--card)) var(--tw-gradient-from-position); --tw-gradient-to: hsl(var(--card)) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
 .dark .from-slate-50, .dark .to-slate-50, .dark .via-slate-50 { --tw-gradient-from: hsl(var(--card)) var(--tw-gradient-from-position); --tw-gradient-to: hsl(var(--card)) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
 .dark .to-white, .dark .from-white { --tw-gradient-to: hsl(var(--card)) var(--tw-gradient-to-position); }
+.dark .bg-blue-800, .dark .bg-blue-700, .dark .bg-blue-600 { background-color: hsl(155 40% 22%); border-color: hsl(155 40% 30%); }
+.dark .hover\:bg-blue-700:hover { background-color: hsl(155 40% 28%); }
