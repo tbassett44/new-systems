@@ -110,7 +110,7 @@ const Index = () => {
           <Button asChild size="lg" className="home-primary-button"><Link to="/papers"><BookOpen />Explore the Manifesto<ArrowRight /></Link></Button>
         </div>
         <Button variant="ghost" onClick={scrollToVision} className="home-scroll" aria-label="Scroll to our vision">
-          <span>ONE EARTH. MANY POSSIBILITIES.</span><ArrowDown className="home-scroll-arrow" />
+          <span>ONE EARTH. INFINITE POSSIBILITIES.</span><ArrowDown className="home-scroll-arrow" />
         </Button>
       </section>
 
