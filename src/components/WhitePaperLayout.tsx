@@ -67,6 +67,10 @@ import { usePrintPDF } from "@/hooks/usePrintPDF";
 import { TableOfContents, PaperNav } from "@/components/paper/ReadingAids";
 import { supabase } from "@/integrations/supabase/client";
 import { LivingEarth } from "@/components/home/LivingEarth";
+import logoAsset from "@/assets/actualize-earth-logo.jpeg.asset.json";
+
+// Local Vite does not serve the hosted asset path; production uses same-origin CDN delivery.
+const logoUrl = import.meta.env.DEV ? `https://id-preview--f9370550-045a-48bb-b616-30daf984e610.lovable.app${logoAsset.url}` : logoAsset.url;
 
 interface WhitePaperLayoutProps {
   children: ReactNode;
@@ -189,18 +193,10 @@ function AppSidebar() {
       <Sidebar className="border-r bg-background/55 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
-          <div className="flex items-center gap-1">
             {(state !== "collapsed" || isMobile) && (
-              <div>
-                <h1 className="text-lg font-semibold text-primary rainbowtext">ACTUALIZE EARTH</h1>
-                <h2 className="text-sm font-medium text-primary">Systems Regeneration Manifesto</h2>
-              </div>
+              <h1 className="text-sm font-semibold text-primary">Systems Regeneration Manifesto</h1>
             )}
-          </div>
-          <div className="flex items-center gap-1">
-            <ThemeToggle />
-            <SidebarTrigger className={`${state === "collapsed" && !isMobile ? "mx-auto" : ""}`} />
-          </div>
+            {state === "collapsed" && !isMobile && <SidebarTrigger className="mx-auto" />}
           </div>
           
           {/* Search section - temporarily hidden 
@@ -355,6 +351,22 @@ function AppSidebar() {
         <GlobalSearch open={searchOpen} onOpenChange={setSearchOpen} />
         
         <SidebarFooter className="border-t p-3">
+          {(state !== "collapsed" || isMobile) ? (
+            <div className="flex items-center justify-between gap-2 pb-3">
+              <div className="flex items-center gap-2">
+                <img src={logoUrl} alt="Actualize Earth logo" className="h-6 w-6 rounded-md" />
+                <span className="text-xs font-semibold text-primary rainbowtext whitespace-nowrap">ACTUALIZE EARTH</span>
+              </div>
+              <div className="flex items-center gap-1">
+                <ThemeToggle />
+                <SidebarTrigger />
+              </div>
+            </div>
+          ) : (
+            <div className="flex justify-center pb-2">
+              <ThemeToggle />
+            </div>
+          )}
           {user ? (
             state === "collapsed" && !isMobile ? (
               <Popover>
