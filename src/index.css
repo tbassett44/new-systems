@@ -293,7 +293,7 @@ All colors MUST be HSL.
 .home-opening { position: relative; z-index: 1; height: min(880px, 92svh); min-height: 640px; overflow: hidden; isolation: isolate; background: transparent; color: hsl(var(--home-on-space)); }
 .home-earth-fixed { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; background: hsl(var(--home-space)); }
 .home-earth-layer { position: absolute; inset: 0; transform: scale(var(--home-earth-scale, 1)); transform-origin: 50% 85%; will-change: transform; }
-.home-earth-scene { position: absolute; left: 0; right: 0; bottom: -38%; margin-inline: auto; width: min(108vw, 108svh, 1000px); aspect-ratio: 1; animation: home-earth-arrive 1.8s ease-out both; }
+.home-earth-scene { position: absolute; left: 0; right: 0; bottom: -22%; margin-inline: auto; width: min(108vw, 108svh, 1000px); aspect-ratio: 1; animation: home-earth-arrive 1.8s ease-out both; }
 .home-living-earth { position: absolute; inset: 0; }
 .home-living-earth canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s ease; }
 .home-earth-fallback { position: absolute; inset: 0; transition: opacity 1.2s ease; }
@@ -330,7 +330,7 @@ All colors MUST be HSL.
 .home-scroll { position: absolute; z-index: 1; bottom: 27px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; height: auto; gap: 12px; padding: 12px 20px; border-radius: 999px; border: 1px solid hsl(var(--home-on-space) / 0.16); background: hsl(var(--home-space) / 0.78); backdrop-filter: blur(12px); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; opacity: var(--home-cue-opacity, 1); transition: opacity 0.4s ease; color: hsl(var(--home-on-space) / 0.95); }
 .home-scroll:hover { background: hsl(var(--home-space) / 0.72); color: hsl(var(--home-on-space)); }
 .home-scroll-arrow { animation: home-scroll-nudge 2.5s ease-in-out infinite; }
-.home-content { position: relative; z-index: 1; max-width: 1160px; margin: auto; padding: 0 48px; background: hsl(var(--background) / 0.86); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 28px; }
+.home-content { position: relative; z-index: 1; max-width: 1160px; margin: auto; padding: 0 48px; background: hsl(var(--background) / 0.55); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 28px; }
 .home-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; padding: 70px 0 54px; }
 .home-section-label { font-size: 11px; font-weight: 700; color: hsl(var(--primary)); margin-bottom: 20px; }
 .home-content h2 { font-size: 38px; font-weight: 500; line-height: 1.25; }
