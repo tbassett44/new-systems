@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				heading: ['Fraunces', 'Georgia', 'serif'],
-				body: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+				heading: ['Lora', 'Georgia', 'serif'],
+				body: ['"Nunito Sans"', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				tone: {
