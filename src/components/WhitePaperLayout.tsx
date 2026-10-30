@@ -191,10 +191,10 @@ function AppSidebar() {
   return (
     <TooltipProvider>
       <Sidebar className="border-r bg-background/55 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
-        <SidebarHeader className="border-b">
+        <SidebarHeader>
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
             {(state !== "collapsed" || isMobile) && (
-              <h1 className="relative z-10 -ml-4 whitespace-nowrap rounded-lg border border-primary/40 bg-background px-3.5 py-2 text-sm font-semibold text-primary shadow-lg shadow-primary/15">Systems Regeneration Manifesto</h1>
+              <h1 className="relative z-10 -ml-4 whitespace-nowrap rounded-lg bg-primary/10 px-3.5 py-2 text-sm font-semibold text-primary">Systems Regeneration Manifesto</h1>
             )}
             {state === "collapsed" && !isMobile && <SidebarTrigger className="mx-auto" />}
           </div>
