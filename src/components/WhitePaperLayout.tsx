@@ -355,7 +355,7 @@ function AppSidebar() {
             <div className="flex items-center justify-between gap-2 pb-3">
               <div className="flex items-center gap-2">
                 <img src={logoUrl} alt="Actualize Earth logo" className="h-6 w-6 rounded-md" />
-                <span className="text-sm font-semibold text-primary rainbowtext">ACTUALIZE EARTH</span>
+                <span className="text-xs font-semibold text-primary rainbowtext whitespace-nowrap">ACTUALIZE EARTH</span>
               </div>
               <div className="flex items-center gap-1">
                 <ThemeToggle />
