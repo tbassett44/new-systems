@@ -42,7 +42,7 @@ All colors MUST be HSL.
     --home-space: 180 12% 3%;
     --home-on-space: 0 0% 97%;
     --home-earth-accent: 160 48% 72%;
-    --home-image-overlay: linear-gradient(180deg, hsl(var(--home-space) / 0.25) 0%, hsl(var(--home-space) / 0.08) 55%, hsl(var(--home-space) / 0.8) 100%);
+    --home-image-overlay: radial-gradient(120% 85% at 50% 14%, hsl(var(--home-space) / 0.82) 0%, hsl(var(--home-space) / 0.5) 34%, hsl(var(--home-space) / 0.12) 58%, transparent 72%), linear-gradient(180deg, transparent 62%, hsl(var(--home-space) / 0.5) 100%);
 
     --tone-info: 155 55% 28%;
     --tone-outcome: 155 55% 28%;
@@ -286,7 +286,7 @@ All colors MUST be HSL.
 /* Earth-led homepage: deliberately isolated from the proposal reading layout. */
 .home-opening { position: relative; height: min(880px, 92svh); min-height: 640px; overflow: hidden; background: hsl(var(--home-space)); color: hsl(var(--home-on-space)); }
 .home-earth-layer { position: absolute; inset: 0; transform: translate3d(0, var(--home-earth-offset, 0px), 0); will-change: transform; }
-.home-earth { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; animation: home-earth-arrive 1.6s ease-out both; }
+.home-earth { position: absolute; left: 0; right: 0; bottom: -24%; margin-inline: auto; width: min(92vw, 72vh); height: auto; object-fit: contain; -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0 92%, transparent 118%); mask-image: radial-gradient(circle at 50% 50%, #000 0 92%, transparent 118%); animation: home-earth-arrive 1.8s ease-out both; }
 .home-earth-shade { position: absolute; inset: 0; background: var(--home-image-overlay); }
 .home-header { position: relative; z-index: 1; max-width: 1400px; margin: auto; padding: 25px 48px; display: flex; align-items: center; justify-content: space-between; }
 .home-nav-button:hover { background: hsl(var(--home-on-space) / 0.1); color: hsl(var(--home-on-space)); }
@@ -322,7 +322,7 @@ All colors MUST be HSL.
 .home-invitation { text-align: center; padding: 65px 0; }
 .home-invitation > p:not(.home-section-label) { max-width: 540px; margin: 23px auto 26px; color: hsl(var(--muted-foreground)); font-size: 17px; line-height: 1.8; }
 .home-footer { padding: 28px 0 35px; border-top: 1px solid hsl(var(--border)); display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-@keyframes home-earth-arrive { from { transform: scale(1.035); opacity: 0.5; } to { transform: scale(1); opacity: 1; } }
+@keyframes home-earth-arrive { from { transform: translateY(3.5%) scale(1.04); opacity: 0.35; } to { transform: translateY(0) scale(1); opacity: 1; } }
 @keyframes home-content-arrive { from { transform: translateY(12px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 @keyframes home-scroll-nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
 @media (min-width: 1500px) { .home-title-block { padding-top: 65px; } }
@@ -333,7 +333,7 @@ All colors MUST be HSL.
   .home-title-block h1 { font-size: 42px; }
   .home-eyebrow { font-size: 9px; margin-bottom: 20px; }
   .home-intro { font-size: 17px; }
-  .home-earth { object-position: 48% center; }
+  .home-earth { width: min(112vw, 68vh); bottom: -18%; }
   .home-content { padding: 0 24px; }
   .home-vision { grid-template-columns: 1fr; gap: 20px; padding: 43px 0 35px; }
   .home-vision-copy { padding-top: 0; }

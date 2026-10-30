@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowDown, ArrowRight, BookOpen, Github, Heart, Leaf, LogIn, MessageCircle, Users } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
-import earthHorizon from "@/assets/earth-horizon.jpg";
+import earthHorizon from "@/assets/earth.jpg";
 
 const principles = [
   { icon: Heart, title: "Dignity-centered", text: "Human dignity and the inherent worth of all beings, at the heart of every proposal." },
@@ -77,7 +77,7 @@ const Index = () => {
     <div ref={pageRef} className="home-page min-h-screen bg-background text-foreground">
       <section className="home-opening" aria-labelledby="home-title">
         <div className="home-earth-layer">
-        <img src={earthHorizon} alt="Earth’s blue horizon, oceans, and clouds seen from space" width={1920} height={1280} className="home-earth" fetchPriority="high" />
+        <img src={earthHorizon} alt="Earth seen from space: the Americas, oceans, and clouds" width={1920} height={1920} className="home-earth" fetchPriority="high" />
         </div>
         <div className="home-earth-shade" aria-hidden="true" />
         <header className="home-header">
