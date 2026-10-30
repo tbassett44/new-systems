@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowRight, BookOpen, Github, Heart, Leaf, LogIn, MessageCircle, Users } from "lucide-react";
+import { ArrowDown, ArrowRight, BookOpen, Github, Heart, Leaf, LogIn, Users } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import earthHorizon from "@/assets/earth.jpg";
 
@@ -107,21 +107,20 @@ const Index = () => {
 
       <main className="home-content">
         <section id="our-vision" className="home-vision scroll-mt-8">
-          <div className="home-reveal"><p className="home-section-label">01 / OUR SHARED FUTURE</p><h2>A living planet.<br />Life-affirming systems.</h2></div>
+          <div className="home-reveal"><p className="home-section-label">OUR SHARED FUTURE</p><h2>A living planet.<br />Life-affirming systems.</h2></div>
           <div className="home-vision-copy home-reveal"><p>We are living in a pivotal evolutionary moment. Like a caterpillar becoming a butterfly, our civilization has the potential to transform.</p><p>These proposals reimagine how we govern, share resources, and care for one another, supporting better feedback, effective governance, and improved wellbeing.</p><Button asChild variant="link" className="px-0"><Link to="/papers">Enter the living blueprint<ArrowRight /></Link></Button></div>
         </section>
         <section aria-label="Core principles" className="home-principles">
           {principles.map(({ icon: Icon, title, text }) => <article key={title} className="home-principle home-reveal"><Icon className="h-6 w-6 text-primary" /><h3>{title}</h3><p>{text}</p></article>)}
         </section>
         <section className="home-invitation home-reveal">
-          <p className="home-section-label">02 / AN OPEN INVITATION</p>
+          <p className="home-section-label">AN OPEN INVITATION</p>
           <h2>The future is something<br />we create together.</h2>
           <p>This is a living manifesto, not a finished answer. Explore the proposals, question the ideas, and help shape what comes next.</p>
           <div className="flex flex-wrap justify-center gap-3"><Button asChild size="lg"><Link to="/papers">Explore the Manifesto<ArrowRight /></Link></Button><Button asChild variant="outline" size="lg"><a href="https://github.com/tbassett44/new-systems" target="_blank" rel="noopener noreferrer"><Github />Contribute on GitHub</a></Button></div>
         </section>
         <footer className="home-footer">
           <div><Link to="/" className="inline-flex items-center gap-2 font-semibold text-sm"><Leaf className="h-4 w-4 text-primary" />Actualize Earth</Link><p className="mt-3 text-sm text-muted-foreground">By <a href="mailto:juicy@actualize.earth" className="hover:text-primary">Juicy Life</a> & Aether, an AI collaborator powered by GPT-4 by OpenAI.</p></div>
-          <Button asChild variant="link" size="sm"><a href="https://chatgpt.com/share/687fdc0d-19ac-800c-a7c7-bbfcb463fb5d" target="_blank" rel="noopener noreferrer"><MessageCircle />The founding conversation<ArrowRight /></a></Button>
         </footer>
       </main>
     </div>
