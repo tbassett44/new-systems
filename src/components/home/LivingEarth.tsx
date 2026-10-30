@@ -1,180 +1,103 @@
-import { useEffect, useRef } from "react";
+import { Component, Suspense, useEffect, useRef, useState, type ReactNode } from "react";
+import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import * as THREE from "three";
-import earthImage from "@/assets/earth.jpg";
-import cloudImage from "@/assets/earth-clouds.png";
+import surfaceAsset from "@/assets/earth-surface.jpg.asset.json";
+import cloudAsset from "@/assets/earth-weather.png.asset.json";
+import normalAsset from "@/assets/earth-relief.jpg.asset.json";
+import oceanAsset from "@/assets/earth-oceans.jpg.asset.json";
 
-// Project the site's shared disk photograph onto a shallow-turning sphere.
-// Small rotations preserve the visible hemisphere without inventing a second map.
-const vertexShader = `
-  varying vec2 imageUv;
-  varying vec3 surfaceNormal;
-  varying vec3 viewDirection;
-  void main() {
-    imageUv = vec2(position.x * 0.405 + 0.5, position.y * 0.405 + 0.5);
-    vec4 viewPosition = modelViewMatrix * vec4(position, 1.0);
-    surfaceNormal = normalize(normalMatrix * normal);
-    viewDirection = normalize(-viewPosition.xyz);
-    gl_Position = projectionMatrix * viewPosition;
-  }
-`;
+// Local Vite does not serve the hosted asset path; production uses same-origin CDN delivery.
+const assetUrl = (url: string) => import.meta.env.DEV ? `https://id-preview--f9370550-045a-48bb-b616-30daf984e610.lovable.app${url}` : url;
+const INITIAL_ROTATION = 2.4;
+const SURFACE_SPEED = 0.035;
+const CLOUD_SPEED = 0.048;
 
-const fragmentShader = `
-  uniform sampler2D image;
-  uniform vec3 atmosphere;
-  uniform float clouds;
-  varying vec2 imageUv;
-  varying vec3 surfaceNormal;
-  varying vec3 viewDirection;
-  void main() {
-    vec4 photo = texture2D(image, imageUv);
-    vec3 n = normalize(surfaceNormal);
-    float facing = max(dot(n, normalize(viewDirection)), 0.0);
-    float daylight = smoothstep(-0.5, 0.8, dot(n, normalize(vec3(-0.5, 0.65, 1.0))));
-    float rim = pow(1.0 - facing, 3.0);
-    if (clouds > 0.5) {
-      gl_FragColor = vec4(photo.rgb, photo.a * 0.28 * daylight * smoothstep(0.0, 0.15, facing));
-    } else {
-      vec3 color = photo.rgb * (0.64 + daylight * 0.36);
-      color += atmosphere * rim * 0.3;
-      gl_FragColor = vec4(color, smoothstep(0.0, 0.035, facing));
+class SceneBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() { return this.state.failed ? null : this.props.children; }
+}
+
+function Planet({ reduced, host, atmosphere, sunlight }: { reduced: boolean; host: HTMLDivElement; atmosphere: THREE.Color; sunlight: THREE.Color }) {
+  const [surface, cloud, normal, ocean] = useLoader(THREE.TextureLoader, [surfaceAsset, cloudAsset, normalAsset, oceanAsset].map(asset => assetUrl(asset.url)));
+  const earthRef = useRef<THREE.Mesh>(null);
+  const cloudRef = useRef<THREE.Mesh>(null);
+  const groupRef = useRef<THREE.Group>(null);
+  const elapsed = useRef(0);
+  const { gl } = useThree();
+  useEffect(() => {
+    surface.colorSpace = THREE.SRGBColorSpace;
+    cloud.colorSpace = THREE.SRGBColorSpace;
+    surface.anisotropy = Math.min(8, gl.capabilities.getMaxAnisotropy());
+    surface.needsUpdate = true;
+    cloud.needsUpdate = true;
+  }, [surface, cloud, gl]);
+  useFrame(({ pointer }, delta) => {
+    if (!reduced) elapsed.current += Math.min(delta, 0.05);
+    const scroll = reduced ? 0 : Number(host.closest<HTMLElement>(".home-page")?.style.getPropertyValue("--home-scroll-progress") || 0);
+    if (earthRef.current) earthRef.current.rotation.y = INITIAL_ROTATION + elapsed.current * SURFACE_SPEED;
+    if (cloudRef.current) cloudRef.current.rotation.y = INITIAL_ROTATION + elapsed.current * CLOUD_SPEED;
+    if (groupRef.current) {
+      const smoothing = reduced ? 1 : 1 - Math.exp(-3 * Math.min(delta, 0.05));
+      groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, reduced ? 0 : pointer.x * 0.075 + scroll * 0.14, smoothing);
+      groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, 0.18 + (reduced ? 0 : pointer.y * 0.035), smoothing);
     }
-    #include <tonemapping_fragment>
-    #include <colorspace_fragment>
-  }
-`;
+    // The first frame containing loaded assets sets the readiness signal.
+    if (!host.hasAttribute("data-scene-ready")) {
+      requestAnimationFrame(() => { host.setAttribute("data-scene-ready", "true"); host.classList.add("home-globe-ready"); });
+    }
+  });
+  return <>
+    <ambientLight intensity={0.6} />
+    <directionalLight color={sunlight} position={[-3, 4, 5]} intensity={3.2} />
+    <directionalLight color={atmosphere} position={[3, -1, 2]} intensity={0.25} />
+    <group ref={groupRef} rotation={[0.18, 0, -0.12]}>
+      <mesh ref={earthRef} rotation={[0, INITIAL_ROTATION, 0]}>
+        <sphereGeometry args={[1, 96, 64]} />
+        <meshPhongMaterial map={surface} normalMap={normal} normalScale={new THREE.Vector2(0.65, 0.65)} specularMap={ocean} specular={atmosphere} shininess={22} />
+      </mesh>
+      <mesh ref={cloudRef} scale={1.008} rotation={[0, INITIAL_ROTATION, 0]}>
+        <sphereGeometry args={[1, 72, 48]} />
+        <meshPhongMaterial map={cloud} transparent opacity={0.72} depthWrite={false} />
+      </mesh>
+      <mesh scale={1.035}>
+        <sphereGeometry args={[1, 64, 48]} />
+        <shaderMaterial transparent depthWrite={false} side={THREE.BackSide} blending={THREE.AdditiveBlending}
+          uniforms={{ atmosphere: { value: atmosphere } }}
+          vertexShader={`varying vec3 n; varying vec3 v; void main(){ vec4 p=modelViewMatrix*vec4(position,1.0); n=normalize(normalMatrix*normal); v=normalize(-p.xyz); gl_Position=projectionMatrix*p; }`}
+          fragmentShader={`uniform vec3 atmosphere; varying vec3 n; varying vec3 v; void main(){ float rim=pow(1.0-abs(dot(normalize(n),normalize(v))),3.0); gl_FragColor=vec4(atmosphere,rim*0.38); }`} />
+      </mesh>
+    </group>
+  </>;
+}
 
 export function LivingEarth() {
   const hostRef = useRef<HTMLDivElement>(null);
-
+  const [config, setConfig] = useState<{ reduced: boolean; active: boolean; host: HTMLDivElement; atmosphere: THREE.Color; sunlight: THREE.Color }>();
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
-    let renderer: THREE.WebGLRenderer;
-    try {
-      renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    } catch {
-      return; // Keep the shared photograph visible when WebGL is unavailable.
-    }
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.75));
-    renderer.setClearColor(0, 0);
-    renderer.domElement.setAttribute("aria-hidden", "true");
-    host.appendChild(renderer.domElement);
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 20);
-    camera.position.z = 3.65;
-    const root = new THREE.Group();
-    scene.add(root);
-    const geometry = new THREE.SphereGeometry(1, 72, 48);
-    const loader = new THREE.TextureLoader();
-    let disposed = false;
-    let ready = false;
-    const earth = loader.load(earthImage, () => {
-      if (disposed) return;
-      ready = true;
-      render();
-      host.classList.add("home-globe-ready");
-    });
-    const clouds = loader.load(cloudImage);
-    earth.colorSpace = THREE.SRGBColorSpace;
-    clouds.colorSpace = THREE.SRGBColorSpace;
-    const colorToken = getComputedStyle(host).getPropertyValue("--home-atmosphere").trim();
-    const atmosphere = new THREE.Color(`hsl(${colorToken.split(/\s+/).join(", ")})`);
-    const makeMaterial = (image: THREE.Texture, cloudLayer: boolean) => new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
-      uniforms: { image: { value: image }, atmosphere: { value: atmosphere }, clouds: { value: cloudLayer ? 1 : 0 } },
-      transparent: true,
-      depthWrite: !cloudLayer,
-    });
-    const surfaceMaterial = makeMaterial(earth, false);
-    const cloudMaterial = makeMaterial(clouds, true);
-    const globe = new THREE.Mesh(geometry, surfaceMaterial);
-    const weather = new THREE.Mesh(geometry, cloudMaterial);
-    weather.scale.setScalar(1.008);
-    root.add(globe, weather);
-    const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let frame = 0;
+    const preference = matchMedia("(prefers-reduced-motion: reduce)");
+    const tokens = getComputedStyle(host);
+    const color = (name: string) => new THREE.Color(`hsl(${tokens.getPropertyValue(name).trim().split(/\s+/).join(", ")})`);
+    const atmosphere = color("--home-atmosphere");
+    const sunlight = color("--home-sunlight");
     let visible = true;
-    let elapsed = 0;
-    let lastTime = 0;
-    let pointerX = 0;
-    let pointerY = 0;
-    let easedX = 0;
-    let easedY = 0;
-
-    function render() {
-      renderer.render(scene, camera);
-    }
-    const animate = (time: number) => {
-      frame = 0;
-      if (disposed || !visible || document.hidden) return;
-      elapsed += Math.min((time - lastTime) / 1000, 0.05);
-      lastTime = time;
-      easedX += (pointerX - easedX) * 0.035;
-      easedY += (pointerY - easedY) * 0.035;
-      const page = host.closest<HTMLElement>(".home-page");
-      const scroll = Number(page?.style.getPropertyValue("--home-scroll-progress") || 0);
-      root.rotation.y = Math.sin(elapsed * 0.055) * 0.055 + easedX * 0.035 + scroll * 0.045;
-      root.rotation.x = Math.sin(elapsed * 0.04) * 0.012 + easedY * 0.018;
-      weather.rotation.z = Math.sin(elapsed * 0.045) * 0.025;
-      weather.rotation.y = Math.sin(elapsed * 0.06) * 0.02;
-      render();
-      if (!preference.matches) frame = requestAnimationFrame(animate);
-    };
-    const start = () => {
-      cancelAnimationFrame(frame);
-      frame = 0;
-      lastTime = performance.now();
-      if (preference.matches) {
-        root.rotation.set(0, 0, 0);
-        weather.rotation.set(0, 0, 0);
-        render();
-      } else if (visible && !document.hidden) frame = requestAnimationFrame(animate);
-    };
-    const resize = new ResizeObserver(() => {
-      renderer.setSize(host.clientWidth, host.clientHeight);
-      camera.aspect = host.clientWidth / Math.max(host.clientHeight, 1);
-      camera.updateProjectionMatrix();
-      if (ready) render();
-    });
-    resize.observe(host);
-    const intersection = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      start();
-    });
-    intersection.observe(host);
-    const move = (event: PointerEvent) => {
-      if (event.pointerType !== "mouse") return;
-      pointerX = event.clientX / window.innerWidth * 2 - 1;
-      pointerY = event.clientY / window.innerHeight * 2 - 1;
-    };
-    const resetPointer = () => { pointerX = 0; pointerY = 0; };
-    window.addEventListener("pointermove", move, { passive: true });
-    document.documentElement.addEventListener("pointerleave", resetPointer);
-    document.addEventListener("visibilitychange", start);
-    preference.addEventListener("change", start);
-    start();
+    const update = () => setConfig({ host, atmosphere, sunlight, reduced: preference.matches, active: visible && !document.hidden });
+    const observer = new IntersectionObserver(([entry]) => { visible = entry.isIntersecting; update(); });
+    observer.observe(host);
+    preference.addEventListener("change", update);
+    document.addEventListener("visibilitychange", update);
+    update();
     return () => {
-      disposed = true;
-      cancelAnimationFrame(frame);
-      resize.disconnect();
-      intersection.disconnect();
-      window.removeEventListener("pointermove", move);
-      document.documentElement.removeEventListener("pointerleave", resetPointer);
-      document.removeEventListener("visibilitychange", start);
-      preference.removeEventListener("change", start);
-      geometry.dispose();
-      surfaceMaterial.dispose();
-      cloudMaterial.dispose();
-      earth.dispose();
-      clouds.dispose();
-      renderer.dispose();
-      renderer.domElement.remove();
-      host.classList.remove("home-globe-ready");
+      observer.disconnect();
+      preference.removeEventListener("change", update);
+      document.removeEventListener("visibilitychange", update);
     };
   }, []);
-
-  return <div ref={hostRef} className="home-living-earth" role="img" aria-label="Earth from space, with gently moving clouds and a sunlit atmosphere">
-    <img src={earthImage} alt="" className="home-earth home-earth-fallback" width={1920} height={1920} />
+  return <div ref={hostRef} className="home-living-earth" role="img" aria-label="A rotating Earth with realistic oceans, continents, moving clouds and a blue atmospheric rim">
+    {config && <SceneBoundary><Canvas camera={{ position: [0, 0, 3.5], fov: 35 }} dpr={[1, 1.5]} frameloop={!config.active ? "never" : config.reduced ? "demand" : "always"} gl={{ alpha: true, antialias: true }} onCreated={({ gl }) => { gl.setClearAlpha(0); gl.toneMapping = THREE.ACESFilmicToneMapping; gl.toneMappingExposure = 1.05; }}>
+      <Suspense fallback={null}><Planet {...config} /></Suspense>
+    </Canvas></SceneBoundary>}
   </div>;
 }
