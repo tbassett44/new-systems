@@ -285,11 +285,22 @@ All colors MUST be HSL.
 
 /* Earth-led homepage: deliberately isolated from the proposal reading layout. */
 .home-opening { position: relative; height: min(880px, 92svh); min-height: 640px; overflow: hidden; background: hsl(var(--home-space)); color: hsl(var(--home-on-space)); }
+.home-earth-layer { position: absolute; inset: 0; transform: translate3d(0, var(--home-earth-offset, 0px), 0); will-change: transform; }
 .home-earth { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 58%; animation: home-earth-arrive 1.6s ease-out both; }
 .home-earth-shade { position: absolute; inset: 0; background: var(--home-image-overlay); }
 .home-header { position: relative; z-index: 1; max-width: 1400px; margin: auto; padding: 25px 48px; display: flex; align-items: center; justify-content: space-between; }
 .home-nav-button:hover { background: hsl(var(--home-on-space) / 0.1); color: hsl(var(--home-on-space)); }
-.home-title-block { position: relative; z-index: 1; text-align: center; padding: 35px 24px 0; animation: home-content-arrive 0.9s ease-out both; }
+.home-title-block { position: relative; z-index: 1; text-align: center; padding: 35px 24px 0; transform: translate3d(0, var(--home-title-offset, 0px), 0); }
+.home-title-block > * { animation: home-content-arrive 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.home-title-block > :nth-child(2) { animation-delay: 0.12s; }
+.home-title-block > :nth-child(3) { animation-delay: 0.24s; }
+.home-title-block > :nth-child(4) { animation-delay: 0.36s; }
+.home-header { animation: home-content-arrive 0.8s ease-out both; }
+.home-motion .home-reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.22, 1, 0.36, 1); }
+.home-motion .home-reveal.home-revealed { opacity: 1; transform: translateY(0); }
+.home-vision-copy.home-reveal, .home-principle:nth-child(2) { transition-delay: 0.12s; }
+.home-principle:nth-child(3) { transition-delay: 0.24s; }
+.home-reveal:focus-within { opacity: 1; transform: none; }
 .home-eyebrow { font-size: 11px; font-weight: 700; color: hsl(var(--home-earth-accent)); margin-bottom: 21px; }
 .home-title-block h1 { font-family: Lora, Georgia, serif; font-size: 68px; font-weight: 500; line-height: 1.12; letter-spacing: 0; }
 .home-title-dot { color: hsl(var(--home-earth-accent)); }
@@ -334,4 +345,8 @@ All colors MUST be HSL.
   .home-invitation { padding: 44px 0; }
   .home-footer { flex-direction: column; align-items: flex-start; }
 }
-@media (prefers-reduced-motion: reduce) { .home-earth, .home-title-block, .home-scroll-arrow { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .home-earth, .home-header, .home-title-block > *, .home-scroll-arrow { animation: none; }
+  .home-earth-layer, .home-title-block { transform: none; will-change: auto; }
+  .home-motion .home-reveal { opacity: 1; transform: none; transition: none; }
+}
