@@ -11,7 +11,7 @@ function getScroller(): HTMLElement | null {
   return document.querySelector("[data-scroll-container]");
 }
 
-/** Thin bar at the top of the screen showing how far through the page you are. */
+/** Inline reading progress shown beneath the commenting controls. */
 export function ReadingProgress() {
   const [pct, setPct] = useState(0);
   const { pathname } = useLocation();
@@ -21,22 +21,38 @@ export function ReadingProgress() {
     const update = () => {
       const docEl = document.documentElement;
       const useEl = el && el.scrollHeight > el.clientHeight + 1;
-      const top = useEl ? el!.scrollTop : window.scrollY;
-      const max = useEl ? el!.scrollHeight - el!.clientHeight : docEl.scrollHeight - window.innerHeight;
+      const top = useEl ? el.scrollTop : window.scrollY;
+      const max = useEl ? el.scrollHeight - el.clientHeight : docEl.scrollHeight - window.innerHeight;
       setPct(max > 0 ? Math.min(100, (top / max) * 100) : 0);
     };
     update();
     el?.addEventListener("scroll", update, { passive: true });
     window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    const observer = new ResizeObserver(update);
+    observer.observe(document.documentElement);
+    if (el) {
+      observer.observe(el);
+      if (el.firstElementChild) observer.observe(el.firstElementChild);
+    }
     return () => {
       el?.removeEventListener("scroll", update);
       window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+      observer.disconnect();
     };
   }, [pathname]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 h-1 z-50 pointer-events-none" aria-hidden>
-      <div className="h-full bg-reading-progress transition-[width] duration-150" style={{ width: `${pct}%` }} />
+    <div
+      role="progressbar"
+      aria-label="Reading progress"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={Math.round(pct)}
+      className="h-1.5 w-full overflow-hidden rounded-full bg-muted pointer-events-none"
+    >
+      <div className="h-full bg-reading-progress transition-[width] duration-150 motion-reduce:transition-none" style={{ width: `${pct}%` }} />
     </div>
   );
 }

@@ -64,7 +64,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
 import { usePrintPDF } from "@/hooks/usePrintPDF";
 
-import { ReadingProgress, TableOfContents, PaperNav } from "@/components/paper/ReadingAids";
+import { TableOfContents, PaperNav } from "@/components/paper/ReadingAids";
 import { supabase } from "@/integrations/supabase/client";
 import earthImage from "@/assets/earth.jpg";
 
@@ -463,7 +463,6 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
               className="absolute inset-0 w-full h-full object-contain opacity-0 dark:opacity-80 mix-blend-screen animate-[ken-burns_60s_ease-in-out_infinite]"
             />
           </div>
-          <ReadingProgress />
           <AppSidebar />
           <main 
             className="flex-1 overflow-auto comment-highlighted-content" 

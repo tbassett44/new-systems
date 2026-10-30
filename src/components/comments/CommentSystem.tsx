@@ -11,6 +11,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { toast } from '@/hooks/use-toast';
 import { trackCommentModeToggle, trackCommentsViewed, trackCommentAdded } from '@/lib/analytics';
 import { useSidebar } from '@/components/ui/sidebar';
+import { ReadingProgress } from '@/components/paper/ReadingAids';
 
 export function CommentSystem() {
   const [isCommentModalOpen, setIsCommentModalOpen] = useState(false);
@@ -234,6 +235,7 @@ export function CommentSystem() {
               </span>
             )}
           </Button>
+          <ReadingProgress />
         </div>
       </div>
 
