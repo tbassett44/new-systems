@@ -31,6 +31,7 @@ const Index = () => {
       const distance = Math.min(Math.max(-opening.getBoundingClientRect().top, 0), opening.offsetHeight);
       page.style.setProperty("--home-earth-offset", `${distance * 0.24}px`);
       page.style.setProperty("--home-title-offset", `${distance * 0.1}px`);
+      page.style.setProperty("--home-cue-opacity", `${Math.max(0, 1 - distance / 200)}`);
     };
     const onScroll = () => {
       if (!motionPreference.matches && !frame) frame = window.requestAnimationFrame(updateParallax);

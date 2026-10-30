@@ -307,7 +307,7 @@ All colors MUST be HSL.
 .home-intro { font-size: 19px; margin: 22px auto 26px; line-height: 1.5; color: hsl(var(--home-on-space) / 0.85); }
 .home-primary-button { background: hsl(var(--home-on-space)); color: hsl(var(--home-space)); border-radius: 4px; }
 .home-primary-button:hover { background: hsl(var(--home-earth-accent)); }
-.home-scroll { position: absolute; z-index: 1; bottom: 27px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; height: auto; gap: 12px; padding: 12px 20px; border-radius: 999px; border: 1px solid hsl(var(--home-on-space) / 0.14); background: hsl(var(--home-space) / 0.6); backdrop-filter: blur(8px); font-size: 10px; color: hsl(var(--home-on-space) / 0.95); }
+.home-scroll { position: absolute; z-index: 1; bottom: 27px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; height: auto; gap: 12px; padding: 12px 20px; border-radius: 999px; border: 1px solid hsl(var(--home-on-space) / 0.16); background: hsl(var(--home-space) / 0.78); backdrop-filter: blur(12px); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; opacity: var(--home-cue-opacity, 1); transition: opacity 0.4s ease; color: hsl(var(--home-on-space) / 0.95); }
 .home-scroll:hover { background: hsl(var(--home-space) / 0.72); color: hsl(var(--home-on-space)); }
 .home-scroll-arrow { animation: home-scroll-nudge 2.5s ease-in-out infinite; }
 .home-content { max-width: 1160px; margin: auto; padding: 0 48px; }
