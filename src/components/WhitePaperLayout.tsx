@@ -194,7 +194,7 @@ function AppSidebar() {
         <SidebarHeader>
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
             {(state !== "collapsed" || isMobile) && (
-              <h1 className="relative z-10 -ml-4 whitespace-nowrap rounded-lg bg-primary/10 px-3.5 py-2 text-sm font-semibold text-primary">Systems Regeneration Manifesto</h1>
+              <h1 className="w-full whitespace-nowrap rounded-lg bg-primary/10 px-3.5 py-2 text-center text-sm font-semibold text-primary">Systems Regeneration Manifesto</h1>
             )}
             {state === "collapsed" && !isMobile && <SidebarTrigger className="mx-auto" />}
           </div>
