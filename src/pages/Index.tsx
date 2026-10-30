@@ -6,6 +6,9 @@ import { useAuth } from "@/contexts/AuthContext";
 import { LivingEarth } from "@/components/home/LivingEarth";
 import logoAsset from "@/assets/actualize-earth-logo.jpeg.asset.json";
 
+// Local Vite does not serve the hosted asset path; production uses same-origin CDN delivery.
+const logoUrl = import.meta.env.DEV ? `https://id-preview--f9370550-045a-48bb-b616-30daf984e610.lovable.app${logoAsset.url}` : logoAsset.url;
+
 const principles = [
   { icon: Heart, title: "Dignity-centered", text: "Human dignity and the inherent worth of all beings, at the heart of every proposal." },
   { icon: Leaf, title: "Regenerative", text: "Systems that heal, restore, and enhance life rather than extract from it." },
@@ -130,7 +133,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center gap-3"><Button asChild size="lg"><Link to="/papers">Explore the Manifesto<ArrowRight /></Link></Button><Button asChild variant="outline" size="lg"><a href="https://github.com/tbassett44/new-systems" target="_blank" rel="noopener noreferrer"><Github />Contribute on GitHub</a></Button></div>
         </section>
         <footer className="home-footer">
-          <div><Link to="/" className="inline-flex items-center gap-2 font-semibold text-sm"><img src={logoAsset.url} alt="Actualize Earth logo" className="h-6 w-6 rounded-md" />Actualize Earth</Link><p className="mt-3 text-sm text-muted-foreground">By <a href="mailto:juicy@actualize.earth" className="hover:text-primary">Juicy Life</a> & Aether, an AI collaborator powered by GPT-4 by OpenAI.</p></div>
+          <div><Link to="/" className="inline-flex items-center gap-2 font-semibold text-sm"><img src={logoUrl} alt="Actualize Earth logo" className="h-6 w-6 rounded-md" />Actualize Earth</Link><p className="mt-3 text-sm text-muted-foreground">By <a href="mailto:juicy@actualize.earth" className="hover:text-primary">Juicy Life</a> & Aether, an AI collaborator powered by GPT-4 by OpenAI.</p></div>
         </footer>
       </main>
     </div>
