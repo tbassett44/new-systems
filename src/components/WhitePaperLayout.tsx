@@ -64,6 +64,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useParagraphIds } from "@/hooks/useParagraphIds";
 import { usePrintPDF } from "@/hooks/usePrintPDF";
 
+import { ReadingProgress, TableOfContents, PaperNav } from "@/components/paper/ReadingAids";
 import { supabase } from "@/integrations/supabase/client";
 import earthImage from "@/assets/earth.jpg";
 
@@ -462,6 +463,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
               className="absolute inset-0 w-full h-full object-cover animate-[ken-burns_60s_ease-in-out_infinite]"
             />
           </div>
+          <ReadingProgress />
           <AppSidebar />
           <main 
             className="flex-1 overflow-auto comment-highlighted-content" 
@@ -469,8 +471,10 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
           >
             <div className="container mx-auto px-6 py-8 max-w-4xl">
               {children}
+              <PaperNav papers={whitePaperItems} />
             </div>
           </main>
+          <TableOfContents />
           <MobileNavButton />
           <CommentSystem />
         </div>

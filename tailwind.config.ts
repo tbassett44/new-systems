@@ -18,7 +18,19 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				heading: ['Fraunces', 'Georgia', 'serif'],
+				body: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+			},
 			colors: {
+				tone: {
+					info: 'hsl(var(--tone-info))',
+					outcome: 'hsl(var(--tone-outcome))',
+					'risk-low': 'hsl(var(--tone-risk-low))',
+					'risk-med': 'hsl(var(--tone-risk-med))',
+					'risk-high': 'hsl(var(--tone-risk-high))',
+				},
+				'reading-progress': 'hsl(var(--reading-progress))',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
