@@ -291,7 +291,7 @@ All colors MUST be HSL.
 /* Earth-led homepage: deliberately isolated from the proposal reading layout. */
 .home-opening { position: relative; height: min(880px, 92svh); min-height: 640px; overflow: hidden; isolation: isolate; background: hsl(var(--home-space)); color: hsl(var(--home-on-space)); }
 .home-earth-layer { position: absolute; inset: 0; transform: translate3d(0, var(--home-earth-offset, 0px), 0) scale(var(--home-earth-scale, 1)); transform-origin: 50% 85%; will-change: transform; }
-.home-earth-scene { position: absolute; left: 0; right: 0; bottom: -36%; margin-inline: auto; width: min(104vw, 90svh); aspect-ratio: 1; animation: home-earth-arrive 1.8s ease-out both; }
+.home-earth-scene { position: absolute; left: 0; right: 0; bottom: -36%; margin-inline: auto; width: min(104vw, 90svh, 800px); aspect-ratio: 1; animation: home-earth-arrive 1.8s ease-out both; }
 .home-living-earth { position: absolute; inset: 0; }
 .home-living-earth canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s ease; }
 .home-earth-fallback { position: absolute; inset: 0; transition: opacity 1.2s ease; }
@@ -308,7 +308,7 @@ All colors MUST be HSL.
 .home-header { position: relative; z-index: 1; max-width: 1400px; margin: auto; padding: 25px 48px; display: flex; align-items: center; justify-content: space-between; }
 .home-nav-button:hover { background: hsl(var(--home-on-space) / 0.1); color: hsl(var(--home-on-space)); }
 .home-title-block { position: relative; z-index: 1; text-align: center; padding: 35px 24px 0; transform: translate3d(0, var(--home-title-offset, 0px), 0); }
-.home-title-block::before { content: ""; position: absolute; inset: -14px -70px -34px; z-index: -1; pointer-events: none; background: radial-gradient(62% 68% at 50% 60%, hsl(var(--home-space) / calc(0.4 * var(--home-text-emphasis, 0))) 0%, hsl(var(--home-space) / calc(0.22 * var(--home-text-emphasis, 0))) 52%, transparent 78%); }
+.home-title-block::before { content: ""; position: absolute; inset: -14px -70px -34px; z-index: -1; pointer-events: none; background: radial-gradient(62% 68% at 50% 60%, hsl(var(--home-space) / calc(0.18 + 0.4 * var(--home-text-emphasis, 0))) 0%, hsl(var(--home-space) / calc(0.1 + 0.22 * var(--home-text-emphasis, 0))) 52%, transparent 78%); }
 .home-title-block > * { animation: home-content-arrive 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
 .home-title-block > :nth-child(2) { animation-delay: 0.12s; }
 .home-title-block > :nth-child(3) { animation-delay: 0.24s; }
