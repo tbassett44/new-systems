@@ -43,6 +43,7 @@ All colors MUST be HSL.
     --home-on-space: 0 0% 97%;
     --home-earth-accent: 160 48% 72%;
     --home-atmosphere: 198 92% 72%;
+    --home-sunlight: 38 45% 92%;
     --home-storm-light: 210 80% 94%;
     --home-atmosphere-glow: inset 0 0 12px hsl(var(--home-atmosphere) / 0.18), inset -5px 4px 20px hsl(var(--home-atmosphere) / 0.2);
     --home-space-edge: var(--background);
@@ -291,7 +292,7 @@ All colors MUST be HSL.
 /* Earth-led homepage: deliberately isolated from the proposal reading layout. */
 .home-opening { position: relative; height: min(880px, 92svh); min-height: 640px; overflow: hidden; isolation: isolate; background: hsl(var(--home-space)); color: hsl(var(--home-on-space)); }
 .home-earth-layer { position: absolute; inset: 0; transform: translate3d(0, var(--home-earth-offset, 0px), 0) scale(var(--home-earth-scale, 1)); transform-origin: 50% 85%; will-change: transform; }
-.home-earth-scene { position: absolute; left: 0; right: 0; bottom: -36%; margin-inline: auto; width: min(104vw, 90svh, 800px); aspect-ratio: 1; animation: home-earth-arrive 1.8s ease-out both; }
+.home-earth-scene { position: absolute; left: 0; right: 0; bottom: -38%; margin-inline: auto; width: min(108vw, 108svh, 1000px); aspect-ratio: 1; animation: home-earth-arrive 1.8s ease-out both; }
 .home-living-earth { position: absolute; inset: 0; }
 .home-living-earth canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s ease; }
 .home-earth-fallback { position: absolute; inset: 0; transition: opacity 1.2s ease; }
@@ -353,7 +354,7 @@ All colors MUST be HSL.
   .home-title-block h1 { font-size: 42px; }
   .home-eyebrow { font-size: 9px; margin-bottom: 20px; }
   .home-intro { font-size: 17px; }
-  .home-earth-scene { width: min(112vw, 68svh); bottom: -18%; }
+  .home-earth-scene { width: min(140vw, 78svh); bottom: -16%; }
   .home-content { padding: 0 24px; }
   .home-vision { grid-template-columns: 1fr; gap: 20px; padding: 43px 0 35px; }
   .home-vision-copy { padding-top: 0; }
