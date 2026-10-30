@@ -285,8 +285,8 @@ All colors MUST be HSL.
 
 /* Earth-led homepage: deliberately isolated from the proposal reading layout. */
 .home-opening { position: relative; height: min(880px, 92svh); min-height: 640px; overflow: hidden; isolation: isolate; background: hsl(var(--home-space)); color: hsl(var(--home-on-space)); }
-.home-earth-layer { position: absolute; inset: 0; transform: translate3d(0, var(--home-earth-offset, 0px), 0); mix-blend-mode: screen; will-change: transform; }
-.home-earth { position: absolute; left: 0; right: 0; bottom: -24%; margin-inline: auto; width: min(92vw, 72vh); height: auto; object-fit: contain; -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 0 88%, transparent 99%); mask-image: radial-gradient(circle at 50% 50%, #000 0 88%, transparent 99%); animation: home-earth-arrive 1.8s ease-out both; }
+.home-earth-layer { position: absolute; inset: 0; transform: translate3d(0, var(--home-earth-offset, 0px), 0); will-change: transform; }
+.home-earth { position: absolute; left: 0; right: 0; bottom: -24%; margin-inline: auto; width: min(92vw, 72vh); height: auto; object-fit: contain; -webkit-mask-image: radial-gradient(circle closest-side at 50% 50%, #000 0 78%, transparent 92%); mask-image: radial-gradient(circle closest-side at 50% 50%, #000 0 78%, transparent 92%); animation: home-earth-arrive 1.8s ease-out both; }
 .home-earth-shade { position: absolute; inset: 0; background: var(--home-image-overlay); }
 .home-header { position: relative; z-index: 1; max-width: 1400px; margin: auto; padding: 25px 48px; display: flex; align-items: center; justify-content: space-between; }
 .home-nav-button:hover { background: hsl(var(--home-on-space) / 0.1); color: hsl(var(--home-on-space)); }
