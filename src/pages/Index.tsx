@@ -87,12 +87,6 @@ const Index = () => {
         <div className="home-earth-layer">
           <div className="home-earth-scene">
             <LivingEarth />
-            <div className="home-earth-weather" aria-hidden="true">
-              <span className="home-earth-lightning home-earth-lightning-pacific" />
-              <span className="home-earth-lightning home-earth-lightning-atlantic" />
-              <span className="home-earth-lightning home-earth-lightning-amazon" />
-              <span className="home-earth-atmosphere" />
-            </div>
           </div>
         </div>
         <div className="home-earth-shade" aria-hidden="true" />
