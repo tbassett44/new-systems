@@ -76,7 +76,7 @@ export function TableOfContents() {
     <nav
       data-toc-ignore
       aria-label="On this page"
-      className="hidden xl:block fixed right-4 top-20 w-56 max-h-[70vh] overflow-y-auto text-sm z-10"
+      className="hidden min-[1600px]:block fixed right-4 top-20 w-56 max-h-[70vh] overflow-y-auto text-sm z-10"
     >
       <p className="font-semibold text-foreground mb-2 uppercase tracking-wide text-xs">On this page</p>
       <ul className="space-y-1.5 border-l border-border">
