@@ -186,7 +186,7 @@ function AppSidebar() {
 
   return (
     <TooltipProvider>
-      <Sidebar className="border-r bg-background/85 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
+      <Sidebar className="border-r bg-background/55 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
           <div className="flex items-center gap-1">
@@ -454,7 +454,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
     <CommentProvider>
       <SidebarProvider>
         <div className="min-h-screen flex w-full relative group/layout">
-          <div className="paper-earth-backdrop" aria-hidden="true">
+          <div className="paper-earth-backdrop hidden md:block w-64 group-has-[[data-state=collapsed]]/layout:w-12" aria-hidden="true">
             <div className="paper-earth-scene">
               <LivingEarth />
             </div>
