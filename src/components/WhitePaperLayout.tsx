@@ -186,7 +186,7 @@ function AppSidebar() {
 
   return (
     <TooltipProvider>
-      <Sidebar className="border-r bg-background/75 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
+      <Sidebar className="border-r bg-background/85 backdrop-blur-[5px] [&_[data-sidebar='sidebar']]:bg-transparent" collapsible="icon">
         <SidebarHeader className="border-b">
           <div className={`flex items-center ${state === "collapsed" && !isMobile ? "justify-center" : "justify-between"}`}>
           <div className="flex items-center gap-1">
@@ -460,7 +460,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
             <img 
               src={earthImage} 
               alt="" 
-              className="absolute inset-0 w-full h-full object-cover animate-[ken-burns_60s_ease-in-out_infinite]"
+              className="absolute inset-0 w-full h-full object-contain opacity-80 animate-[ken-burns_60s_ease-in-out_infinite]"
             />
           </div>
           <ReadingProgress />
