@@ -454,7 +454,7 @@ export default function WhitePaperLayout({ children }: WhitePaperLayoutProps) {
     <CommentProvider>
       <SidebarProvider>
         <div className="min-h-screen flex w-full relative group/layout">
-          <div className="paper-earth-backdrop" aria-hidden="true">
+          <div className="paper-earth-backdrop hidden md:block w-64 group-has-[[data-state=collapsed]]/layout:w-12" aria-hidden="true">
             <div className="paper-earth-scene">
               <LivingEarth />
             </div>
